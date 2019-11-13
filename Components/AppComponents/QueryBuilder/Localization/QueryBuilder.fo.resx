@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="QueryBuilder_AfterTheNext">
+    <value>After the nextAfter th###</value>
+  </data>
+  <data name="QueryBuilder_AfterThePast">
+    <value>After the pastAfter th###</value>
+  </data>
+  <data name="QueryBuilder_And">
+    <value>AN###</value>
+  </data>
+  <data name="QueryBuilder_BeforeTheNext">
+    <value>Before the nextBefore th###</value>
+  </data>
+  <data name="QueryBuilder_BeforeThePast">
+    <value>Before the pastBefore th###</value>
+  </data>
+  <data name="QueryBuilder_Contains">
+    <value>ContainsCon###</value>
+  </data>
+  <data name="QueryBuilder_Err_DateField">
+    <value>Please enter a valid value in the date field.Please enter a valid value in the###</value>
+  </data>
+  <data name="QueryBuilder_Err_DateTimeField">
+    <value>Please enter a valid value in the date/time field.Please enter a valid value in the dat###</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalField">
+    <value>Please enter a valid value in the decimal field.Please enter a valid value in the d###</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalRangeField">
+    <value>Please enter valid range value(s) in the decimal fields.Please enter valid range value(s) in the d###</value>
+  </data>
+  <data name="QueryBuilder_Err_KeywordField">
+    <value>Please enter a valid value in the keyword field.Please enter a valid value in the k###</value>
+  </data>
+  <data name="QueryBuilder_Err_MemoField">
+    <value>Please enter a valid value in the memo field.Please enter a valid value in the###</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericField">
+    <value>Please enter a valid value in the numeric field.Please enter a valid value in the n###</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericRangeField">
+    <value>Please enter valid range value(s) in the numeric fields.Please enter valid range value(s) in the n###</value>
+  </data>
+  <data name="QueryBuilder_Err_RangeDateField">
+    <value>Please enter valid range value(s) in the date fields.Please enter valid range value(s) in th###</value>
+  </data>
+  <data name="QueryBuilder_Err_SqlField">
+    <value>Please enter a valid value in the sql field.Please enter a valid value in th###</value>
+  </data>
+  <data name="QueryBuilder_Err_TextField">
+    <value>Please enter a valid value in the text fieldPlease enter a valid value in th###</value>
+  </data>
+  <data name="QueryBuilder_Introduction">
+    <value>Users will only see documents which match the following rules:Users will only see documents which match the f###</value>
+  </data>
+  <data name="QueryBuilder_invalidField">
+    <value>The file cabinet field does not exist.The file cabinet field does###</value>
+  </data>
+  <data name="QueryBuilder_IsBetween">
+    <value>Is betweenIs be###</value>
+  </data>
+  <data name="QueryBuilder_IsEmpty">
+    <value>Is emptyIs ###</value>
+  </data>
+  <data name="QueryBuilder_IsEqual">
+    <value>Is equalIs ###</value>
+  </data>
+  <data name="QueryBuilder_IsNotEmpty">
+    <value>Is not emptyIs not ###</value>
+  </data>
+  <data name="QueryBuilder_IsNotEqual">
+    <value>Is not equalIs not ###</value>
+  </data>
+  <data name="QueryBuilder_IsWhereClause">
+    <value>Is (where clause)Is (where c###</value>
+  </data>
+  <data name="QueryBuilder_Or">
+    <value>O###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDISK">
+    <value>Disk NumberDisk N###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDOCID">
+    <value>Doc IDDo###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSDATETIME">
+    <value>Last Access DateLast Acces###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSUSER">
+    <value>Last Access UserLast Acces###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODDATETIME">
+    <value>Modification DateModificatio###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODUSER">
+    <value>Modification UserModificatio###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSECTIONCOUNT">
+    <value>File CountFile ###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPDATETIME">
+    <value>SAP Date TimeSAP Dat###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPSTATUS">
+    <value>SAP StatusSAP S###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREDATETIME">
+    <value>Store DateStore###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREUSER">
+    <value>Store UserStore###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWUSRVERSION">
+    <value>User VersionUser Ve###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSIONCOMMENT">
+    <value>Version CommentVersion C###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSTATUS">
+    <value>Version StatusVersion ###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCID">
+    <value>SAP Doc IdSAP D###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCTYPE">
+    <value>SAP Doc TypeSAP Doc###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPPROTECTIONTYPE">
+    <value>SAP Protection TypeSAP Protecti###</value>
+  </data>
+  <data name="QueryBuilder_SystemFields">
+    <value>System FieldsSystem ###</value>
+  </data>
+  <data name="QueryBuilder_WithinTheNext">
+    <value>Within the nextWithin th###</value>
+  </data>
+  <data name="QueryBuilder_WithinThePast">
+    <value>Within the pastWithin th###</value>
+  </data>
+  <data name="QueryClick_LabelFirstPart">
+    <value>No rules are defined yet.No rules are defi###</value>
+  </data>
+  <data name="QueryClick_LabelSecondPart">
+    <value>Create a new ruleCreate a ne###</value>
+  </data>
+  <data name="QueryClick_LabelThirdPart">
+    <value>Create a group of rulesCreate a group ###</value>
+  </data>
+  <data name="QueryDate_Days">
+    <value>Days###</value>
+  </data>
+  <data name="QueryDate_Hours">
+    <value>HoursH###</value>
+  </data>
+  <data name="QueryDate_Months">
+    <value>MonthsMo###</value>
+  </data>
+  <data name="QueryDate_Years">
+    <value>YearsY###</value>
+  </data>
+  <data name="QueryBuilder_ProfileIntroduction">
+    <value>Users having this profile will only see documents which match the following rules:Users having this profile will only see documents which match t###</value>
+  </data>
+  <data name="QueryBuilder_After">
+    <value>Is afterIs ###</value>
+  </data>
+  <data name="QueryBuilder_Before">
+    <value>Is beforeIs b###</value>
+  </data>
+  <data name="QueryBuilder_BeforeOrOn">
+    <value>Is before or onIs before###</value>
+  </data>
+  <data name="QueryBuilder_Begins">
+    <value>Begins withBegins###</value>
+  </data>
+  <data name="QueryBuilder_Ends">
+    <value>Ends withEnds###</value>
+  </data>
+  <data name="QueryBuilder_IsNotOn">
+    <value>Is not onIs n###</value>
+  </data>
+  <data name="QueryBuilder_IsOn">
+    <value>Is onI###</value>
+  </data>
+  <data name="QueryBuilder_Less">
+    <value>Is less thanIs less###</value>
+  </data>
+  <data name="QueryBuilder_LessOrEqual">
+    <value>Is less or equal thanIs less or equ###</value>
+  </data>
+  <data name="QueryBuilder_More">
+    <value>Is greater thanIs greate###</value>
+  </data>
+  <data name="QueryBuilder_MoreOrEqual">
+    <value>Is equal or greaterIs equal or ###</value>
+  </data>
+  <data name="QueryBuilder_OnOrAfter">
+    <value>Is on or afterIs on or###</value>
+  </data>
+  <data name="SystemFunction_CurrentDate">
+    <value>Current dateCurrent###</value>
+  </data>
+  <data name="SystemFunction_CurrentDateTime">
+    <value>Current datetimeCurrent da###</value>
+  </data>
+  <data name="SystemFunction_CurrentUserEmail">
+    <value>Email of the userEmail of th###</value>
+  </data>
+  <data name="SystemFunction_CurrentUserLongName">
+    <value>Login of the userLogin of th###</value>
+  </data>
+  <data name="SystemFunction_CurrentUserShortName">
+    <value>Internal user nameInternal us###</value>
+  </data>
+  <data name="QueryBuilder_invalid_Input">
+    <value>Please enter a valid value in the numeric fieldPlease enter a valid value in the n###</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Decimal_Input">
+    <value>Please enter a decimal like {0}Please enter a decimal###</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Number_Input">
+    <value>Please enter a number like {0}Please enter a number###</value>
+  </data>
+  <data name="QueryBuilder_AddCondition">
+    <value>Create a new ruleCreate a ne###</value>
+  </data>
+  <data name="QueryBuilder_AddGroupCondition">
+    <value>Create a group of rulesCreate a group ###</value>
+  </data>
+  <data name="QueryBuilder_RemoveCondition">
+    <value>Remove ruleRemove###</value>
+  </data>
+  <data name="QueryBuilder_RemoveGroupCondition">
+    <value>Remove group of rulesRemove group o###</value>
+  </data>
+  <data name="QueryBuilder_AutocompleteEmptyResult">
+    <value>No values foundNo values###</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWEXTENSION">
+    <value>ExtensionExte###</value>
+  </data>
+  <data name="QueryBuilder_RangeTo">
+    <value>t###</value>
+  </data>
+</root>

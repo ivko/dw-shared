@@ -1,0 +1,224 @@
+// Typography
+@baseUIFontSize: 12px;
+@baseFontFamily: Tahoma, Arial, Helvetica, sans-serif;
+
+@baseUIFontSizeInc4: @baseUIFontSize + 4;
+@baseUIFontSizeInc3: @baseUIFontSize + 3;
+@baseUIFontSizeInc2: @baseUIFontSize + 2;
+@baseUIFontSizeInc1: @baseUIFontSize + 1;
+
+@baseUIFontSizeDec1: @baseUIFontSize - 1;
+@baseUIFontSizeDec2: @baseUIFontSize - 2;
+@baseUIFontSizeDec3: @baseUIFontSize - 3;
+@baseUIFontSizeDec4: @baseUIFontSize - 4;
+
+
+//Icons*/
+@icon-color: @OT_LabelGray;
+
+// Headings
+@headings-line-height: 1.1;
+@headings-color: inherit;
+@headings-font-weight: bold;
+
+// Scaffolding
+@topAreaHeight: 36px;
+@searchAreaHeight: 54px;
+
+@lockedHeadersWidth: 120px;
+@LineHeightHeader: 14px;
+@LineHeightSelectiveSelect: 25px;
+
+// Store Dialog*/
+@dialogHeaderHeight: 50px;
+@dialogHeaderWidth: 120px;
+
+// Viewer*/
+@viewer-store-dialog-width: 280px;
+@viewer-side-panel-tools-width: 105px;
+
+
+// Navigation
+@navbar-height: 36px;
+@navbar-bg: @OT_UltraLightGray;
+@navbar-border-color: @OT_BorderGray;
+@navbar-mini-minwidth: 320px; 
+@navbar-color: @OT_LabelGray;
+
+// Dialog Toolbar*/
+@dialog-toolbar-height: 36px;
+
+// TABS
+@tabStripHeight: 36px;
+@TabsPaddingTop: 10px;
+//Tabs inside height - 3px borders and paddings
+@tabsHeight: (@tabStripHeight - @TabsPaddingTop) - 3;
+@tabsHeightColors: (@tabStripHeight - @TabsPaddingTop) - 4;
+
+// BUTTONS
+@dw-MainArrowIconsWidth: 34px;
+@arrowHeight: 16px;
+@mainButtonHeight: 22px;
+@toolbarButtonHeight: 22px;
+
+// CHECKBOX
+@checkbox-color: @OT_LabelGray;
+@checkbox-bg: @OT_UltraLightGray;
+@checkbox-border: @OT_BorderGray;
+@checkbox-border-focus: @OT_SelectionBlue;
+
+// RADIO BUTTONS
+@radio-color: @OT_LabelGray;
+@radio-bg: @OT_GrayE;
+@radio-border: @OT_BorderGray;
+@radio-border-focus: @OT_SelectionBlue;
+
+// FIELDS
+@field-color: @OT_LabelGray;
+@field-color-error: @OT_Red;
+@field-readonly-color: @OT_LabelGray;
+@field-bg: @OT_GrayE;
+@field-selected-bg: @OT_Orange_90;
+@field-border: @OT_BorderGray;
+@field-height: 26px;
+@field-border-focus: @OT_SelectionBlue;
+@field-border-error: @OT_Red;
+
+
+// DIALOG CONTENT
+@dialogBG: @OT_UltraLightGray;
+
+// DROP-DOWNS
+@dListWidth: 150px;
+@dListHeight: 24px;
+
+//GRID*/
+@goodIndexColor: @OT_Green;
+@mediumIndexColor: @OT_Orange;
+@badIndexColor: @OT_Red;
+@thumbnailSize: 80px;
+@thumbnailMargin: 10px;
+//Offset for the grid container div
+@gridContainerOffset: (@tabStripHeight + @dialog-toolbar-height) - 1;
+
+
+//SCROLLBAR*/
+@scrollbar-arrow-border-color: @OT_BorderGray;
+@scrollbar-arrow-border-hover-color: @OT_CaptionGray;
+@scrollbar-trackwrapper-bg: @OT_UltraLightGray;
+@scrollbar-tracks-bg: @OT_UltraLightGray;
+@scrollbar-trackwrapper-border-color: @OT_BorderGray;
+@scrollbar-buttons-bg: @OT_UltraLightGray;
+@scrollbar-corners-bg: @OT_UltraLightGray;
+@scrollbar-corners-border-color: @OT_BorderGray;
+@scrollbar-handles-bg: @OT_BorderGray;
+@scrollbar-handles-hover-bg: @OT_CaptionGray;
+
+
+
+//Styleguide color names for reference*/
+@OT_GrayA: #353535;
+@OT_GrayB: #91979B;
+@OT_GrayC: #A3ADB2;
+@OT_GrayD: #C8CED1;
+@OT_GrayE: #EEF1F2;
+@OT_GrayF: #B5BDC1;
+@OT_GrayG: #f4f5f6;
+@OT_GrayH: #F8F8F8;
+@OT_GrayI: #e3e7e9;
+@OT_GrayJ: #d8d8d8;
+
+
+@OT_BlueA: #303AB2;
+@OT_BlueB: #C0E4F9;
+@OT_BlueC: #81CAF3;
+@OT_BlueD: #0089CF;
+
+@OT_Yellow: #FCB200;
+@OT_YellowB: #FDD166;
+@OT_YellowC: #FC973A;
+
+
+
+
+//Grays*/
+@OT_WHITE: #FFFFFF;
+@OT_LabelGray: @OT_GrayA;
+@OT_CaptionGray: #91979b;
+@OT_MediumGray: #a3adb2;
+@OT_DisabledGray: #a3adb2;
+@OT_LightCaptionGray: #c8ced1;
+@OT_BorderGray: #c8ced1;
+@OT_SeparatorGray: #b5bdc1;
+@OT_ControlGray: #c8ced1;
+@OT_DragZoneGray: #c8ced1;
+@OT_LightBorderGray: #eef1f2;
+@OT_UltraLightGray: #eef1f2;
+@OT_TableGray: #f4f5f6;
+@OT_Black: #000000;
+
+//Blue*/
+@OT_SelectionBlue: @OT_BlueA;
+@OT_MouseOverBlue: @OT_BlueB;
+@OT_SelectionBlue_90: @OT_BlueC;
+
+//Orange*/
+@OT_Orange: @OT_Yellow;
+@OT_Orange_45: @OT_YellowB;
+@OT_Orange_60: @OT_YellowC;
+@OT_Orange_90: #FFEFBB;
+
+//Red*/
+@OT_Red: #BB3937;
+
+//Green*/
+@OT_Green: #368D2E;
+
+
+//FILE TYPES
+@OT_PPT: #a17555;
+@OT_PNG: #52975e;
+@OT_PDF: #b20000;
+@OT_DOC: #4c7cac;
+@OT_IMG: #a45ba4;
+@OT_JPG: #a48b5b;
+@OT_XML: #52975e;
+@OT_XLS: #75ad6d;
+@OT_TIFF: #5485b7;
+@OT_COLD: #60cbf5;
+
+
+//Toastr new
+@OT_Success: @OT_Green;
+@OT_Info: @OT_BlueD;
+@OT_Warning: @OT_Orange;
+@OT_Error: @OT_Red;
+
+//IMAGES*/
+@dwImagePath: "../images/";
+
+@gridResizableHandler:"@{dwImagePath}dw_grid_column_resize_handle.png";
+@dwMainLogo: "@{dwImagePath}dw_logo.png";
+@loadFile: "@{dwImagePath}dw-load-file.png";
+
+
+//intellix indexing*/
+@indexing-10-23: "@{dwImagePath}indexing_10x23.gif";
+@indexing-2-23: "@{dwImagePath}indexing_2x23.gif";
+
+
+//PAGER VARIABLES*/
+@pagerHeight: 30px;
+@pagerIconHeight: 20px;
+
+
+// dw-Colors
+@fcColorRed: @OT_Red;
+@fcColorGreen: @OT_Green;
+@fcColorYellow: @OT_Orange;
+@fcColorBlue: @OT_BlueD;
+@fcColorBlack: @OT_LabelGray;
+
+// Bootstrap tooltip
+@tooltip-bg: @OT_GrayA;
+@tooltip-arrow-color: @OT_GrayA;

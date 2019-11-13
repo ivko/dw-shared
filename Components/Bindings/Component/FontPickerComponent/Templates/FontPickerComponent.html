@@ -1,0 +1,42 @@
+﻿<script type="text/html" id="font-picker-template">
+    <div class="font-picker">
+        <!--ko if: params.label-->
+        <div data-bind="text: params.label"></div>
+        <!--/ko-->
+        <select data-bind="options: params.fonts, value: selectedFont,
+                select2: { width: 'off',
+                    formatResult: fontFamilyFormat,
+                    formatSelection: fontFamilyFormat,
+                    containerCssClass: 'select-theme-white large',
+                    dropdownCssClass: 'select-theme-white' }"></select>
+        <input type="text" data-bind="spinner: {
+                value: size,
+                min: params.minSize || 6,
+                max: params.maxSize || 72,
+                step: 1,
+                intOnly: true },
+                valueUpdate: 'afterkeydown'" />
+        <!--ko if: color !== undefined-->
+        <spectrum params="params: { value: color }"></spectrum>
+        <!--/ko-->
+        <div class="top-offset-small">
+            <!--ko if:bold !== undefined-->
+            <label data-bind="attr:{for:'fontBold' + componentId}"><input type="checkbox" data-bind="checked: bold, attr:{id:'fontBold' + componentId}" /><span class="font-picker-button-bold">B</span></label>
+            <!--/ko-->
+            <!--ko if:italic !== undefined-->
+            <label data-bind="attr:{for:'fontItalic' + componentId}"><input type="checkbox" data-bind="checked: italic, attr:{id:'fontItalic' + componentId}" /><span class="font-picker-button-italic">I</span></label>
+            <!--/ko-->
+            <!--ko if:underline !== undefined-->
+            <label data-bind="attr:{for:'fontUnderline' + componentId}"><input type="checkbox" data-bind="checked: underline,attr:{id:'fontUnderline' + componentId}" /><span class="font-picker-button-underline">U</span></label>
+            <!--/ko-->
+            <!--ko if:strikeout !== undefined-->
+            <label data-bind="attr:{for:'fontStrikeout' + componentId}"><input type="checkbox" data-bind="checked: strikeout, attr:{id:'fontStrikeout' + componentId}" /><span class="font-picker-button-strikeout">abc</span></label>
+            <!--/ko-->
+        </div>
+        <!--ko if: params.previewText-->
+        <div class="font-picker-preview top-offset-small">
+            <span data-bind="text: params.previewText, attr: { style: style}" />
+        </div>
+        <!--/ko-->
+    </div>
+</script>

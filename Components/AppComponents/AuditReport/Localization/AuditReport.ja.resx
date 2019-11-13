@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuditEventDetails_DocInfo">
+    <value>Doc Id: {0}</value>
+  </data>
+  <data name="AuditEventDetails_Label">
+    <value>変更済みプロパティ:</value>
+  </data>
+  <data name="AuditReport_Default_FileName">
+    <value>Audit</value>
+  </data>
+  <data name="AuditReport_EventType_Changed">
+    <value>変更済み</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToFileSystem">
+    <value>ファイルシステムへチェックアウト</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToTray">
+    <value>トレイへチェックアウト</value>
+  </data>
+  <data name="AuditReport_EventType_Clip">
+    <value>クリップ</value>
+  </data>
+  <data name="AuditReport_EventType_CopyToTray">
+    <value>トレイへコピー</value>
+  </data>
+  <data name="AuditReport_EventType_Created">
+    <value>作成日時</value>
+  </data>
+  <data name="AuditReport_EventType_CreateRequest">
+    <value>Request を作成</value>
+  </data>
+  <data name="AuditReport_EventType_CreateSettings">
+    <value>設定を作成</value>
+  </data>
+  <data name="AuditReport_EventType_Delete">
+    <value>削除</value>
+  </data>
+  <data name="AuditReport_EventType_Deleted">
+    <value>削除済み</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteSettings">
+    <value>設定を削除</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteVersionHistory">
+    <value>バージョン履歴を削除</value>
+  </data>
+  <data name="AuditReport_EventType_EditAnnotations">
+    <value>注釈を編集</value>
+  </data>
+  <data name="AuditReport_EventType_EditContent">
+    <value>コンテンツを編集</value>
+  </data>
+  <data name="AuditReport_EventType_EditIndexData">
+    <value>インデックスデータを編集</value>
+  </data>
+  <data name="AuditReport_EventType_EditSettings">
+    <value>設定を編集</value>
+  </data>
+  <data name="AuditReport_EventType_Email">
+    <value>電子メール</value>
+  </data>
+  <data name="AuditReport_EventType_Export">
+    <value>エクスポート</value>
+  </data>
+  <data name="AuditReport_EventType_LogIn">
+    <value>ログイン</value>
+  </data>
+  <data name="AuditReport_EventType_LogOff">
+    <value>ログオフ</value>
+  </data>
+  <data name="AuditReport_EventType_Open">
+    <value>開く</value>
+  </data>
+  <data name="AuditReport_EventType_Print">
+    <value>印刷</value>
+  </data>
+  <data name="AuditReport_EventType_Store">
+    <value>保管</value>
+  </data>
+  <data name="AuditReport_EventType_UndoCheckout">
+    <value>チェックアウトを元に戻す</value>
+  </data>
+  <data name="AuditReport_EventType_WorkflowDecisionMade">
+    <value>実行されたワークフローデシジョン</value>
+  </data>
+  <data name="AuditReport_LastModified">
+    <value>最終修正日時</value>
+  </data>
+  <data name="AuditReport_SettingsType_AuthenticationServer">
+    <value>Authentication Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_Autoindex">
+    <value>Autoindex</value>
+  </data>
+  <data name="AuditReport_SettingsType_AutoNumber">
+    <value>自動番号</value>
+  </data>
+  <data name="AuditReport_SettingsType_BusinessUseCase">
+    <value>Business Use Case</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlook">
+    <value>Connect to Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookAccess">
+    <value>Connect to Outlook アクセス</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookConfiguration">
+    <value>Connect to Outlook 構成</value>
+  </data>
+  <data name="AuditReport_SettingsType_Database">
+    <value>データベース</value>
+  </data>
+  <data name="AuditReport_SettingsType_DatabaseConnection">
+    <value>データベース接続</value>
+  </data>
+  <data name="AuditReport_SettingsType_Deletion">
+    <value>削除</value>
+  </data>
+  <data name="AuditReport_SettingsType_Disk">
+    <value>ディスク</value>
+  </data>
+  <data name="AuditReport_SettingsType_Document">
+    <value>ドキュメント</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentSettings">
+    <value>ドキュメント設定</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentType">
+    <value>ドキュメントのタイプ</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwImportRequest">
+    <value>DocuWare Import Request</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwRequestLite">
+    <value>DocuWare Request Lite</value>
+  </data>
+  <data name="AuditReport_SettingsType_EmailConfiguration">
+    <value>電子メール構成</value>
+  </data>
+  <data name="AuditReport_SettingsType_Export">
+    <value>エクスポート</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalSelectList">
+    <value>外部の選択リスト</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalUserDirectory">
+    <value>外部ユーザーディレクトリ</value>
+  </data>
+  <data name="AuditReport_SettingsType_Field">
+    <value>フィールド</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinet">
+    <value>ファイルキャビネット</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetGeneral">
+    <value>ファイルキャビネット全般</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetSettings">
+    <value>ファイルキャビネット設定</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileConnection">
+    <value>ファイル接続</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileExtension">
+    <value>ファイル拡張子</value>
+  </data>
+  <data name="AuditReport_SettingsType_Forms">
+    <value>Forms</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralProfile">
+    <value>一般的なプロファイル</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralSystem">
+    <value>一般的なシステム</value>
+  </data>
+  <data name="AuditReport_SettingsType_Group">
+    <value>グループ</value>
+  </data>
+  <data name="AuditReport_SettingsType_IntellixConnection">
+    <value>Intelligent Indexing 接続</value>
+  </data>
+  <data name="AuditReport_SettingsType_Licence">
+    <value>ライセンス</value>
+  </data>
+  <data name="AuditReport_SettingsType_Link">
+    <value>リンク</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpDevice">
+    <value>MFP デバイス</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpWorkflow">
+    <value>MFP ワークフロー</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationServer">
+    <value>Notification Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationSettings">
+    <value>通知設定</value>
+  </data>
+  <data name="AuditReport_SettingsType_Obr">
+    <value>Obr</value>
+  </data>
+  <data name="AuditReport_SettingsType_Ocr">
+    <value>Ocr</value>
+  </data>
+  <data name="AuditReport_SettingsType_Organization">
+    <value>組織</value>
+  </data>
+  <data name="AuditReport_SettingsType_PrinterConfiguration">
+    <value>プリンター構成</value>
+  </data>
+  <data name="AuditReport_SettingsType_ProcessServer">
+    <value>処理サーバー</value>
+  </data>
+  <data name="AuditReport_SettingsType_Profile">
+    <value>プロファイル</value>
+  </data>
+  <data name="AuditReport_SettingsType_RegularExpression">
+    <value>正規表現</value>
+  </data>
+  <data name="AuditReport_SettingsType_Replication">
+    <value>複製</value>
+  </data>
+  <data name="AuditReport_SettingsType_ResultList">
+    <value>結果リスト</value>
+  </data>
+  <data name="AuditReport_SettingsType_Role">
+    <value>役割</value>
+  </data>
+  <data name="AuditReport_SettingsType_Schedules">
+    <value>スケジュール</value>
+  </data>
+  <data name="AuditReport_SettingsType_SearchDialog">
+    <value>検索ダイアログ</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmartConnect">
+    <value>Smart Connect</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmtpConnection">
+    <value>SMTP 接続</value>
+  </data>
+  <data name="AuditReport_SettingsType_SolrConnection">
+    <value>Solr 接続</value>
+  </data>
+  <data name="AuditReport_SettingsType_Stamp">
+    <value>スタンプ</value>
+  </data>
+  <data name="AuditReport_SettingsType_StorageLocation">
+    <value>保管場所</value>
+  </data>
+  <data name="AuditReport_SettingsType_StoreDialog">
+    <value>保管ダイアログ</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionRules">
+    <value>代替ルール</value>
+  </data>
+  <data name="AuditReport_SettingsType_SystemBackupWorkflow">
+    <value>システムバックアップワークフロー</value>
+  </data>
+  <data name="AuditReport_SettingsType_TrustedUser">
+    <value>信頼されたユーザー</value>
+  </data>
+  <data name="AuditReport_SettingsType_User">
+    <value>ユーザー</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserLoginLogout">
+    <value>ユーザーログインログアウト</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserSync">
+    <value>ユーザー同期</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebBasket">
+    <value>トレイ</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebConnection">
+    <value>Web 接続</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebInstances">
+    <value>Web インスタンス</value>
+  </data>
+  <data name="AuditReport_Table_DownloadCSV">
+    <value>CSV 形式でダウンロード</value>
+  </data>
+  <data name="AuditReport_TableColumn_Date">
+    <value>日付</value>
+  </data>
+  <data name="AuditReport_TableColumn_DocId">
+    <value>DocId</value>
+  </data>
+  <data name="AuditReport_TableColumn_Event">
+    <value>イベント</value>
+  </data>
+  <data name="AuditReport_TableColumn_FileCabinet">
+    <value>ファイルキャビネット</value>
+  </data>
+  <data name="AuditReport_TableColumn_Name">
+    <value>名前</value>
+  </data>
+  <data name="AuditReport_TableColumn_Organization">
+    <value>組織</value>
+  </data>
+  <data name="AuditReport_TableColumn_Type">
+    <value>タイプ</value>
+  </data>
+  <data name="AuditReport_TableColumn_User">
+    <value>ユーザー</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_PreviousValue">
+    <value>前の値</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Property">
+    <value>プロパティ</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Value">
+    <value>値</value>
+  </data>
+  <data name="AuditReport_EventType_Edited">
+    <value>変更済み</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteAudit">
+    <value>削除</value>
+  </data>
+  <data name="AuditReport_EventType_DisableAudit">
+    <value>無効化</value>
+  </data>
+  <data name="AuditReport_EventType_EnableAudit">
+    <value>有効化</value>
+  </data>
+  <data name="AuditReport_ObjectName_AllData">
+    <value>すべてのデータ</value>
+  </data>
+  <data name="AuditReport_ObjectName_ConfigurationChanges">
+    <value>構成の変更</value>
+  </data>
+  <data name="AuditReport_ObjectName_DocumentEvent">
+    <value>ドキュメントイベント</value>
+  </data>
+  <data name="AuditReport_ObjectName_UserLogEvent">
+    <value>ユーザーのログイン/ログアウト</value>
+  </data>
+  <data name="AuditReport_SettingsType_Auditing">
+    <value>監査</value>
+  </data>
+  <data name="AuditReport_SettingsType_FixedSelectList">
+    <value>固定選択リスト</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebServices">
+    <value>Web サービス</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionList">
+    <value>代理リスト</value>
+  </data>
+</root>

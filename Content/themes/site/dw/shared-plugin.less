@@ -1,0 +1,507 @@
+﻿// Install the Web Essentials extensions in order to use this LESS file.
+
+.rounded-corners (@radius: 7px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+html, body{
+	height:100%;
+	overflow: hidden;
+}
+
+body {
+    font-size: 11px;
+    color: #232323;
+    background-color: #ebf0f3;
+	  height: 100%;
+}
+
+form {
+    legend {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    textarea {
+        min-height: 75px;
+    }
+
+    .editor-label {
+        margin: 1em 0 0 0;
+    }
+
+    .editor-field {
+        margin: 0.5em 0 0 0;
+    }
+
+    .field-validation-error {
+        color: #ff0000;
+    }
+
+    .field-validation-valid {
+        display: none;
+    }
+
+    .input-validation-error {
+        border: 1px solid #ff0000;
+        background-color: #ffeeee;
+    }
+
+    .validation-summary-errors {
+        font-weight: bold;
+        color: #ff0000;
+    }
+
+    .validation-summary-valid {
+        display: none;
+    }
+}
+
+.pheader {
+    height: 48px;
+    background: transparent url("../../jqhtml5/images/HeadBarBg.png") repeat-x;
+    padding: 1px;
+    
+    h2 {
+        margin: 10px;
+    }
+}
+
+.pbody {    
+	height:94%;
+}
+
+
+.ui-combobox {
+	position: relative;
+	display: inline-block;	
+	.ui-button {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin-left: -1px;
+		padding: 0;		
+		height: 1.9em;
+	}
+	.ui-autocomplete-input {
+		margin: 0;
+		padding: 0 0.3em 0 0.3em;
+		height:1.9em;
+	}	
+}
+
+.ui-menu{
+	.rounded-corners(0px);
+	border: 1px solid #00538D;	
+	&.ui-widget-content {		
+		background: #EBF0F3 url('') no-repeat fixed center;
+	}
+}
+
+.pfooter {
+}
+
+.toolbar{
+	padding-left: 3px;
+}
+
+.toolbar-button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only{
+	&.add{
+		.ui-button-text{						
+			display: inline-block;
+			width:100%;
+			line-height:25px;
+			padding: 0;
+			background: transparent url("../../jqhtml5/images/add_24.png") no-repeat center center;
+		}
+	}
+	&.edit{
+		.ui-button-text{
+			display: inline-block;
+			width:100%;
+			line-height:25px;
+			padding: 0;
+			background: transparent url("../../jqhtml5/images/edit_24.png") no-repeat center center;
+		}
+	}
+	&.copy{
+		.ui-button-text{
+			display: inline-block;
+			width:100%;
+			line-height:25px;
+			padding: 0;
+			background: transparent url("../../jqhtml5/images/copy_24.png") no-repeat center center;
+		}
+	}
+	&.removeAll{
+		.ui-button-text{
+			display: inline-block;
+			width:100%;
+			line-height:25px;
+			padding: 0;
+			background: transparent url("../../jqhtml5/images/delete_2_24.png") no-repeat center center;
+		}
+	}
+	&.remove{
+		.ui-button-text{
+			display: inline-block;
+			width:100%;
+			line-height:25px;
+			padding: 0;
+			background: transparent url("../../jqhtml5/images/remove_24.png") no-repeat center center;
+		}
+	}
+	&.help{
+  	float:right;
+    margin-right: 20px;
+    .ui-button-text{
+      display: inline-block;
+			width:100%;
+			line-height:25px;
+			padding: 0;
+			background: transparent url("../../jqhtml5/images/help_24.png") no-repeat center center;
+		}
+	}
+	background: none;
+	border-style: none;
+	width:32px;
+	height:30px;
+	margin-top: 9px;
+	margin-left: 4px;
+	&.ui-state-hover{
+		background: url("../../jqhtml5/images/toolbar-button-hover.png") repeat-x #ADC1D9;
+		border-style:solid;
+		border-width:1px;
+		border-color: #618BB2;
+	}
+	&.ui-state-active{
+		background: url("../../jqhtml5/images/toolbar-button-active.png") repeat-x #839DBE;
+		border-style:solid;
+		border-width:1px;
+		border-color: #3BB2D3;
+	}	
+}
+
+.ui-dialog-buttonpane{
+  border: 0;
+
+	.ui-button {
+		min-width:101px;
+		.ui-button-text{
+			line-height:1;
+		}
+	}
+}
+
+.ui-dialog{
+	border: 1px solid #00538D !important;
+	padding: 1px !important;
+
+	.ui-dialog-titlebar{
+		padding: 0.15em 1em !important;
+	}
+
+	.ui-widget-header{
+		border-top: 1px solid #C7D2E0;
+		border-left: 1px solid #C7D2E0;
+		border-bottom: 1px solid #FFFFFF;		
+	}
+	&.wizard-dialog{		
+		.ui-dialog-content{
+			height: 450px !important;
+		}
+	}
+}
+
+
+.help-button{
+	border-style:none;
+	background: url("../../jqhtml5/images/help_16.png") no-repeat center center;
+	display: inline-block;
+	width:16px;
+	height:16px;
+	margin-left: 5px;
+	outline:0;
+}
+
+.users-text{
+	padding-top:20px;
+	padding-bottom:20px;
+	.available, .availableUser{
+		font-weight: bold;
+		width:50%;
+		float: left;
+	}
+	.selected, .selectedUser{
+		font-weight: bold;
+		float: left;
+		width:50%;
+	}
+}
+
+// start wizard style
+.wizard
+{
+	.steps{
+		&.ui-tabs{
+			.button.help{
+				float: right;
+				border-style:none;
+				background: url("../../jqhtml5/images/help_16.png") no-repeat center center;
+				display: inline-block;
+				width:16px;
+				height:16px;
+				margin: 14px;
+				outline:0;
+			}
+			padding:0;
+			height: 40px;			
+			.tabs{
+				&.ui-tabs-nav{
+					.ui-tabs-selected{
+						padding-bottom:0;
+						background:url("../../jqhtml5/images/tab-background-active.png") repeat-x #00538C;
+						.tab-arrow{
+							background:url("../../jqhtml5/images/tab-arrow-active.png") no-repeat left -1px;
+						}
+						a{
+							color: White;
+							outline:none;
+						}
+					}
+                    .ui-tabs-active{
+						padding-bottom:0;
+						background:url("../../jqhtml5/images/tab-background-active.png") repeat-x #00538C;
+						.tab-arrow{
+							background:url("../../jqhtml5/images/tab-arrow-active.png") no-repeat left -1px;
+						}
+						a{
+							color: White;
+							outline:none;
+						}
+					}
+					.tab-arrow{
+						background:url("../../jqhtml5/images/tab-arrow.png") no-repeat left -1px;
+						position:absolute;
+						display: inline-block;
+						height: 40px;						
+						width: 12px;						
+						z-index: 500;
+					}
+					background:transparent;
+					padding:0 0 0 5px;
+					margin:0;
+					height: 100%;					
+					border-style: none;
+					li:first-child{
+						border-bottom-left-radius: 5px;
+						-webkit-border-bottom-left-radius: 5px;
+						-moz-border-bottom-left-radius: 5px;
+						border-top-left-radius:5px;
+						-webkit-border-top-left-radius:5px;
+						-moz-border-top-left-radius:5px;
+						border-left: 1px solid black;
+					}
+					li:last-child{
+						border-right: 1px solid black;
+						border-bottom-right-radius: 5px;
+						-webkit-border-bottom-right-radius: 5px;
+						-moz-border-bottom-right-radius: 5px;
+						border-top-right-radius:5px;
+						-webkit-border-top-right-radius:5px;
+						-moz-border-top-right-radius:5px;
+						.tab-arrow{
+							background:transparent;
+						}
+					}
+					li{
+						.rounded-corners(0px);
+						background:url("../../jqhtml5/images/tab-background.png") repeat-x #ACC0D9;						
+						top: 0;
+						margin:0;					
+						width: 15em;
+						height:100%;
+						border-top: 1px solid black;
+						border-bottom: 1px solid black !important;
+						border-right-style: none;
+						border-left-style: none;
+						a{							
+							height:75%;
+							width:100%;
+							padding: 12px 0 0 0;
+							vertical-align: middle;
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+	}
+	.ui-tabs{
+		 .ui-tabs-panel {
+			padding: 1em 0.4em 0;
+		}
+				
+		&.ui-widget-content{
+			background: transparent;
+			padding-bottom: 0;
+      border: 0;
+		}
+	}
+
+	.skip{
+		display: none;
+	}
+
+	div&.ui-dialog-content{
+		background: url("../../jqhtml5/images/wizard-background.png") repeat-x #FEFEFE;
+	}
+		
+	.content{
+		background: url("../../jqhtml5/images/wizard-group-background.png") repeat-x #FFFFFF;
+		min-height:377px;
+		border: 1px solid #ddd;
+        padding: 7px;
+        margin: 0 0 5px 0;
+		border-color: #829CBE;
+		
+		.rounded-corners;
+
+		ul, ol{
+			list-style-type: none;
+		}
+
+		&.schedule{
+			li{
+				padding: 7px 7px 7px 0;
+			}
+		}
+	}
+
+	h5{
+		font-weight: bold;		
+		text-indent: 5px;
+		background-color:#C8D3E1;
+		padding-top: 3px;
+		min-height:18px;
+		margin: 0px;
+	}
+
+	.edit{
+		margin-left: 4px;
+		margin-bottom: 12px;
+		width: 200px;
+	}
+
+	.large-edit{
+		margin-left: 4px;
+		width: 200px;
+		resize: none;
+	}
+
+	.combobox{
+		margin-left: 4px;
+	}
+
+	.radio-edit{
+		margin-left: 4px;
+	}
+
+	.next-radio{		
+		margin-left:217px;
+	}
+		
+	.label{
+		display: inline-block;
+		line-height: 1.8;
+		vertical-align: top;
+		min-width: 210px;
+		text-align: right;
+	}
+
+  .block-label{
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+
+
+.filter {
+  width: auto;
+}
+.filter th{
+  text-align: left;
+  font-weight: normal;
+}
+.filter .half {
+  width: 7em;
+}
+.filter .operator {
+  width: 7em;
+}
+.filter .index-field {
+  min-width: 150px;
+}
+.filter .large-edit {
+  margin-left: 0;
+  width: 206px;
+}
+.filter .index-field-value {
+  width: 206px;
+}
+.filter .add {
+  float: right;
+  background: transparent url("../../jqhtml5/images/add-filter.png") no-repeat center center;
+  border-style: none;
+  margin: 3px;
+}
+.filter .add:hover {
+  background: transparent url("../../jqhtml5/images/add-filter-active.png") no-repeat center center;
+}
+.filter .add:active {
+  background: transparent url("../../jqhtml5/images/add-filter.png") no-repeat center center;
+}
+.filter .remove {
+  float: right;
+  background: transparent url("../../jqhtml5/images/remove-filter.png") no-repeat center center;
+  border-style: none;
+  margin: 3px;
+}
+.filter .remove:hover {
+  background: transparent url("../../jqhtml5/images/remove-filter-active.png") no-repeat center center;
+}
+.filter .remove:active {
+  background: transparent url("../../jqhtml5/images/remove-filter.png") no-repeat center center;
+}
+// end wizard style
+
+
+
+//dw.browserTab styles
+.dw-browserTab .tab-label, .dw-browserTab .addTab{
+  background-image: none;
+}
+
+.dw-browserTab label.ui-state-active{
+  background-color: #EBF0F3;
+  padding-top: 3px;
+  border-bottom: 0px;
+}
+.dw-browserTab label .ui-button-text{
+  margin-left: 3px;
+  margin-right: 15px;
+}
+.dw-browserTab tab-label .ui-button-text{
+  line-height: 1.4;
+}
+
+.dw-browserTab .ui-corner-all, .dw-browserTab .ui-corner-bottom, .dw-browserTab .ui-corner-left, .dw-browserTab .ui-corner-bl { -moz-border-radius-bottomleft: 0px; -webkit-border-bottom-left-radius: 0px; -khtml-border-bottom-left-radius: 0px; border-bottom-left-radius: 0px; }
+.dw-browserTab .ui-corner-all, .dw-browserTab .ui-corner-bottom, .dw-browserTab .ui-corner-right, .dw-browserTab .ui-corner-br { -moz-border-radius-bottomright: 0px; -webkit-border-bottom-right-radius: 0px; -khtml-border-bottom-right-radius: 0px; border-bottom-right-radius: 0px; }
+
+
+

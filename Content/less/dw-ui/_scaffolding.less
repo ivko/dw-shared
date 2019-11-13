@@ -1,0 +1,558 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+@import "_icons.less";
+
+body
+{
+    background-color: @OT_WHITE;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-size: @baseUIFontSize;
+    font-family: @baseFontFamily;
+    -ms-touch-action: none;
+    touch-action: none;
+    *:focus
+    {
+        outline: none;
+    }
+    //.unselectable()!important;
+}
+
+/*Headings*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @baseFontFamily;
+  line-height: @headings-line-height;
+  color: @headings-color;
+  text-transform: uppercase;
+  font-weight: @headings-font-weight;
+}
+h1, .h1 { font-size: @baseUIFontSizeInc4; }
+h2, .h2 { font-size: @baseUIFontSizeInc3; }
+h3, .h3 { font-size: @baseUIFontSizeInc2; }
+h4, .h4 { font-size: @baseUIFontSizeInc1; }
+h5, .h5 { font-size: @baseUIFontSize; }
+h6, .h6 { font-size: @baseUIFontSizeDec1; }
+
+/*Logo*/
+.dw-logo {
+    //.backgroundImage(~'"@{dwImagePath}dw_logo.png"', left, center);
+    //background-size: 100px 21px;
+    //background-repeat: no-repeat;
+    &:before {
+        font-family: 'dwIconFont';
+        font-size: 22px;
+        line-height: 36px;
+        color: #303AB2;
+        content: "\e93b";
+    }
+
+    &:after {
+        font-family: 'dwIconFont';
+        font-size: 12px;
+        line-height: 38px;
+        color: @OT_GrayA;
+        content: "\e93c";
+        margin-left: 5px;
+        vertical-align: top;
+    }
+}
+
+//logo behavior for iPhone/iPad
+//@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
+//{
+//    .dw-logo, #loginBox
+//    {
+//        .backgroundImage(~'"@{dwImagePath}dw_logo_large.png"', left, center);
+//    }
+//}
+
+
+/*Links*/
+.ui-widget-content a.dw-blue, a.dw-blue, .toast-message a.dw-blue {
+    color: @OT_BlueD;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 16px;
+    border: 1px solid transparent;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none !important;
+    }
+
+    &:focus {
+        border-color: @OT_BlueD;
+    }
+
+    &:focus:hover span {
+        text-decoration: none;
+    }
+    //Using a span due to IE and text decoration on pseudo elements
+    span {
+        vertical-align: middle;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &.arrow {
+        .ui-icon-carat-1-e;
+        text-decoration: none;
+
+        span {
+            text-decoration: underline;
+        }
+
+        &:before {
+            .dw-font-icon;
+            color: @OT_BlueD;
+            font-size: 16px;
+            padding-right: 3px;
+            display: inline-block;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            span {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+
+/*Main Containers*/
+.dw-mainContainer
+{
+    background: @OT_WHITE;
+    width: auto;
+    height: 100%;
+    //overflow: hidden;
+
+    &.dw-integration
+    {
+        .dw-navigationContentWrapper
+        {
+            top: 0;
+        }
+        .dw-navigationContentWrapper.top-padding
+        {
+            top: 30px;
+        }
+    }
+    &.reset-password {
+        height: auto;
+    }
+}
+
+.dw-mainContainerContent
+{
+    overflow: hidden;
+    position: absolute;
+    width: inherit;
+    top: @topAreaHeight; /*fixed height of dw-topArea*/
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.dw-navigationContentWrapper
+{
+    position: absolute;
+    top: @navbar-height;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+
+    &.activeStoreDialog,
+    .activeClipDialog
+    {
+        right: 0px;
+    }
+
+    .dw-navigationContent
+    {
+        border: none;
+        background-color: @OT_WHITE;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    &.top-padding{
+        top: 36px;
+    }
+}
+
+.dw-basketGridWrapper
+{
+    position: absolute;
+    top: @tabStripHeight + @dialog-toolbar-height;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+    /*
+        Dialog headers are hidden when storecontent
+        bar is open and activate the store dialog.
+    */
+    &.lockedHeaders
+    {
+        right: @lockedHeadersWidth;
+    }
+
+    .dw-grid
+    {
+        top: 0;
+    }
+
+    .dw-griddle
+    {
+        top: 0;
+    }
+}
+
+//Gray container used for dialogs
+.dw-contentContainer
+{
+    //background: @OT_UltraLightGray;
+    //border: 1px solid @OT_BorderGray;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    //padding: 10px;
+    .boxed();
+    font-size: 0;
+
+    &.no-m-b
+    {
+        margin-bottom: 0;
+    }
+
+    &.no-m-t
+    {
+        margin-top: 0;
+    }
+
+    &.f-s-inherit
+    {
+        font-size: inherit;
+    }
+
+    &.w-auto
+    {
+        width: auto;
+    }
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+//Container for folated elements
+.dw-floatContainer
+{
+    background: @OT_WHITE;
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 40px;
+    .boxed();
+    .clearfix();
+
+    .dw-special-link
+    {
+        line-height: 24px;
+    }
+
+    &.no-padding
+    {
+        padding:0;
+    }
+}
+//Relative container
+.dw-relativeContainer
+{
+    display: block;
+    position: relative;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+//Absolute container
+.dw-absolute
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    /* Center in parent with unknown height*/ 
+    &.center
+    {
+        display: block;
+        text-align: center;
+
+        &:before
+        {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -0.25em; /* Adjusts for spacing */
+        }
+    }
+}
+
+//Container 100% height
+.dw-fullHeightContainer
+{
+    height: 100%;
+}
+
+//Circle container
+.dw-circle
+{
+    position: absolute;
+    display: inline-block;
+    right: 2px;
+    top: 2px;
+    padding: 1px;
+    border-radius: 50%;
+    min-width: 13px;
+    max-width: 35px;
+    height: 13px;
+    background-color: @OT_Orange;
+    font-size: @baseUIFontSizeDec2;
+    line-height: 2 + @baseUIFontSizeDec2;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    color: @OT_LabelGray;
+
+    -webkit-transition:background-color 1s ease;
+    -moz-transition:background-color 1s ease;
+    -o-transition:background-color 1s ease;
+    transition:background-color 1s ease;
+
+    &.navigation
+    {
+        right: 1px;
+        top: 1px;
+        padding: 2px;
+        min-width: 15px;
+        height: 15px;
+        font-size: @baseUIFontSizeDec2;
+        line-height: 4 + @baseUIFontSizeDec2;
+    }
+
+    &.new
+    {
+        background-color: @OT_Red;
+        color: @OT_WHITE;
+    }
+}
+
+//Info conatiner for info icon
+.dw-contentInfo
+{
+    position: relative;
+    font-size: @baseUIFontSize;
+    padding-left: 32px;
+    min-height: 26px;
+
+    &.dialog
+    {
+        margin: 10px;
+    }
+}
+
+.dw-contentMain
+{
+    padding: 10px 0 0 0;
+    font-size: @baseUIFontSize;
+}
+
+.dw-dialogsTxt
+{
+    font-size: @baseUIFontSize;
+    display: inline-block;
+    padding: 0;
+}
+
+
+//Rows for labels (left aligned) and inputs (right aligned)
+.contentRow
+{
+    width: 100%;
+    vertical-align: middle;
+    min-height: @field-height;
+    line-height: @field-height;
+    padding-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    .textOverflow(ellipsis);
+
+    &:only-child, &:last-child
+    {
+        padding-bottom: 0;
+    }
+
+    &.w-auto
+    {
+        width: auto;
+    }
+
+    &.bottom-offset-small
+    {
+        padding-bottom: 0;
+        margin-bottom: 5px;
+    }
+
+    &:after
+    {
+        clear: both;
+    }
+
+    &.height-small
+    {
+        vertical-align: middle;
+        height: (@field-height)- 6;
+        line-height: (@field-height)- 6;
+        min-height: (@field-height)- 6;
+    }
+
+    &.line-height-auto
+    {
+        line-height: normal;
+    }
+
+    &.no-padding
+    {
+        padding: 0;
+    }
+
+    &.fixed-height, .fixed-height
+    {
+        height: 26px;
+        line-height: normal;
+    }
+
+
+    .left
+    {
+        font-size: @baseUIFontSize;
+        float: left;
+        width: 170px;
+        overflow: hidden;
+        white-space: nowrap;
+        .textOverflow(ellipsis);
+        text-align: right;
+        padding-right: 10px;
+        cursor: default;
+        min-height: @field-height;
+
+        &.dw-reassignTask
+        {
+            width: 55px;
+        }
+    }
+
+    .right
+    {
+        font-size: @baseUIFontSize;
+        vertical-align: top;
+        cursor: default;
+        position: relative;
+        overflow: hidden;
+
+        input[type="text"], input[type="password"]
+        {
+            width: 100%;
+
+            &.dw-dateFieldSmall
+            {
+                display: inline-block;
+                width: 130px;
+            }
+
+            &.is-timeEntry
+            {
+                display: inline-block;
+                width: 90px;
+            }
+        }
+
+        textarea
+        {
+            .boxed();
+            height: 85px;
+        }
+
+        .dw-checkBox + label
+        {
+            margin-left: -13px;
+        }
+    }
+}
+.tree-view
+{
+    line-height: 26px;
+
+    ul
+    {
+        list-style: none;
+        padding-left: 18px;
+    }
+
+    .ui-icon
+    {
+        font-size: 14px;
+    }
+
+    .dw-icon-plus, .dw-icon-minus
+    {
+        cursor: pointer;
+        font-size: 9px;
+        margin: 0;
+        border: 1px solid @OT_BorderGray;
+        padding: 2px;
+    }
+
+    .dw-icon-empty
+    {
+        min-width: 15px;
+    }
+}
+
+//QUNIT
+div#qunit
+{
+    display: inline-block;
+    /*background-color: darkred;*/
+    /* Let's bring some color into the game... */
+    /*background: red;
+    animation: my-nice-webclient-background-frames 0.2s linear 0.2s infinite alternate;
+    -moz-animation:my-nice-webclient-background-frames 0.2s linear 0.2s infinite alternate; 
+    -webkit-animation: my-nice-webclient-background-frames 0.2s linear 0.2s infinite alternate;
+    -o-animation: my-nice-webclient-background-frames 0.2s linear 0.2s infinite alternate;*/
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 600px; /*webClient*/
+}

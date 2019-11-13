@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuditEventDetails_DocInfo">
+    <value>Doc Id: {0}</value>
+  </data>
+  <data name="AuditEventDetails_Label">
+    <value>Proprietà modificate:</value>
+  </data>
+  <data name="AuditReport_Default_FileName">
+    <value>Audit</value>
+  </data>
+  <data name="AuditReport_EventType_Changed">
+    <value>Modificato</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToFileSystem">
+    <value>Estrai in file system</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToTray">
+    <value>Estrai nel vassoio</value>
+  </data>
+  <data name="AuditReport_EventType_Clip">
+    <value>Unisci</value>
+  </data>
+  <data name="AuditReport_EventType_CopyToTray">
+    <value>Copia nel vassoio</value>
+  </data>
+  <data name="AuditReport_EventType_Created">
+    <value>Creato</value>
+  </data>
+  <data name="AuditReport_EventType_CreateRequest">
+    <value>Crea Request</value>
+  </data>
+  <data name="AuditReport_EventType_CreateSettings">
+    <value>Crea impostazioni</value>
+  </data>
+  <data name="AuditReport_EventType_Delete">
+    <value>Elimina</value>
+  </data>
+  <data name="AuditReport_EventType_Deleted">
+    <value>Eliminato</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteSettings">
+    <value>Elimina impostazioni</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteVersionHistory">
+    <value>Elimina cronologia versioni</value>
+  </data>
+  <data name="AuditReport_EventType_EditAnnotations">
+    <value>Modifica annotazioni</value>
+  </data>
+  <data name="AuditReport_EventType_EditContent">
+    <value>Modifica contenuto</value>
+  </data>
+  <data name="AuditReport_EventType_EditIndexData">
+    <value>Modifica dati indice</value>
+  </data>
+  <data name="AuditReport_EventType_EditSettings">
+    <value>Modifica impostazioni</value>
+  </data>
+  <data name="AuditReport_EventType_Email">
+    <value>E-mail</value>
+  </data>
+  <data name="AuditReport_EventType_Export">
+    <value>Esporta</value>
+  </data>
+  <data name="AuditReport_EventType_LogIn">
+    <value>Accedi</value>
+  </data>
+  <data name="AuditReport_EventType_LogOff">
+    <value>Disconnetti</value>
+  </data>
+  <data name="AuditReport_EventType_Open">
+    <value>Apri</value>
+  </data>
+  <data name="AuditReport_EventType_Print">
+    <value>Stampa</value>
+  </data>
+  <data name="AuditReport_EventType_Store">
+    <value>Archivia</value>
+  </data>
+  <data name="AuditReport_EventType_UndoCheckout">
+    <value>Annulla estrazione</value>
+  </data>
+  <data name="AuditReport_EventType_WorkflowDecisionMade">
+    <value>Decisione flusso di lavoro</value>
+  </data>
+  <data name="AuditReport_LastModified">
+    <value>Ultima modifica</value>
+  </data>
+  <data name="AuditReport_SettingsType_AuthenticationServer">
+    <value>Authentication Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_Autoindex">
+    <value>Autoindex</value>
+  </data>
+  <data name="AuditReport_SettingsType_AutoNumber">
+    <value>Numero automatico</value>
+  </data>
+  <data name="AuditReport_SettingsType_BusinessUseCase">
+    <value>Business Use Case</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlook">
+    <value>Connect to Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookAccess">
+    <value>Accesso Connect to Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookConfiguration">
+    <value>Configurazione Connect to Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_Database">
+    <value>Database</value>
+  </data>
+  <data name="AuditReport_SettingsType_DatabaseConnection">
+    <value>Connessione al database</value>
+  </data>
+  <data name="AuditReport_SettingsType_Deletion">
+    <value>Eliminazione</value>
+  </data>
+  <data name="AuditReport_SettingsType_Disk">
+    <value>Disco</value>
+  </data>
+  <data name="AuditReport_SettingsType_Document">
+    <value>Documento</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentSettings">
+    <value>Impostazioni documento</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentType">
+    <value>Tipo di documento</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwImportRequest">
+    <value>DocuWare Import Request</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwRequestLite">
+    <value>DocuWare Request Lite</value>
+  </data>
+  <data name="AuditReport_SettingsType_EmailConfiguration">
+    <value>Configurazione e-mail</value>
+  </data>
+  <data name="AuditReport_SettingsType_Export">
+    <value>Esporta</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalSelectList">
+    <value>Lista di selezione esterna</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalUserDirectory">
+    <value>Directory utente esterna</value>
+  </data>
+  <data name="AuditReport_SettingsType_Field">
+    <value>Campo</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinet">
+    <value>Raccoglitore</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetGeneral">
+    <value>Raccoglitore - Generale</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetSettings">
+    <value>Impostazioni raccoglitore</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileConnection">
+    <value>Connessione file</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileExtension">
+    <value>Estensione file</value>
+  </data>
+  <data name="AuditReport_SettingsType_Forms">
+    <value>Moduli</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralProfile">
+    <value>Profilo generale</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralSystem">
+    <value>Sistema generale</value>
+  </data>
+  <data name="AuditReport_SettingsType_Group">
+    <value>Gruppo</value>
+  </data>
+  <data name="AuditReport_SettingsType_IntellixConnection">
+    <value>Connessione a Intelligent Indexing</value>
+  </data>
+  <data name="AuditReport_SettingsType_Licence">
+    <value>Licenza</value>
+  </data>
+  <data name="AuditReport_SettingsType_Link">
+    <value>Link</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpDevice">
+    <value>Dispositivo MFP</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpWorkflow">
+    <value>Flusso di lavoro MFP</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationServer">
+    <value>Notification Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationSettings">
+    <value>Impostazioni notifica</value>
+  </data>
+  <data name="AuditReport_SettingsType_Obr">
+    <value>Obr</value>
+  </data>
+  <data name="AuditReport_SettingsType_Ocr">
+    <value>Ocr</value>
+  </data>
+  <data name="AuditReport_SettingsType_Organization">
+    <value>Organizzazione</value>
+  </data>
+  <data name="AuditReport_SettingsType_PrinterConfiguration">
+    <value>Configurazione stampante</value>
+  </data>
+  <data name="AuditReport_SettingsType_ProcessServer">
+    <value>Server processo</value>
+  </data>
+  <data name="AuditReport_SettingsType_Profile">
+    <value>Profilo</value>
+  </data>
+  <data name="AuditReport_SettingsType_RegularExpression">
+    <value>Espressione regolare</value>
+  </data>
+  <data name="AuditReport_SettingsType_Replication">
+    <value>Replica</value>
+  </data>
+  <data name="AuditReport_SettingsType_ResultList">
+    <value>Lista dei risultati</value>
+  </data>
+  <data name="AuditReport_SettingsType_Role">
+    <value>Ruolo</value>
+  </data>
+  <data name="AuditReport_SettingsType_Schedules">
+    <value>Pianificazioni</value>
+  </data>
+  <data name="AuditReport_SettingsType_SearchDialog">
+    <value>Finestra di ricerca</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmartConnect">
+    <value>Smart Connect</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmtpConnection">
+    <value>Connessione SMTP</value>
+  </data>
+  <data name="AuditReport_SettingsType_SolrConnection">
+    <value>Connessione Solr</value>
+  </data>
+  <data name="AuditReport_SettingsType_Stamp">
+    <value>Timbro</value>
+  </data>
+  <data name="AuditReport_SettingsType_StorageLocation">
+    <value>Posizione di archiviazione</value>
+  </data>
+  <data name="AuditReport_SettingsType_StoreDialog">
+    <value>Finestra di archiviazione</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionRules">
+    <value>Regole di sostituzione</value>
+  </data>
+  <data name="AuditReport_SettingsType_SystemBackupWorkflow">
+    <value>Flusso di lavoro di backup del sistema</value>
+  </data>
+  <data name="AuditReport_SettingsType_TrustedUser">
+    <value>Utente attendibile</value>
+  </data>
+  <data name="AuditReport_SettingsType_User">
+    <value>Utente</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserLoginLogout">
+    <value>Accesso/disconnessione utente</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserSync">
+    <value>Sincronizzazione utente</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebBasket">
+    <value>Cassetto</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebConnection">
+    <value>Connessione Web</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebInstances">
+    <value>Istanze Web</value>
+  </data>
+  <data name="AuditReport_Table_DownloadCSV">
+    <value>Scarica come CSV</value>
+  </data>
+  <data name="AuditReport_TableColumn_Date">
+    <value>Data</value>
+  </data>
+  <data name="AuditReport_TableColumn_DocId">
+    <value>DocId</value>
+  </data>
+  <data name="AuditReport_TableColumn_Event">
+    <value>Evento</value>
+  </data>
+  <data name="AuditReport_TableColumn_FileCabinet">
+    <value>Raccoglitore</value>
+  </data>
+  <data name="AuditReport_TableColumn_Name">
+    <value>Nome</value>
+  </data>
+  <data name="AuditReport_TableColumn_Organization">
+    <value>Organizzazione</value>
+  </data>
+  <data name="AuditReport_TableColumn_Type">
+    <value>Tipo</value>
+  </data>
+  <data name="AuditReport_TableColumn_User">
+    <value>Utente</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_PreviousValue">
+    <value>Valore precedente</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Property">
+    <value>Proprietà</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Value">
+    <value>Valore</value>
+  </data>
+  <data name="AuditReport_EventType_Edited">
+    <value>Modificato</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteAudit">
+    <value>Elimina</value>
+  </data>
+  <data name="AuditReport_EventType_DisableAudit">
+    <value>Disattiva</value>
+  </data>
+  <data name="AuditReport_EventType_EnableAudit">
+    <value>Attiva</value>
+  </data>
+  <data name="AuditReport_ObjectName_AllData">
+    <value>Tutti i dati</value>
+  </data>
+  <data name="AuditReport_ObjectName_ConfigurationChanges">
+    <value>Modifiche alla configurazione</value>
+  </data>
+  <data name="AuditReport_ObjectName_DocumentEvent">
+    <value>Eventi documento</value>
+  </data>
+  <data name="AuditReport_ObjectName_UserLogEvent">
+    <value>Accesso/Disconnessione utente</value>
+  </data>
+  <data name="AuditReport_SettingsType_Auditing">
+    <value>Revisione</value>
+  </data>
+  <data name="AuditReport_SettingsType_FixedSelectList">
+    <value>Lista di selezione fissa</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebServices">
+    <value>Web Service</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionList">
+    <value>Elenco di sostituzione</value>
+  </data>
+</root>

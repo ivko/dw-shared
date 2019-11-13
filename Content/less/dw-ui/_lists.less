@@ -1,0 +1,554 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+@import "_icons.less";
+
+.list-group {
+    border: 1px solid @OT_BorderGray;
+    background-color: @OT_UltraLightGray;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin-bottom: 20px;
+
+    &.no-margin {
+        margin: 0;
+    }
+    //Margin bottom for the list-items
+    &.separated-items > .list-item {
+        margin-bottom: 2px;
+    }
+    //Inner list
+    .inner {
+        padding: 0;
+        margin-bottom: 0;
+    }
+    //Expandable list
+    &.expandable {
+        /*.dw-iconsContainer
+        {
+            margin-right: 6px;
+        }*/
+    }
+
+    &.connectedSortable {
+        &.dw-dropTarget {
+            background-color: @OT_DragZoneGray;
+        }
+
+        .list-item {
+            border-left: none;
+            border-right: none;
+
+            .dw-iconsContainer {
+                margin-right: 6px;
+            }
+
+            .dw-icon-eye, .dw-icon-eye-disabled {
+                margin-right: 0;
+            }
+
+            &:first-child {
+                border-top: none;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.list-item {
+    padding: 4px 5px;
+    display: block;
+    border: 1px solid @OT_BorderGray;
+    margin-bottom: -1px;
+    background-color: @OT_WHITE;
+    color: @OT_LabelGray;
+    cursor: default;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover:not(.expanded) {
+        background-color: @OT_MouseOverBlue;
+
+        .dw-icon-arrow-4-n-s-e-w {
+            visibility: visible;
+        }
+    }
+    //Can be dragged
+    &.draggable {
+        cursor: pointer;
+    }
+    //TO DO - refactor the states
+    //Active item
+    &.active {
+        .text {
+            font-weight: bold;
+        }
+
+        &:hover {
+            .dw-icon-arrow-2-n-s {
+                visibility: visible;
+            }
+        }
+
+        .title:hover {
+
+            .dw-icon-arrow-4-n-s-e-w {
+                visibility: visible;
+            }
+        }
+    }
+    //Disabled item
+    &.disabled {
+        color: @OT_DisabledGray;
+
+        span.text {
+            font-weight: normal;
+        }
+
+        .ui-icon {
+            color: @OT_DisabledGray;
+        }
+
+        .dw-icon-eye-disabled {
+            margin-right: 20px;
+        }
+
+        &:hover {
+            background-color: @OT_WHITE;
+        }
+    }
+    //Selected item
+    &.selected {
+        background-color: @OT_SelectionBlue;
+        color: @OT_WHITE;
+
+        .title {
+            background-color: @OT_SelectionBlue;
+            color: @OT_WHITE;
+
+            .dw-icon-eye, .dw-icon-eye-disabled, .dw-icon-arrow-4-n-s-e-w {
+                color: @OT_WHITE;
+            }
+
+            .dw-icon-eye:hover, .dw-icon-eye:focus, .dw-icon-eye-disabled:hover, .dw-icon-eye-disabled:focus {
+                cursor: pointer;
+                outline: 1px solid @OT_MouseOverBlue;
+            }
+
+            .dw-icon-plus:hover, .dw-icon-plus:focus, .dw-icon-minus:hover, .dw-icon-minus:focus {
+                border-color: @OT_MouseOverBlue;
+            }
+        }
+
+        > .dw-iconsContainer .dw-icon-arrow-4-n-s-e-w {
+            color: @OT_WHITE;
+        }
+
+        &:hover {
+            background-color: @OT_SelectionBlue;
+        }
+
+        &.expanded {
+            .title:hover {
+                background-color: @OT_SelectionBlue;
+            }
+        }
+
+        &.disabled {
+
+            .dw-icon-eye:hover, .dw-icon-eye:focus, .dw-icon-eye-disabled:hover, .dw-icon-eye-disabled:focus {
+                cursor: default;
+                outline: none;
+            }
+
+            .title {
+                .dw-icon-eye:hover, .dw-icon-eye-disabled:hover, .dw-icon-eye:focus, .dw-icon-eye-disabled:focus {
+                    cursor: pointer;
+                    outline: 1px solid @OT_MouseOverBlue;
+                }
+            }
+        }
+    }
+    //Expanded item
+    &.expanded {
+        padding: 0;
+
+        &:hover {
+            background-color: @OT_WHITE;
+        }
+
+        .title {
+            padding: 4px 5px;
+
+            &:hover {
+                background-color: @OT_MouseOverBlue;
+            }
+        }
+        //Expanded inner list
+        .inner .list-item {
+            padding: 4px 5px 4px 24px;
+            border-left: none;
+            border-right: none;
+
+
+            &:first-child {
+                border-top: 1px solid @OT_BorderGray;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &.ui-sortable-helper:last-child {
+                border-bottom: 1px solid @OT_BorderGray;
+            }
+        }
+    }
+    //Collapsed item
+    &.collapsed {
+        .title {
+            padding: 0;
+        }
+    }
+    //List-item title
+    .title {
+        font-weight: bold;
+        display: block;
+        line-height: 16px;
+        padding: 4px 10px 4px 0;
+    }
+    //Text overflow - to do position absolute for icons and text overflow max-width - padding
+    span.text {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        .textOverflow(ellipsis);
+        max-width: 85%;
+        font-size: @baseUIFontSize;
+        vertical-align: middle;
+    }
+
+    .ui-icon + span.text {
+        max-width: 75%;
+    }
+    //With plus icon
+    .ui-icon.border {
+        cursor: pointer;
+        font-size: 9px;
+        margin: 0 5px 0 0;
+    }
+    //With right aligned icons
+    > .dw-iconsContainer {
+        float: right;
+        font-size: 14px;
+        width: auto;
+        clear: both;
+        white-space: nowrap;
+        position: relative;
+        vertical-align: middle;
+        line-height: 1;
+    }
+    //Icons
+    .ui-icon {
+        position: relative;
+    }
+
+    .dw-icon-default {
+        margin-left: 15px;
+    }
+
+    .dw-icon-arrow-2-n-s {
+        padding-left: 5px;
+        visibility: hidden;
+    }
+
+    .dw-icon-arrow-4-n-s-e-w {
+        padding-right: 5px;
+        visibility: hidden;
+    }
+
+    .dw-icon-eye, .dw-icon-eye-disabled, .dw-icon-default, .dw-icon-delete {
+        padding: 1px;
+        cursor: pointer;
+    }
+
+    .dw-icon-eye:hover, .dw-icon-eye:focus, .dw-icon-default:hover, .dw-icon-default:focus, .dw-icon-delete:hover,
+    .dw-icon-delete:focus, .dw-icon-eye-disabled:hover, .dw-icon-eye-disabled:focus {
+        outline: 1px solid @OT_SelectionBlue;
+    }
+
+    .dw-icon-plus:hover, .dw-icon-plus:focus, .dw-icon-minus:hover, .dw-icon-minus:focus {
+        border-color: @OT_SelectionBlue;
+    }
+}
+
+
+.list-sub-item {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    &.m-5 {
+        margin: 5px;
+    }
+}
+
+
+
+/*Drag drop helpers*/
+//Placeholder for the dragged item
+.expandable.list .ui-sortable-placeholder {
+    margin-top: -2px;
+    border: none;
+    border-top: 1px solid @OT_BorderGray;
+}
+
+.connectedSortable.expandable.list .ui-sortable-placeholder {
+    border: none;
+
+    &:last-child {
+        border-bottom: 1px solid @OT_BorderGray;
+    }
+}
+
+.list .ui-sortable-placeholder {
+    background-color: @OT_MouseOverBlue;
+    height: 1.5em;
+    padding: 0;
+    border: 1px solid @OT_BorderGray;
+    border-bottom: none;
+}
+
+//The grayed out original item  on drag
+.list-item.ui-sortable-item, &.ui-sortable-item li {
+    &.selected, .title, .selected.title {
+        background-color: @OT_UltraLightGray;
+        color: @OT_DisabledGray;
+
+        .ui-icon, .dw-icon-plus {
+            &:before {
+                color: @OT_DisabledGray;
+            }
+
+            color: @OT_DisabledGray;
+        }
+    }
+
+    background-color: @OT_UltraLightGray;
+    color: @OT_DisabledGray;
+
+    .ui-icon {
+        color: @OT_DisabledGray;
+    }
+
+    &:hover > .title {
+        color: @OT_DisabledGray;
+        background-color: @OT_UltraLightGray;
+    }
+}
+//The dragged item
+.list-item.ui-sortable-helper {
+    background-color: @OT_WHITE;
+    background-image: none;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+
+    &.selected {
+        background-color: @OT_WHITE;
+
+        .title {
+            background-color: @OT_WHITE;
+        }
+
+        .text {
+            color: @OT_LabelGray;
+        }
+
+        &.disabled {
+            .text {
+                color: @OT_DisabledGray;
+            }
+
+            .ui-icon {
+                color: @OT_DisabledGray;
+            }
+        }
+    }
+
+    &:hover {
+        color: @OT_LabelGray;
+        background-color: @OT_WHITE;
+    }
+
+    &:hover .dw-icon-arrow-4-n-s-e-w, div.title:hover .dw-icon-arrow-4-n-s-e-w {
+        visibility: hidden;
+    }
+
+    &.active:hover .dw-iconsContainer .dw-icon-arrow-2-n-s {
+        visibility: hidden;
+    }
+}
+
+.connectedSortable .ui-sortable-helper.disabled {
+    .dw-icon-eye-disabled {
+        margin-right: 0;
+    }
+}
+
+
+.dw-iconsContainer {
+    float: right;
+    font-size: 14px;
+    width: auto;
+    clear: both;
+    white-space: nowrap;
+    position: relative;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.toolbar-panel {
+    height: 210px;
+    border: 1px solid @OT_BorderGray;
+    background-color: @OT_UltraLightGray;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+
+    &.workflow {
+        border: 1px solid @OT_BorderGray;
+        height: 106px;
+
+        .connectedSortable {
+            min-height: 106px;
+        }
+    }
+
+    .connectedSortable {
+        min-height: 210px;
+    }
+}
+
+
+/* draggable icons */
+.dw-drag-icons {
+    position: absolute;
+    padding: 100px 20px 20px 100px;
+    left: -110px;
+    top: -110px;
+    display: inline-block;
+    z-index: 99999;
+    -moz-transform: translate(-1000px, -1000px);
+    -ms-transform: translate(-1000px, -1000px);
+    -o-transform: translate(-1000px, -1000px);
+    -webkit-transform: translate(-1000px, -1000px);
+    transform: translate(-1000px, -1000px);
+}
+
+/*Drag and Drop*/
+.dw-drop-mask {
+    position: absolute;
+    z-index: 99;
+    display: none;
+    background-color: transparent;
+    top: 0;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    .backgroundImage( ~'"@{dwImagePath}dw-drop-mask.png"', 50%, 50%, repeat );
+
+    span {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 400px;
+        padding: 50px 10px;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background-color: @OT_SelectionBlue;
+        color: @OT_WHITE;
+        font-size: 24px;
+        font-style: italic;
+        text-align: center;
+        opacity: 0.5;
+    }
+}
+
+.dropPossible {
+    display: block;
+}
+
+.singleDocument {
+    .dw-drag-icons;
+}
+
+.dragCopy {
+    .dw-icon-plus;
+
+    &:before {
+        .dw-font-icon;
+        text-align: center;
+        height: 16px;
+        width: 16px;
+        line-height: 16px;
+        vertical-align: middle;
+        border: 1px solid @OT_BorderGray;
+        background-color: @OT_WHITE;
+        position: absolute;
+        top: 100px;
+        right: 20px;
+        font-size: 10px;
+        color: @OT_SelectionBlue;
+        z-index: 1000;
+    }
+}
+//drag drop multiple
+.multipleDocs {
+    font-size: @baseUIFontSize;
+    line-height: 20px;
+    color: @OT_WHITE;
+    background-color: @OT_SelectionBlue;
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    left: 50%;
+    z-index: 10001;
+
+    + .thumb-loaded {
+        overflow: visible;
+
+        &:before {
+            background: none repeat scroll 0 0 #FFFFFF;
+            border: 1px solid @OT_BorderGray;
+            bottom: 5px;
+            content: " ";
+            left: 3px;
+            position: absolute;
+            right: -3px;
+            top: -3px;
+            z-index: -1;
+        }
+    }
+}

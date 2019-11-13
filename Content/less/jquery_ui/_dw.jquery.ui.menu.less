@@ -1,0 +1,622 @@
+/*dw-theme menu*/
+
+/* MULTICOLUMN MENU*/
+.menu-column-container {
+    border: 1px solid @OT_BorderGray;
+
+    .menu-column {
+        min-width: 200px;
+        float: left;
+        border-right: 1px solid @OT_BorderGray;
+
+        &:first-child {
+            border-left: none;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &:last-child:not(:only-child) {
+            ul:last-child li {
+                border-bottom: 1px solid @OT_BorderGray;
+            }
+        }
+
+        ul.ui-menu {
+            padding: 0;
+            position: relative;
+
+            li {
+                border-bottom: 1px solid @OT_BorderGray;
+                min-width: 200px;
+
+                &.with-separator {
+                    &:before {
+                        content: '';
+                        width: 100%;
+                        display: block;
+                        border-top: 1px solid #ffffff;
+                        border-bottom: 1px solid @OT_BorderGray;
+                    }
+
+                    &:only-child {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+
+                &:active {
+                    /*color: @OT_WHITE;
+                    background-color: @OT_SelectionBlue;*/
+                }
+
+                &.with-badge a {
+                    padding-right: 40px;
+                }
+
+                a {
+                    line-height: 24px;
+                    position: relative;
+                    padding-left: 8px;
+                    padding-right: 28px;
+                    max-width: 300px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    .textOverflow;
+
+                    span.dw-circle{
+                        top: 7px;
+                        right: 20px;
+                    }
+
+                    span.dw-icon-delete{
+                        right:2px;
+                        top: 6px;
+                        left: auto;
+                        font-size: @baseUIFontSizeInc2;
+                        cursor: pointer;
+                        border: 1px solid transparent;
+                        
+                        &:hover {
+                            border-color: @OT_SelectionBlue;
+                        }
+                    }
+                }
+            }
+
+            .ui-menu {
+                position: absolute;
+            }
+        }
+    }
+}
+
+
+
+/* UI Menu */
+/*Fix form IE*/
+li, li li, li li li {
+    list-style-type: none;
+}
+
+.ui-menu-trigger {
+    .ui-icon-carat-1-n-after {
+        display: none;
+    }
+
+    &.menu-activated {
+        .ui-icon-carat-1-s-after {
+            display: none;
+        }
+        .ui-icon-carat-1-n-after {
+            display: inline-block;
+        }
+    }
+}
+
+.ui-menu, .menu-container {
+    z-index: 1020;
+    position: absolute;
+    display: none;
+    min-width: 150px;
+    color: @OT_CaptionGray;
+    background-color: @OT_UltraLightGray;
+    .drop-shadow( 0px, 3px, 3px, 0.3 );
+
+    &.menu-column-container .ui-menu {
+        .drop-shadow( 0, 0, 0, 0 );
+    }
+
+    &.menu-column-container .ui-menu-item .ui-menu {
+        .drop-shadow( 0px, 3px, 3px, 0.3 );
+    }
+
+    > .ui-menu {
+        display: block;
+        position: static;
+        .drop-shadow( 0, 0, 0, 0 );
+
+        //menu arrow right
+        .ui-menu-item{
+            a{
+                position: relative;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+.ui-menu {
+    *{
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    &.scroll-wrapper {
+        max-height: 224px; /* 22(height)*10(items)=220 */
+    }
+
+    &.scroll-visible {
+        padding-right: 16px !important;
+    }
+}
+//Using hover for the li elements that have left border
+.ui-menu .ui-menu-item:hover {
+    background-color: @OT_MouseOverBlue;
+}
+
+//import button inside menu
+.ui-menu .ui-menu-item .fileinput{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    left:0;
+    cursor: pointer;
+
+     + input{
+         display: none;
+     }
+}
+
+.ui-menu .ui-menu-item a {
+    .transition( 0.2s, background-color );
+
+    &.ui-state-focus, &.ui-state-active {
+        background-color: @OT_MouseOverBlue;
+    }
+
+    span {
+        white-space: nowrap;
+    }
+
+
+    &.dw-menuColors {
+        .dw-icon-indexing {
+            left: 0.5em;
+        }
+    }
+
+
+    .ui-icon[class*="icon"] {
+        width: auto;
+        height: auto;
+        top: 50%;
+    }
+
+    .ui-menu-scrollable {
+        max-height: 200px;
+    }
+
+    .dw-shortcut {
+        position: absolute;
+        width: 110px;
+        right: 20px;
+        text-align: right;
+        overflow: hidden;
+        font-size: @baseUIFontSizeDec1;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+
+    .ui-menu-icon {
+        position: absolute;
+        right: 5px;
+        left: auto;
+        top: 50%;
+    }
+}
+
+.ui-menu .ui-menu-divider, .menu-divider {
+    border-bottom: 1px solid @OT_BorderGray;
+
+    &:first-child {
+        display: none; /*invisible dummy <li> element to fix jquery-ui bug.*/
+    }
+
+    &:before {
+        content: '';
+        width: 100%;
+        display: block;
+        border-top: 1px solid #ffffff;
+    }
+}
+
+/* CONTEXT MENU */
+.ui-menu.contextMenu {
+    position: absolute;
+    /* Margin for ie9,10 */
+    margin-right: 1px;
+    //Padding for the shortcuts in the Context Menu
+    a {
+        padding-right: 145px;
+    }
+
+    &.scroll-visible a {
+        /* substract scrollbar width */
+        padding-right: 128px;
+    }
+
+    &.no-shortcuts {
+        a {
+            padding-right: 0;
+        }
+    }
+}
+
+
+
+
+/*Selective Select*/
+.dw-autocomplete {
+    position: absolute;
+}
+
+.dw-autocompleteColumnContainer {
+    background-color: @OT_WHITE;
+    color: @OT_LabelGray;
+    border: 1px solid @OT_BorderGray;
+    z-index: 20;
+    min-height: 33px;
+    min-width: 100px;
+
+    .dw-autocomplete-noentries {
+        padding: 4px;
+        font-style: italic;
+    }
+
+    .dw-autocompleteContainerFooter {
+        border-top: 1px solid @OT_BorderGray;
+        width: 100%;
+        height: @field-height;
+        &:only-child {
+            border-top: none;
+        }
+    }
+
+    &.dw-wfAutocompletMmenu {
+
+        ul.dw-MultiControlList {
+            padding: 0;
+            border-bottom-width: 0;
+
+            li.dw-MultiControl {
+                line-height: @LineHeightSelectiveSelect;
+                height: @LineHeightSelectiveSelect;
+                border-bottom: 1px solid @OT_BorderGray;
+                vertical-align: middle;
+                white-space: nowrap;
+
+                label {
+                    vertical-align: middle;
+                    display: inline;
+                    .textOverflow(ellipsis);
+
+                    &:before{
+                        vertical-align: text-bottom;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    span {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    hr {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 5px 8px;
+        list-style: none;
+        border-bottom: 1px solid @OT_BorderGray;
+
+        &.intelligent-indexing {
+            li {
+                padding: 0 24px;
+
+                &.header {
+                    padding: 0 8px;
+                    vertical-align: middle;
+                    background-color: @OT_WHITE;
+                    cursor: default;
+                    white-space: nowrap;
+
+                    span {
+                        display: inline;
+                        .textOverflow(ellipsis);
+                    }
+                }
+            }
+        }
+
+        &.select-list {
+            border-bottom: none;
+        }
+
+        &.no-border-bottom {
+            border-bottom: none;
+        }
+
+        li {
+            display: block;
+            padding: 0px 0px;
+            cursor: pointer;
+            line-height: @LineHeightSelectiveSelect;
+            white-space: pre;
+            overflow: hidden;
+            .textOverflow(ellipsis);
+
+
+            &:hover {
+                background-color: @OT_MouseOverBlue;
+            }
+
+            &.selected {
+                background: @OT_SelectionBlue;
+                color: @OT_WHITE;
+
+                .dw-checkBox + label {
+                    color: @OT_WHITE;
+                }
+            }
+
+
+            &.dw-autocomplete-separator {
+                height: 1px;
+                font-size: 0;
+                border-bottom: 1px solid @OT_BorderGray;
+                margin-bottom: 5px;
+                padding-top: 5px;
+
+                &:hover {
+                    background-color: @OT_WHITE;
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    .dw-autocompleteFooter {
+        //18px is the height of the icon. to change the icon height to a variable everywhere
+        float: left;
+        width: 75%;
+        padding: ((@field-height - 18px) / 8) 8px ((@field-height - 18px) / 2);
+        white-space: nowrap;
+        &.pull-right {
+            padding-top: (@field-height - 18px) / 2;
+            width: auto;
+        }
+        a {
+            display: block;
+        }
+    }
+
+    .dw-autocompleteScrollArea {
+        &.scroll-visible {
+            padding-right: 16px !important;
+        }
+
+        max-height: 300px;
+    }
+}
+
+.dw-dialog {
+    .dw-autocompleteColumnContainer {
+        min-height: 54px;
+
+        &.dw-autocomplete-single-result, &.dw-autocompleteColumnContainer-with-footer {
+            min-height: 26px;
+            padding-bottom: 26px;
+        }
+    }
+
+    .dw-autocompleteContainerFooter {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.table-fields-content .dw-autocompleteColumnContainer-with-footer {
+    padding-bottom: 26px;
+}
+
+.workflow-tasks {
+    .dw-dialog .dw-autocompleteColumnContainer {
+        min-height: 33px;
+
+        &.dw-wfAutocompletMmenu {
+            ul.dw-MultiControlList {
+                padding: 5px 8px;
+            }
+        }
+    }
+}
+
+/* Menu Bar */
+.ui-menu-horizontal {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    //overflow:hidden; //fixes the issue with jumping buttons but breaks the drop down menues to appear
+    vertical-align: middle;
+
+    > .ui-menu {
+        z-index: 2;
+        margin: 0;
+        padding: 0px 0px 0px 0px;
+        white-space: nowrap;
+        .drop-shadow(0, 0, 0, 0);
+        position: relative;
+        display: inline-block;
+        background-color: transparent;
+        min-width: 10px;
+        height: 36px;
+        width: 100%;
+        vertical-align: middle;
+
+        > .ui-menu-item {
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: auto;
+            line-height: @mainButtonHeight;
+            //background: #ffd800;
+            .dw-shortcut {
+                display: none;
+            }
+
+            .ui-menu {
+                .ui-icon, .dw-shortcut {
+                    display: inline-block;
+                }
+
+                .dw-shortcut {
+                    position: absolute;
+                    width: 110px;
+                    right: 20px;
+                    text-align: right;
+                }
+
+                a {
+                    padding-right: 130px;
+                }
+            }
+
+            > a {
+                padding: 6px 5px 6px 20px;
+                display: inline-block;
+                line-height: inherit;
+                border: 1px solid rgba(0,0,0,0);
+
+                &.ui-state-focus {
+                    //    background-color: #ffffff;
+                    border-color: @OT_BlueA;
+                }
+
+                &[aria-haspopup=true] {
+                    padding-right: 25px;
+                }
+            }
+
+            .ui-menu-icon {
+                position: absolute;
+                right: 6px;
+                left: auto;
+                font-size: 16px;
+            }
+
+            .ui-icon-menuitem-arrow {
+                .ui-icon-carat-1-s;
+            }
+
+            .ui-menu-item-open .ui-icon-menuitem-arrow,
+            .ui-menu-item-active .ui-icon-menuitem-arrow {
+                .ui-icon-carat-1-n;
+            }
+        }
+
+        > .ui-menu-divider {
+            display: none; /* Invisible for now */
+            width: 1px;
+            float: left;
+            margin: 0;
+            padding: 0;
+            line-height: 24px;
+            height: 24px;
+            border-left: 1px solid @OT_BorderGray;
+            border-bottom: 0 none;
+        }
+    }
+
+    .ui-menu .ui-menu-dropdown {
+        display: none;
+        float: right;
+
+        &.ui-menu-item > a {
+            padding-left: 4px;
+            margin-right: 0;
+
+            .ui-menu-icon {
+                position: static;
+                float: none;
+                margin-top: -3px;
+                vertical-align: middle;
+
+                &.ui-icon-arrow-down {
+                    .ui-icon-carat-1-s;
+                }
+            }
+
+            &.ui-menu-item-open .ui-icon.ui-icon-arrow-down {
+                .ui-icon-carat-1-n;
+            }
+
+            > .ui-menu-text {
+                float: left;
+            }
+        }
+    }
+
+    &.dropdown-enabled .ui-menu .ui-menu-item.ui-menu-dropdown {
+        display: inline-block;
+    }
+
+    &.working {
+        overflow: hidden !important;
+        visibility: hidden !important;
+        height: @mainButtonHeight !important;
+
+        .ui-menu .ui-menu-item.ui-menu-dropdown {
+            display: inline-block !important;
+        }
+    }
+}
+
+.ui-menu .ui-menu-icon.ui-icon-menuitem-arrow {
+    .ui-icon-carat-1-e;
+}
+
+.ui-menu .ui-menuitem-noarrow .ui-menu-icon {
+    display: none;
+}

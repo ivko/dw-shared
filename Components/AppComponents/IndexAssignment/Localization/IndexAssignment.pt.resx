@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IndexAssignment_EmailProperty_AttachmentNames">
+    <value>Nomes dos anexos</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_BCC_Email">
+    <value>Endereço de E-mail do Cco</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_BCC_Name">
+    <value>Nome do Cco</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_CC_Email">
+    <value>Endereço de E-mail do Cc</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_CC_Name">
+    <value>Nome do Cc</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Contact">
+    <value>Nome do Contato</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Contact_Email">
+    <value>Endereço de E-mail do contato</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Direction">
+    <value>Direção</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_ReceivedDate">
+    <value>Data recebido</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Recipients">
+    <value>Nome dos Destinatários</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Recipients_Email">
+    <value>Endereço de E-mail dos destinatários</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_SendDate">
+    <value>Data do envio</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Sender">
+    <value>Nome do remetente</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Sender_Email">
+    <value>Endereço de e-mail do remetente</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_SendTo">
+    <value>Enviado para</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_SendTo_Email">
+    <value>Enviado ao endereço de E-mail</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Size">
+    <value>Tamanho</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Subject">
+    <value>Assunto</value>
+  </data>
+  <data name="IndexAssignment_Error_Field_Not_Active">
+    <value>Não foi possível encontrar o campo na lista de campos de índice ativos</value>
+  </data>
+  <data name="IndexAssignment_Error_Field_Not_Available">
+    <value>O campo não mais está disponível. Remova este campo de sua configuração.</value>
+  </data>
+  <data name="IndexAssignment_Error_Field_Selected_But_Not_Filled">
+    <value>Não é permitido ter campos vazios</value>
+  </data>
+  <data name="IndexAssignment_Error_Not_Single_Field_Filled">
+    <value>Ao menos um campo de índice deve ser preenchido. Insira como em entrada de índice.</value>
+  </data>
+  <data name="IndexAssignment_Error_Unsupported_field_type">
+    <value>Tipo de campo não suportado pelo DocuWare. Entre em contato com o administrador do DocuWare</value>
+  </data>
+  <data name="IndexAssignment_Grid_ColumHeader_Field">
+    <value>Campo de índice</value>
+  </data>
+  <data name="IndexAssignment_Grid_ColumHeader_Source">
+    <value>Origem</value>
+  </data>
+  <data name="IndexAssignment_Grid_ColumHeader_Value">
+    <value>Valor</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_EmailProperty">
+    <value>Propriedade do e-mail</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_Fixed">
+    <value>Valor fixo</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_KeywordField">
+    <value>Palavras-chave</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_PleaseSelect">
+    <value>selecionar</value>
+  </data>
+  <data name="IndexAssignment_Grid_ToolTip_NumberField">
+    <value>Insira um número</value>
+  </data>
+  <data name="IndexAssignment_ValidationError_Length">
+    <value>O valor excede o limite permitido de {0}</value>
+  </data>
+  <data name="IndexAssignment_ValidationError_ReadOnly">
+    <value>Este campo é de somente leitura. Ele não pode ser sobrescrito.</value>
+  </data>
+  <data name="IndexAssignment_ValidationError_Required">
+    <value>A entrada para este campo é obrigatória</value>
+  </data>
+</root>

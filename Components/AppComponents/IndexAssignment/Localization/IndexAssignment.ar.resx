@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IndexAssignment_EmailProperty_AttachmentNames">
+    <value>أسماء المرفق</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_BCC_Email">
+    <value>عنوان البريد الإلكتروني للنسخة المخفية</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_BCC_Name">
+    <value>اسم النسخة المخفية</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_CC_Email">
+    <value>عنوان البريد الإلكتروني للنسخة الكربونية</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_CC_Name">
+    <value>اسم النسخة الكربونية</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Contact">
+    <value>اسم جهة الاتصال</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Contact_Email">
+    <value>عنوان البريد الإلكتروني لجهة الاتصال</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Direction">
+    <value>الاتجاه</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_ReceivedDate">
+    <value>تاريخ الاستلام</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Recipients">
+    <value>اسم المستلمين</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Recipients_Email">
+    <value>عناوين البريد الإلكتروني للمستلمين</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_SendDate">
+    <value>تاريخ الإرسال</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Sender">
+    <value>اسم المُرسِل</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Sender_Email">
+    <value>عنوان البريد الإلكتروني للمُرسِل</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_SendTo">
+    <value>اسم المُرسَل إليه</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_SendTo_Email">
+    <value>عنوان البريد الإلكتروني للمُرسَل إليه</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Size">
+    <value>الحجم</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Subject">
+    <value>الموضوع</value>
+  </data>
+  <data name="IndexAssignment_Error_Field_Not_Active">
+    <value>تعذر العثور على الحقل في قائمة حقول الفهرس النشطة</value>
+  </data>
+  <data name="IndexAssignment_Error_Field_Not_Available">
+    <value>لم يعد الحقل متوفرًا بعد الآن. قم بإزالة هذا الحقل من التكوين الخاص بك.</value>
+  </data>
+  <data name="IndexAssignment_Error_Field_Selected_But_Not_Filled">
+    <value>لا يُسمح بأن تكون الحقول فارغة</value>
+  </data>
+  <data name="IndexAssignment_Error_Not_Single_Field_Filled">
+    <value>يجب تعبئة حقل فهرس واحد على الأقل. أدخل إدخال فهرس.</value>
+  </data>
+  <data name="IndexAssignment_Error_Unsupported_field_type">
+    <value>لا تدعم DocuWare نوع الحقل. اتصل بمسؤول DocuWare الذي تتعامل معه.</value>
+  </data>
+  <data name="IndexAssignment_Grid_ColumHeader_Field">
+    <value>حقل الفهرس</value>
+  </data>
+  <data name="IndexAssignment_Grid_ColumHeader_Source">
+    <value>المصدر</value>
+  </data>
+  <data name="IndexAssignment_Grid_ColumHeader_Value">
+    <value>القيمة</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_EmailProperty">
+    <value>خاصية البريد الإلكتروني</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_Fixed">
+    <value>قيمة ثابتة</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_KeywordField">
+    <value>الكلمات الأساسية</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_PleaseSelect">
+    <value>تحديد</value>
+  </data>
+  <data name="IndexAssignment_Grid_ToolTip_NumberField">
+    <value>أدخل رقمًا</value>
+  </data>
+  <data name="IndexAssignment_ValidationError_Length">
+    <value>تتجاوز القيمة الحد المسموح به البالغ {0}</value>
+  </data>
+  <data name="IndexAssignment_ValidationError_ReadOnly">
+    <value>هذا الحقل للقراءة فقط. لا يمكن استبداله.</value>
+  </data>
+  <data name="IndexAssignment_ValidationError_Required">
+    <value>أحد الإدخالات لهذا الحقل مطلوب</value>
+  </data>
+</root>

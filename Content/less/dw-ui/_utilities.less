@@ -1,0 +1,541 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+
+/*Display*/
+.inline-block
+{
+    display: inline-block;
+    zoom: 1;
+}
+/*Quick floats*/
+.pull-right
+{
+    float: right;
+}
+.pull-left
+{
+    float: left;
+}
+.clear
+{
+    .clearfix;
+}
+
+/*Toggling content*/
+.hide
+{
+    display: none;
+}
+.show
+{
+    display: block;
+}
+
+// Disable
+.disabled-overlay {
+    .disabled-overlay-item {
+        color: @OT_GrayC;
+    }
+
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        //      background: rgba(255,255,255,.5);
+    }
+
+    .query-builder {
+        opacity: 0.5;
+    }
+    .color-selector-component-container {
+        opacity: .5;
+    }
+}
+
+.disabled-table-row {
+    &.ui-state-disabled {
+        opacity: 1 !important;
+        td {
+            opacity: .45;
+        }
+        .table-data-enabled {
+            opacity: 1;
+        }
+    }
+    &.active.ui-state-disabled {
+        td {
+            opacity: 1;
+        }
+    }
+}
+
+.ui-state-disabled {
+    .ui-state-disabled {
+        opacity: 1 !important;
+    }
+}
+
+/*Other*/
+.block
+{
+    display: block;
+}
+.l-h-1
+{
+    line-height: 1;
+}
+
+/*Paddings and margins*/
+.padding
+{
+    padding: 20px;
+}
+.no-padding
+{
+    padding: 0px;
+}
+
+.no-padding-left
+{
+    padding-left: 0px;
+}
+
+.p-r-5
+{
+    padding-right: 5px;
+}
+.p-r-10
+{
+    padding-right: 10px;
+}
+.p-r-16
+{
+    padding-right: 16px;
+}
+.p-r-20
+{
+    padding-right: 20px;
+}
+.p-l-20
+{
+    padding-left: 20px;
+}
+.p-l-25
+{
+    padding-left: 25px;
+}
+.p-l-40
+{
+    padding-left: 40px !important;
+}
+.p-l-15
+{
+    padding-left: 15px;
+}
+.p-l-5
+{
+    padding-left: 5px;
+}
+.p-l-6 {
+    padding-left: 6px;
+}
+.p-l-8 {
+    padding-left: 8px;
+}
+.p-b-5
+{
+    padding-bottom: 10px;
+}
+.p-b-10
+{
+    padding-left: 10px;
+}
+.p-l-0{
+    padding-left: 0px !important;
+}
+.p-r-0{
+    padding-right: 0;
+}
+.p-t-4 {
+    padding-top: 4px;
+}
+.p-t-6 {
+    padding-top: 6px;
+}
+.no-margin
+{
+    margin: 0px;
+}
+.m-l-3{
+    margin-left: 3px;
+}
+.m-r-5
+{
+    margin-right: 5px;
+}
+.m-l-5
+{
+    margin-left: 5px;
+}
+.m-l-8
+{
+    margin-left: 8px;
+}
+.m-l-10
+{
+    margin-left: 10px;
+}
+.m-r-10
+{
+    margin-right: 10px;
+}
+.m-l-16
+{
+    margin-left: 16px;
+}
+.m-r-8
+{
+    margin-right: 8px;
+}
+.m-r-16
+{
+    margin-right: 16px;
+}
+.m-l-15
+{
+    margin-left: 15px;
+}
+.m-r-15
+{
+    margin-right: 15px;
+}
+.m-l-30 {
+    margin-left: 30px;
+}
+.m-l-40
+{
+    margin-left: 40px;
+}
+.m-l-0
+{
+    margin-left: 0px;
+}
+.m-r-40
+{
+    margin-right: 40px;
+}
+
+.m-t-3
+{
+    margin-top: 3px;
+}
+
+.m-t-24
+{
+    margin-top: 24px;
+}
+
+.m-b-3
+{
+    margin-bottom: 3px;
+}
+
+.top-offset-small {
+    margin-top: 8px;
+}
+
+.bottom-offset-small {
+    margin-bottom: 8px;
+}
+
+.top-offset-medium {
+    margin-top: 16px;
+}
+
+.bottom-offset-medium {
+    margin-bottom: 16px;
+}
+
+.top-offset-large {
+    margin-top: 40px;
+}
+
+.bottom-offset-large {
+    margin-bottom: 40px;
+}
+
+/*List styles*/
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  .list-unstyled();
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/*Font-sizes*/
+.f-s-b
+{
+    font-size: @baseUIFontSize;
+}
+.f-s-b-1
+{
+    font-size: @baseUIFontSize - 1;
+}
+.f-s-b-2
+{
+    font-size: (@baseUIFontSize) - 2;
+}
+.f-s-b-3
+{
+    font-size: (@baseUIFontSize) - 3;
+}
+.dw-noFontSize
+{
+    font-size: 0;
+}
+
+/*Font-styles*/
+.bold
+{
+    font-weight: bold;
+}
+.italic
+{
+    font-style:italic;
+}
+
+.normal
+{
+    font-weight: normal;
+}
+
+/*Text align*/
+.align-right
+{
+    text-align: right;
+}
+.align-left
+{
+    text-align: left;
+}
+.align-center
+{
+    text-align: center;
+}
+
+.pre-wrap {
+    white-space: pre-wrap;
+}
+
+//TO DO optimize everywhere using this class
+.text-overflow
+{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    .textOverflow(ellipsis);
+}
+
+/*Visibility*/
+.invisible
+{
+    visibility: hidden;
+}
+.visible
+{
+    visibility: visible;
+}
+/*Cursor*/
+.pointer{
+    cursor: pointer;
+}
+
+/*Table*/
+.table
+{
+    display: table;
+    width: 100%;
+
+    &.v-a-top{
+        vertical-align: top;
+    }
+}
+.table-row
+{
+    display: table-row;
+}
+.table-cell
+{
+    display: table-cell;
+    vertical-align: middle;
+
+    &.v-a-top{
+        vertical-align: top;
+    }
+}
+
+/*Borders*/
+.border
+{
+    padding: 2px;
+    background-color: @OT_UltraLightGray;
+    border: 1px solid @OT_BorderGray;
+}
+.border-gray
+{
+    border: 1px solid @OT_BorderGray;
+}
+.underline
+{
+    border-bottom: 1px solid @OT_BorderGray;
+}
+
+.dw-noTopBorder
+{
+    border-top: 0;
+}
+
+.b-r-gray {
+    border-right: 1px solid @OT_GrayD;
+}
+
+.no-border {
+    border: none !important;
+}
+
+
+.width-100-px {
+    width: 100px;
+}
+
+.width-110-px {
+    width: 110px;
+}
+
+//height
+.height-100
+{   height: 100%;
+}
+
+.height-200 {
+    height: 200px;
+}
+
+.height-32 {
+    height: 32px;
+}
+
+.overflow-auto {
+    overflow: auto !important;
+}
+
+.word-break {
+    word-break: break-word;
+}
+
+//width
+.width-100{   
+    width: 100%;
+}
+.width-90{   
+    width: 90%;
+}
+
+//min-width
+.min-width-40{
+    min-width: 40px;
+}
+
+.m-w-entire{
+    min-width: 100%
+}
+
+.m-w-50 {
+    min-width: 50px;
+}
+
+.m-w-200 {
+    min-width: 200px;
+}
+
+.m-w-350 {
+    min-width: 350px;
+}
+
+.w-auto{
+    width: auto;
+}
+
+.min-height-70 {
+    min-height: 70px;
+}
+
+//overflow
+.no-overflow{
+    overflow: hidden;
+}
+
+.relative {
+    position: relative;
+}
+
+/* Text decorations */
+.underlined {
+    text-decoration: underline;
+}
+
+.non-underlined {
+    text-decoration: none !important;
+}
+
+/* BPSProcesses Plugins table columns */
+.column-lastRun-withIcon-width {
+    width: 198px;
+}
+
+.column-nextRun-width {
+    width: 156px;
+}
+
+.column-buttons-width {
+    width: 154px;
+}
+
+.column-active-width {
+    width: 70px;
+}
+
+.column-processed-docs-width {
+    width: 85px;
+}
+
+.column-processed-transfer-docs-width {
+    width: 100px;
+}
+
+.column-aix-writeback-overview {
+    width: 110px;
+}
+
+.column-aix-writeback-value {
+    width: 225px;
+}

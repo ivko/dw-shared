@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuditEventDetails_DocInfo">
+    <value>Doc Id: {0}Doc Id###</value>
+  </data>
+  <data name="AuditEventDetails_Label">
+    <value>Changed properties:Changed prop###</value>
+  </data>
+  <data name="AuditReport_Table_DownloadCSV">
+    <value>Download as CSVDownload ###</value>
+  </data>
+  <data name="AuditReport_TableColumn_Date">
+    <value>Date###</value>
+  </data>
+  <data name="AuditReport_TableColumn_Event">
+    <value>EventE###</value>
+  </data>
+  <data name="AuditReport_TableColumn_Name">
+    <value>Name###</value>
+  </data>
+  <data name="AuditReport_TableColumn_Type">
+    <value>Type###</value>
+  </data>
+  <data name="AuditReport_TableColumn_User">
+    <value>User###</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_PreviousValue">
+    <value>Previous ValuePrevious###</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Property">
+    <value>PropertyPro###</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Value">
+    <value>ValueV###</value>
+  </data>
+  <data name="AuditReport_TableColumn_FileCabinet">
+    <value>File CabinetFile Ca###</value>
+  </data>
+  <data name="AuditReport_TableColumn_Organization">
+    <value>OrganizationOrganiz###</value>
+  </data>
+  <data name="AuditReport_EventType_Changed">
+    <value>ChangedCha###</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToFileSystem">
+    <value>Checkout to File SystemCheckout to Fil###</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToTray">
+    <value>Checkout to TrayCheckout t###</value>
+  </data>
+  <data name="AuditReport_EventType_Clip">
+    <value>Clip###</value>
+  </data>
+  <data name="AuditReport_EventType_CopyToTray">
+    <value>Copy to TrayCopy to###</value>
+  </data>
+  <data name="AuditReport_EventType_Created">
+    <value>CreatedCre###</value>
+  </data>
+  <data name="AuditReport_EventType_CreateRequest">
+    <value>Create RequestCreate R###</value>
+  </data>
+  <data name="AuditReport_EventType_CreateSettings">
+    <value>Create SettingsCreate Se###</value>
+  </data>
+  <data name="AuditReport_EventType_Delete">
+    <value>DeleteDe###</value>
+  </data>
+  <data name="AuditReport_EventType_Deleted">
+    <value>DeletedDel###</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteSettings">
+    <value>Delete SettingsDelete Se###</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteVersionHistory">
+    <value>Delete Version HistoryDelete Version ###</value>
+  </data>
+  <data name="AuditReport_EventType_EditAnnotations">
+    <value>Edit AnnotationsEdit Annot###</value>
+  </data>
+  <data name="AuditReport_EventType_EditContent">
+    <value>Edit ContentEdit Co###</value>
+  </data>
+  <data name="AuditReport_EventType_EditIndexData">
+    <value>Edit Index DataEdit Inde###</value>
+  </data>
+  <data name="AuditReport_EventType_EditSettings">
+    <value>Edit SettingsEdit Se###</value>
+  </data>
+  <data name="AuditReport_EventType_Email">
+    <value>EmailE###</value>
+  </data>
+  <data name="AuditReport_EventType_Export">
+    <value>ExportEx###</value>
+  </data>
+  <data name="AuditReport_EventType_Open">
+    <value>Open###</value>
+  </data>
+  <data name="AuditReport_EventType_Print">
+    <value>PrintP###</value>
+  </data>
+  <data name="AuditReport_EventType_Store">
+    <value>StoreS###</value>
+  </data>
+  <data name="AuditReport_EventType_UndoCheckout">
+    <value>Undo CheckoutUndo Ch###</value>
+  </data>
+  <data name="AuditReport_EventType_WorkflowDecisionMade">
+    <value>Workflow Decision madeWorkflow Decisi###</value>
+  </data>
+  <data name="AuditReport_SettingsType_AuthenticationServer">
+    <value>Authentication ServerAuthentication###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Autoindex">
+    <value>AutoindexAuto###</value>
+  </data>
+  <data name="AuditReport_SettingsType_AutoNumber">
+    <value>Auto NumberAuto N###</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlook">
+    <value>Connect to OutlookConnect to ###</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookAccess">
+    <value>Connect to Outlook accessConnect to Outloo###</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookConfiguration">
+    <value>Connect to Outlook ConfigurationConnect to Outlook Conf###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Database">
+    <value>DatabaseDat###</value>
+  </data>
+  <data name="AuditReport_SettingsType_DatabaseConnection">
+    <value>Database ConnectionDatabase Con###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Deletion">
+    <value>DeletionDel###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Disk">
+    <value>Disk###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Document">
+    <value>DocumentDoc###</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentSettings">
+    <value>Document SettingsDocument Se###</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentType">
+    <value>Document TypeDocumen###</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwImportRequest">
+    <value>DocuWare Import RequestDocuWare Import###</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwRequestLite">
+    <value>DocuWare Request LiteDocuWare Reque###</value>
+  </data>
+  <data name="AuditReport_SettingsType_EmailConfiguration">
+    <value>Email ConfigurationEmail Config###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Export">
+    <value>ExportEx###</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalSelectList">
+    <value>External Select ListExternal Sele###</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalUserDirectory">
+    <value>External User DirectoryExternal User D###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Field">
+    <value>FieldF###</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinet">
+    <value>File CabinetFile Ca###</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetGeneral">
+    <value>File Cabinet GeneralFile Cabinet ###</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileConnection">
+    <value>File ConnectionFile Conn###</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileExtension">
+    <value>File ExtensionFile Ext###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Forms">
+    <value>FormsF###</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralProfile">
+    <value>General ProfileGeneral P###</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralSystem">
+    <value>General SystemGeneral ###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Group">
+    <value>GroupG###</value>
+  </data>
+  <data name="AuditReport_SettingsType_IntellixConnection">
+    <value>Intelligent Indexing ConnectionIntelligent Indexing C###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Licence">
+    <value>LicenceLic###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Link">
+    <value>Link###</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpDevice">
+    <value>MFP DeviceMFP D###</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpWorkflow">
+    <value>MFP WorkflowMFP Wor###</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationServer">
+    <value>Notification ServerNotification###</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationSettings">
+    <value>Notification SettingsNotification S###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Obr">
+    <value>Ob###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Ocr">
+    <value>Oc###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Organization">
+    <value>OrganizationOrganiz###</value>
+  </data>
+  <data name="AuditReport_SettingsType_PrinterConfiguration">
+    <value>Processing Configuration of type PrinterProcessing Configuration of t###</value>
+  </data>
+  <data name="AuditReport_SettingsType_ProcessServer">
+    <value>Process ServerProcess ###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Profile">
+    <value>ProfilePro###</value>
+  </data>
+  <data name="AuditReport_SettingsType_RegularExpression">
+    <value>Regular ExpressionRegular Exp###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Replication">
+    <value>ReplicationReplic###</value>
+  </data>
+  <data name="AuditReport_SettingsType_ResultList">
+    <value>Result ListResult###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Role">
+    <value>Role###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Schedules">
+    <value>SchedulesSche###</value>
+  </data>
+  <data name="AuditReport_SettingsType_SearchDialog">
+    <value>Search DialogSearch ###</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmartConnect">
+    <value>Smart ConnectSmart C###</value>
+  </data>
+  <data name="AuditReport_SettingsType_SolrConnection">
+    <value>Solr ConnectionSolr Conn###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Stamp">
+    <value>StampS###</value>
+  </data>
+  <data name="AuditReport_SettingsType_StorageLocation">
+    <value>Storage LocationStorage Lo###</value>
+  </data>
+  <data name="AuditReport_SettingsType_StoreDialog">
+    <value>Store DialogStore D###</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionRules">
+    <value>Substitution RulesSubstitutio###</value>
+  </data>
+  <data name="AuditReport_SettingsType_SystemBackupWorkflow">
+    <value>System Backup WorkflowSystem Backup W###</value>
+  </data>
+  <data name="AuditReport_SettingsType_TrustedUser">
+    <value>Trusted UserTrusted###</value>
+  </data>
+  <data name="AuditReport_SettingsType_User">
+    <value>User###</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserLoginLogout">
+    <value>User Login LogoutUser Login ###</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserSync">
+    <value>User SynchronizationUser Synchron###</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebBasket">
+    <value>Tray###</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebConnection">
+    <value>Web ConnectionWeb Conn###</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebInstances">
+    <value>Web InstancesWeb Ins###</value>
+  </data>
+  <data name="AuditReport_EventType_LogIn">
+    <value>Log InLo###</value>
+  </data>
+  <data name="AuditReport_EventType_LogOff">
+    <value>Log OffLog###</value>
+  </data>
+  <data name="AuditReport_LastModified">
+    <value>Last ModifiedLast Mo###</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetSettings">
+    <value>File Cabinet SettingsFile Cabinet S###</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmtpConnection">
+    <value>Smtp ConnectionSmtp Conn###</value>
+  </data>
+  <data name="AuditReport_Default_FileName">
+    <value>AuditA###</value>
+  </data>
+  <data name="AuditReport_TableColumn_DocId">
+    <value>DocIdD###</value>
+  </data>
+  <data name="AuditReport_SettingsType_ThumbnailServer">
+    <value>Thumbnai lServerThumbnai l###</value>
+  </data>
+  <data name="AuditReport_SettingsType_BusinessUseCase">
+    <value>Business Use CaseBusiness Us###</value>
+  </data>
+  <data name="AuditReport_EventType_Edited">
+    <value>ChangedCha###</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteAudit">
+    <value>DeleteDe###</value>
+  </data>
+  <data name="AuditReport_EventType_DisableAudit">
+    <value>DisableDis###</value>
+  </data>
+  <data name="AuditReport_EventType_EnableAudit">
+    <value>EnableEn###</value>
+  </data>
+  <data name="AuditReport_ObjectName_AllData">
+    <value>All DataAll###</value>
+  </data>
+  <data name="AuditReport_ObjectName_ConfigurationChanges">
+    <value>Configuration changesConfiguration ###</value>
+  </data>
+  <data name="AuditReport_ObjectName_DocumentEvent">
+    <value>Document EventsDocument ###</value>
+  </data>
+  <data name="AuditReport_ObjectName_UserLogEvent">
+    <value>User Login/LogoutUser Login/###</value>
+  </data>
+  <data name="AuditReport_SettingsType_Auditing">
+    <value>AuditingAud###</value>
+  </data>
+  <data name="AuditReport_SettingsType_FixedSelectList">
+    <value>Fixed Select ListFixed Selec###</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebServices">
+    <value>Web ServiceWeb Se###</value>
+  </data>
+  <data name="AuditReportDetails_SettingsType_SubstitutionList">
+    <value>Substitution ListSubstitutio###</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionList">
+    <value>Maximum version id has been exceeded.Maximum version id has been###</value>
+  </data>
+</root>

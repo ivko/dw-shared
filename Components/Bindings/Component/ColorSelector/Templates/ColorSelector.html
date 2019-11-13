@@ -1,0 +1,10 @@
+﻿<script type="text/html" id="colorSelector-template">
+    <div class="color-selector-component-container">
+        <!--ko foreach: colorList -->
+        <div data-bind="css: 'color ' + ($data.argb == $parent.selectedColor() ? 'color-selected': ''),
+                        click: function(color, event) { $parent.selectedColor(color.argb)},
+                        style: { backgroundColor: $data.hex }">
+        </div>
+        <!--/ko-->
+    </div>
+</script>

@@ -1,0 +1,140 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+
+//Navbar used for webclient and viewer
+// -------------------------
+.dw-navbar
+{
+    overflow: hidden;
+    // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
+    *position: relative;
+    *z-index: 2;
+    width: auto;
+}
+
+.dw-header {
+    height: @topAreaHeight;
+
+    &.dw-withColor {
+        background-color: @OT_UltraLightGray;
+        background-image: none;
+        border-bottom: 1px solid @OT_BorderGray;
+        border-top: 0;
+    }
+
+    &.dw-about {
+        line-height: @topAreaHeight;
+
+        .dw-logo {
+            margin-left: 0;
+        }
+
+        label {
+            float: right;
+            display: inline-block;
+        }
+    }
+
+    .dw-logo {
+        float: left;
+        display: inline-block;
+        height: 100%;
+        margin-left: 5px;
+    }
+
+
+    .dw-logout {
+        height: @topAreaHeight;
+        float: right;
+        display: inline-block;
+        line-height: @LineHeightHeader;
+
+        .dw-logoutText {
+            max-width: 245px;
+            font-size: @baseUIFontSize;
+            text-align: right;
+            height: 36px;
+            /*Vertically center the text given @navbarHeight*/
+            padding: 3px 5px 3px;
+
+            span {
+                font-weight: bold;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 235px;
+                display: inline-block;
+            }
+
+
+            div {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                max-width: 235px;
+            }
+        }
+
+        .clearfix ();
+    }
+
+    .my-profile-button {
+        border: 0;
+        padding: 0;
+        background-color: @OT_WHITE;
+        .transition( 0.25s, background-color );
+
+        &:hover {
+            background-color: @OT_MouseOverBlue;
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: @OT_SelectionBlue_90;
+        }
+
+        &:focus {
+            .drop-shadow-inset(inset 0 0 0 1px @OT_SelectionBlue);
+        }
+
+        .dw-logoutIcon {
+            width: 54px;
+            height: @topAreaHeight;
+            position: relative;
+            font-size: 20px;
+            .ui-icon-carat-1-s;
+
+            &:before {
+                .dw-font-icon;
+                font-size: 20px;
+                line-height: 14px;
+                position: absolute;
+                top: ~"calc(50% - 7px)";
+                right: 8px;
+            }
+
+            span {
+                display: inline-block;
+                width: 100%;
+                height: auto;
+                padding-right: 20px;
+            }
+        }
+
+        &.menu-activated {
+            .dw-logoutIcon {
+                .ui-icon-carat-1-n;
+            }
+        }
+    }
+
+    .dw-icon-configurations {
+        font-size: 18px !important;
+    }
+}
+
+.my-profile-menu.ui-menu-icons {
+    .ui-menu-item a {
+        padding-right: 1.5em;
+    }
+}

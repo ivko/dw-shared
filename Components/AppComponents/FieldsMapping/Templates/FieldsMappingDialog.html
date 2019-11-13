@@ -1,0 +1,36 @@
+﻿<script type="text/html" id="fields-mapping-dialog">
+    <div class="dw-dialog-template container-fluid container-content top-offset-small">
+        <div class="form-horizontal">
+            <div class="row info bottom-offset-small">
+                <div class="col-xs-10 text-left">
+                    <label class="control-label" data-bind="text: DW.FieldsMapping.localize('Select_Mapping_Label')"></label>
+                </div>
+                <div class="col-xs-2 text-right">
+                    <span class="ui-icon icon-auto dw-icon-info-plain gray" data-bind="infobox: { key: 'Fields_Mapping_Dialog', options: { placement: 'bottom' } }"></span>
+                </div>
+            </div>
+            <div class="row info bottom-offset-small">
+                <div class="col-xs-6 text-right">
+                    <label class="control-label bold break-word" data-bind="text: sourceFileCabinetName"></label>
+                </div>
+                <div class="col-xs-6 text-left">
+                    <label class="control-label bold break-word" data-bind="text: targetFileCabinetName"></label>
+                </div>
+            </div>
+            <ul class="mapped-fields no-padding">
+                <!--ko foreach: fields -->
+                <li class="form-group bottom-offset-small">
+                    <div class="col-xs-6 text-right">
+                        <label class="control-label" data-bind="text: displayName"></label>
+                    </div>
+                    <div class="col-xs-6 text-left" data-bind="css: { 'has-warning': !$data.selectedTargetField.isValid() }">
+                        <select class="form-control" data-bind="value: selectedTargetField, optionsValue: 'DBName', options: availableFields, optionsText: function(item) {return item.Name}"></select>
+                    </div>
+                </li>
+                <!-- /ko -->
+            </ul>
+        </div>
+    </div>
+    <!-- ko template: 'dialog-exit-buttons-right' -->
+    <!-- /ko -->
+</script>

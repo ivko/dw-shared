@@ -1,0 +1,271 @@
+﻿.dw-dialogs {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  /*Annotations options margin*/
+}
+.dw-dialogs:after {
+  content: "";
+}
+.dw-dialogs.no-tabs .ui-dialog-content {
+  padding: 0 16px 0 16px;
+}
+.dw-dialogs.no-tabs .ui-dialog-buttonpane {
+  padding-top: 16px;
+}
+.dw-dialogs.no-tabs .ui-dialog-titlebar {
+  padding-bottom: 10px;
+}
+.dw-dialogs.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+.dw-dialogs.gray {
+  background-color: #eef1f2;
+  border: 1px solid #c8ced1;
+}
+.dw-dialogs .ui-dialog-titlebar-close .ui-button-icon-primary {
+  font-size: 10px;
+  left: 0;
+}
+.dw-dialogs .ui-dialog-titlebar-close span.ui-button-text {
+  display: none;
+}
+.dw-dialogs .ui-widget-header {
+  text-transform: uppercase;
+}
+.dw-dialogs .ui-dialog-titlebar.ui-widget-header {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.dw-dialogs .ui-dialog-titlebar.ui-widget-header .ui-icon-closethick:after {
+  font-size: 10px;
+}
+.dw-dialogs .ui-dialog-buttonpane {
+  padding: 15px;
+}
+.dw-dialogs .ui-dialog-buttonpane button {
+  margin: 0;
+}
+.dw-dialogs .ui-dialog-buttonpane button:first-of-type {
+  margin-right: 10px;
+}
+.dw-dialogs .ui-widget.ui-spinner .ui-spinner-input {
+  width: 65px;
+}
+.dw-dialogs .dw-annotations-options.color {
+  text-align: center;
+}
+.dw-dialogs .dw-annotations-options.font {
+  width: 355px;
+}
+.dw-dialogs .dw-annotations-options > *:not(.row) {
+  margin-right: 10px;
+}
+.dw-dialogs .dw-annotations-options .font {
+  width: 200px;
+}
+.dw-dialogs .dw-tabContent .ui-widget-header,
+.dw-dialogs .dw-subheaders {
+  font-size: 11px;
+  color: #485258;
+}
+.dw-dialogs .ui-dialog-content {
+  overflow: hidden;
+}
+.dw-dialogs .dw-navigationContent {
+  padding: 0;
+  background-color: #ffffff;
+}
+.dw-dialogs .dw-settings .dw-mainContainer {
+  padding: 10px 16px 0 16px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.dw-dialogs .dw-mainContainer {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  padding: 10px 16px 0px 16px;
+  overflow: visible;
+  position: relative;
+  margin-top: 0;
+}
+.dw-dialogs .dw-mainContainer.dw-about .dw-grayContainer:last-child {
+  margin-bottom: 0;
+}
+.dw-dialogs .dw-mainContainer ul:last-child {
+  margin: 0;
+}
+.dw-dialogs .dw-mainContainer label {
+  display: inline;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.dw-dialogs .dw-contentLeft {
+  display: inline-block;
+  vertical-align: middle;
+  width: 65%;
+  font-size: 12px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+.dw-dialogs .dw-contentLeft.w-auto {
+  width: auto;
+}
+.dw-dialogs .dw-contentRight {
+  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  font-size: 12px;
+  width: 35%;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+.dw-dialogs .dw-contentRight.w-auto {
+  width: auto;
+}
+.dw-dialogs .dw-contentRight.max-width {
+  max-width: 286px;
+}
+.dw-dialogs .dw-threeColumnsContainer .dw-contentLeft {
+  display: table-cell;
+  vertical-align: top;
+  width: 46%;
+}
+.dw-dialogs .dw-threeColumnsContainer .dw-contentRight {
+  display: table-cell;
+  vertical-align: top;
+  width: 46%;
+  padding: 0;
+}
+.dw-dialogs .dw-threeColumnsContainer .dw-contentMiddle {
+  font-size: 0;
+  display: table-cell;
+  vertical-align: top;
+  width: 8%;
+  text-align: center;
+}
+.dw-dialogs .dw-threeColumnsContainer .dw-contentMiddle.workflow {
+  vertical-align: middle;
+}
+.dw-dialogs .dw-threeColumnsContainer .dw-contentMiddle .ui-icon {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.dw-dialogs .dw-threeColumnsContainer .dw-contentMiddle .dw-imageButton {
+  margin-bottom: 5px;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+.dw-dialogs .dw-threeColumnsContainer .dw-contentMiddle .dw-imageButton:hover {
+  background-color: #c0e4f9;
+}
+.dw-dialogs .dw-threeColumnsContainer .ui-widget-header {
+  height: 20px;
+  line-height: 12px;
+}
+.dw-dialogs .dw-threeColumnsContainer .dw-contentMain {
+  display: table;
+  table-layout: fixed;
+}
+.dw-dialogs .dw-contentInfo {
+  position: relative;
+  font-size: 12px;
+  padding-left: 32px;
+}
+.dw-dialogs .dw-contentMain {
+  width: 100%;
+  padding: 10px 0 0 0;
+  font-size: 12px;
+}
+.dw-dialogs .dw-dialogsTxt {
+  font-size: 12px;
+  display: inline-block;
+  padding: 0;
+}
+.dw-dialogs .dw-dialogContent {
+  border: 1px solid #c8ced1;
+  min-width: 300px;
+  padding: 10px;
+  height: auto;
+}
+.dw-dialogs .dw-dialogContent.fields {
+  min-height: 40px;
+  margin: 10px 16px 21px 16px;
+}
+.dw-dialogs .dw-dialogContent.fields.no-margin {
+  margin: 0;
+}
+.dw-dialogs.info-dialog .infodialog-template {
+  position: relative;
+  padding: 10px 16px 16px 16px;
+}
+.dw-dialogs.info-dialog .infodialog-template + .ui-dialog-toolbar {
+  padding-top: 0px;
+}
+.dw-dialogs.info-dialog .dw-dialogContent.fields {
+  -ms-user-select: text !important;
+  margin: 0;
+}
+.dw-dialogs.ui-dialog.ui-draggable {
+  width: 300px;
+}
+.dw-dialogs.ui-dialog.ui-draggable .rightToolbarButtons {
+  width: auto;
+  padding-right: 0;
+}
+.dw-dialogs .dw-tutorial iframe {
+  height: 600px;
+  width: 800px;
+  border: none;
+}
+.dw-dialogs .dw-tabStrip.ui-tabs-nav .ui-state-focus {
+  outline: none;
+  border-color: #0089cf;
+}
+.dw-dialogs.slippery {
+  -webkit-transition: left 0.32s, top 0.32s;
+  -moz-transition: left 0.32s, top 0.32s;
+  -o-transition: left 0.32s, top 0.32s;
+  transition: left 0.32s, top 0.32s;
+}
+.dw-dialogs .position-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.dw-dialogs .dw-dialog-template {
+  margin-bottom: 55px;
+  max-height: 690px;
+  height: calc(100% - 65px);
+  overflow: auto;
+}
+.dw-dialogs .dw-dialog-tabs-template {
+  margin-bottom: 54px;
+  max-height: 690px;
+  height: calc(100% - 90px);
+  overflow: auto;
+}

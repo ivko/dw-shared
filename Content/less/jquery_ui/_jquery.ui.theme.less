@@ -1,0 +1,365 @@
+/*!
+ * jQuery UI CSS Framework 1.8.21
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ */
+
+// Component containers
+.ui-widget {
+    font-family: @ffDefault;
+    font-size: @fsDefault;
+
+    .ui-widget { 
+        font-size: @fsDefault;
+    }
+
+    input, select, textarea, button {
+        font-family: @ffDefault;
+        font-size: @fsDefault;
+    }
+}
+.ui-widget-content {
+    border: 0;
+    color: @fcContent;
+
+    a {
+        color: @fcContent;
+    }
+}
+.ui-widget-header {
+    border: 0;
+    background-color: @bgColorHeader;
+    color: @fcHeader;
+    font-weight: bold;
+    cursor: default;
+
+    a { 
+        color: @fcHeader;
+    }
+}
+
+// Interaction states
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    border: 1px solid @borderColorDefault;
+    background-color: @bgColorDefault;
+    font-weight: normal;
+    color: @fcDefault;
+}
+.ui-state-default {
+    a, a:link, a:visited {
+        color: @fcDefault;
+        text-decoration: none;
+    }
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover
+/*,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus */{
+    border: 1px solid @borderColorHover;
+    background-color: @bgColorHover;
+    font-weight: normal;
+    color: @fcHover;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover {
+    color: @fcHover;
+    text-decoration: none;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+    border: 1px solid @borderColorActive;
+    background-color: @bgColorActive;
+    font-weight: normal;
+    color: @fcActive;
+}
+.ui-state-active {
+    a, a:link, a:visited {
+        color: @fcActive;
+        text-decoration: none;
+    }
+}
+.ui-widget :active {
+    outline: none;
+}
+
+// Interaction Cues
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    border: 1px solid @borderColorHighlight;
+    background-color: @bgColorHighlight;
+    color: @fcHighlight;
+}
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+    color: @fcHighlight;
+}
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+    border: 1px solid @borderColorError;
+    background-color: @bgColorError;
+    color: @fcError;
+}
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+    color: @fcError;
+}
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text{
+    color: @fcError;
+}
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+    font-weight: bold;
+}
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+    opacity: .7;
+    filter: ~"Alpha(Opacity=70)";
+    font-weight: normal;
+}
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+    opacity: .45;
+    filter: ~"Alpha(Opacity=45)";
+    background-image: none;
+}
+
+.ui-icon {
+    font-family: 'dwIconFont';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: @icon-color;
+    text-align: center;
+    display: inline-block;
+    overflow: visible;
+    width: 16px;
+    height: 16px;
+    margin-top: -0.5em;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &.icon-auto {
+        font-size: inherit;
+        height: auto;
+        width: auto;
+        vertical-align: middle;
+        margin-top: 0;
+    }
+
+    &.icon-small {
+        height: 10px;
+        width: 10px;
+        margin-top: 0;
+    }
+
+    &.icon-medium {
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        margin-top: -0.45em;
+    }
+
+    &.icon-large {
+        height: 25px;
+        width: 25px;
+        line-height: 25px;
+        margin-top: 0;
+    }
+
+    &.c-inh {
+        color: inherit;
+    }
+
+    &.button:not(.ui-state-disabled) {
+        .transition( 0.25s, background-color );
+
+        &:hover {
+            cursor: pointer;
+            background-color: @OT_MouseOverBlue;
+        }
+
+        &:active {
+            background-color: @OT_SelectionBlue_90;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: @OT_SelectionBlue;
+        }
+
+        &:active:focus {
+            border-color: @OT_SelectionBlue;
+            background-color: @OT_SelectionBlue_90;
+        }
+    }
+
+    &.button {
+        &.bordered {
+            padding: 1px;
+            border: 1px solid transparent;
+        }
+    }
+
+    &.button-disabled {
+        padding: 1px;
+        border: 1px solid transparent;
+        color: @OT_DisabledGray;
+    }
+
+    &.pos-abs {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        display: inline-block;
+
+        &.top {
+            top: 0;
+        }
+
+        &.bottom {
+            bottom: 0;
+            top: auto;
+        }
+
+        &.right {
+            right: 0;
+            left: auto;
+        }
+
+        &.width-full {
+            width: 100%;
+        }
+    }
+
+    &.ico-dec-1 {
+        font-size: @baseUIFontSize - 1 !important;
+    }
+
+    &.ico-dec-2 {
+        font-size: @baseUIFontSize - 2 !important;
+    }
+
+    &.ico-dec-3 {
+        font-size: @baseUIFontSize - 3 !important;
+    }
+
+
+    &.ico-inc-2 {
+        font-size: @baseUIFontSize + 2 !important;
+    }
+
+    &.ico-inc-4 {
+        font-size: @baseUIFontSize + 4 !important;
+    }
+
+    &.ico-inc-6 {
+        font-size: @baseUIFontSize + 6 !important;
+    }
+
+    &.ico-inc-8 {
+        font-size: @baseUIFontSize + 8 !important;
+    }
+
+    &.active {
+        background-color: @OT_SelectionBlue;
+        color: @OT_WHITE;
+    }
+
+    &.ui-state-disabled {
+        opacity: 1;
+        color: @OT_DisabledGray !important;
+    }
+
+    &.selected {
+        background-color: @OT_BlueC;
+        outline: 1px solid @OT_SelectionBlue;
+    }
+}
+
+
+// Corner radius
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+    -moz-border-radius-topleft: @cornerRadius;
+    -webkit-border-top-left-radius: @cornerRadius;
+    -khtml-border-top-left-radius: @cornerRadius;
+    border-top-left-radius: @cornerRadius;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+    -moz-border-radius-topright: @cornerRadius;
+    -webkit-border-top-right-radius: @cornerRadius;
+    -khtml-border-top-right-radius: @cornerRadius;
+    border-top-right-radius: @cornerRadius;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+    -moz-border-radius-bottomleft: @cornerRadius;
+    -webkit-border-bottom-left-radius: @cornerRadius;
+    -khtml-border-bottom-left-radius: @cornerRadius;
+    border-bottom-left-radius: @cornerRadius;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+    -moz-border-radius-bottomright: @cornerRadius;
+    -webkit-border-bottom-right-radius: @cornerRadius;
+    -khtml-border-bottom-right-radius: @cornerRadius;
+    border-bottom-right-radius: @cornerRadius;
+}
+
+// Overlays
+.ui-widget-overlay {
+    background: @bgColorShadow;
+    opacity: @opacityShadow / 100;
+    filter: ~"Alpha(Opacity=@{opacityShadow})";
+}
+
+#drag-overlay.ui-widget-overlay, .ui-widget-overlay.white
+{
+    background: @bgColorOverlayWhite;
+}
+
+.ui-widget-shadow {
+    margin: @offsetTopShadow 0 0 @offsetLeftShadow;
+    padding: @thicknessShadow;
+    
+    opacity: @opacityShadow / 100;
+    filter: ~"Alpha(Opacity=@{opacityShadow})";
+    -moz-border-radius: @cornerRadiusShadow;
+    -khtml-border-radius: @cornerRadiusShadow;
+    -webkit-border-radius: @cornerRadiusShadow;
+    border-radius: @cornerRadiusShadow;
+}
+

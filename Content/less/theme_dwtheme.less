@@ -1,0 +1,49 @@
+﻿.ui-tabs-horizontal {
+    /*One tab*/
+    &.ui-tabs-count-single {
+
+        .ui-tabs-nav li {
+            display: block;
+        }
+
+        .ui-tabs-nav {
+            border-bottom-color: transparent;
+            padding-left: 13px;
+            padding-right: 6px;
+            //   width: 100%;
+            .dw-icon-close-light {
+                right: 0;
+                position: absolute;
+
+                &:hover {
+                    border-color: transparent;
+                }
+            }
+
+            .ui-icon.dw-icon-close-light {
+                margin: ((@tabsHeightColors - @baseUIFontSize) / 2) 5px ((@tabsHeightColors - @baseUIFontSize) / 2) auto;
+            }
+        }
+
+        li.ui-tabs-active {
+            border: 0;
+            margin-left: 0;
+
+            &.dw-colors a {
+                padding-left: 0;
+            }
+        }
+
+        li.dw-colors.no-color {
+            border-top: none;
+        }
+
+        .link.ui-button {
+            margin-left: -11px;
+        }
+
+        .leftToolbarButtons {
+            padding-left: 13px;
+        }
+    }
+}

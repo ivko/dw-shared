@@ -1,0 +1,81 @@
+@tooltip-color: #fff;
+@tooltip-bg: @OT_GrayA;
+@tooltip-arrow-color: @tooltip-bg;
+@tooltip-arrow-width: 5px;
+@tooltip-padding: 2px 7px;
+@tooltip-max-width: 300px;
+@tooltip-z-index: 9999;
+@tooltip-opacity: 0.9;
+
+.ui-tooltip {
+    padding: @tooltip-padding;
+    position: absolute;
+    z-index: @tooltip-z-index;
+    max-width: @tooltip-max-width;
+    background-color: @tooltip-bg;
+    color: @tooltip-color;
+    .opacity(@tooltip-opacity);
+}
+body .ui-tooltip {
+    border-width: 2px;
+}
+.ui-tooltip-content {
+    position: relative;
+    text-align: center;
+    word-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+.ui-tooltip-arrow {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    display: block;
+    width: 0;
+}
+.auto .ui-tooltip-arrow {
+    border-width: 0;
+}
+.top .ui-tooltip-arrow {
+    bottom: -@tooltip-arrow-width;
+    left: 50%;
+    margin-left: -@tooltip-arrow-width;
+    border-color: @tooltip-arrow-color transparent;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
+}
+.right .ui-tooltip-arrow {
+    top: 50%;
+    left: -@tooltip-arrow-width;
+    margin-top: -@tooltip-arrow-width;
+    border-color: transparent @tooltip-arrow-color;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0;
+}
+.bottom .ui-tooltip-arrow, .center .ui-tooltip-arrow {
+    top: -@tooltip-arrow-width;
+    left: 50%;
+    margin-left: -@tooltip-arrow-width;
+    border-color: @tooltip-arrow-color transparent;
+    border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
+}
+
+.left .ui-tooltip-arrow {
+    top: 50%;
+    right: -@tooltip-arrow-width;
+    margin-top: -@tooltip-arrow-width;
+    border-color: transparent @tooltip-arrow-color;
+    border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
+}
+
+.ui-tooltip-sensor {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    visibility: hidden
+}
+
+.ui-tooltip-pre-wrap {
+    white-space: pre-wrap;
+    .ui-tooltip-content {
+        text-align: left;
+    }
+}

@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuditEventDetails_DocInfo">
+    <value>Идентификатор на документ: {0}</value>
+  </data>
+  <data name="AuditEventDetails_Label">
+    <value>Променени свойства:</value>
+  </data>
+  <data name="AuditReport_Default_FileName">
+    <value>Одит</value>
+  </data>
+  <data name="AuditReport_EventType_Changed">
+    <value>Променено</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToFileSystem">
+    <value>Изход към файлова система</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToTray">
+    <value>Изход към контейнер</value>
+  </data>
+  <data name="AuditReport_EventType_Clip">
+    <value>Кламер</value>
+  </data>
+  <data name="AuditReport_EventType_CopyToTray">
+    <value>Копиране към контейнер</value>
+  </data>
+  <data name="AuditReport_EventType_Created">
+    <value>Създадено</value>
+  </data>
+  <data name="AuditReport_EventType_CreateRequest">
+    <value>Създаване на заявка</value>
+  </data>
+  <data name="AuditReport_EventType_CreateSettings">
+    <value>Създаване на настройки</value>
+  </data>
+  <data name="AuditReport_EventType_Delete">
+    <value>Изтриване</value>
+  </data>
+  <data name="AuditReport_EventType_Deleted">
+    <value>Изтрито</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteSettings">
+    <value>Изтриване на настройките</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteVersionHistory">
+    <value>Изтриване на хронология на версиите</value>
+  </data>
+  <data name="AuditReport_EventType_EditAnnotations">
+    <value>Редактиране на бележки</value>
+  </data>
+  <data name="AuditReport_EventType_EditContent">
+    <value>Редактиране на съдържание</value>
+  </data>
+  <data name="AuditReport_EventType_EditIndexData">
+    <value>Редактиране на индексни данни</value>
+  </data>
+  <data name="AuditReport_EventType_EditSettings">
+    <value>Редактиране на настройки</value>
+  </data>
+  <data name="AuditReport_EventType_Email">
+    <value>Имейл</value>
+  </data>
+  <data name="AuditReport_EventType_Export">
+    <value>Експортиране</value>
+  </data>
+  <data name="AuditReport_EventType_LogIn">
+    <value>Влизане</value>
+  </data>
+  <data name="AuditReport_EventType_LogOff">
+    <value>Излизане</value>
+  </data>
+  <data name="AuditReport_EventType_Open">
+    <value>Отваряне</value>
+  </data>
+  <data name="AuditReport_EventType_Print">
+    <value>Отпечатване</value>
+  </data>
+  <data name="AuditReport_EventType_Store">
+    <value>Съхраняване</value>
+  </data>
+  <data name="AuditReport_EventType_UndoCheckout">
+    <value>Отмяна на извличане</value>
+  </data>
+  <data name="AuditReport_EventType_WorkflowDecisionMade">
+    <value>Направено решение в Workflow</value>
+  </data>
+  <data name="AuditReport_LastModified">
+    <value>Последно изменение на</value>
+  </data>
+  <data name="AuditReport_SettingsType_AuthenticationServer">
+    <value>Authentication Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_Autoindex">
+    <value>Автоматично индексиране</value>
+  </data>
+  <data name="AuditReport_SettingsType_AutoNumber">
+    <value>Автоматичен номер</value>
+  </data>
+  <data name="AuditReport_SettingsType_BusinessUseCase">
+    <value>Случай на бизнес употреба</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlook">
+    <value>Connect to Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookAccess">
+    <value>Достъп Connect to Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookConfiguration">
+    <value>Конфигурация Connect to Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_Database">
+    <value>База с данни</value>
+  </data>
+  <data name="AuditReport_SettingsType_DatabaseConnection">
+    <value>Връзка с базата данни</value>
+  </data>
+  <data name="AuditReport_SettingsType_Deletion">
+    <value>Изтриване</value>
+  </data>
+  <data name="AuditReport_SettingsType_Disk">
+    <value>Диск</value>
+  </data>
+  <data name="AuditReport_SettingsType_Document">
+    <value>Документ</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentSettings">
+    <value>Настройки на документ</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentType">
+    <value>Тип документ</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwImportRequest">
+    <value>DocuWare Import Request</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwRequestLite">
+    <value>DocuWare Request Lite</value>
+  </data>
+  <data name="AuditReport_SettingsType_EmailConfiguration">
+    <value>Имейл конфигурация</value>
+  </data>
+  <data name="AuditReport_SettingsType_Export">
+    <value>Експортиране</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalSelectList">
+    <value>Външен списък за избор</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalUserDirectory">
+    <value>Външен указател с потребители</value>
+  </data>
+  <data name="AuditReport_SettingsType_Field">
+    <value>Поле</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinet">
+    <value>Документален архив</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetGeneral">
+    <value>Документален архив, Общи</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetSettings">
+    <value>Настройки за документален архив</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileConnection">
+    <value>Връзка с файл</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileExtension">
+    <value>Разширение на файл</value>
+  </data>
+  <data name="AuditReport_SettingsType_Forms">
+    <value>Формуляри</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralProfile">
+    <value>Общ профил</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralSystem">
+    <value>Обща система</value>
+  </data>
+  <data name="AuditReport_SettingsType_Group">
+    <value>Група</value>
+  </data>
+  <data name="AuditReport_SettingsType_IntellixConnection">
+    <value>Връзка с Intelligent Indexing</value>
+  </data>
+  <data name="AuditReport_SettingsType_Licence">
+    <value>Лиценз</value>
+  </data>
+  <data name="AuditReport_SettingsType_Link">
+    <value>Връзка</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpDevice">
+    <value>МФУ устройство</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpWorkflow">
+    <value>МФУ работен процес</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationServer">
+    <value>Notification Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationSettings">
+    <value>Настройки за уведомления</value>
+  </data>
+  <data name="AuditReport_SettingsType_Obr">
+    <value>Obr</value>
+  </data>
+  <data name="AuditReport_SettingsType_Ocr">
+    <value>Ocr</value>
+  </data>
+  <data name="AuditReport_SettingsType_Organization">
+    <value>Организация</value>
+  </data>
+  <data name="AuditReport_SettingsType_PrinterConfiguration">
+    <value>Конфигуратор на принтер</value>
+  </data>
+  <data name="AuditReport_SettingsType_ProcessServer">
+    <value>Process Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_Profile">
+    <value>Профил</value>
+  </data>
+  <data name="AuditReport_SettingsType_RegularExpression">
+    <value>Редовен израз</value>
+  </data>
+  <data name="AuditReport_SettingsType_Replication">
+    <value>Репликация</value>
+  </data>
+  <data name="AuditReport_SettingsType_ResultList">
+    <value>Списък с резултати</value>
+  </data>
+  <data name="AuditReport_SettingsType_Role">
+    <value>Роля</value>
+  </data>
+  <data name="AuditReport_SettingsType_Schedules">
+    <value>Графици</value>
+  </data>
+  <data name="AuditReport_SettingsType_SearchDialog">
+    <value>Диалогов прозорец за търсене</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmartConnect">
+    <value>Smart Connect</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmtpConnection">
+    <value>SMTP връзка</value>
+  </data>
+  <data name="AuditReport_SettingsType_SolrConnection">
+    <value>Solr връзка</value>
+  </data>
+  <data name="AuditReport_SettingsType_Stamp">
+    <value>Печат</value>
+  </data>
+  <data name="AuditReport_SettingsType_StorageLocation">
+    <value>Място за съхранение</value>
+  </data>
+  <data name="AuditReport_SettingsType_StoreDialog">
+    <value>Диалогов прозорец за съхранение</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionRules">
+    <value>Правила за заместване</value>
+  </data>
+  <data name="AuditReport_SettingsType_SystemBackupWorkflow">
+    <value>Работен процес за архивиране на система</value>
+  </data>
+  <data name="AuditReport_SettingsType_TrustedUser">
+    <value>Надежден потребител</value>
+  </data>
+  <data name="AuditReport_SettingsType_User">
+    <value>Потребител</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserLoginLogout">
+    <value>Потребител Вход Изход</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserSync">
+    <value>Потребителско синхронизиране</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebBasket">
+    <value>Контейнер</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebConnection">
+    <value>Уеб връзка</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebInstances">
+    <value>Уеб случаи</value>
+  </data>
+  <data name="AuditReport_Table_DownloadCSV">
+    <value>Изтегляне като CSV</value>
+  </data>
+  <data name="AuditReport_TableColumn_Date">
+    <value>Дата</value>
+  </data>
+  <data name="AuditReport_TableColumn_DocId">
+    <value>Идент. на док</value>
+  </data>
+  <data name="AuditReport_TableColumn_Event">
+    <value>Събитие</value>
+  </data>
+  <data name="AuditReport_TableColumn_FileCabinet">
+    <value>Документален архив</value>
+  </data>
+  <data name="AuditReport_TableColumn_Name">
+    <value>Име</value>
+  </data>
+  <data name="AuditReport_TableColumn_Organization">
+    <value>Организация</value>
+  </data>
+  <data name="AuditReport_TableColumn_Type">
+    <value>Тип</value>
+  </data>
+  <data name="AuditReport_TableColumn_User">
+    <value>Потребител</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_PreviousValue">
+    <value>Предишна стойност</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Property">
+    <value>Свойство</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Value">
+    <value>Стойност</value>
+  </data>
+  <data name="AuditReport_EventType_Edited">
+    <value>Променено</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteAudit">
+    <value>Изтриване</value>
+  </data>
+  <data name="AuditReport_EventType_DisableAudit">
+    <value>Забраняване</value>
+  </data>
+  <data name="AuditReport_EventType_EnableAudit">
+    <value>Разрешаване</value>
+  </data>
+  <data name="AuditReport_ObjectName_AllData">
+    <value>Всички данни</value>
+  </data>
+  <data name="AuditReport_ObjectName_ConfigurationChanges">
+    <value>Промени по конфигурацията</value>
+  </data>
+  <data name="AuditReport_ObjectName_DocumentEvent">
+    <value>Събития в документа</value>
+  </data>
+  <data name="AuditReport_ObjectName_UserLogEvent">
+    <value>Вход/изход на потребител</value>
+  </data>
+  <data name="AuditReport_SettingsType_Auditing">
+    <value>Проверка</value>
+  </data>
+  <data name="AuditReport_SettingsType_FixedSelectList">
+    <value>Фиксиран списък за избор</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebServices">
+    <value>Уеб услуга</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionList">
+    <value>Списък със заместители</value>
+  </data>
+</root>

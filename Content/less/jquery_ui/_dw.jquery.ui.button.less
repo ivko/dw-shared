@@ -1,0 +1,277 @@
+/*dw-theme button*/
+
+.ui-button
+{
+    &.ui-button-icon-only.no-padding{
+        padding: 0;
+    }
+    
+    &.no-padding{
+        padding: 0;
+        
+        .ui-button-icon-primary{
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    &.ui-state-default
+    {
+        background-color: transparent;
+        border: 1px solid transparent;
+        .transition( 0.2s, background-color );
+    }
+
+    &.ui-state-hover, &:hover, &.ui-state-hover.ui-state-focus
+    {
+        background-color: @OT_MouseOverBlue;
+    }
+
+    &.ui-state-active, &:active
+    {
+        background-color: @OT_SelectionBlue_90;
+    }
+
+    &.ui-state-focus, &:focus
+    {
+        outline: none;
+        //transparent - needed in fca and forms
+        background-color: transparent;
+        border-color: @OT_SelectionBlue;
+    }
+
+    &.ui-state-active.ui-state-focus, &:active:focus
+    {
+        border-color: @OT_SelectionBlue;
+        background-color: @OT_SelectionBlue_90;
+    }
+
+    &.menu-activated
+    {
+        .ui-icon-carat-1-s
+        {
+            .ui-icon-carat-1-n();
+        }
+    }
+
+    &.fixed-width
+    {
+        max-width: 250px;
+        overflow: hidden;
+        white-space: nowrap;
+        .textOverflow(ellipsis);
+    }
+    /* additions */
+    &.main
+    {
+        background-color: @OT_Orange;
+
+        &.ui-state-hover, &:hover
+        {
+            background-color: @OT_Orange_45;
+        }
+
+        &.ui-state-active, &:active
+        {
+            background-color: @OT_Orange_60;
+        }
+
+        &.ui-state-focus, &:focus
+        {
+            background-color: @OT_Orange;
+            border-color: @OT_BlueA;
+        }
+
+        &.ui-state-active.ui-state-focus, &:active:focus
+        {
+            background-color: @OT_Orange_60;
+            border-color: @OT_LabelGray;
+        }
+    }
+    &.secondary:not(.ui-state-focus){
+        border-color: @OT_Orange;
+    }
+
+    &.gray
+    {
+        background-color: @OT_UltraLightGray;
+        .transition( 0.2s, background-color );
+
+        &:hover
+        {
+            background-color: @OT_MouseOverBlue;
+        }
+
+        &:active
+        {
+            background-color: @OT_SelectionBlue_90;
+        }
+
+        &:focus
+        {
+            outline: none;
+            background-color: @OT_WHITE;
+            border-color: @OT_SelectionBlue;
+        }
+
+        &:active:focus
+        {
+            border-color: @OT_SelectionBlue;
+            background-color: @OT_SelectionBlue_90;
+        }
+    }
+    //Link like button
+    &.link
+    {
+        margin-left: -10px;
+        color: @OT_Orange;
+
+        &.ui-state-default
+        {
+            background-color: @OT_WHITE;
+        }
+
+        &.ui-state-hover, &.ui-state-active, &:hover, &:active
+        {
+            .ui-button-text
+            {
+                text-decoration: underline;
+                color: @OT_Orange;
+            }
+        }
+
+        &:focus
+        {
+            .ui-button-text
+            {
+                text-decoration: underline;
+            }
+        }
+
+        .ui-button-icon-primary, .ui-button-icon-secondary
+        {
+            color: @OT_Orange;
+        }
+    }
+    //Used in fields to refactor
+    &.dw-imageButton
+    {
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        vertical-align: middle;
+        cursor: pointer;
+        padding: 0;
+
+        .ui-icon
+        {
+            left: 50%;
+            margin-left: -8px;
+        }
+
+        &.border
+        {
+            border-color: @OT_BorderGray;
+
+            &.ui-state-focus, &:focus
+            {
+                border-color: @OT_SelectionBlue;
+            }
+        }
+
+        &.ui-datepicker-trigger{
+            margin-left: 10px;
+        }
+    }
+    //This is for the input button
+    &.fileinput
+    {
+        input
+        {
+            display: inline-block;
+            position: absolute;
+            left: -1000px;
+        }
+
+        .ui-button-text .ui-button-text
+        {
+            padding: 0;
+        }
+    }
+    //button selected
+    &.button-selected{
+        background: @OT_SelectionBlue_90;
+    }
+    /*Reducing the width for ui-icon for the arrows*/
+    .ui-icon-carat-1-w, .ui-icon-carat-1-e
+    {
+        width: 8px;
+
+        +.ui-button-text
+        {
+            padding: 0px 0 0px 12px;
+        }
+    }
+}
+
+.audit-report-toolbar {
+    // This is for delete date from input button
+    .ui-button.del-button {
+        position: absolute;
+        right: 55px;
+        top: 8px;
+    }
+}
+
+.user-management-out-of-office {
+    .ui-button.del-button {
+        position: absolute;
+        right: 30px;
+        top: 8px;
+    }
+}
+
+.ui-dialog-titlebar-close
+{
+    padding: 0;
+    height: 18px;
+    width: 18px;
+}
+
+
+.ui-buttonset {
+    margin-right: 0;
+
+    .ui-button {
+        margin-right: -0.4em;
+        margin-bottom: 0;
+        border-color: @OT_BorderGray;
+        background-color: @OT_GrayH;
+        text-transform: uppercase;
+        font-size: @baseUIFontSizeDec1;
+        font-weight: bold;
+
+        &.ui-state-active {
+            background-color: @OT_SelectionBlue;
+            color: white;
+
+            &:hover, &.ui-state-hover {
+                color: white;
+                background-color: @OT_SelectionBlue;
+            }
+        }
+
+        &.ui-state-hover {
+            background-color: @OT_MouseOverBlue;
+        }
+
+        &.ui-state-focus, &:focus {
+            border-color: @OT_SelectionBlue;
+        }
+
+        &.ui-state-active.ui-state-focus, &:active:focus {
+            border-color: @OT_BorderGray;
+        }
+    }
+}
+

@@ -1,0 +1,96 @@
+/*!
+ * jQuery UI Spinner @VERSION
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Spinner#theming
+ */
+.ui-spinner
+{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: middle;
+
+    .ui-spinner-input
+    {
+        .boxed();
+        width: 200px;
+        border: 1px solid @OT_BorderGray;
+        margin: 0;
+        vertical-align: middle;
+        padding-right: 20px;
+        background-color: #ffffff;
+
+        &:focus ~ .ui-spinner-button
+        {
+            border-left: 1px solid @field-border-focus;
+        }
+    }
+    input[type="text"].form-control {
+        padding-right: 20px !important;
+    }
+}
+
+
+.ui-state-default.ui-spinner-button, .ui-spinner-button
+{
+    width: 20px;
+    height: 50%;
+    padding: 0;
+    border-left: 1px solid @OT_BorderGray;
+    background-color: transparent;
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    cursor: default;
+    display: block;
+    overflow: hidden;
+    right: 0;
+
+    &.ui-state-hover, &.ui-state-hover
+    {
+        background-color: transparent;
+        cursor: pointer;
+
+        .ui-icon:before
+        {
+            color: @OT_MouseOverBlue;
+        }
+    }
+}
+
+.ui-spinner .ui-icon
+{
+    position: absolute;
+    margin-top: 0;
+    left: 0;
+    top: 0;
+    height: 13px;
+    width: 100%;
+    font-size: 16px;
+
+    &:before
+    {
+        display: block;
+        text-align: center;
+        color: @OT_LabelGray;
+        width: 100%;
+        line-height: 13px;
+        vertical-align: middle;
+    }
+}
+
+.ui-spinner-up
+{
+    top: 0;
+}
+
+.ui-spinner-down
+{
+    bottom: 0;
+}

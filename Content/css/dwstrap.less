@@ -1,0 +1,105 @@
+@sharedResourcesPath: "../../";
+
+@bootstrapPath: "@{sharedResourcesPath}Content/bootstrap/less/";
+@dwthemePath: "@{sharedResourcesPath}Content/less/";
+@componentsPath: "@{sharedResourcesPath}Components/Widgets";
+@jqueryUI: "@{dwthemePath}jquery_ui/";
+
+@import "@{dwthemePath}_variables.less";
+@import "@{dwthemePath}_mixins.less";
+// Core variables and mixins
+//@import "@{bootstrapPath}variables.less";
+@import "@{dwthemePath}_bootstrap-variables-adapter.less";
+@import "@{bootstrapPath}mixins.less";
+// Reset
+@import "@{bootstrapPath}normalize.less";
+@import "@{bootstrapPath}print.less";
+// Core CSS
+@import "@{bootstrapPath}scaffolding.less";
+@import "@{bootstrapPath}type.less";
+@import "@{bootstrapPath}code.less";
+@import "@{bootstrapPath}grid.less";
+@import "@{bootstrapPath}tables.less";
+@import "@{bootstrapPath}forms.less";
+@import "@{bootstrapPath}buttons.less";
+// Components
+@import "@{bootstrapPath}component-animations.less";
+//@import "@{bootstrapPath}glyphicons.less";
+@import "@{bootstrapPath}dropdowns.less";
+@import "@{bootstrapPath}button-groups.less";
+@import "@{bootstrapPath}input-groups.less";
+@import "@{bootstrapPath}navs.less";
+@import "@{bootstrapPath}navbar.less";
+@import "@{bootstrapPath}breadcrumbs.less";
+@import "@{bootstrapPath}pagination.less";
+@import "@{bootstrapPath}pager.less";
+@import "@{bootstrapPath}labels.less";
+//@import "@{bootstrapPath}badges.less";
+@import "@{bootstrapPath}jumbotron.less";
+@import "@{bootstrapPath}thumbnails.less";
+@import "@{bootstrapPath}alerts.less";
+@import "@{bootstrapPath}progress-bars.less";
+@import "@{bootstrapPath}media.less";
+@import "@{bootstrapPath}list-group.less";
+@import "@{bootstrapPath}panels.less";
+@import "@{bootstrapPath}wells.less";
+@import "@{bootstrapPath}close.less";
+// Components w/ JavaScript
+@import "@{bootstrapPath}modals.less";
+@import "@{bootstrapPath}tooltip.less";
+@import "@{bootstrapPath}popovers.less";
+//@import "@{bootstrapPath}carousel.less";
+
+// Utility classes
+@import "@{bootstrapPath}utilities.less";
+@import "@{bootstrapPath}responsive-utilities.less";
+
+// WAF Components
+@import "@{dwthemePath}Components/query-builder.less";
+@import "@{dwthemePath}Components/fc-selector.less";
+
+// Docuware
+@import "@{dwthemePath}dw-ui/_icons.less";
+@import "@{dwthemePath}dw-ui/_utilities.less";
+@import "@{dwthemePath}dw-ui/_inputs.less";
+@import "@{dwthemePath}dw-ui/_dw-colors.less";
+@import "@{dwthemePath}dw-ui/_popover.less";
+
+
+// Jquery
+@import "@{jqueryUI}_jquery.ui.variables.less";
+@import "@{jqueryUI}_jquery.ui.core.less";
+@import "@{jqueryUI}_jquery.ui.theme.less";
+@import "@{jqueryUI}_jquery.ui.button.less";
+@import "@{jqueryUI}_jquery.ui.dialog.less";
+@import "@{jqueryUI}_jquery.ui.tabs.less";
+@import "@{jqueryUI}_jquery.ui.datepicker.less";
+@import "@{jqueryUI}_jquery.ui.menu.less";
+@import "@{jqueryUI}_jquery.ui.spinner.less";
+@import "@{jqueryUI}_jquery.ui.progressbar.less";
+@import "@{jqueryUI}_jquery.ui.accordion.less";
+@import "@{jqueryUI}_jquery.ui.resizable.less";
+@import "@{jqueryUI}_jquery.ui.tooltip.less";
+@import "@{jqueryUI}_ui.calendars.picker.less";
+
+// Jquery Extensions
+@import "@{jqueryUI}_dw.jquery.ui.button.less";
+@import "@{jqueryUI}_dw.jquery.ui.accordion.less";
+@import "@{jqueryUI}_dw.jquery.ui.menu.less";
+@import "@{componentsPath}/slickGrid/css/dw-grid.less";
+@import "@{componentsPath}/dwHidden/css/jquery.ui.dwHidden.less";
+
+@import (inline) "@{componentsPath}/DateTime/calendars/css/jquery.calendars.picker.css";
+@import (inline) "@{componentsPath}/DateTime/calendars/css/ui.calendars.picker.css";
+@import (less) "@{componentsPath}/select/css/select2.css";
+@import "@{componentsPath}/dwTabs/css/jquery.ui.dwTabs.less";
+@import "@{componentsPath}/dwScrollbar/css/jquery.ui.dwScrollbar.less";
+@import "@{componentsPath}/dwactivity/css/jquery.ui.dwactivity.less";
+@import "@{componentsPath}/toastr/css/toastr.less";
+@import "@{componentsPath}/dialogs/css/dw-dialogs.less";
+@import "@{componentsPath}/resizableColumns/css/jquery.resizableColumns.less";
+@import (less) "@{componentsPath}/spectrum/css/spectrum.css";
+
+// Theme
+@import "@{dwthemePath}Components/components.less";
+@import "@{dwthemePath}theme_dwstarp.less";

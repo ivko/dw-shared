@@ -1,0 +1,98 @@
+//dw-theme accordion
+
+.ui-accordion .ui-accordion-header {
+    background-color: @OT_GrayE;
+    border-bottom-color: @OT_GrayF;
+    //border-top-color: @OT_GrayF;
+    padding: 5px 5px 5px 25px;
+    margin-top: 0;
+
+    &:hover:not(.ui-accordion-header-active) {
+        background-color: @OT_BlueB;
+    }
+}
+
+.ui-accordion .ui-accordion-header-active {
+    border-bottom: 0 !important;
+    background-color: @OT_BlueA;
+    border-bottom-color: @OT_GrayF;
+    //    border-top-color: @OT_GrayF;
+    color: @OT_WHITE;
+}
+
+.ui-accordion .ui-accordion-content-active {
+    border-bottom: 1px !important;
+    border-bottom-color: @OT_GrayF !important;
+    border-bottom-style: solid !important;
+    display: block;
+    background-color: @OT_WHITE;
+    color: @OT_GrayA;
+}
+
+.ui-accordion .ui-accordion-content-active .ui-icon {
+    color: @OT_GrayA;
+}
+
+.ui-accordion-header-icon {
+    display: none;
+}
+
+.categories.ui-accordion .ui-accordion-content {
+    padding: 0;
+}
+
+.ui-accordion .vertical-menu {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    .menu-item {
+        position: relative;
+        list-style: none;
+    }
+}
+
+/*.ui-accordion .ui-accordion-header .ui-icon
+{
+    margin-top: -6px;
+}*/
+
+.ui-accordion .dw-icon-close {
+    position: absolute;
+    right: 2px;
+    top: 6px;
+    font-size: 9px;
+    padding: 1px;
+    border: 1px solid transparent;
+
+    &:hover {
+        border-color: @OT_SelectionBlue;
+    }
+}
+
+
+.ui-accordion a.ui-button {
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding-right: 15px;
+
+    &:focus {
+        background-color: transparent;
+    }
+
+    .ui-button-text {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 235px;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+}
+
+
+.ui-accordion .vertical-menu .menu-item.active .ui-button-text {
+    font-weight: bold;
+}

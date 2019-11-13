@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuditEventDetails_DocInfo">
+    <value>Αναγνωριστικό εγγράφου: {0}</value>
+  </data>
+  <data name="AuditEventDetails_Label">
+    <value>Τροποποιημένες ιδιότητες:</value>
+  </data>
+  <data name="AuditReport_Default_FileName">
+    <value>Έλεγχος</value>
+  </data>
+  <data name="AuditReport_EventType_Changed">
+    <value>Τροποποιήθηκε</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToFileSystem">
+    <value>Εξαγωγή στο σύστημα αρχείων</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToTray">
+    <value>Εξαγωγή στην κασέτα</value>
+  </data>
+  <data name="AuditReport_EventType_Clip">
+    <value>Περικοπή</value>
+  </data>
+  <data name="AuditReport_EventType_CopyToTray">
+    <value>Αντιγραφή στην κασέτα</value>
+  </data>
+  <data name="AuditReport_EventType_Created">
+    <value>Δημιουργήθηκε</value>
+  </data>
+  <data name="AuditReport_EventType_CreateRequest">
+    <value>Δημιουργία αιτήματος</value>
+  </data>
+  <data name="AuditReport_EventType_CreateSettings">
+    <value>Δημιουργία ρυθμίσεων</value>
+  </data>
+  <data name="AuditReport_EventType_Delete">
+    <value>Διαγραφή</value>
+  </data>
+  <data name="AuditReport_EventType_Deleted">
+    <value>Διαγράφηκε</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteSettings">
+    <value>Διαγραφή ρυθμίσεων</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteVersionHistory">
+    <value>Διαγραφή ιστορικού εκδόσεων</value>
+  </data>
+  <data name="AuditReport_EventType_EditAnnotations">
+    <value>Επεξεργασία σχολίων</value>
+  </data>
+  <data name="AuditReport_EventType_EditContent">
+    <value>Επεξεργασία περιεχομένου</value>
+  </data>
+  <data name="AuditReport_EventType_EditIndexData">
+    <value>Επεξεργασία δεδομένων ευρετηρίου</value>
+  </data>
+  <data name="AuditReport_EventType_EditSettings">
+    <value>Επεξεργασία ρυθμίσεων</value>
+  </data>
+  <data name="AuditReport_EventType_Email">
+    <value>Email</value>
+  </data>
+  <data name="AuditReport_EventType_Export">
+    <value>Εξαγωγή</value>
+  </data>
+  <data name="AuditReport_EventType_LogIn">
+    <value>Σύνδεση</value>
+  </data>
+  <data name="AuditReport_EventType_LogOff">
+    <value>Αποσύνδεση</value>
+  </data>
+  <data name="AuditReport_EventType_Open">
+    <value>Άνοιγμα</value>
+  </data>
+  <data name="AuditReport_EventType_Print">
+    <value>Εκτύπωση</value>
+  </data>
+  <data name="AuditReport_EventType_Store">
+    <value>Αποθήκευση</value>
+  </data>
+  <data name="AuditReport_EventType_UndoCheckout">
+    <value>Αναίρεση εξόδου</value>
+  </data>
+  <data name="AuditReport_EventType_WorkflowDecisionMade">
+    <value>Ελήφθη απόφαση για τη ροή εργασιών</value>
+  </data>
+  <data name="AuditReport_LastModified">
+    <value>Τελευταία τροποποίηση</value>
+  </data>
+  <data name="AuditReport_SettingsType_AuthenticationServer">
+    <value>Διακομιστής ελέγχου ταυτότητας</value>
+  </data>
+  <data name="AuditReport_SettingsType_Autoindex">
+    <value>Autoindex</value>
+  </data>
+  <data name="AuditReport_SettingsType_AutoNumber">
+    <value>Αυτόματος αριθμός</value>
+  </data>
+  <data name="AuditReport_SettingsType_BusinessUseCase">
+    <value>Περίπτωση επιχειρηματικής χρήσης</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlook">
+    <value>Σύνδεση με Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookAccess">
+    <value>Σύνδεση με πρόσβαση σε Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookConfiguration">
+    <value>Σύνδεση με διαμόρφωση Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_Database">
+    <value>Βάση δεδομένων</value>
+  </data>
+  <data name="AuditReport_SettingsType_DatabaseConnection">
+    <value>Σύνδεση βάσης δεδομένων</value>
+  </data>
+  <data name="AuditReport_SettingsType_Deletion">
+    <value>Διαγραφή</value>
+  </data>
+  <data name="AuditReport_SettingsType_Disk">
+    <value>Δίσκος</value>
+  </data>
+  <data name="AuditReport_SettingsType_Document">
+    <value>Έγγραφο</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentSettings">
+    <value>Ρυθμίσεις εγγράφου</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentType">
+    <value>Τύπος εγγράφου</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwImportRequest">
+    <value>DocuWare Import Request</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwRequestLite">
+    <value>DocuWare Request Lite</value>
+  </data>
+  <data name="AuditReport_SettingsType_EmailConfiguration">
+    <value>Διαμόρφωση email</value>
+  </data>
+  <data name="AuditReport_SettingsType_Export">
+    <value>Εξαγωγή</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalSelectList">
+    <value>Εξωτερική λίστα επιλογής</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalUserDirectory">
+    <value>Κατάλογος εξωτερικών χρηστών</value>
+  </data>
+  <data name="AuditReport_SettingsType_Field">
+    <value>Πεδίο</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinet">
+    <value>Αρχειοθήκη</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetGeneral">
+    <value>Αρχειοθήκη Γενικά</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetSettings">
+    <value>Ρυθμίσεις αρχειοθήκης</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileConnection">
+    <value>Σύνδεση αρχείου</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileExtension">
+    <value>Επέκταση αρχείου</value>
+  </data>
+  <data name="AuditReport_SettingsType_Forms">
+    <value>Φόρμες</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralProfile">
+    <value>Γενικό προφίλ</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralSystem">
+    <value>Γενικό σύστημα</value>
+  </data>
+  <data name="AuditReport_SettingsType_Group">
+    <value>Ομάδα</value>
+  </data>
+  <data name="AuditReport_SettingsType_IntellixConnection">
+    <value>Σύνδεση έξυπνης τοποθέτησης σε ευρετήριο</value>
+  </data>
+  <data name="AuditReport_SettingsType_Licence">
+    <value>Άδεια χρήσης</value>
+  </data>
+  <data name="AuditReport_SettingsType_Link">
+    <value>Σύνδεσμος</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpDevice">
+    <value>Συσκευή MFP</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpWorkflow">
+    <value>Ροή εργασιών MFP</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationServer">
+    <value>Διακομιστής ειδοποιήσεων</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationSettings">
+    <value>Ρυθμίσεις ειδοποιήσεων</value>
+  </data>
+  <data name="AuditReport_SettingsType_Obr">
+    <value>Obr</value>
+  </data>
+  <data name="AuditReport_SettingsType_Ocr">
+    <value>Ocr</value>
+  </data>
+  <data name="AuditReport_SettingsType_Organization">
+    <value>Οργανισμός</value>
+  </data>
+  <data name="AuditReport_SettingsType_PrinterConfiguration">
+    <value>Διαμόρφωση εκτυπωτή</value>
+  </data>
+  <data name="AuditReport_SettingsType_ProcessServer">
+    <value>Διακομιστής διαδικασίας</value>
+  </data>
+  <data name="AuditReport_SettingsType_Profile">
+    <value>Προφίλ</value>
+  </data>
+  <data name="AuditReport_SettingsType_RegularExpression">
+    <value>Κανονική έκφραση</value>
+  </data>
+  <data name="AuditReport_SettingsType_Replication">
+    <value>Αναπαραγωγή</value>
+  </data>
+  <data name="AuditReport_SettingsType_ResultList">
+    <value>Λίστα αποτελεσμάτων</value>
+  </data>
+  <data name="AuditReport_SettingsType_Role">
+    <value>Ρόλος</value>
+  </data>
+  <data name="AuditReport_SettingsType_Schedules">
+    <value>Χρονοδιαγράμματα</value>
+  </data>
+  <data name="AuditReport_SettingsType_SearchDialog">
+    <value>Παράθυρο διαλόγου αναζήτησης</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmartConnect">
+    <value>Smart Connect</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmtpConnection">
+    <value>Σύνδεση SMTP</value>
+  </data>
+  <data name="AuditReport_SettingsType_SolrConnection">
+    <value>Σύνδεση SOLR</value>
+  </data>
+  <data name="AuditReport_SettingsType_Stamp">
+    <value>Χρονική σήμανση</value>
+  </data>
+  <data name="AuditReport_SettingsType_StorageLocation">
+    <value>Θέση αποθήκευσης</value>
+  </data>
+  <data name="AuditReport_SettingsType_StoreDialog">
+    <value>Παράθυρο διαλόγου αποθήκευσης</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionRules">
+    <value>Κανόνες υποκατάστασης</value>
+  </data>
+  <data name="AuditReport_SettingsType_SystemBackupWorkflow">
+    <value>Ροή εργασιών αντιγράφων ασφαλείας συστήματος</value>
+  </data>
+  <data name="AuditReport_SettingsType_TrustedUser">
+    <value>Αξιόπιστος χρήστης</value>
+  </data>
+  <data name="AuditReport_SettingsType_User">
+    <value>Χρήστης</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserLoginLogout">
+    <value>Σύνδεση - Αποσύνδεση χρήστη</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserSync">
+    <value>Συγχρονισμός χρήστη</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebBasket">
+    <value>Κασέτα</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebConnection">
+    <value>Σύνδεση Web</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebInstances">
+    <value>Παρουσίες Web</value>
+  </data>
+  <data name="AuditReport_Table_DownloadCSV">
+    <value>Λήψη σε μορφή CSV</value>
+  </data>
+  <data name="AuditReport_TableColumn_Date">
+    <value>Ημερομηνία</value>
+  </data>
+  <data name="AuditReport_TableColumn_DocId">
+    <value>DocId</value>
+  </data>
+  <data name="AuditReport_TableColumn_Event">
+    <value>Συμβάν</value>
+  </data>
+  <data name="AuditReport_TableColumn_FileCabinet">
+    <value>Αρχειοθήκη</value>
+  </data>
+  <data name="AuditReport_TableColumn_Name">
+    <value>Όνομα</value>
+  </data>
+  <data name="AuditReport_TableColumn_Organization">
+    <value>Οργανισμός</value>
+  </data>
+  <data name="AuditReport_TableColumn_Type">
+    <value>Τύπος</value>
+  </data>
+  <data name="AuditReport_TableColumn_User">
+    <value>Χρήστης</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_PreviousValue">
+    <value>Προηγούμενη τιμή</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Property">
+    <value>Ιδιότητα</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Value">
+    <value>Τιμή</value>
+  </data>
+  <data name="AuditReport_EventType_Edited">
+    <value>Τροποποιήθηκε</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteAudit">
+    <value>Διαγραφή</value>
+  </data>
+  <data name="AuditReport_EventType_DisableAudit">
+    <value>Απενεργοποίηση</value>
+  </data>
+  <data name="AuditReport_EventType_EnableAudit">
+    <value>Ενεργοποίηση</value>
+  </data>
+  <data name="AuditReport_ObjectName_AllData">
+    <value>Όλα τα δεδομένα</value>
+  </data>
+  <data name="AuditReport_ObjectName_ConfigurationChanges">
+    <value>Αλλαγές διαμόρφωσης</value>
+  </data>
+  <data name="AuditReport_ObjectName_DocumentEvent">
+    <value>Συμβάντα εγγράφων</value>
+  </data>
+  <data name="AuditReport_ObjectName_UserLogEvent">
+    <value>Σύνδεση/Αποσύνδεση χρήστη</value>
+  </data>
+  <data name="AuditReport_SettingsType_Auditing">
+    <value>Έλεγχος</value>
+  </data>
+  <data name="AuditReport_SettingsType_FixedSelectList">
+    <value>Σταθερή λίστα επιλογής</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebServices">
+    <value>Υπηρεσία Web</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionList">
+    <value>Λίστα υποκατάστασης</value>
+  </data>
+</root>

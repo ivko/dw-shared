@@ -1,0 +1,15 @@
+﻿<script type="text/html" id="simple-pages-container-template">
+    <div class="btn-container radio-switch-toolbar" data-bind="css: { 'ui-hidden': !$data.isNavigationAvailable() }">
+        <div class="btn-group large" role="group">
+            <!--ko foreach: $data.pages-->
+            <button class="btn btn-quaternary" data-bind="command: $parent.switchPageCommand, text: $data.getTitle(), css: { 'btn-active': $parent.isCurrentPage($data) }"></button>
+            <!--/ko-->
+        </div>
+    </div>
+
+    <!-- ko foreach: pages -->
+        <div data-bind="bindIf: $parent.isCurrentPage($data)">
+            <!-- ko template: { name: getTemplate(), data: overviewVM } --> <!-- /ko -->
+        </div>
+    <!-- /ko -->
+</script>

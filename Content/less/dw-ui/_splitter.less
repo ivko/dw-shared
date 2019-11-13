@@ -1,0 +1,147 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+@import "_icons.less";
+
+/* SPLITTER*/
+/* Maybe we need to rename this 'master class name'
+   to something like 'dw-theme-default'. We will use
+   this class prefix to override the third-party css stytles. vmm */
+.masterArea
+{
+    overflow: hidden;
+
+    .splitter-pane
+    {
+        z-index: auto!important;
+    }
+
+    .left-splitter-pane
+    {
+        min-width: 440px;
+    }
+
+    .splitter-bar
+    {
+        background-image: none;
+    }
+
+    .splitter-bar-vertical
+    {
+        width: 10px;
+        height: 100%;
+        .dw-icon-splitter-vertical;
+
+        &:before
+        {
+            .dw-font-icon;
+            font-size: 9px;
+            line-height: 10px;
+            vertical-align: middle;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            bottom: 0;
+        }
+
+        &.with-handle
+        {
+            &:before
+            {
+                content: '';
+                display: none;
+            }
+        }
+
+        .touch-handle
+        {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 55px;
+            line-height: 55px;
+            vertical-align: middle;
+            width: 35px;
+            background: @OT_SeparatorGray;
+            text-align: center;
+            opacity: 0.8;
+            .dw-icon-splitter-vertical;
+
+            &:before
+            {
+                .dw-font-icon;
+                vertical-align: middle;
+            }
+        }
+
+        /*&-docked
+        {
+            .touch-handle
+            {
+                height: 40px;
+                width: 50px;
+            }
+        }*/
+    }
+
+    .splitter-bar-horizontal
+    {
+        height: 10px;
+        width: 100%;
+        .dw-icon-splitter;
+
+        &:before
+        {
+            .dw-font-icon;
+            font-size: 9px;
+            line-height: 10px;
+            vertical-align: middle;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    }
+
+    .splitter-bar.ui-state-default
+    {
+        background-color: @OT_SeparatorGray;
+        position: relative;
+        border-width: 0;
+        color: @OT_LabelGray;
+    }
+
+
+
+    .splitter-bar.ui-state-hover, .splitter-bar.ui-state-focus, .splitter-bar.ui-state-highlight, .splitter-bar.ui-state-hover .touch-handle, .splitter-bar.ui-state-focus .touch-handle, .splitter-bar.ui-state-highlight .touch-handle
+    {
+        background-color: @OT_MouseOverBlue;
+        border-width: 0;
+        color: @OT_LabelGray;
+        
+    }
+
+    .splitter-bar.ui-state-error, .splitter-bar.ui-state-error .touch-handle
+    {
+        background-color: @OT_MouseOverBlue;
+        border-width: 0;
+        color: @OT_Red;
+    }
+
+    div.hSplitPane
+    {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    div.hSplitContent
+    {
+        height: 100%;
+        width: 100%;
+        border: none;
+    }
+}

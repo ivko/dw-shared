@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="At_Label">
+    <value>بداية من</value>
+  </data>
+  <data name="Custom">
+    <value>مُخصص</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Friday_Label">
+    <value>الجمعة</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Monday_Label">
+    <value>الاثنين</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Saturday_Label">
+    <value>السبت</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Sunday_Label">
+    <value>الأحد</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Thursday_Label">
+    <value>الخميس</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Tuesday_Label">
+    <value>الثلاثاء</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Wednesday_Label">
+    <value>الأربعاء</value>
+  </data>
+  <data name="DailyRepeatEvery_Max_Text">
+    <value>لا يمكن أن تكون قيمة "{1}" أكبر من {0}</value>
+  </data>
+  <data name="DailyRepeatEvery_Min_Text">
+    <value>لا يمكن أن تكون قيمة "{1}" أقل من {0}</value>
+  </data>
+  <data name="DailyRepeatEveryDayEveryText">
+    <value>تكرار يوميًا كل {0} بدءًا من {1}</value>
+  </data>
+  <data name="DailyRepeatEveryDayText">
+    <value>تكرار يوميًا بدءًا من {0}</value>
+  </data>
+  <data name="DailyRepeatEverySummaryText">
+    <value>تكرار كل {0} كل {1} بدءًا من {2}</value>
+  </data>
+  <data name="DailyRepeatSummaryText">
+    <value>تكرار كل {0} بدءًا من {1}</value>
+  </data>
+  <data name="End_At_Label">
+    <value>انتهاء في</value>
+  </data>
+  <data name="EndDateNeverText">
+    <value>أبدًا</value>
+  </data>
+  <data name="Every2Month">
+    <value>كل شهرين</value>
+  </data>
+  <data name="Every2Weeks">
+    <value>كل أسبوعين</value>
+  </data>
+  <data name="Every3Month">
+    <value>كل ثلاثة أشهر</value>
+  </data>
+  <data name="Every3Weeks">
+    <value>كل ثلاثة أسابيع</value>
+  </data>
+  <data name="Every4Month">
+    <value>كل أربعة أشهر</value>
+  </data>
+  <data name="Every6Month">
+    <value>كل ستة أشهر</value>
+  </data>
+  <data name="EveryDay">
+    <value>يوميًا</value>
+  </data>
+  <data name="EveryMonth">
+    <value>شهريًا</value>
+  </data>
+  <data name="EveryWeek">
+    <value>أسبوعيًا</value>
+  </data>
+  <data name="First">
+    <value>الأول</value>
+  </data>
+  <data name="Fourth">
+    <value>الرابع</value>
+  </data>
+  <data name="Friday">
+    <value>الجمعة</value>
+  </data>
+  <data name="Hours_Label">
+    <value>كل ساعة (ساعات)</value>
+  </data>
+  <data name="Last">
+    <value>الأخير</value>
+  </data>
+  <data name="Minutes_Label">
+    <value>دقائق</value>
+  </data>
+  <data name="MissingDailyRepeatEvery_Text">
+    <value>يرجى إدخال قيمة للحقل "{0}"</value>
+  </data>
+  <data name="Monday">
+    <value>الاثنين</value>
+  </data>
+  <data name="MonthlyRepeatByMonthdaySummaryText">
+    <value>تتكرر {0} في {1} {2} عند {3}</value>
+  </data>
+  <data name="MonthlyRepeatByWeekdaySummaryText">
+    <value>تكرار {0} في {1} {2} في {3}</value>
+  </data>
+  <data name="NeverRepeatSummaryText">
+    <value>بلا تكرار</value>
+  </data>
+  <data name="On_Label">
+    <value>في</value>
+  </data>
+  <data name="On_the_Label">
+    <value>في</value>
+  </data>
+  <data name="Repeat_Every_Label">
+    <value>كل</value>
+  </data>
+  <data name="Repeat_Label">
+    <value>الجدول</value>
+  </data>
+  <data name="Saturday">
+    <value>السبت</value>
+  </data>
+  <data name="Second">
+    <value>الثاني</value>
+  </data>
+  <data name="SelectDate">
+    <value>تحديد اليوم</value>
+  </data>
+  <data name="SelectDayErrorText">
+    <value>الرجاء تحديد يوم واحد من الأسبوع على الأقل!</value>
+  </data>
+  <data name="Start_At_Label">
+    <value>بداية من</value>
+  </data>
+  <data name="Summary_Label">
+    <value>ملخص</value>
+  </data>
+  <data name="Sunday">
+    <value>الأحد</value>
+  </data>
+  <data name="Third">
+    <value>الثالث</value>
+  </data>
+  <data name="Thursday">
+    <value>الخميس</value>
+  </data>
+  <data name="Tuesday">
+    <value>الثلاثاء</value>
+  </data>
+  <data name="Wednesday">
+    <value>الأربعاء</value>
+  </data>
+  <data name="Weekdays">
+    <value>أيام الأسبوع (الاثنين-الجمعة)</value>
+  </data>
+  <data name="Weekends">
+    <value>عطلة نهاية الأسبوع (السبت-الأحد)</value>
+  </data>
+  <data name="WeeklyRepeatSummaryText">
+    <value>تكرار {0} في {1} في {2}</value>
+  </data>
+  <data name="Daily">
+    <value>يوميًا</value>
+  </data>
+  <data name="Monthly">
+    <value>شهريًا</value>
+  </data>
+  <data name="Never">
+    <value>أبدًا</value>
+  </data>
+  <data name="Of_The_Month_Text">
+    <value>من الشهر</value>
+  </data>
+  <data name="Weekly">
+    <value>أسبوعيًا</value>
+  </data>
+  <data name="Hours">
+    <value>كل ساعة (ساعات)</value>
+  </data>
+  <data name="Minutes">
+    <value>دقائق</value>
+  </data>
+  <data name="EndTimeIsBeforeStartTimeErrorText">
+    <value>يجب أن يكون وقت البدء قبل وقت النهاية.</value>
+  </data>
+  <data name="ClientTimeZone_Label">
+    <value>المنطقة الزمنية</value>
+  </data>
+  <data name="By_minute">
+    <value>بحسب الدقائق</value>
+  </data>
+  <data name="DailyRepeatCustomDaysNonRecurringText">
+    <value>تتكرر كل {0} عند {1}</value>
+  </data>
+  <data name="DailyRepeatCustomDaysRecurringText">
+    <value>تتكرر كل {0} من {2} إلى {3} كل {1}</value>
+  </data>
+  <data name="DailyRepeatEveryDayNonRecurringText">
+    <value>تتكرر يوميًا عند {0}</value>
+  </data>
+  <data name="DailyRepeatEveryDayRecurringText">
+    <value>تتكرر يوميًا من {1} إلى {2} كل {0}</value>
+  </data>
+  <data name="day_first">
+    <value>st</value>
+  </data>
+  <data name="day_other">
+    <value>th</value>
+  </data>
+  <data name="day_second">
+    <value>nd</value>
+  </data>
+  <data name="day_third">
+    <value>rd</value>
+  </data>
+  <data name="Hourly">
+    <value>كل ساعة</value>
+  </data>
+  <data name="Recurring">
+    <value>متكرر</value>
+  </data>
+</root>

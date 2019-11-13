@@ -1,0 +1,166 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+@import "_icons.less";
+
+ // NAVIGATION BAR
+
+.dw-navigationStrip
+{
+    height: @navbar-height;
+    width: 100%;
+    background-color: @navbar-bg;
+    border-top: 1px solid @navbar-border-color;
+    border-bottom: 1px solid @navbar-border-color;
+    .boxed;
+
+    &.dw-navigation-strip-mini
+    {
+        min-width: @navbar-mini-minwidth;
+        /*Hide labels except for baskets and searches*/
+        .dw-relativeContainer
+        {
+            .ui-icon
+            {
+                +.label
+                {
+                    display: none;
+                }
+
+                margin-right: 17px;
+                margin-left: 18px;
+            }
+        }
+    }
+
+
+    .dw-navigationTab
+    {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        background-color: @navbar-bg;
+        overflow: hidden;
+
+        *{
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+
+
+        li
+        {
+            min-width: 24px;
+            position: relative;
+            cursor: pointer;
+            float: left;
+            height: 100%;
+            line-height: @navbar-height - 2;
+            padding: 0;
+            margin: 0;
+            font-size: @baseUIFontSizeDec1;
+            font-weight: bold;
+            border-left: 1px solid @OT_WHITE;
+            border-right: 1px solid @OT_BorderGray;
+            color: @navbar-color;
+            vertical-align: middle;
+            .transition( 0.25s, background-color );
+            //The before icons position
+            &:before
+            {
+                font-size: 18px;
+                margin-left: 10px;
+                vertical-align: middle;
+            }
+
+            .dw-relativeContainer
+            {
+                width: auto;
+                display: inline-block;
+
+                .ui-icon{
+                    font-size: 18px;
+
+                    &.dw-icon-treeViewContentArea{
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .label
+            {
+                display: inline-block;
+                margin-left: 5px;
+                margin-right: 2px;
+                padding-right: 20px;
+                vertical-align: middle;
+            }
+
+            &.menuIcon .dw-relativeContainer
+            {
+                .ui-icon-carat-1-s;
+
+                &:before
+                {
+                    .dw-font-icon;
+                    font-size: 14px;
+                    line-height: 14px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 2px;
+                }
+            }
+
+            &:hover
+            {
+                background-color: @OT_MouseOverBlue;
+            }
+
+            &:focus
+            {
+                .drop-shadow-inset(inset 0 0 0 1px @OT_SelectionBlue);
+            }
+
+            &.menu-active.menuIcon .dw-relativeContainer
+            {
+                .ui-icon-carat-1-n;
+            }
+
+            &.active, &:active
+            {
+                color: @OT_WHITE;
+                background-color: @OT_SelectionBlue;
+                border-color: @OT_SelectionBlue;
+            }
+
+            &:first-child
+            {
+                border-left: none;
+            }
+
+            &:last-child:after
+            {
+                display: block;
+                position: absolute;
+                border-right: 1px solid @OT_WHITE;
+                height: 100%;
+                width: 1px;
+                content: "";
+                right: -2px;
+                top: 0;
+            }
+        }
+    }
+
+    .icon-button
+    {
+        height: @navbar-height - 2;
+    }
+}
+
+.dw-splitButton {
+    position: absolute;
+    right: 0;
+    top: 1px;
+}

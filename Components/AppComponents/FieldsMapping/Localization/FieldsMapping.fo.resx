@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Button_Cancel_Text">
+    <value>CancelCa###</value>
+  </data>
+  <data name="Button_OK_Text">
+    <value>O###</value>
+  </data>
+  <data name="DiscardingChanges_Default_Title">
+    <value>Changes will be discardedChanges will be d###</value>
+  </data>
+  <data name="Fields_Mapping_Dialog_Infobox_Title">
+    <value>Assign FieldsAssign ###</value>
+  </data>
+  <data name="FieldsMappingDialog_Title">
+    <value>Assign FieldsAssign ###</value>
+  </data>
+  <data name="MappingFields_DiffLength_Text">
+    <value>Field {0} is assigned to a field with a different lengthField *0* is assigned to a field with a di###</value>
+  </data>
+  <data name="MappingFields_DiffPrecision_Text">
+    <value>The field {0} is assigned to a field with a different precisionThe field *0* is assigned to a field with a dif###</value>
+  </data>
+  <data name="MappingFields_Required_Text">
+    <value>Please assign at least one fieldPlease assign at least ###</value>
+  </data>
+  <data name="NotMapped_Text">
+    <value>&lt;Not assigned&gt;&lt;Not ass###</value>
+  </data>
+  <data name="Select_Mapping_Label">
+    <value>Please assign fields for mappingPlease assign fields fo###</value>
+  </data>
+</root>

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="At_Label">
+    <value>Comenzar el</value>
+  </data>
+  <data name="Custom">
+    <value>Personalización</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Friday_Label">
+    <value>Vi</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Monday_Label">
+    <value>Lu</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Saturday_Label">
+    <value>Sá</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Sunday_Label">
+    <value>Do</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Thursday_Label">
+    <value>Ju</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Tuesday_Label">
+    <value>Ma</value>
+  </data>
+  <data name="Daily_Custom_Occurrence_Wednesday_Label">
+    <value>Mi</value>
+  </data>
+  <data name="DailyRepeatEvery_Max_Text">
+    <value>El valor para «{1}» no puede ser superior a {0}</value>
+  </data>
+  <data name="DailyRepeatEvery_Min_Text">
+    <value>El valor para «{1}» no puede ser inferior a {0}</value>
+  </data>
+  <data name="DailyRepeatEveryDayEveryText">
+    <value>Se repite cada {0} a partir de las {1}</value>
+  </data>
+  <data name="DailyRepeatEveryDayText">
+    <value>Se repite cada día a partir de las {0}</value>
+  </data>
+  <data name="DailyRepeatEverySummaryText">
+    <value>Se repite cada {0} cada {1} a partir de las {2}</value>
+  </data>
+  <data name="DailyRepeatSummaryText">
+    <value>Se repite cada {0} a partir de las {1}</value>
+  </data>
+  <data name="End_At_Label">
+    <value>Finaliza a las</value>
+  </data>
+  <data name="EndDateNeverText">
+    <value>Nunca</value>
+  </data>
+  <data name="Every2Month">
+    <value>cada 2 meses</value>
+  </data>
+  <data name="Every2Weeks">
+    <value>cada 2 semanas</value>
+  </data>
+  <data name="Every3Month">
+    <value>cada 3 meses</value>
+  </data>
+  <data name="Every3Weeks">
+    <value>cada 3 semanas</value>
+  </data>
+  <data name="Every4Month">
+    <value>cada 4 meses</value>
+  </data>
+  <data name="Every6Month">
+    <value>cada 6 meses</value>
+  </data>
+  <data name="EveryDay">
+    <value>cada día</value>
+  </data>
+  <data name="EveryMonth">
+    <value>cada mes</value>
+  </data>
+  <data name="EveryWeek">
+    <value>cada semana</value>
+  </data>
+  <data name="First">
+    <value>primer</value>
+  </data>
+  <data name="Fourth">
+    <value>cuarto</value>
+  </data>
+  <data name="Friday">
+    <value>Viernes</value>
+  </data>
+  <data name="Hours_Label">
+    <value>hora/s</value>
+  </data>
+  <data name="Last">
+    <value>Último</value>
+  </data>
+  <data name="Minutes_Label">
+    <value>minutos</value>
+  </data>
+  <data name="MissingDailyRepeatEvery_Text">
+    <value>Introduzca un valor en el campo «{0}»</value>
+  </data>
+  <data name="Monday">
+    <value>Lunes</value>
+  </data>
+  <data name="MonthlyRepeatByMonthdaySummaryText">
+    <value>Se repite {0} el {1} {2} a las {3}</value>
+  </data>
+  <data name="MonthlyRepeatByWeekdaySummaryText">
+    <value>Se repite {0} el {1} {2} a las {3}</value>
+  </data>
+  <data name="NeverRepeatSummaryText">
+    <value>Sin repetición</value>
+  </data>
+  <data name="On_Label">
+    <value>El</value>
+  </data>
+  <data name="On_the_Label">
+    <value>El</value>
+  </data>
+  <data name="Repeat_Every_Label">
+    <value>Cada</value>
+  </data>
+  <data name="Repeat_Label">
+    <value>Programación</value>
+  </data>
+  <data name="Saturday">
+    <value>Sábado</value>
+  </data>
+  <data name="Second">
+    <value>segundo</value>
+  </data>
+  <data name="SelectDate">
+    <value>Seleccionar día</value>
+  </data>
+  <data name="SelectDayErrorText">
+    <value>Seleccione al menos un día de la semana.</value>
+  </data>
+  <data name="Start_At_Label">
+    <value>A partir del</value>
+  </data>
+  <data name="Summary_Label">
+    <value>Resumen</value>
+  </data>
+  <data name="Sunday">
+    <value>Domingo</value>
+  </data>
+  <data name="Third">
+    <value>tercer</value>
+  </data>
+  <data name="Thursday">
+    <value>Jueves</value>
+  </data>
+  <data name="Tuesday">
+    <value>Martes</value>
+  </data>
+  <data name="Wednesday">
+    <value>Miércoles</value>
+  </data>
+  <data name="Weekdays">
+    <value>De lunes a viernes</value>
+  </data>
+  <data name="Weekends">
+    <value>Los fines de semana</value>
+  </data>
+  <data name="WeeklyRepeatSummaryText">
+    <value>Se repite {0} el {1} a las {2}</value>
+  </data>
+  <data name="Daily">
+    <value>A diario</value>
+  </data>
+  <data name="Monthly">
+    <value>Cada mes</value>
+  </data>
+  <data name="Never">
+    <value>Nunca</value>
+  </data>
+  <data name="Of_The_Month_Text">
+    <value>del mes</value>
+  </data>
+  <data name="Weekly">
+    <value>Cada semana</value>
+  </data>
+  <data name="Hours">
+    <value>hora/s</value>
+  </data>
+  <data name="Minutes">
+    <value>minutos</value>
+  </data>
+  <data name="EndTimeIsBeforeStartTimeErrorText">
+    <value>La hora de inicio debe ser anterior a la hora de finalización.</value>
+  </data>
+  <data name="ClientTimeZone_Label">
+    <value>Zona horaria</value>
+  </data>
+  <data name="By_minute">
+    <value>Por minuto</value>
+  </data>
+  <data name="DailyRepeatCustomDaysNonRecurringText">
+    <value>Se repite cada {0} a las {1}</value>
+  </data>
+  <data name="DailyRepeatCustomDaysRecurringText">
+    <value>Se repite cada {0} de {2} a {3} cada {1}</value>
+  </data>
+  <data name="DailyRepeatEveryDayNonRecurringText">
+    <value>Se repite cada día a las {0}</value>
+  </data>
+  <data name="DailyRepeatEveryDayRecurringText">
+    <value>Se repite cada día de {1} a {2} cada {0}</value>
+  </data>
+  <data name="day_first">
+    <value>º</value>
+  </data>
+  <data name="day_other">
+    <value>º</value>
+  </data>
+  <data name="day_second">
+    <value>º</value>
+  </data>
+  <data name="day_third">
+    <value>º</value>
+  </data>
+  <data name="Hourly">
+    <value>Cada hora</value>
+  </data>
+  <data name="Recurring">
+    <value>Periódico</value>
+  </data>
+</root>

@@ -1,0 +1,1110 @@
+@import "../../../../Content/less/_variables.less";
+@import "../../../../Content/less/_mixins.less";
+@import "../../../../Content/less/dw-ui/_icons.less";
+
+/*GRID*/
+.dw-griddle {
+    position: absolute;
+    top: 0;
+    bottom: 30px;
+    width: 100%;
+    left: 0;
+    right: 0;
+
+    .slick-viewport {
+        height: 100% !important;
+    }
+
+    &.dw-fullTextView {
+        top: 0;
+
+        .grid-canvas {
+            border-top: 1px solid @OT_BorderGray;
+        }
+
+        .slick-row.odd {
+            background-color: @OT_WHITE;
+        }
+
+        .slick-cell {
+            border-bottom: 1px solid @OT_BorderGray;
+            border-top: 1px solid transparent;
+        }
+    }
+
+    &.basket {
+        top: 0;
+    }
+
+    .slick-header-columns {
+        height: 0;
+    }
+
+    .slick-row {
+        background-color: @OT_UltraLightGray;
+
+        &.odd {
+            background-color: @OT_UltraLightGray;
+        }
+    }
+
+    .slick-header {
+        display: none;
+    }
+
+    .slick-cell {
+        padding: 0;
+        border: none;
+
+        &.hidden-cell {
+            display: none;
+
+            &:hover {
+                background: @OT_CaptionGray;
+            }
+        }
+
+        &.selected {
+            background: @OT_CaptionGray;
+
+            .dw-icon-mobile-menu {
+                color: @OT_WHITE;
+
+                &:after {
+                    color: @OT_WHITE;
+                }
+            }
+
+            .dw-icon-folder {
+                &:before {
+                    color: @OT_WHITE;
+                }
+            }
+
+            .wrapper {
+                .thumb-title, .data {
+                    color: @OT_WHITE;
+                }
+            }
+
+            &:hover {
+                background: @OT_CaptionGray;
+            }
+        }
+
+        &:hover {
+            background: @OT_MouseOverBlue;
+        }
+
+        &.dropzone.dragging {
+            //add border for dropzone dragging
+            outline: 1px solid @OT_BlueA;
+
+            .wrapper {
+                .thumb-title, .data {
+                    color: @OT_LabelGray;
+                }
+            }
+
+            .dw-icon-folder {
+                display: none;
+            }
+
+            .dw-icon-folder-open.hidden-icon {
+                visibility: visible !important;
+                width: 100% !important;
+            }
+        }
+
+        &.dropzone.dragging.selected {
+            background-color: @OT_MouseOverBlue !important;
+        }
+
+        &.folder { //vertically align the text of the folder cells
+            .dw-cardView-item .data {
+                vertical-align: middle;
+            }
+        }
+
+        .ico-inc-thumbnail { //align vertically icon-based (folder) thumbnails.
+            font-size: 52px;
+            width: 100%;
+
+            &:before {
+                position: relative;
+                top: 54%;
+            }
+        }
+
+        &.tempFolder { //this is when we have empty folder (created with "new folder")
+            color: @OT_MediumGray;
+
+            &.selected {
+                color: @OT_WHITE;
+            }
+
+            .dw-icon-folder {
+                .font-icon(e924);
+                //color: @OT_MediumGray;
+            }
+
+            .dw-icon-folder-open.hidden-icon {
+                .font-icon(e927);
+            }
+        }
+    }
+
+    .dw-thumbnailView-item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: table;
+
+        .rename-input-container {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    .scroll-vertical-visible {
+        padding-right: 16px !important;
+        width: auto !important;
+
+        .dw-fullTextView-item .dw-icon-mobile-menu {
+            right: 20px;
+        }
+    }
+    /*Common classes for card view and full text view*/
+    .dw-cardView-item, .dw-fullTextView-item {
+        display: table;
+        width: 100%;
+        height: 100%;
+
+        .wrapper {
+            display: table-row;
+
+            &:hover {
+                .data {
+                    overflow-y: auto;
+                }
+            }
+
+            .thumb {
+                .boxed();
+                position: relative;
+                display: inline-block;
+                line-height: 0;
+
+                .indexing {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 10px; /*by design*/
+                    height: 23px; /*by design*/
+                    background-color: transparent;
+
+                    &.good {
+                        background-color: @goodIndexColor;
+                    }
+
+                    &.medium {
+                        background-color: @mediumIndexColor;
+                    }
+
+                    &.bad {
+                        background-color: @badIndexColor;
+                    }
+                }
+                //&.dw-noImage
+                //{
+                //    width: 80px;
+                //    height: 80px;
+                //    .backgroundImage(~'"@{dwImagePath}dw_logo.png"', left, center);
+                //    background-size: 78px 17px;
+                //}
+                .loadingImage {
+                    background-image: ~'url("@{dwImagePath}ajax-loader-small.gif"), url("@{loadFile}")';
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+
+            .thumb-loaded {
+                border: 1px solid @OT_BorderGray;
+            }
+
+            .image {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            .data {
+                .boxed();
+                display: table-cell;
+                font-family: @baseFontFamily;
+                font-size: 11px;
+                overflow-y: hidden;
+                overflow-x: hidden;
+                line-height: 15px;
+            }
+        }
+    }
+    /*Card view*/
+    .dw-cardView-item {
+        .image {
+            width: 40%;
+        }
+
+        .data {
+            width: 145px;
+            height: 120px;
+            padding-top: 15px;
+            padding-left: 5px;
+
+            .data-wrapper {
+                max-height: 96px;
+            }
+
+            .title span {
+                display: block;
+                font-weight: bold;
+                width: 120px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-align: left;
+                margin-bottom: 5px;
+                .textOverflow(ellipsis);
+            }
+
+            .intellixField, .content {
+                width: 120px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-align: left;
+                .textOverflow(ellipsis);
+            }
+
+            .intellixField {
+                min-height: 15px;
+            }
+
+            div {
+                text-align: left;
+            }
+        }
+
+        .dw-icon-mobile-menu {
+            margin-top: 0;
+        }
+    }
+    /*Full text view*/
+    .dw-fullTextView-item {
+        .image {
+            width: 82px;
+            padding: 0 20px;
+        }
+
+        .data {
+            .boxed();
+            display: table-cell;
+            padding: 10px 40px 10px 0;
+            vertical-align: middle;
+            font-family: @baseFontFamily;
+            font-size: 11px;
+            overflow-y: hidden;
+            line-height: 15px;
+
+            .data-wrapper {
+                max-height: 96px;
+            }
+
+            .title {
+                span {
+                    display: block;
+                    font-weight: bold;
+                    text-align: left;
+                    white-space: normal;
+                    margin-bottom: 5px;
+                }
+
+                .documentNameLink {
+                    cursor: pointer;
+                    font-weight: normal !important;
+                }
+            }
+
+            .content {
+                text-align: left;
+                white-space: normal;
+            }
+
+            div {
+                text-align: left;
+            }
+        }
+    }
+
+    .dw-thumbnailView-item, .dw-cardView-item {
+        .tooltipContainer {
+            height: 20px;
+
+            .documentNameLink {
+                cursor: pointer;
+                font-weight: normal !important;
+                display: inline;
+            }
+        }
+    }
+
+
+    .dw-icon-mobile-menu {
+        margin-top: 0;
+    }
+
+    &.dropzoneSelected {
+        background-color: @OT_BlueB !important;
+
+        .slick-row {
+            background-color: @OT_BlueB !important;
+        }
+
+        .slick-cell:after {
+            background: rgba(192, 228, 249, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+        }
+    }
+}
+
+//Thumbnail image used in grid and in drag and drop
+.wrapper {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+    .thumb {
+        .boxed();
+        position: relative;
+        display: inline-block;
+        line-height: 0;
+        .backgroundSize( @thumbnailSize @thumbnailSize );
+
+        .indexing {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 10px; /*by design*/
+            height: 23px; /*by design*/
+            background-color: transparent;
+
+            &.good {
+                background-color: @goodIndexColor;
+            }
+
+            &.medium {
+                background-color: @mediumIndexColor;
+            }
+
+            &.bad {
+                background-color: @badIndexColor;
+            }
+        }
+
+
+        &.dw-noImage {
+            border: 0 !important;
+
+            &:before {
+                content: "\e92a";
+                font-family: 'dwIconFont';
+                font-size: 52px;
+                line-height: 1;
+            }
+
+            .dbrecord {
+                display: none;
+            }
+        }
+
+        .loadingImage {
+            background-image: ~'url("@{dwImagePath}ajax-loader-small.gif"), url("@{loadFile}")';
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .thumb-loaded {
+        border: 1px solid @OT_BorderGray;
+    }
+
+    .thumb-annotations {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .thumb-title span {
+        .boxed();
+        position: absolute;
+        display: block;
+        width: 100%;
+        background: none;
+        left: 0px;
+        bottom: 1px;
+        padding: 0 10px 0 5px;
+        white-space: nowrap;
+        text-align: center;
+        font-size: @baseUIFontSizeDec1;
+        font-weight: bold;
+        overflow: hidden;
+        .textOverflow(ellipsis);
+
+        label {
+            display: inline;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.dw-grid {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 30px;
+
+    .scrollbar-corner {
+        border: 0;
+    }
+
+    &.basket {
+        top: 0;
+    }
+
+
+    &.wf-grid {
+        top: 0;
+    }
+
+    &.forms-grid {
+        bottom: 0;
+    }
+
+    .slick-header {
+        z-index: 2;
+
+        &.ui-state-default {
+            border: 0;
+        }
+
+        .slick-header-columns {
+            background: @OT_WHITE;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            .slick-header-column {
+                font-size: @baseUIFontSizeDec1;
+                font-weight: bold;
+                // text-transform: uppercase;
+                background: transparent;
+                border: none;
+
+                &.ui-state-default {
+                    height: 15px;
+                    line-height: 15px;
+                    margin: 0;
+                    padding: 5px 30px 5px 5px;
+                    border-style: none;
+
+                    &:first-child {
+                        text-align: center;
+                    }
+                }
+
+                &.slick-sortable-placeholder {
+                    background-color: @OT_MouseOverBlue;
+                }
+
+                &.slick-header-sortable, &.slick-header-filterable {
+                    background-color: transparent;
+                }
+
+
+                .slick-resizable-handle {
+                    background-color: @OT_WHITE;
+                    .backgroundImage( ~'"@{dwImagePath}dw_grid_column_resize_handle.png"', center, center, repeat-y );
+                }
+
+                &.dw-intellixHeader {
+                    padding-right: 3px;
+                    min-width: 0;
+                }
+
+                &.slick-header-column-sorted {
+                    font-style: normal;
+
+                    .slick-sort-indicator {
+                        font-size: 10px;
+
+                        &.slick-sort-indicator-asc {
+                            .dw-font-icon;
+                            .ui-icon-triangle-1-n;
+                        }
+
+                        &.slick-sort-indicator-desc {
+                            .dw-font-icon;
+                            .ui-icon-triangle-1-s;
+                        }
+                    }
+                }
+
+                &:last-child .slick-resizable-handle {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .ui-widget-content {
+        &.slick-row {
+            border-bottom: 1px solid @OT_BorderGray;
+            border-color: @OT_BorderGray;
+            background: @OT_WHITE;
+            .transition( 0.25s, background );
+            line-height: 29px;
+
+            &.odd {
+                background: @OT_WHITE;
+            }
+
+            &.even {
+                background: @OT_UltraLightGray;
+            }
+
+            &:hover {
+                background: @OT_BlueB;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &.dropzone.dragging {
+                .slick-cell.selected {
+                    background-color: @OT_MouseOverBlue;
+                    color: @OT_LabelGray;
+                }
+                //add border for dropzone dragging
+                .slick-cell {
+                    border-top: 1px solid @OT_BlueA;
+                    border-bottom: 1px solid @OT_BlueA;
+
+                    &:first-child {
+                        border-left: 1px solid @OT_BlueA;
+                    }
+
+                    &:last-child {
+                        border-right: 1px solid @OT_BlueA;
+                    }
+                }
+
+                .dw-icon-folder.slick-cell-icon {
+                    display: none;
+                }
+
+                .dw-icon-folder-open.hidden-icon {
+                    width: 18px !important;
+                    visibility: visible !important;
+                }
+            }
+
+            &.tempFolder { //this is when we have empty folder (created with "new folder")
+                .slick-cell {
+                    color: @OT_BlueC;
+
+                    &.selected {
+                        color: @OT_WHITE;
+                    }
+
+                    .dw-icon-folder.slick-cell-icon {
+                        .font-icon(e924);
+                        //color: @OT_MediumGray;
+                    }
+
+                    .dw-icon-folder-open.hidden-icon {
+                        .font-icon(e927);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .slick-cell {
+        background: transparent;
+        font-family: @baseFontFamily;
+        color: @OT_LabelGray;
+        border-left: none;
+        border-right: none;
+        padding-left: 5px;
+        padding-right: 10px;
+        border-bottom-color: @OT_BorderGray;
+
+        label {
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &:before {
+                margin-right: 0;
+            }
+
+            &:after {
+                top: 8px;
+            }
+        }
+
+        &:empty {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        &.selected {
+            background-color: @OT_GrayB;
+            color: @OT_WHITE;
+
+            .dw-icon-filetype, .dw-icon-mobile-menu, .dw-icon-folder, .dw-icon-formsLink, .dw-icon-formsEdit, .dw-cell-formsType {
+                color: @OT_WHITE;
+
+                &:after {
+                    color: @OT_WHITE;
+                }
+
+                &:before {
+                    color: @OT_WHITE;
+                }
+            }
+        }
+
+        span.slick-cell-text {
+            padding-left: 5px;
+        }
+    }
+    //Icons for table view
+    .dw-icon-filetype, .dw-icon-formsLink, .dw-icon-formsEdit, .dw-cell-formsType {
+        bottom: initial;
+        top: 50%;
+        left: ~"calc(50% - 13px)";
+        background-color: transparent;
+
+        &.checkedout:after {
+            background: transparent;
+            color: @OT_CaptionGray;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    div.ui-icon:not(.dw-wf-status) { //do not apply this only to the workflow flag icons
+        //position: static;
+        font-size: 15px;
+        width: 18px;
+        height: 15px;
+
+        &.slick-cell-icon { //the folder icon
+            margin-top: -3px;
+            vertical-align: middle;
+            margin-left: ~"calc(50% - 10px)";
+        }
+    }
+
+    .dw-icon-mobile-menu {
+        margin-top: 0;
+    }
+
+    &.dropzoneSelected {
+        background-color: #b2d6e9;
+
+        .slick-row {
+            &.odd {
+                .slick-cell {
+                    background-color: @OT_BlueB; //fake overlay color
+                }
+            }
+
+            &.even {
+                .slick-cell {
+                    background-color: @OT_BlueB; //fake overlay color
+                }
+            }
+        }
+    }
+}
+
+/* Hidden Tabs */
+.ui-tabs-nav-hidden .dw-grid
+{
+    top: @gridContainerOffset - @navbar-height;
+}
+
+/*GRID PAGER*/
+div.dw-pager {
+    width: 100%;
+    height: @pagerHeight;
+    min-height: 20px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    bottom: 0;
+    z-index: 5;
+
+    * {
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    .pager-content {
+        height: -2+@pagerHeight;
+        border-top: 1px solid @OT_BorderGray;
+        border-bottom: 1px solid @OT_WHITE;
+        background-color: @OT_WHITE;
+        display: table;
+
+        & > div {
+            display: table-row;
+        }
+
+        .section {
+            display: table-cell;
+            width: 50%;
+            min-width: 25px;
+            vertical-align: middle;
+
+            &.controls {
+                width: 250px;
+            }
+
+            .ui-icon {
+                cursor: pointer;
+                margin-top: 0;
+                vertical-align: -10%;
+
+                &:focus {
+                    -webkit-box-shadow: inset 0 0 0 1px @OT_BlueA;
+                    -moz-box-shadow: inset 0 0 0 1px @OT_BlueA;
+                    box-shadow: inset 0 0 0 1px @OT_BlueA;
+                }
+            }
+
+            .page-input {
+                margin-left: 5px;
+                margin-right: 6px;
+                width: 32px;
+                height: @pagerIconHeight;
+                line-height: @baseUIFontSize;
+                font-size: @baseUIFontSize;
+                color: @OT_LabelGray;
+                border: 1px solid @OT_BorderGray;
+                padding: 0;
+                text-align: center;
+                .boxed();
+
+                &:focus {
+                    border-color: @OT_SelectionBlue;
+                }
+            }
+
+            .separator {
+                display: table-cell;
+                min-width: 1px;
+                width: 1px;
+                height: -2+@pagerHeight;
+                background-color: @OT_BorderGray;
+                border-right: 1px solid @OT_WHITE;
+            }
+
+            .page-numbers {
+                margin-right: 5px;
+                text-align: right;
+                font-size: 11px;
+                white-space: nowrap;
+                float: right;
+                width: 140px;
+                color: @OT_LabelGray;
+            }
+        }
+    }
+}
+
+.dw-griddle, .dw-grid
+{
+    /* Drag drop */
+    border: 1px solid rgba(0,0,0,0);
+    &.canDrop
+    {
+        background-color: @OT_DragZoneGray;
+        z-index: 100;
+
+        .slick-row
+        {
+            background-color: @OT_DragZoneGray;
+        }
+
+        &:hover
+        {
+            background-color: @OT_MouseOverBlue;
+
+            .slick-row
+            {
+                background-color: @OT_MouseOverBlue;
+            }
+        }
+    }
+
+    &.dropStart
+    {
+        background-color: @OT_MouseOverBlue;
+
+        .slick-cell.selected{
+             .dw-icon-folder{
+                .font-icon(e926);
+            }
+
+            &.tempFolder{
+                 .dw-icon-folder{
+                    .font-icon(e927);
+                }
+            }
+        }
+
+        .slick-row.tempFolder{
+             .slick-cell.selected{
+                 .dw-icon-folder{
+                    .font-icon(e927);
+                }
+            }
+        }
+    }
+
+    .ui-icon{
+        &.dw-icon-folder, &.dw-icon-folder-open, &.dw-icon-folder-add{
+            color: @OT_BlueA;
+        }
+    }
+}
+
+.dw-grid.ui-state-focus, .dw-griddle.ui-state-focus {
+    border: 1px @OT_BlueA solid;
+}
+
+/*Help cell used to calculate the width with the current styles*/
+.slick-header-column-helper
+{
+    font-family: @baseFontFamily;
+    font-size: @baseUIFontSizeDec1;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px 5px 5px;
+}
+.slick-header-sortable
+{
+    &:hover
+    {
+        &:not(.slick-header-column-sorted)
+        {
+            .dw-icon-sort();
+        }
+
+        cursor: pointer;
+    }
+
+
+    &:before
+    {
+        .dw-font-icon();
+        position: absolute;
+        right: 4px;
+        font-size: 10px;
+    }
+}
+
+.slick-header-filterable {
+    &:hover {
+        &:not(.slick-header-column-filtered) .slick-filter-indicator {
+            .dw-icon-filter();
+        }
+
+        cursor: pointer;
+    }
+
+
+    .slick-filter-indicator:before {
+        .dw-font-icon();
+        position: absolute;
+        right: 18px;
+        font-size: 10px;
+    }
+}
+
+.slick-header-column-filtered .slick-filter-indicator {
+    .dw-icon-filter();
+}
+//Show and hide the icon menu for mobile
+.mobile-menu {
+    display: none;
+
+    .touch & {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    &.horizontal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+
+        .dw-icon-mobile-menu {
+            display: block;
+        }
+    }
+
+    .dw-checkBox + label, .checkbox + label {
+        vertical-align: inherit;
+        line-height: inherit;
+
+        &:before {
+            margin-right: 0;
+        }
+    }
+
+    .wf-grid & .dw-checkBox {
+        display: none;
+
+        & + label {
+            display: none;
+        }
+    }
+}
+
+.drop-indicator {
+    top: 50%;
+    left: 50%;
+    max-width: 90%;
+    position: absolute;
+    background-color: transparent;
+    display: none;
+    z-index: 2;
+
+    .center-part{
+        left: -50%;
+        position: relative;
+        height: 52px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: @OT_WHITE;
+        -webkit-box-shadow: 0px 2px 6px 0px rgba(72,82,88,0.8);
+        -moz-box-shadow: 0px 2px 6px 0px rgba(72,82,88,0.8);
+        box-shadow: 0px 2px 6px 0px rgba(72,82,88,0.8);
+        white-space: nowrap;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+
+        span:not(.ui-icon){
+            line-height: 52px;
+        }
+        
+        span.ui-icon{
+            font-size: 24px;
+            margin-top: -6px;
+            margin-right: 8px;
+            color: @OT_BlueA;
+
+            &.empty:before{
+                content: "\e927";
+            }
+        }
+    }
+}
+
+.hidden-icon{
+    visibility: hidden;
+    width: 0px !important;
+}
+
+// "no-content" messages
+.basketArea {
+    .dw-grid, .dw-griddle {
+        .dw-no-content .icon-container .ui-icon:before {
+            content: "\e66a";
+        }
+    }
+}
+
+.basketArea:not(.activeStoreDialog) {
+    .table-field-table-row {
+        .ui-state-disabled {
+            opacity: 1;
+        }
+    }
+}
+
+.searchArea{
+    .dw-grid, .dw-griddle{
+        .dw-no-content .icon-container .ui-icon:before{
+            content: "\e64e";
+        }
+    }
+}
+
+.tasklistArea{
+    .dw-grid, .dw-griddle{
+        .dw-no-content .icon-container .ui-icon:before{
+            content: "\e65e";
+        }
+    }
+}
+
+.treeViewArea{
+    .dw-grid, .dw-griddle{
+        .dw-no-content .icon-container .ui-icon:before{
+            content: "\e924";
+        }
+    }
+}
+
+.workflowArea{
+    .dw-grid, .dw-griddle{
+        .dw-no-content .icon-container .ui-icon:before{
+            content: "\e77f";
+        }
+    }
+}
+
+.formsArea {
+    .dw-grid {
+        .dw-no-content .icon-container .ui-icon:before {
+            content: "\e6de";
+        }
+    }
+}

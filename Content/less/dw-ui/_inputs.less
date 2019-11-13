@@ -1,0 +1,737 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+
+// CHECKBOXES
+// Left Checkbox
+.dw-checkBox
+{
+    opacity: 0;
+    filter: alpha(opacity=0);
+    margin-top: 0px !important;
+
+    & + label
+    {
+        margin-left: -16px;
+        color: @checkbox-color;
+        vertical-align: middle;
+        display: inline-block;
+        cursor: pointer;
+        height: 18px;
+        line-height: 18px;
+    }
+
+        & + label:before
+        {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: @checkbox-bg;
+            border: 1px solid @checkbox-border;
+            vertical-align: top;
+            margin-right: 3px;
+        }
+    &:hover + label:before
+    {
+        cursor: pointer;
+        background-color: @OT_MouseOverBlue;
+    }
+
+    &:focus + label:before
+    {
+        border: 1px solid @checkbox-border-focus;
+    }
+
+    &:active + label:before
+    {
+        background-color: darken( @checkbox-bg, 10% );
+        border: 1px solid @checkbox-border-focus;
+    }
+
+    &:checked + label:before
+    {
+        background-image: ~'url("@{dwImagePath}checkmark.png")';
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 1px solid @checkbox-border;
+    }
+
+    &:checked:focus + label:before
+    {
+        border: 1px solid @checkbox-border-focus;
+    }
+
+    &:disabled + label
+    {
+        color: @checkbox-color;
+    }
+}
+/* Right Checkbox */
+.dw-checkBoxRight
+{
+    opacity: 0;
+    filter: alpha(opacity=0);
+
+    & + label
+    {
+        float: left;
+        margin-right: -13px;
+        margin-bottom: 0px;
+        color: @checkbox-color;
+        vertical-align: middle;
+        display: inline-block !important;
+        line-height: 18px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+        & + label:after
+        {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: @checkbox-bg;
+            border: 1px solid @checkbox-border;
+            vertical-align: top;
+            line-height: 16px;
+            margin-left: 16px;
+        }
+
+    &:hover + label:after
+    {
+        cursor: pointer;
+        background-color: @OT_MouseOverBlue;
+    }
+
+    &:focus + label:after
+    {
+        border: 1px solid @checkbox-border-focus;
+    }
+
+    &:active + label:after
+    {
+        background-color: darken( @checkbox-bg, 10% );
+        border: 1px solid @checkbox-border-focus;
+    }
+
+    &:checked + label:after
+    {
+        background-image: ~'url("@{dwImagePath}checkmark.png")';
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 1px solid @checkbox-border;
+    }
+
+    &:checked:focus + label:after
+    {
+        border: 1px solid @checkbox-border-focus;
+    }
+
+
+    &:disabled + label:after
+    {
+        color: @checkbox-color;
+    }
+}
+
+// Checkbox switch
+
+.dw-checkBoxSwitch {
+    position: relative;
+    display: block;
+
+    input[type="checkbox"] {
+        visibility: hidden;
+
+        & + label {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding-left: 65px;
+            height: 25px;
+            display: inline-block;
+            font-family: arial;
+            font-size: @baseUIFontSizeInc2;
+            line-height: 1.8;
+            z-index: 0;
+            cursor: pointer;
+
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                left: 0px;
+                transition: all 0.1s ease-in;
+                z-index: -1;
+            }
+
+            &:before {
+                content: '';
+                text-align: right;
+                width: 50px;
+                height: 25px;
+                padding-left: 5px;
+                padding-right: 5px;
+                border-radius: 20px;
+                background-color: @checkbox-bg;
+                border: 1px solid @checkbox-border;
+                color: #fff;
+                //  font-size: 0.5em;
+            }
+
+            &:after {
+                width: 19px;
+                height: 19px;
+                background: @OT_GrayC;
+                border-radius: 18px;
+                top: 3px;
+                left: 3px;
+            }
+
+            &:hover {
+                &:before {
+                    background: @OT_MouseOverBlue;
+                }
+            }
+        }
+
+        &:focus + label:before {
+            border: 1px solid @checkbox-border;
+        }
+
+        &:active + label:before {
+            border: 1px solid @checkbox-border;
+        }
+
+        &:checked {
+            & + label {
+                &:before {
+                    content: '';
+                    text-align: left;
+                }
+
+                &:after {
+                    left: 28px;
+                    background: @OT_BlueA;
+                }
+            }
+        }
+
+        &[disabled] {
+            & + label {
+                opacity: .5;
+                cursor: default;
+            }
+
+            &:hover {
+                & + label {
+                    &:before {
+                        background: @checkbox-bg;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Radio button
+.dw-radio
+{
+    opacity: 0;
+    filter: alpha(opacity=0);
+
+    & + label
+    {
+        color: @radio-color;
+        margin-left: -16px;
+        display: inline-block !important;
+        cursor: pointer;
+        height: 16px;
+        line-height: 16px;
+    }
+
+        & + label:before
+        {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 1px solid @radio-border;
+            vertical-align: top;
+            margin-right: 3px;
+            border-radius: 8px;
+        }
+
+
+    &:checked + label:before
+    {
+        background-image: ~'url("@{dwImagePath}checkmark-radio.png")';
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 1px solid @radio-border;
+    }
+
+    &:checked:focus + label:before
+    {
+        border: 1px solid @radio-border-focus;
+    }
+
+    &:checked:active + label:before
+    {
+        border: 1px solid @radio-border-focus;
+    }
+    &:hover + label:before
+    {
+        cursor: pointer;
+        background-color: @OT_MouseOverBlue;
+    }
+}
+
+//Input fields
+input[type="text"], input[type="search"], input[type="password"], input[role="spinbutton"] {
+    .boxed();
+    padding: 0 5px;
+    color: @field-color;
+    height: @field-height;
+    border: 1px solid @field-border;
+    background: @field-bg;
+    .transition( 0.1s, border);
+
+    &[readonly] {
+        color: @field-readonly-color;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid @field-border-focus;
+    }
+
+    .placeholder( #999999, white, italic, normal );
+
+    &.invalidField {
+        border-color: @field-border-error;
+        border-width: 2px;
+    }
+
+    &.psSelectedField {
+        background-color: @field-selected-bg !important;
+    }
+
+    &.grey-border {
+        border-color: @OT_BorderGray;
+    }
+    //placeholder styles
+    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        background-color: @field-bg;
+    }
+
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        background-color: @field-bg;
+        /*  opacity:  1; */
+    }
+
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        background-color: @field-bg;
+        /*  opacity:  1; */
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        background-color: @field-bg;
+    }
+}
+
+input[type="text"], input[type="password"], textarea
+{
+    -webkit-appearance: none;
+    -webkit-border-radius:0; 
+    border-radius:0;
+}
+
+textarea
+{
+    .boxed();
+    padding: 3px 5px;
+    color: @field-color;
+    width: 100%;
+    border: 1px solid @field-border;
+    background: #ffffff;
+    resize: none;
+    .transition( 0.1s, border);
+    &[readonly]
+    {
+        color: @field-readonly-color;
+    }
+
+    &:focus
+    {
+        outline: none;
+        border: 1px solid @field-border-focus;
+    }
+
+    &.invalidField
+    {
+        border-color: @field-border-error;
+        border-width: 2px;
+    }
+
+    &.psSelectedField
+    {
+        background-color: @field-selected-bg;
+    }
+}
+
+//Fields verification
+.field-validation-error
+{
+    display: block;
+    color: @field-color-error;
+    font-size: @baseUIFontSizeDec1;
+    padding-top: 2px;
+    line-height: @baseUIFontSizeDec1;
+    white-space: normal;
+}
+
+//Date fields
+.dw-dateFieldContainer{ //it is recommended to put the dateFieldBox/dateRangeField in this conteiner to avoid problems with DWScrollbar in IE
+    display: block;
+    height: 26px;
+}
+
+.dw-dateRangeField, .dw-dateFieldBox
+{
+    position: relative;
+
+    &.dw-inlineFields
+    {
+        display: inline-block;
+        width: auto;
+
+        &:first-child
+        {
+            margin-right: 5px;
+        }
+
+        &.w-100-percent{
+            width: 100%;
+
+            input[type=text]{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.dw-dateField
+{
+    width: 200px;
+}
+
+
+/* Select dropDown list */
+.dw-dropDownList {
+    width: @dListWidth;
+    height: @dListHeight;
+    overflow: hidden;
+    .backgroundImage(~'"@{dwImagePath}dw-dropdown-arrow.png"', right 10px, center );
+    //IE<=8 hack for backgound-position
+    background-position: right center\9;
+    background-color: @OT_ControlGray;
+    border: 1px solid @OT_ControlGray;
+
+    &.dw-selectedLanguage {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        select {
+            width: 25+@dListWidth;
+            height: @dListHeight;
+        }
+    }
+
+    &.dw-loginType {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 240px;
+        height: @field-height;
+        .boxed();
+
+        select {
+            width: 240px;
+            height: @field-height;
+            -moz-appearance: none;
+        }
+
+        select::-ms-expand {
+            display: none;
+        }
+    }
+    //Calendar
+    &.dw-calendar {
+        .backgroundImage(~'"@{dwImagePath}dw-dropdown-arrow.png"', right 5px, center );
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-left: 5px;
+        height: @pagerIconHeight;
+        float: left;
+        .boxed();
+
+        &.month {
+            width: 100px;
+
+            select {
+                width: 120px;
+            }
+        }
+
+        &.year {
+            width: 70px;
+
+            select {
+                width: 90px;
+            }
+        }
+
+        select {
+            height: -1 + @pagerIconHeight;
+            padding: 1px;
+            font-size: @baseUIFontSizeDec1;
+            .boxed();
+        }
+    }
+
+    select {
+        background: transparent;
+        padding: 4px;
+        border: 0;
+        border-radius: 0;
+        -webkit-appearance: none;
+        line-height: normal;
+        color: @OT_LabelGray;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    option {
+        outline: none;
+        border: none;
+    }
+} 
+
+
+input::-ms-clear, input::-ms-reveal
+{
+    color: @OT_CaptionGray;
+    font-size: 12px;
+}
+
+input::-ms-clear
+{
+    display: none;
+}
+
+//Right button icon addons
+.right-inner-addons {
+    height: 100%;
+    position: relative;
+
+    input[type="text"] {
+        vertical-align: middle;
+        float: left;
+    }
+
+    button {
+        position: absolute;
+        top: 3px;
+    }
+
+    &.one {
+        input[type="text"] {
+            padding-right: 22px;
+        }
+
+
+        .ac-button, .ui-datepicker-trigger, .del-button, .keyword-button {
+            right: 4px;
+        }
+
+        .dw-icon-info-plain.gray {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+    }
+
+    &.two {
+        input[type="text"] {
+            padding-right: 42px;
+        }
+
+
+        .ac-button, .ui-datepicker-trigger {
+            right: 4px;
+        }
+
+        .keyword-button {
+            right: 5px;
+        }
+
+        .del-button {
+            right: 24px;
+        }
+
+        .dw-icon-info-plain.gray {
+            position: absolute;
+            right: -20px;
+            top: 5px;
+        }
+    }
+
+    &.three {
+        input[type="text"] {
+            padding-right: 62px;
+        }
+
+        .ac-button {
+            right: 4px;
+        }
+
+        .del-button {
+            right: 44px;
+        }
+
+        .ui-datepicker-trigger {
+            right: 24px;
+        }
+
+        .keyword-button {
+            right: 35px;
+        }
+
+        .dw-icon-info-plain.gray {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+    }
+
+    &.four {
+        input[type="text"] {
+            padding-right: 62px;
+        }
+
+        .ac-button {
+            right: 4px;
+        }
+
+        .del-button {
+            right: 52px;
+        }
+
+        .ui-datepicker-trigger {
+            right: 24px;
+        }
+
+        .keyword-button {
+            right: 28px;
+        }
+
+        .dw-icon-info-plain.gray {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+    }
+
+    input[type="text"], input[type="search"], input[type="password"], input[role="spinbutton"] {
+        background: #ffffff;
+
+        &.gray {
+            background: #eef1f2;
+        }
+        //placeholder styles
+        &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            background-color: #ffffff;
+        }
+
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            background-color: #ffffff;
+            /*   opacity: 1; */
+        }
+
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+            background-color: #ffffff;
+            /*   opacity: 1;*/
+        }
+
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            background-color: #ffffff;
+        }
+    }
+}
+.dw-dateRangeField .three, .dw-dateFieldBox .three
+{
+    .ui-datepicker-trigger
+    {
+        right: 4px;
+    }
+
+    .ac-button
+    {
+        right: 24px;
+    }
+}
+
+.presicion-spinner2-fields {
+    width:100% !important;
+    height:26px !important;
+}
+
+.wf-dialog-date-range {
+    .select2-container {
+        margin-bottom: 8px;
+        .select2-choice {
+            height: 26px;
+        }
+    }
+    .right-inner-addons.two {
+        float: left;
+        width: 150px;
+        margin-right: 10px;
+
+        .dw-dateField {
+            width: 150px;
+        }
+
+        .ui-datepicker-trigger {
+            top: 4px;
+        }
+
+        .del-button {
+            top: 5px;
+        }
+    }
+}
+
+.wf-dialog-numeric-range {
+    .right-inner-addons.one {
+        float: left;
+        margin-right: 10px;
+        button {
+            top: 5px;
+        }
+    }
+}
+
+.wf-dialog-text {
+    .right-inner-addons.two {
+        float: left;
+        button {
+            top: 5px;
+        }
+    }
+}

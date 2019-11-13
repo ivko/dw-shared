@@ -1,0 +1,199 @@
+﻿<script id="add-users-and-roles-dialog" type="text/html">
+    <div class="dw-dialog-template container-fluid container-content top-offset-small" data-bind="dwScrollbar: {
+            contentSelector: false,
+            options: {
+                theme: 'scroll-theme-light',
+                autoAdjustContentPadding: false,
+                horizontalScrolling: false,
+                debug: true,
+                pollChanges: true
+            }
+        }">
+        <div class="row info bottom-offset-medium">
+            <!--ko template: {name: DW.AssignUsersAndRolesComponent.Templates['info']}-->
+            <!--/ko-->
+        </div>
+        <!--ko with: table-->
+        <div class="row bottom-offset-small" data-bind="dwActivity: { active: $parent.loadingUsers }">
+            <div class="col-xs-12">
+                <div class="btn-group large" role="group">
+                    <!--ko template: {name: DW.AssignUsersAndRolesComponent.Templates['filterButtons']}-->
+                    <!--/ko-->
+                </div>
+                <!--ko template: {
+                    name: 'input-filter',
+                    data: {
+                        placeholder: DW.AssignUsersAndRolesComponent.localize('Table_Filter'),
+                        clearFilter: $data.clearFilter.bind($data),
+                        filterText: $data.filterText
+                    } } -->
+                <!--/ko-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="table-scroll bordered">
+                    <div style="height: 264px" data-bind="event: {
+                        scroll: function(obj, event) {
+                            $data.scroll(event.target.scrollTop);
+                        }
+                    }, dwScrollbar: {
+                        contentSelector: false,
+                        options: {
+                            resize: function(event, ui) {
+                                $data.resize({width: ui.width, height: ui.height});
+                            },
+                            theme: 'scroll-theme-dark',
+                            autoAdjustContentPadding: true,
+                            horizontalScrolling: false,
+                            updateTriggers: {
+                                observable: $data.visibleRows
+                            }
+                        }
+                    }">
+                        <table class="table table-striped table-hover table-condensed" data-bind="resizableColumns: {
+                        updateTriggers: {
+                            observable: $data.visibleRows
+                        }
+                    }">
+                            <thead>
+                                <tr>
+                                    <th class="col-xs-2 sortable text-center" data-bind="click: getSortTrigger('inUse')">
+                                        <div class="header-cell" data-bind="tooltip: { conditions: [{ type: 'truncated', arg: DW.AssignUsersAndRolesComponent.localize('UsersTable_InUse_ColumnText') }], placement: 'bottom' }">
+                                            <span data-bind="text: DW.AssignUsersAndRolesComponent.localize('UsersTable_InUse_ColumnText')"></span>
+                                            <span class="ui-icon" data-bind="css: getSortCss('inUse')" />
+                                        </div>
+                                    </th>
+                                    <th class="col-xs-7 sortable" data-bind="click: getSortTrigger('name')">
+                                        <div class="header-cell" data-bind="tooltip: { conditions: [{ type: 'truncated', arg: DW.AssignUsersAndRolesComponent.localize('UsersTable_Name_ColumnText') }], placement: 'bottom' }">
+                                            <span data-bind="text: DW.AssignUsersAndRolesComponent.localize('UsersTable_Name_ColumnText')"></span>
+                                            <span class="ui-icon" data-bind="css: getSortCss('name')" />
+                                        </div>
+                                    </th>
+                                    <th class="col-xs-2 sortable" data-bind="click: getSortTrigger('type')">
+                                        <div class="header-cell" data-bind=" tooltip: { conditions: [{ type: 'truncated', arg: DW.AssignUsersAndRolesComponent.localize('UsersTable_UserType_ColumnText') }], placement: 'bottom' }">
+                                            <span data-bind="text: DW.AssignUsersAndRolesComponent.localize('UsersTable_UserType_ColumnText')"></span>
+                                            <span class="ui-icon" data-bind="css: getSortCss('type')" />
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td colspan="3" data-bind="style:{height:$data.topOffset() + 'px'}, css: {'ui-hidden': $data.topOffset()==0}"></td></tr>
+                                <!--ko template: {name: 'select-all', data: {ctx: $parent, selectAllText: DW.AssignUsersAndRolesComponent.localize('FieldsTable_SelectAll_Text')}} -->
+                                <!--/ko-->
+                                <!--ko foreach: visibleRows-->
+                                <tr>
+                                    <!--ko template: {name: DW.AssignUsersAndRolesComponent.Templates['row']}-->
+                                    <!--/ko-->
+                                </tr>
+                                <!--/ko-->
+                                <tr><td colspan="3" data-bind="style:{height:$data.bottomOffset() + 'px'}, css: {'ui-hidden': $data.bottomOffset()==0}"></td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ko-->
+    </div>
+    <!--ko template: {name: DW.AssignUsersAndRolesComponent.Templates['dialogButtons']}-->
+    <!--/ko-->
+</script>
+
+<script id="users-and-roles-dialog-info" type="text/html">
+    <label class="col-xs-10" data-bind="text: DW.AssignUsersAndRolesComponent.localize('UsersTable_ChooseUserRole_Label')" />
+    <div class="col-xs-2 text-right">
+        <span class="ui-icon icon-auto  dw-icon-info-plain gray" data-bind="infobox: { key: 'UsersTable_ChooseUserRole_Label', localize: DW.AssignUsersAndRolesComponent.localize }"></span>
+    </div>
+</script>
+
+<script id="users-and-roles-table-row-template" type="text/html">
+    <td class="text-center">
+        <checkbox params="{
+                  buttonOptions: {
+                        buttonId: function() {return 'UandRRole_' + $index(); },
+                        checked: inUse
+                  }
+             }"></checkbox>
+    </td>
+    <td>
+        <span data-bind="text: name"></span>
+    </td>
+    <td>
+        <span data-bind="text: DW.AssignUsersAndRolesComponent.localize(type === DW.Utils.dwRelationItemTypes.User ? 'UsersTable_User_Text' : 'UsersTable_Role_Text') "></span>
+    </td>
+</script>
+
+<script id="users-and-roles-dialog-buttons" type="text/html">
+    <div class="position-bottom ui-dialog-buttonpane">
+        <div class="pull-right">
+            <button class="btn btn-secondary m-r-10" data-bind="command: cancel">
+                <span data-bind="text: DW.AssignUsersAndRolesComponent.localize('Button_Cancel_Text')"></span>
+            </button>
+            <button class="btn btn-primary" data-bind="command: saveUsersAndRolesCommand">
+                <span data-bind="text: DW.AssignUsersAndRolesComponent.localize('Button_OK_Text')"></span>
+            </button>
+        </div>
+    </div>
+</script>
+
+
+<script id="users-and-roles-filter-buttons" type="text/html">
+    <button class="btn btn-tertiary" data-bind="click: filterKey.bind($data, 'all'), text: DW.AssignUsersAndRolesComponent.localize('UsersTable_AllFilter_Text'), css: { 'btn-active': filterKey() == 'all' }"></button>
+    <button class="btn btn-tertiary" data-bind="click: filterKey.bind($data, 'users'), text: DW.AssignUsersAndRolesComponent.localize('UsersTable_UsersFilter_Text'), css: { 'btn-active': filterKey() == 'users' }"></button>
+    <button class="btn btn-tertiary" data-bind="click: filterKey.bind($data, 'roles'), text: DW.AssignUsersAndRolesComponent.localize('UsersTable_RolesFilter_Text'), css: { 'btn-active': filterKey() == 'roles' }"></button>
+</script>
+
+<script type="text/html" id="popover-user-assignments">
+    <div data-bind="dwActivity: { active: relationsLoading, length: 3, width: 2, radius: 2 }">
+        <!--ko ifnot: $data.relationsLoading()-->
+        <!--ko ifnot: $data.hasRelations()-->
+        <span class="label label-danger" data-bind="text: DW.AssignUsersAndRolesComponent.localize('NoUsersAndRolesRelations')"></span>
+        <!--/ko-->
+        <!--ko if: $data.hasRelations()-->
+        <!--ko template: {name: 'popover-user-assignments-content', data: $data.usersAndRoles }-->
+        <!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </div>
+</script>
+
+<script type="text/html" id="popover-user-assignments-item">
+    <!-- ko if: $data.itemsData && $data.itemsData.result && $data.itemsData.result.length -->
+    <div class="relation-title">
+        <span data-bind="text: $data.displayName"></span>
+    </div>
+    <!-- ko foreach: $data.itemsData.result -->
+    <span class="label" data-bind="text: Name, class: $parent.class"></span>
+    <!-- /ko -->
+    <span class="label" data-bind="visible: $data.itemsData.more, class: $data.class">...</span>
+    <!--/ko-->
+</script>
+
+<script type="text/html" id="popover-user-assignments-content">
+    <!--ko template: {name:'popover-user-assignments-item', data: {itemsData: $data.users, class: 'label-info', displayName: DW.AssignUsersAndRolesComponent.localize('Users_Popover_Label')} }-->
+    <!--/ko-->
+    <!--ko template: {name:'popover-user-assignments-item', data: {itemsData: $data.roles, class: 'label-primary', displayName: DW.AssignUsersAndRolesComponent.localize('Roles_Popover_Label')} }-->
+    <!--/ko-->
+</script>
+
+<script type="text/html" id="popover-relations-content">
+    <div data-bind="dwActivity: { active: $data.relationsLoading, length: 3, width: 2, radius: 2 }">
+        <!--ko ifnot: $data.relationsLoading()-->
+        <!--ko if: $data.hasRelativeRelationsInfo() -->
+        <!--ko template: { name: 'popover-item-relations', data: $data.relationInfos }-->
+        <!--/ko-->
+        <!--/ko-->
+        <!--ko ifnot: $data.hasRelativeRelationsInfo() -->
+        <span class="label label-danger" data-bind="text: $data.noRelationsString"></span>
+        <!--/ko-->
+        <!-- /ko -->
+    </div>
+</script>
+
+<script type="text/html" id="popover-item-relations">
+    <!--ko foreach: $data -->
+    <!--ko template: { name:'popover-user-assignments-item', data: { itemsData: $data.relations, class: $data.css, displayName: $data.displayName } }-->
+    <!--/ko-->
+    <!--/ko-->
+</script>

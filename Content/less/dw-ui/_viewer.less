@@ -1,0 +1,1042 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+@import "_icons.less";
+
+//Vierwer
+
+div#viewer
+{
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+#viewer {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+
+    .dw-dialogContent * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    * {
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    .ui-widget-content {
+        background-color: @OT_UltraLightGray;
+        background-image: none;
+        color: @OT_LabelGray;
+        border: 0;
+    }
+
+    .dw-no-content {
+        margin: 43px auto 0 auto;
+    }
+
+    .content_no_doc {
+        .dw-viewerNoDoc;
+
+        &:before {
+            .dw-font-icon;
+        }
+    }
+
+    .content_no_section {
+        .dw-viewerNoSection;
+
+        &:before {
+            .dw-font-icon;
+        }
+    }
+
+    .content_doc {
+        background-color: @OT_CaptionGray;
+
+        .dw-no-content {
+            display: none;
+        }
+    }
+
+    .ui-icon-gripsmall-diagonal-se {
+        font-size: 14px;
+        width: auto;
+        height: auto;
+    }
+
+    &.storeViewer {
+        &.centerStore {
+            .dw-fieldLabel {
+                max-width: 100%;
+            }
+
+            .scroll-visible .dw-fieldLabel {
+                max-width: 100%;
+            }
+
+            table.dw-dialog {
+                table-layout: fixed;
+            }
+        }
+
+        .dialogTitle {
+            width: auto;
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            .textOverflow(ellipsis);
+            margin-right: 10px;
+        }
+
+        .dw-dialogToolbar button {
+            text-align: left;
+            max-width: 95px;
+            overflow: hidden;
+            white-space: nowrap;
+            .textOverflow(ellipsis);
+        }
+
+        .infoDialog button {
+            max-width: 200px;
+        }
+
+        .dw-dialogContent.fields {
+            padding: 10px;
+
+            table {
+                td {
+                    display: block;
+                    width: 100%\9;
+                    float: left\9;
+                    .boxed();
+                    text-align: left;
+                    height: auto;
+                    min-height: 26px;
+                    padding: 0;
+
+                    &:not(.dw-fieldLabel) {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                tr.keyword-row td, td.keywords-list {
+                    margin-bottom: 0;
+                }
+
+                &.dw-keywordField {
+                    td {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .dw-fieldLabel {
+            margin-right: 0;
+            padding-bottom: 0;
+            width: auto;
+            max-width: @viewer-store-dialog-width - 20;
+            line-height: 26px;
+        }
+
+        .scroll-visible .dw-fieldLabel {
+            max-width: @viewer-store-dialog-width - 40;
+        }
+
+        button.cancel {
+            display: none;
+        }
+
+        .leftStoreDialog, .rightStoreDialog, .centerStoreDialog {
+            .dw-no-content {
+                margin-top: -20px;
+            }
+        }
+    }
+
+    .anotationWrapper {
+        overflow: hidden;
+        position: absolute;
+        z-index: 3;
+        top: 0px;
+        left: 0px;
+        display: block;
+        transform: rotate(0deg);
+    }
+}
+
+#content
+{
+    width: auto;
+    vertical-align: top;
+    height: 100%;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#viewerContainer {
+    background-color: #3e3e3f;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#viewer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pageContainer {
+    position: relative;
+    margin: -22px auto 8px auto;
+    border: 9px solid transparent;
+    background-clip: content-box;
+    /*border-image: url("images/shadow.png") 9 9 repeat;*/
+    background-color: white;
+    overflow: visible;
+}
+.dataPage {
+    direction: ltr;
+    width: 816px;
+    height: 1056px;
+    margin: 1px auto -8px auto;
+    position: relative;
+    overflow: visible;
+    border: 9px solid transparent;
+    background-clip: content-box;
+    /*border-image: url(images/shadow.png) 9 9 repeat;*/
+    background-color: white;
+}
+
+#toolBar {
+    position: relative;
+    height: 30px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+}
+
+
+//Header
+#dw-ViewerHeader {
+    position: relative;
+    overflow: hidden;
+    height: @topAreaHeight;
+    //Icon containers
+    .downArrowIconContainer {
+        background-color: @OT_UltraLightGray;
+        border-left: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        display: block;
+    }
+
+    .top-bar-nav-info, .top-bar-nav-info-noTextBox {
+        width: 74px;
+        text-align: center;
+        float: left;
+        white-space: nowrap;
+        overflow: hidden;
+        .textOverflow;
+    }
+
+    .top-bar-nav-info-noTextBox {
+        width: 50px;
+    }
+
+    &:focus, .ui-icon.button:focus {
+        -webkit-box-shadow: inset 0 0 0 1px @OT_BlueA;
+        -moz-box-shadow: inset 0 0 0 1px @OT_BlueA;
+        box-shadow: inset 0 0 0 1px @OT_BlueA;
+    }
+
+    .dw-top-bar-btn {
+        float: left;
+
+        .ui-state-disabled, &.ui-state-disabled {
+            .ui-icon {
+                cursor: default;
+            }
+        }
+
+        &.menu-activated {
+
+            .ui-icon {
+
+                &.dw-icon-center-align, &.dw-icon-left-align, &.dw-icon-right-align, &.dw-icon-icons-stamps {
+                    .ui-icon-carat-1-n-after;
+                }
+            }
+        }
+
+        .ui-icon, &.ui-icon {
+            cursor: pointer;
+            font-size: 20px;
+            vertical-align: middle;
+            float: left;
+            padding-left: 3px;
+            padding-right: 3px;
+            line-height: inherit;
+
+
+            &.dw-icon-close-light {
+                font-size: 12px;
+            }
+
+            &.dw-icon-icons-stamps, &.dw-icon-center-align, &.dw-icon-left-align, &.dw-icon-right-align {
+                padding: 0 5px;
+                .ui-icon-carat-1-s-after;
+
+                &:after {
+                    font-size: 14px;
+                    line-height: 14px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .nav-topbar-icon {
+        font-size: 20px;
+        vertical-align: middle;
+        float: left;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    //The left header div
+    .dw-ViewerHeaderLeft {
+        position: absolute;
+        left: 40px;
+        top: 0;
+        z-index: 1;
+        overflow: hidden;
+        height: @topAreaHeight;
+        display: block;
+        width: 1000px;
+
+
+
+        .dw-ViewerHeaderLeftContent {
+            vertical-align: middle;
+            display: inline-block;
+            position: relative;
+            margin-right: 10px;
+
+
+            input {
+                width: 32px;
+                font-size: 12px;
+                text-align: center;
+                margin-left: 2px;
+                padding: 0;
+                height: 8 + @baseUIFontSize;
+                background: @OT_WHITE;
+            }
+
+            span {
+                height: @topAreaHeight;
+                line-height: @topAreaHeight;
+            }
+        }
+    }
+    //The right header div
+    .dw-ViewerHeaderRight {
+        overflow: hidden;
+        height: @topAreaHeight;
+        display: table;
+        vertical-align: middle;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        background-color: @OT_UltraLightGray;
+
+        span {
+            display: inline-block;
+        }
+
+        .dw-ViewerHeaderRightContent {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .dw-ViewerHeaderSeparator {
+            border-left: 1px solid @OT_BorderGray;
+            padding-left: 1px;
+            position: relative;
+            height: @topAreaHeight;
+            line-height: @topAreaHeight;
+            overflow: hidden;
+        }
+
+        .dw-ViewerHeaderSeparator:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            height: 100%;
+            border-left: 1px solid @OT_WHITE;
+        }
+
+        .ui-icon {
+            &.button {
+                width: -6 + @dw-MainArrowIconsWidth;
+            }
+        }
+    }
+}
+
+
+//Main content container
+#dw-viewer .dw-mainContainerContent
+{
+    position: relative;
+    float: left;
+    padding: 0;
+    text-align: left;
+    top: 0;
+}
+
+/*Structure*/
+.viewerAreaNew
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.topPanel
+{
+    background: azure;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 36px;
+}
+
+.sidePanel
+{
+    position: absolute;
+    top: 37px;
+    bottom: 0;
+    width: @viewer-side-panel-tools-width;
+}
+
+#leftPanel
+{
+    display: none;
+    left: 0px;
+    border-right: 1px solid @OT_BorderGray;
+}
+
+#rightPanel
+{
+    display: none;
+    right: 0;
+    border-left: 1px solid @OT_BorderGray;
+}
+
+.documentContent {
+    overflow: hidden;
+    position: absolute;
+    top: 37px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#documentContent
+{
+    overflow: hidden;
+    position: absolute;
+    top: 37px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.viewerAreaNew.left.right .documentContent
+{
+
+}
+
+.viewerAreaNew.left .documentContent
+{
+
+}
+
+.viewerAreaNew.right .documentContent
+{
+
+}
+
+.viewerAreaNew.right #rightPanel
+{
+    display: block;
+}
+
+.viewerAreaNew.left #leftPanel
+{
+    display: block;
+}
+
+.horizontalExpansion
+{
+    position: absolute;
+    top: 21px;
+    bottom: 20px;
+}
+
+.down
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+//Adding 1 or 2 pixels for the borders
+.storeViewer.left.leftStore .documentContent
+{
+
+}
+
+.storeViewer.leftStore .documentContent
+{
+
+}
+
+
+.storeViewer.right.rightStore .documentContent
+{
+
+}
+
+.storeViewer.rightStore .documentContent
+{
+
+}
+
+.viewerAreaNew.left .leftStoreDialog
+{
+    left: @viewer-side-panel-tools-width + 1;
+}
+
+.viewerAreaNew.right .rightStoreDialog
+{
+    right: @viewer-side-panel-tools-width + 1;
+}
+
+.leftStoreDialog
+{
+    width: @viewer-store-dialog-width;
+    left: 0;
+    border-right: 1px solid @OT_BorderGray;
+}
+
+.rightStoreDialog
+{
+    width: @viewer-store-dialog-width;
+    right: 0;
+    border-left: 1px solid @OT_BorderGray;
+}
+
+.centerStoreDialog
+{
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: white;
+}
+
+.storeViewer.centerStore
+{
+    .documentContent
+    {
+        visibility: hidden;
+    }
+
+    .icon-button.arrow, #topbar_navigation, .split, .stamps, .zoom
+    {
+        display: none;
+    }
+}
+
+.storeViewer .collapse-button
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    height: 20px;
+    width: 8px;
+    margin-top: 0;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    right: 4px;
+}
+
+.leftStoreDialog .collapse-button
+{
+    .ui-icon-carat-1-w;
+}
+
+.rightStoreDialog .collapse-button
+{
+    .ui-icon-carat-1-e;
+}
+
+.collapsedDialog .leftStoreDialog .collapse-button
+{
+    right: 0;
+    .ui-icon-carat-1-e;
+}
+
+.collapsedDialog .rightStoreDialog .collapse-button
+{
+    left: 0;
+    .ui-icon-carat-1-w;
+}
+
+.centerStoreDialog .collapse-button
+{
+    visibility: hidden;
+}
+
+.storeViewer.collapsedDialog .storePanel:not(.centerStoreDialog)
+{
+    background-color: @OT_UltraLightGray;
+    width: 10px;
+    & > div
+    {
+        visibility: hidden;
+    }
+    .dw-dialogContent
+    {
+        display: none;
+    }
+}
+
+
+.storeViewer.left.leftStore.collapsedDialog .documentContent
+{
+    left: @viewer-side-panel-tools-width + 11;
+}
+
+.storeViewer.leftStore.collapsedDialog .documentContent
+{
+    left: 10px;
+}
+
+.storeViewer.right.rightStore.collapsedDialog .documentContent
+{
+    right: @viewer-side-panel-tools-width + 11;
+}
+
+.storeViewer.rightStore.collapsedDialog .documentContent
+{
+    right: 10px;
+}
+
+
+
+
+/*Stamps menu*/
+#topbarStampDiv
+{
+    width: auto;
+    overflow: hidden;
+    display: none;
+    background-color: @OT_UltraLightGray;
+    padding: 2px;
+    border: 1px solid @OT_BorderGray;
+    border-top: none;
+    z-index: 10;
+
+    &:focus
+    {
+        outline: none;
+    }
+
+    .dw-toolbar-li
+    {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+ul.stamps
+{
+    .dw-toolbar-li .text-overflow
+    {
+        display: inline-block;
+        margin-left: 2px;
+        font-size: 11px;
+    }
+}
+
+
+//Viewer footer
+#footer_pack
+{
+    display: block;
+    width: 100%;
+
+    *{
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+.dw-statusBar
+{
+    .boxed();
+    display: inline-block;
+    width: 100%;
+    font-size: @baseUIFontSizeDec1;
+    color: @OT_WHITE;
+    vertical-align: middle;
+    background-color: @OT_CaptionGray;
+    height: 30px;
+    line-height: 27px;
+    padding: 0 10px;
+
+    a
+    {
+        text-decoration: none;
+    }
+
+    .ui-icon
+    {
+        font-size: 16px;
+        color: @OT_WHITE;
+    }
+
+    .ui-button
+    {
+        vertical-align: middle;
+    }
+
+    .bar-icon
+    {
+        display: inline-block;
+    }
+
+        .bar-icon + .bar-icon
+        {
+            margin-left: 8px;
+        }
+}
+
+//Fix of breaking of the structure on browser zooming
+#center_div
+{
+    margin-right: -1px;
+}
+
+
+
+/*Intellix*/
+.intellix-area
+{
+    left: 0;
+    top: 0;
+
+    .box-and-bulb(@c)
+    {
+        .box
+        {
+            background: fadeout(@c,80%);
+        }
+
+        .bulb
+        {
+            display: none;
+        }
+    }
+
+    position: absolute;
+    z-index: 4;
+
+    .box-container
+    {
+        position: absolute;
+        overflow: visible;
+
+        &.Red
+        {
+            .box-and-bulb(@badIndexColor)
+        }
+
+        &.Green
+        {
+            .box-and-bulb(@goodIndexColor)
+        }
+
+        &.Yellow
+        {
+            .box-and-bulb(@mediumIndexColor)
+        }
+
+        &.None
+        {
+            .box-and-bulb(#4747e4);
+        }
+
+
+        .box
+        {
+            position: absolute;
+            left: 0;
+            top: 0;
+            -moz-transition: background-color 0.15s;
+            -o-transition: background-color 0.15s;
+            -webkit-transition: background-color 0.15s;
+            transition: background-color 0.15s;
+        }
+
+        &.selected
+        {
+            .selected-box(@c)
+            {
+                .box
+                {
+                    .box-shadow(0px, 0px, 20px, 5px, rgba(255, 255, 0, 0.7));
+                }
+            }
+
+            &.Red
+            {
+                .selected-box(@badIndexColor)
+            }
+
+            &.Green
+            {
+                .selected-box(@goodIndexColor)
+            }
+
+            &.Yellow
+            {
+                .selected-box(@mediumIndexColor)
+            }
+
+            &.None
+            {
+                .selected-box(#4747e4);
+            }
+        }
+    }
+}
+
+/*Annotations*/
+#fontBold, #fontItalic, #fontUnderline, #fontStrikeout
+{
+    display: none;
+
+    & + label
+    {
+        display: inline-block;
+        height: 26px;
+        width: 26px;
+        line-height: 26px;
+        font-size: 16px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    &:checked + label
+    {
+        color: @OT_WHITE;
+        background: @OT_SelectionBlue;
+    }
+}
+
+label[for=fontBold]
+{
+    font-weight: bold;
+}
+
+label[for=fontItalic]
+{
+    font-style: italic;
+}
+
+label[for=fontUnderline]
+{
+    text-decoration: underline;
+}
+
+label[for=fontStrikeout]
+{
+    text-decoration: line-through;
+}
+
+.font.preview, .line.preview
+{
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid @OT_BorderGray;
+    height: 57px;
+    line-height: 57px;
+
+    span
+    {
+        vertical-align: middle;
+    }
+}
+
+.font.preview
+{
+    width: 355px;
+    overflow: hidden;
+}
+
+
+.textAnnotationEdit
+{
+    z-index: 10;
+    position: absolute;
+    border: dashed 1px black;
+    overflow: hidden;
+    text-indent: 4px;
+}
+
+.textShot
+{
+    background-color: #FFFF00;
+    z-index: 3;
+    position: absolute;
+    filter: alpha(opacity=35);
+    -moz-opacity: 0.35;
+    -khtml-opacity: 0.35;
+    opacity: 0.35;
+}
+
+.textShotSelection
+{
+    background-color: #00FF00;
+    z-index: 3;
+    position: absolute;
+    filter: alpha(opacity=35);
+    -moz-opacity: 0.35;
+    -khtml-opacity: 0.35;
+    opacity: 0.35;
+}
+
+.fullText
+{
+    background-color: #FFFF00;
+    z-index: 3;
+    position: absolute;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.50;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+
+div.docOverview
+{
+    visibility: hidden;
+    background-color: Transparent;
+    top: 0px;
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+ul.OVFile
+{
+    padding: 0px;
+    margin: 0px;
+    float: none;
+    display: block; /* position: relative; */
+    left: 0px;
+}
+
+li.OVPage
+{
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: outside;
+    clear: none;
+    float: left; /*position: relative; */
+}
+
+div.OVSection
+{
+    float: none;
+    white-space: nowrap;
+    margin: 5px;
+    background-color: #DDDDDD;
+}
+
+div.OVSectionEven
+{
+    background-color: #AAAAAA !important;
+}
+
+img.OVImage
+{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+    text-align: center;
+    vertical-align: middle;
+    border-style: solid;
+    border-color: Black;
+    border-width: 1px;
+}
+
+    img.OVImage:hover
+    {
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+        -moz-opacity: 0.5;
+        opacity: 0.5;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+div.Dummy
+{
+    /* Required otherwise the containing div is too small */
+    clear: left;
+    height: 0px;
+}
+
+img.OVMorePages:hover
+{
+    cursor: pointer;
+}

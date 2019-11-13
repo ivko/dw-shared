@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="QueryBuilder_AfterTheNext" xml:space="preserve">
+    <value>晚于此后</value>
+  </data>
+  <data name="QueryBuilder_AfterThePast" xml:space="preserve">
+    <value>晚于此前</value>
+  </data>
+  <data name="QueryBuilder_And" xml:space="preserve">
+    <value>和</value>
+  </data>
+  <data name="QueryBuilder_BeforeTheNext" xml:space="preserve">
+    <value>早于此后</value>
+  </data>
+  <data name="QueryBuilder_BeforeThePast" xml:space="preserve">
+    <value>早于此前</value>
+  </data>
+  <data name="QueryBuilder_Contains" xml:space="preserve">
+    <value>包含</value>
+  </data>
+  <data name="QueryBuilder_Err_DateField" xml:space="preserve">
+    <value>请在日期字段中输入有效值。</value>
+  </data>
+  <data name="QueryBuilder_Err_DateTimeField" xml:space="preserve">
+    <value>请在日期/时间字段中输入有效值。</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalField" xml:space="preserve">
+    <value>请在小数字段中输入有效值。</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalRangeField" xml:space="preserve">
+    <value>请在小数字段中输入有效范围值。</value>
+  </data>
+  <data name="QueryBuilder_Err_KeywordField" xml:space="preserve">
+    <value>请在关键字字段中输入有效值。</value>
+  </data>
+  <data name="QueryBuilder_Err_MemoField" xml:space="preserve">
+    <value>请在备忘录字段中输入有效值。</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericField" xml:space="preserve">
+    <value>请在数字字段中输入有效值。</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericRangeField" xml:space="preserve">
+    <value>请在数字字段中输入有效范围值。</value>
+  </data>
+  <data name="QueryBuilder_Err_RangeDateField" xml:space="preserve">
+    <value>请在日期字段中输入有效范围值。</value>
+  </data>
+  <data name="QueryBuilder_Err_SqlField" xml:space="preserve">
+    <value>请在 SQL 字段中输入有效值。</value>
+  </data>
+  <data name="QueryBuilder_Err_TextField" xml:space="preserve">
+    <value>请在文本字段中输入有效值。</value>
+  </data>
+  <data name="QueryBuilder_Introduction" xml:space="preserve">
+    <value>用户将只能看到符合以下规则的文档：</value>
+  </data>
+  <data name="QueryBuilder_invalidField" xml:space="preserve">
+    <value>文件柜字段不存在。</value>
+  </data>
+  <data name="QueryBuilder_IsBetween" xml:space="preserve">
+    <value>介于</value>
+  </data>
+  <data name="QueryBuilder_IsEmpty" xml:space="preserve">
+    <value>为空</value>
+  </data>
+  <data name="QueryBuilder_IsEqual" xml:space="preserve">
+    <value>等于</value>
+  </data>
+  <data name="QueryBuilder_IsNotEmpty" xml:space="preserve">
+    <value>不为空</value>
+  </data>
+  <data name="QueryBuilder_IsNotEqual" xml:space="preserve">
+    <value>不等于</value>
+  </data>
+  <data name="QueryBuilder_IsWhereClause" xml:space="preserve">
+    <value>是（where 子句）</value>
+  </data>
+  <data name="QueryBuilder_Or" xml:space="preserve">
+    <value>或</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDISK" xml:space="preserve">
+    <value>磁盘号</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDOCID" xml:space="preserve">
+    <value>文档 ID</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSDATETIME" xml:space="preserve">
+    <value>上次访问日期</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSUSER" xml:space="preserve">
+    <value>上次访问用户</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODDATETIME" xml:space="preserve">
+    <value>修改日期</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODUSER" xml:space="preserve">
+    <value>修改用户</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSECTIONCOUNT" xml:space="preserve">
+    <value>文件计数</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREDATETIME" xml:space="preserve">
+    <value>存储日期</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREUSER" xml:space="preserve">
+    <value>存储用户</value>
+  </data>
+  <data name="QueryBuilder_SystemFields" xml:space="preserve">
+    <value>系统字段</value>
+  </data>
+  <data name="QueryBuilder_WithinTheNext" xml:space="preserve">
+    <value>在此后</value>
+  </data>
+  <data name="QueryBuilder_WithinThePast" xml:space="preserve">
+    <value>在此前</value>
+  </data>
+  <data name="QueryClick_LabelFirstPart" xml:space="preserve">
+    <value>尚未定义规则。</value>
+  </data>
+  <data name="QueryClick_LabelSecondPart" xml:space="preserve">
+    <value>创建新规则</value>
+  </data>
+  <data name="QueryClick_LabelThirdPart" xml:space="preserve">
+    <value>创建一组规则</value>
+  </data>
+  <data name="QueryDate_Days" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="QueryDate_Hours" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="QueryDate_Months" xml:space="preserve">
+    <value>个月</value>
+  </data>
+  <data name="QueryDate_Years" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPDATETIME" xml:space="preserve">
+    <value>SAP 日期时间</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPSTATUS" xml:space="preserve">
+    <value>SAP 状态</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWUSRVERSION" xml:space="preserve">
+    <value>用户版本</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSIONCOMMENT" xml:space="preserve">
+    <value>版本注释</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSTATUS" xml:space="preserve">
+    <value>版本状态</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCID" xml:space="preserve">
+    <value>SAP 文档 ID</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCTYPE" xml:space="preserve">
+    <value>SAP 文档类型</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPPROTECTIONTYPE" xml:space="preserve">
+    <value>SAP 保护类型</value>
+  </data>
+  <data name="QueryBuilder_ProfileIntroduction">
+    <value>以下授权仅适用于符合下列规则的文档:</value>
+  </data>
+  <data name="QueryBuilder_AddCondition">
+    <value>创建新规则</value>
+  </data>
+  <data name="QueryBuilder_AddGroupCondition">
+    <value>创建一组规则</value>
+  </data>
+  <data name="QueryBuilder_After">
+    <value>晚于</value>
+  </data>
+  <data name="QueryBuilder_AutocompleteEmptyResult">
+    <value>找不到值</value>
+  </data>
+  <data name="QueryBuilder_Before">
+    <value>早于</value>
+  </data>
+  <data name="QueryBuilder_BeforeOrOn">
+    <value>早于或在</value>
+  </data>
+  <data name="QueryBuilder_Begins">
+    <value>开头为</value>
+  </data>
+  <data name="QueryBuilder_Ends">
+    <value>结尾为</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Decimal_Input">
+    <value>请输入小数，例如 {0}</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Number_Input">
+    <value>请输入数字，例如 {0}</value>
+  </data>
+  <data name="QueryBuilder_IsNotOn">
+    <value>未在</value>
+  </data>
+  <data name="QueryBuilder_IsOn">
+    <value>在</value>
+  </data>
+  <data name="QueryBuilder_Less">
+    <value>小于</value>
+  </data>
+  <data name="QueryBuilder_LessOrEqual">
+    <value>小于或等于</value>
+  </data>
+  <data name="QueryBuilder_More">
+    <value>大于</value>
+  </data>
+  <data name="QueryBuilder_MoreOrEqual">
+    <value>等于或大于</value>
+  </data>
+  <data name="QueryBuilder_OnOrAfter">
+    <value>在或晚于</value>
+  </data>
+  <data name="QueryBuilder_RemoveCondition">
+    <value>移除规则</value>
+  </data>
+  <data name="QueryBuilder_RemoveGroupCondition">
+    <value>移除一组规则</value>
+  </data>
+  <data name="SystemFunction_CurrentDate">
+    <value>当前日期</value>
+  </data>
+  <data name="SystemFunction_CurrentDateTime">
+    <value>当前日期和时间</value>
+  </data>
+  <data name="SystemFunction_CurrentUserEmail">
+    <value>用户电子邮件</value>
+  </data>
+  <data name="SystemFunction_CurrentUserLongName">
+    <value>用户登录</value>
+  </data>
+  <data name="SystemFunction_CurrentUserShortName">
+    <value>内部用户名称</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWEXTENSION">
+    <value>扩展名</value>
+  </data>
+  <data name="QueryBuilder_RangeTo">
+    <value>到</value>
+  </data>
+</root>

@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuditEventDetails_DocInfo">
+    <value>文档 ID: {0}</value>
+  </data>
+  <data name="AuditEventDetails_Label">
+    <value>更改的属性:</value>
+  </data>
+  <data name="AuditReport_Default_FileName">
+    <value>审计</value>
+  </data>
+  <data name="AuditReport_EventType_Changed">
+    <value>已更改</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToFileSystem">
+    <value>检出到文件系统</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToTray">
+    <value>检出到购物篮</value>
+  </data>
+  <data name="AuditReport_EventType_Clip">
+    <value>剪切</value>
+  </data>
+  <data name="AuditReport_EventType_CopyToTray">
+    <value>复制到购物篮</value>
+  </data>
+  <data name="AuditReport_EventType_Created">
+    <value>已创建</value>
+  </data>
+  <data name="AuditReport_EventType_CreateRequest">
+    <value>创建请求</value>
+  </data>
+  <data name="AuditReport_EventType_CreateSettings">
+    <value>创建设置</value>
+  </data>
+  <data name="AuditReport_EventType_Delete">
+    <value>删除</value>
+  </data>
+  <data name="AuditReport_EventType_Deleted">
+    <value>已删除</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteSettings">
+    <value>删除设置</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteVersionHistory">
+    <value>删除版本历史记录</value>
+  </data>
+  <data name="AuditReport_EventType_EditAnnotations">
+    <value>编辑注释</value>
+  </data>
+  <data name="AuditReport_EventType_EditContent">
+    <value>编辑内容</value>
+  </data>
+  <data name="AuditReport_EventType_EditIndexData">
+    <value>编辑索引数据</value>
+  </data>
+  <data name="AuditReport_EventType_EditSettings">
+    <value>编辑设置</value>
+  </data>
+  <data name="AuditReport_EventType_Email">
+    <value>电子邮件</value>
+  </data>
+  <data name="AuditReport_EventType_Export">
+    <value>导出</value>
+  </data>
+  <data name="AuditReport_EventType_LogIn">
+    <value>登录</value>
+  </data>
+  <data name="AuditReport_EventType_LogOff">
+    <value>注销</value>
+  </data>
+  <data name="AuditReport_EventType_Open">
+    <value>打开</value>
+  </data>
+  <data name="AuditReport_EventType_Print">
+    <value>打印</value>
+  </data>
+  <data name="AuditReport_EventType_Store">
+    <value>存储</value>
+  </data>
+  <data name="AuditReport_EventType_UndoCheckout">
+    <value>撤消检出</value>
+  </data>
+  <data name="AuditReport_EventType_WorkflowDecisionMade">
+    <value>工作流决策已定</value>
+  </data>
+  <data name="AuditReport_LastModified">
+    <value>上次修改</value>
+  </data>
+  <data name="AuditReport_SettingsType_AuthenticationServer">
+    <value>Authentication Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_Autoindex">
+    <value>Autoindex</value>
+  </data>
+  <data name="AuditReport_SettingsType_AutoNumber">
+    <value>自动编号</value>
+  </data>
+  <data name="AuditReport_SettingsType_BusinessUseCase">
+    <value>Business Use Case</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlook">
+    <value>Connect to Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookAccess">
+    <value>Connect to Outlook 权限</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookConfiguration">
+    <value>Connect to Outlook 配置</value>
+  </data>
+  <data name="AuditReport_SettingsType_Database">
+    <value>数据库</value>
+  </data>
+  <data name="AuditReport_SettingsType_DatabaseConnection">
+    <value>数据库连接</value>
+  </data>
+  <data name="AuditReport_SettingsType_Deletion">
+    <value>删除</value>
+  </data>
+  <data name="AuditReport_SettingsType_Disk">
+    <value>磁盘</value>
+  </data>
+  <data name="AuditReport_SettingsType_Document">
+    <value>文档</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentSettings">
+    <value>文档设置</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentType">
+    <value>文档类型</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwImportRequest">
+    <value>DocuWare Import 请求</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwRequestLite">
+    <value>DocuWare Request Lite</value>
+  </data>
+  <data name="AuditReport_SettingsType_EmailConfiguration">
+    <value>电子邮件配置</value>
+  </data>
+  <data name="AuditReport_SettingsType_Export">
+    <value>导出</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalSelectList">
+    <value>外部选择列表</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalUserDirectory">
+    <value>外部用户目录</value>
+  </data>
+  <data name="AuditReport_SettingsType_Field">
+    <value>字段</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinet">
+    <value>文件柜</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetGeneral">
+    <value>文件柜常规</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetSettings">
+    <value>文件柜设置</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileConnection">
+    <value>文件连接</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileExtension">
+    <value>文件扩展名</value>
+  </data>
+  <data name="AuditReport_SettingsType_Forms">
+    <value>表单</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralProfile">
+    <value>常规配置文件</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralSystem">
+    <value>常规系统</value>
+  </data>
+  <data name="AuditReport_SettingsType_Group">
+    <value>组</value>
+  </data>
+  <data name="AuditReport_SettingsType_IntellixConnection">
+    <value>Intelligent Indexing 连接</value>
+  </data>
+  <data name="AuditReport_SettingsType_Licence">
+    <value>许可证</value>
+  </data>
+  <data name="AuditReport_SettingsType_Link">
+    <value>链接</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpDevice">
+    <value>MFP 设备</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpWorkflow">
+    <value>MFP 工作流</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationServer">
+    <value>Notification Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationSettings">
+    <value>通知设置</value>
+  </data>
+  <data name="AuditReport_SettingsType_Obr">
+    <value>OBR</value>
+  </data>
+  <data name="AuditReport_SettingsType_Ocr">
+    <value>OCR</value>
+  </data>
+  <data name="AuditReport_SettingsType_Organization">
+    <value>组织</value>
+  </data>
+  <data name="AuditReport_SettingsType_PrinterConfiguration">
+    <value>打印机配置</value>
+  </data>
+  <data name="AuditReport_SettingsType_ProcessServer">
+    <value>进程服务器</value>
+  </data>
+  <data name="AuditReport_SettingsType_Profile">
+    <value>配置文件</value>
+  </data>
+  <data name="AuditReport_SettingsType_RegularExpression">
+    <value>正则表达式</value>
+  </data>
+  <data name="AuditReport_SettingsType_Replication">
+    <value>复制</value>
+  </data>
+  <data name="AuditReport_SettingsType_ResultList">
+    <value>结果列表</value>
+  </data>
+  <data name="AuditReport_SettingsType_Role">
+    <value>角色</value>
+  </data>
+  <data name="AuditReport_SettingsType_Schedules">
+    <value>排期</value>
+  </data>
+  <data name="AuditReport_SettingsType_SearchDialog">
+    <value>搜索对话框</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmartConnect">
+    <value>Smart Connect</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmtpConnection">
+    <value>SMTP 连接</value>
+  </data>
+  <data name="AuditReport_SettingsType_SolrConnection">
+    <value>SOLR 连接</value>
+  </data>
+  <data name="AuditReport_SettingsType_Stamp">
+    <value>印章</value>
+  </data>
+  <data name="AuditReport_SettingsType_StorageLocation">
+    <value>存储位置</value>
+  </data>
+  <data name="AuditReport_SettingsType_StoreDialog">
+    <value>存储对话框</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionRules">
+    <value>替换规则</value>
+  </data>
+  <data name="AuditReport_SettingsType_SystemBackupWorkflow">
+    <value>系统备份工作流</value>
+  </data>
+  <data name="AuditReport_SettingsType_TrustedUser">
+    <value>受信任用户</value>
+  </data>
+  <data name="AuditReport_SettingsType_User">
+    <value>用户</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserLoginLogout">
+    <value>用户登录注销</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserSync">
+    <value>用户同步</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebBasket">
+    <value>购物篮</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebConnection">
+    <value>Web 连接</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebInstances">
+    <value>Web 实例</value>
+  </data>
+  <data name="AuditReport_Table_DownloadCSV">
+    <value>下载为 CSV</value>
+  </data>
+  <data name="AuditReport_TableColumn_Date">
+    <value>日期</value>
+  </data>
+  <data name="AuditReport_TableColumn_DocId">
+    <value>DocID</value>
+  </data>
+  <data name="AuditReport_TableColumn_Event">
+    <value>事件</value>
+  </data>
+  <data name="AuditReport_TableColumn_FileCabinet">
+    <value>文件柜</value>
+  </data>
+  <data name="AuditReport_TableColumn_Name">
+    <value>名称</value>
+  </data>
+  <data name="AuditReport_TableColumn_Organization">
+    <value>组织</value>
+  </data>
+  <data name="AuditReport_TableColumn_Type">
+    <value>类型</value>
+  </data>
+  <data name="AuditReport_TableColumn_User">
+    <value>用户</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_PreviousValue">
+    <value>上一个值</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Property">
+    <value>属性</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Value">
+    <value>值</value>
+  </data>
+  <data name="AuditReport_EventType_Edited">
+    <value>已更改</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteAudit">
+    <value>删除</value>
+  </data>
+  <data name="AuditReport_EventType_DisableAudit">
+    <value>禁用</value>
+  </data>
+  <data name="AuditReport_EventType_EnableAudit">
+    <value>启用</value>
+  </data>
+  <data name="AuditReport_ObjectName_AllData">
+    <value>所有数据</value>
+  </data>
+  <data name="AuditReport_ObjectName_ConfigurationChanges">
+    <value>配置更改</value>
+  </data>
+  <data name="AuditReport_ObjectName_DocumentEvent">
+    <value>文档事件</value>
+  </data>
+  <data name="AuditReport_ObjectName_UserLogEvent">
+    <value>用户登录/注销</value>
+  </data>
+  <data name="AuditReport_SettingsType_Auditing">
+    <value>正在审计</value>
+  </data>
+  <data name="AuditReport_SettingsType_FixedSelectList">
+    <value>固定选择列表</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebServices">
+    <value>Web Service</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionList">
+    <value>替换列表</value>
+  </data>
+</root>

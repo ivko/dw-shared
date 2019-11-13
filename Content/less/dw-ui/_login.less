@@ -1,0 +1,92 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+
+// LOGIN SCREEN
+#loginBox {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 440px;
+    font-family: @baseFontFamily;
+    font-size: @baseUIFontSize;
+    background-color: @OT_UltraLightGray;
+    color: @OT_LabelGray;
+    border: 1px solid @OT_BorderGray;
+    padding: 10px;
+    background-position: 18px 20px;
+
+    .dw-logo {
+        float: left;
+        margin-left: 4px;
+    }
+
+    fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 100px;
+        margin-bottom: 30px; /*68px;*/
+    }
+
+    .dw-loginFieldsContainer {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .dw-login-field {
+        display: table-row;
+        border-collapse: separate;
+        margin-bottom: 5px;
+
+        .left label {
+            padding-top: 4px;
+        }
+
+        &.expanded > div {
+            padding-top: 15px;
+        }
+
+        &.condensed {
+            height: -5+@field-height;
+            margin-top: 0px;
+        }
+
+        .left {
+            display: table-cell;
+            .boxed();
+            text-align: right;
+            padding: 3px 0px;
+            vertical-align: middle;
+        }
+
+        .right {
+            display: table-cell;
+            .boxed();
+            //         width: 250px;
+            text-align: left;
+            padding: 3px 10px;
+        }
+
+        input {
+            background-color: #ffffff;
+        }
+    }
+
+    .editor-label, .editor-field {
+        *:nth-child(1) {
+            float: left;
+        }
+
+        *:nth-child(2) {
+            float: right;
+        }
+
+        clear: both;
+    }
+
+    input[type="text"], input[type="password"] {
+        .boxed();
+        width: 100%;
+        height: @field-height;
+    }
+}

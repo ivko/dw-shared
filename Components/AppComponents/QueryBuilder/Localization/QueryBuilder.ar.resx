@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="QueryBuilder_AfterTheNext" xml:space="preserve">
+    <value>بعد التالي</value>
+  </data>
+  <data name="QueryBuilder_AfterThePast" xml:space="preserve">
+    <value>بعد السابق</value>
+  </data>
+  <data name="QueryBuilder_And" xml:space="preserve">
+    <value>و</value>
+  </data>
+  <data name="QueryBuilder_BeforeTheNext" xml:space="preserve">
+    <value>قبل التالي</value>
+  </data>
+  <data name="QueryBuilder_BeforeThePast" xml:space="preserve">
+    <value>قبل السابق</value>
+  </data>
+  <data name="QueryBuilder_Contains" xml:space="preserve">
+    <value>يشتمل على</value>
+  </data>
+  <data name="QueryBuilder_Err_DateField" xml:space="preserve">
+    <value>الرجاء إدخال قيمة صالحة في حقل التاريخ.</value>
+  </data>
+  <data name="QueryBuilder_Err_DateTimeField" xml:space="preserve">
+    <value>الرجاء إدخال قيمة صالحة في حقل التاريخ/الوقت.</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalField" xml:space="preserve">
+    <value>الرجاء إدخال قيمة صالحة في حقل العلامة العشرية.</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalRangeField" xml:space="preserve">
+    <value>الرجاء إدخال قيمة (قيم) نطاق صالحة في حقول العلامة العشرية.</value>
+  </data>
+  <data name="QueryBuilder_Err_KeywordField" xml:space="preserve">
+    <value>الرجاء إدخال قيمة صالحة في حقل الكلمة الأساسية.</value>
+  </data>
+  <data name="QueryBuilder_Err_MemoField" xml:space="preserve">
+    <value>الرجاء إدخال قيمة صالحة في حقل المذكرة.</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericField" xml:space="preserve">
+    <value>الرجاء إدخال قيمة صالحة في الحقل الرقمي.</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericRangeField" xml:space="preserve">
+    <value>الرجاء إدخال قيمة (قيم) نطاق صالحة في الحقول الرقمية.</value>
+  </data>
+  <data name="QueryBuilder_Err_RangeDateField" xml:space="preserve">
+    <value>الرجاء إدخال قيمة (قيم) نطاق صالحة في حقول التاريخ.</value>
+  </data>
+  <data name="QueryBuilder_Err_SqlField" xml:space="preserve">
+    <value>الرجاء إدخال قيمة صالحة في حقل sql.</value>
+  </data>
+  <data name="QueryBuilder_Err_TextField" xml:space="preserve">
+    <value>الرجاء إدخال قيمة صالحة في حقل النص.</value>
+  </data>
+  <data name="QueryBuilder_Introduction" xml:space="preserve">
+    <value>سيظهر فقط للمستخدمين الوثائق التي تتطابق مع القواعد التالية:</value>
+  </data>
+  <data name="QueryBuilder_invalidField" xml:space="preserve">
+    <value>حقل خزانة الملفات غير موجود.</value>
+  </data>
+  <data name="QueryBuilder_IsBetween" xml:space="preserve">
+    <value>بين</value>
+  </data>
+  <data name="QueryBuilder_IsEmpty" xml:space="preserve">
+    <value>فارغ</value>
+  </data>
+  <data name="QueryBuilder_IsEqual" xml:space="preserve">
+    <value>يساوي</value>
+  </data>
+  <data name="QueryBuilder_IsNotEmpty" xml:space="preserve">
+    <value>ليس فارغ</value>
+  </data>
+  <data name="QueryBuilder_IsNotEqual" xml:space="preserve">
+    <value>لا يساوي</value>
+  </data>
+  <data name="QueryBuilder_IsWhereClause" xml:space="preserve">
+    <value>يكون (عبارة أين)</value>
+  </data>
+  <data name="QueryBuilder_Or" xml:space="preserve">
+    <value>أو</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDISK" xml:space="preserve">
+    <value>رقم القرص</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDOCID" xml:space="preserve">
+    <value>معرف الوثيقة</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSDATETIME" xml:space="preserve">
+    <value>تاريخ آخر وصول</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSUSER" xml:space="preserve">
+    <value>مستخدم آخر وصول</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODDATETIME" xml:space="preserve">
+    <value>تاريخ التعديل</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODUSER" xml:space="preserve">
+    <value>مستخدم التعديل</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSECTIONCOUNT" xml:space="preserve">
+    <value>عدد الملفات</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREDATETIME" xml:space="preserve">
+    <value>تاريخ التخزين</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREUSER" xml:space="preserve">
+    <value>مستخدم التخزين</value>
+  </data>
+  <data name="QueryBuilder_SystemFields" xml:space="preserve">
+    <value>حقول النظام</value>
+  </data>
+  <data name="QueryBuilder_WithinTheNext" xml:space="preserve">
+    <value>في التالي</value>
+  </data>
+  <data name="QueryBuilder_WithinThePast" xml:space="preserve">
+    <value>في السابق</value>
+  </data>
+  <data name="QueryClick_LabelFirstPart" xml:space="preserve">
+    <value>لم يتم تحديد أي قواعد بعد.</value>
+  </data>
+  <data name="QueryClick_LabelSecondPart" xml:space="preserve">
+    <value>إنشاء قاعدة جديدة</value>
+  </data>
+  <data name="QueryClick_LabelThirdPart" xml:space="preserve">
+    <value>إنشاء مجموعة قواعد</value>
+  </data>
+  <data name="QueryDate_Days" xml:space="preserve">
+    <value>أيام</value>
+  </data>
+  <data name="QueryDate_Hours" xml:space="preserve">
+    <value>الساعات</value>
+  </data>
+  <data name="QueryDate_Months" xml:space="preserve">
+    <value>أشهر</value>
+  </data>
+  <data name="QueryDate_Years" xml:space="preserve">
+    <value>أعوام</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPDATETIME" xml:space="preserve">
+    <value>SAP Date Time</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPSTATUS" xml:space="preserve">
+    <value>SAP Status</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWUSRVERSION" xml:space="preserve">
+    <value>إصدار المستخدم</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSIONCOMMENT" xml:space="preserve">
+    <value>تعليق الإصدار</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSTATUS" xml:space="preserve">
+    <value>حالة الإصدار</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCID" xml:space="preserve">
+    <value>SAP Doc Id</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCTYPE" xml:space="preserve">
+    <value>SAP Doc Type</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPPROTECTIONTYPE" xml:space="preserve">
+    <value>SAP Protection Type</value>
+  </data>
+  <data name="QueryBuilder_ProfileIntroduction">
+    <value>تسري الحقوق الممنوحة أدناه على المستندات المستوفية للقواعد التالية:</value>
+  </data>
+  <data name="QueryBuilder_AddCondition">
+    <value>قُم بإنشاء قاعدة جديدة</value>
+  </data>
+  <data name="QueryBuilder_AddGroupCondition">
+    <value>قُم بإنشاء مجموعة قواعد</value>
+  </data>
+  <data name="QueryBuilder_After">
+    <value>بعد</value>
+  </data>
+  <data name="QueryBuilder_AutocompleteEmptyResult">
+    <value>لم يتم العثور على أيَّة قِيَم</value>
+  </data>
+  <data name="QueryBuilder_Before">
+    <value>قبل</value>
+  </data>
+  <data name="QueryBuilder_BeforeOrOn">
+    <value>قبل أو مع</value>
+  </data>
+  <data name="QueryBuilder_Begins">
+    <value>يبدأ بـ</value>
+  </data>
+  <data name="QueryBuilder_Ends">
+    <value>ينتهي بـ</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Decimal_Input">
+    <value>الرجاء إدخال عدد عشريّ مثل {0}</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Number_Input">
+    <value>الرجاء إدخال رقم مثل {0}</value>
+  </data>
+  <data name="QueryBuilder_IsNotOn">
+    <value>ليس مع</value>
+  </data>
+  <data name="QueryBuilder_IsOn">
+    <value>في</value>
+  </data>
+  <data name="QueryBuilder_Less">
+    <value>أقل من</value>
+  </data>
+  <data name="QueryBuilder_LessOrEqual">
+    <value>أقل من أو يساوي</value>
+  </data>
+  <data name="QueryBuilder_More">
+    <value>أكبر من</value>
+  </data>
+  <data name="QueryBuilder_MoreOrEqual">
+    <value>يساوي أو أكبر من</value>
+  </data>
+  <data name="QueryBuilder_OnOrAfter">
+    <value>في أو بعد</value>
+  </data>
+  <data name="QueryBuilder_RemoveCondition">
+    <value>إزالة القاعدة</value>
+  </data>
+  <data name="QueryBuilder_RemoveGroupCondition">
+    <value>إزالة مجموعة قواعد</value>
+  </data>
+  <data name="SystemFunction_CurrentDate">
+    <value>التاريخ الحالي</value>
+  </data>
+  <data name="SystemFunction_CurrentDateTime">
+    <value>التاريخ/الوقت الحالي</value>
+  </data>
+  <data name="SystemFunction_CurrentUserEmail">
+    <value>البريد الإلكتروني للمستخدِم</value>
+  </data>
+  <data name="SystemFunction_CurrentUserLongName">
+    <value>تسجيل الدخول للمستخدِم</value>
+  </data>
+  <data name="SystemFunction_CurrentUserShortName">
+    <value>اسم المستخدم الداخلي</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWEXTENSION">
+    <value>الامتداد</value>
+  </data>
+  <data name="QueryBuilder_RangeTo">
+    <value>إلى</value>
+  </data>
+</root>

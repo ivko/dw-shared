@@ -1,0 +1,77 @@
+/*!
+ * jQuery UI Tabs 1.8.21
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
+
+.ui-tabs
+{
+    position: relative; /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+    padding: 0;
+}
+
+    .ui-tabs .ui-tabs-nav
+    {
+        margin: 0;
+        padding: @TabsPaddingTop 0 0 16px;
+        font-size: 0;
+    }
+
+        .ui-tabs .ui-tabs-nav li
+        {
+            list-style: none;
+            position: relative;
+            display: inline-block;
+            *display: inline;
+            top: 0;
+            margin: 1px 0 0 3px;
+            border-width: 1px;
+            border-bottom-width: 0;
+            padding: 0;
+            white-space: nowrap;
+            height: @tabsHeight;
+        }
+
+        .ui-tabs .ui-tabs-nav .ui-tabs-anchor
+        {
+            float: left;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .ui-tabs .ui-tabs-nav li.ui-tabs-active
+        {
+            margin-bottom: -2px !important;
+            padding-bottom: 2px;
+        }
+
+            .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+            .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+            .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor
+            {
+                cursor: default;
+            }
+
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor
+{
+    cursor: pointer;
+}
+
+.ui-tabs .ui-tabs-panel
+{
+    display: block;
+    border-width: 0;
+    padding: 0;
+    background: none;
+    width: 100%;
+    height: auto;
+}
+
+.ui-tabs .ui-tabs-hide
+{
+    display: none !important;
+}

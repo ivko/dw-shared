@@ -1,0 +1,290 @@
+﻿<script id="schedule-main" type="text/html">
+<div class="form-horizontal">
+    <div class="row bottom-offset-medium">
+        <div class="col-xs-2 text-right">
+            <span class="control-label" data-bind="text: DW.ScheduleComponent.localize('Summary_Label')"></span>
+        </div>
+        <div class="col-xs-9">
+            <span class="control-label" data-bind="text: summary"></span>
+        </div>
+        <div class="col-xs-1 text-right">
+            <span class="ui-icon icon-auto dw-icon-info-plain gray" data-bind="infobox: { key: 'Schedule'}"></span>
+        </div>
+    </div>
+    <div class="row bottom-offset-medium">
+        <div class="col-xs-2 text-right">
+            <label for="repeatType" class="control-label" data-bind="text: DW.ScheduleComponent.localize('Repeat_Label')"></label>
+        </div>
+        <div class="col-xs-2">
+            <select id="repeatType" class="form-control" data-bind="options:repeatTypeList, optionsValue: 'value', optionsText: function(item) {return DW.ScheduleComponent.localize( item.key)}, value:repeatType"></select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control" data-bind="visible: repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.Daily || repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.Hourly || repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.By_minute, value: dailyOccurrence, options:dailyOccurrenceList, optionsValue:'value', optionsText: function(item) {return DW.ScheduleComponent.localize(item.key)}"></select>
+            <select class="form-control" data-bind="visible: repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.Weekly, value: weeklyOccurrence, options:weeklyOccurrenceList, optionsValue:'value', optionsText: function(item) {return DW.ScheduleComponent.localize(item.key)}"></select>
+            <select class="form-control" data-bind="visible: repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.Monthly, value: monthlyOccurrence, options:monthlyOccurrenceList, optionsValue:'value', optionsText: function(item) {return DW.ScheduleComponent.localize(item.key)}"></select>
+        </div>
+        <div class="col-xs-6" data-bind="visible: (repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.Daily || repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.Hourly || repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.By_minute) && dailyOccurrence() == DW.ScheduleComponent.Enums.DailyOccurrenceType.Custom">
+            <div class="col-xs-1">
+                <checkbox  params="{
+                          toggleOptions: {
+                        enable: function () {return true}
+                    }, buttonOptions: {
+                            buttonId: 'dailyCustomOccurrenceMonday',
+                            checked: dailyCustomOccurrenceMonday
+                          },
+                          labelOptions: {
+                            labelClass: 'disabled-overlay-item',
+                            label: DW.ScheduleComponent.localize('Daily_Custom_Occurrence_Monday_Label')
+                          }}">
+                </checkbox>
+            </div>
+            <div class="col-xs-1">
+                <checkbox  params="{
+                          toggleOptions: {
+                        enable: function () {return true}
+                    }, buttonOptions: {
+                            buttonId: 'dailyCustomOccurrenceTuesday',
+                            checked: dailyCustomOccurrenceTuesday
+                          },
+                          labelOptions: {
+                            labelClass: 'disabled-overlay-item',
+                            label: DW.ScheduleComponent.localize('Daily_Custom_Occurrence_Tuesday_Label')
+                          }}">
+                </checkbox>
+            </div>
+            <div class="col-xs-1">
+                <checkbox  params="{
+                          toggleOptions: {
+                        enable: function () {return true}
+                    }, buttonOptions: {
+                            buttonId: 'dailyCustomOccurrenceWednesday',
+                            checked: dailyCustomOccurrenceWednesday
+                          },
+                          labelOptions: {
+                            labelClass: 'disabled-overlay-item',
+                            label: DW.ScheduleComponent.localize('Daily_Custom_Occurrence_Wednesday_Label')
+                          }}">
+                </checkbox>
+            </div>
+            <div class="col-xs-1">
+                <checkbox  params="{
+                          toggleOptions: {
+                        enable: function () {return true}
+                    }, buttonOptions: {
+                            buttonId: 'dailyCustomOccurrenceThursday',
+                            checked: dailyCustomOccurrenceThursday
+                          },
+                          labelOptions: {
+                            labelClass: 'disabled-overlay-item',
+                            label: DW.ScheduleComponent.localize('Daily_Custom_Occurrence_Thursday_Label')
+                          }}">
+                </checkbox>
+            </div>
+            <div class="col-xs-1">
+                <checkbox  params="{
+                          toggleOptions: {
+                        enable: function () {return true}
+                    }, buttonOptions: {
+                            buttonId: 'dailyCustomOccurrenceFriday',
+                            checked: dailyCustomOccurrenceFriday
+                          },
+                          labelOptions: {
+                            labelClass: 'disabled-overlay-item',
+                            label: DW.ScheduleComponent.localize('Daily_Custom_Occurrence_Friday_Label')
+                          }}">
+                </checkbox>
+            </div>
+            <div class="col-xs-1">
+                <checkbox  params="{
+                          toggleOptions: {
+                        enable: function () {return true}
+                    }, buttonOptions: {
+                            buttonId: 'dailyCustomOccurrenceSaturday',
+                            checked: dailyCustomOccurrenceSaturday
+                          },
+                          labelOptions: {
+                            labelClass: 'disabled-overlay-item',
+                            label: DW.ScheduleComponent.localize('Daily_Custom_Occurrence_Saturday_Label')
+                          }}">
+                </checkbox>
+            </div>
+            <div class="col-xs-1">
+                <checkbox  params="{
+                          toggleOptions: {
+                        enable: function () {return true}
+                    }, buttonOptions: {
+                            buttonId: 'dailyCustomOccurrenceSunday',
+                            checked: dailyCustomOccurrenceSunday
+                          },
+                          labelOptions: {
+                            labelClass: 'disabled-overlay-item',
+                            label: DW.ScheduleComponent.localize('Daily_Custom_Occurrence_Sunday_Label')
+                          }}">
+                </checkbox>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Daily recurring-->
+<div data-bind="visible: repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.Daily">
+    <div class="row bottom-offset-medium">
+        <div class="col-xs-2 text-right">
+            <label for="dailystarttime" class="control-label" data-bind="text: DW.ScheduleComponent.localize('Start_At_Label')"></label>
+        </div>
+        <div class="col-xs-3">
+            <input id="dailystarttime" style="width:64.5%;display:inline-block;" type="text" class="form-control" data-bind="datetimepicker: dailyStartDate, datepickerOptions: { changeMonth: true, changeYear: true, showButtonPanel: true }" />
+        </div>
+        <div class="col-xs-7">
+            <!-- ko if: showTimeZoneDropdown -->
+            <select class="form-control" data-bind="value: displayTimeZone, options: DW.ScheduleComponent.TimeZoneMapping.DisplayValues"></select>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
+<!--END Daily recurring-->
+<!--Hourly recurring-->
+<div data-bind="visible: repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.Hourly">
+    <div class="row bottom-offset-medium">
+        <div class="col-xs-2 text-right">
+            <label for="repeatEvery" class="control-label" data-bind="text: DW.ScheduleComponent.localize('Repeat_Every_Label')"></label>
+        </div>
+        <div class="col-xs-1" data-bind="css: { 'has-error': dailyRepeatEveryHourValue.isModified() && !dailyRepeatEveryHourValue.isValid() }">
+            <input id="repeatEvery" class="form-control" type="number" min="1" max="24" data-bind="value:dailyRepeatEveryHourValue, attr: { max: dailyRepeatEveryHourMax, min: dailyRepeatEveryHourMin }" />
+        </div>
+        <div class="col-xs-2" style="padding-top:5px">
+            <label for="repeatEvery" class="text-right" data-bind="text: DW.ScheduleComponent.localize('Hours_Label')"></label>
+        </div>
+        <div class="col-xs-4"></div>
+    </div>
+    <div class="row bottom-offset-medium">
+        <div class="col-xs-2 text-right">
+            <label for="dailystarttime" class="control-label" data-bind="text: DW.ScheduleComponent.localize('Start_At_Label')"></label>
+        </div>
+        <div class="col-xs-3">
+            <input id="dailystarttime" style="width:64.5%;display:inline-block;" type="text" class="form-control" data-bind="datetimepicker: dailyStartDate, datepickerOptions: { changeMonth: true, changeYear: true, showButtonPanel: true }" />
+        </div>
+        <div class="col-xs-7">
+            <!-- ko if: showTimeZoneDropdown -->
+            <select class="form-control" data-bind="value: displayTimeZone, options: DW.ScheduleComponent.TimeZoneMapping.DisplayValues"></select>
+            <!-- /ko -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 text-right">
+            <label for="dailyEndTime" class="control-label" data-bind="text: DW.ScheduleComponent.localize('End_At_Label')"></label>
+        </div>
+        <div class="col-xs-2">
+            <select id="dailyEndTime" class="form-control" data-bind="value: dailyEndTime,
+                                                                      options: endTimeList,
+                                                                      optionsValue: 'value',
+                                                                      optionsText: localizeDailyEndTime.bind($data)"></select>
+        </div>
+        <div class="col-xs-8"></div>
+    </div>
+</div>
+<!--END Hourly recurring-->
+<!--Recurring by minute-->
+<div data-bind="visible: repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.By_minute">
+    <div class="row bottom-offset-medium">
+        <div class="col-xs-2 text-right">
+            <label for="repeatEvery" class="control-label" data-bind="text: DW.ScheduleComponent.localize('Repeat_Every_Label')"></label>
+        </div>
+        <div class="col-xs-1" data-bind="css: { 'has-error': dailyRepeatEveryMinuteValue.isModified() && !dailyRepeatEveryMinuteValue.isValid() }">
+            <input id="repeatEvery" class="form-control" type="number" data-bind="value:dailyRepeatEveryMinuteValue, attr: { max: dailyRepeatEveryMinuteMax, min: dailyRepeatEveryMinuteMin }" />
+        </div>
+        <div class="col-xs-2" style="padding-top:5px">
+            <label for="repeatEvery" class="text-right" data-bind="text: DW.ScheduleComponent.localize('Minutes_Label')"></label>
+        </div>
+        <div class="col-xs-4"></div>
+        <div class="col-xs-1 text-right">
+            <!-- ko if: showMinimumMinutesInfobox() -->
+            <span class="ui-icon icon-auto dw-icon-info-plain gray pull-right" data-bind="infobox: { key: 'Hours_limits', options: { placement: 'bottom' } }"></span>
+            <!-- /ko -->
+        </div>
+    </div>
+    <div class="row bottom-offset-medium">
+        <div class="col-xs-2 text-right">
+            <label for="dailystarttime" class="control-label" data-bind="text: DW.ScheduleComponent.localize('Start_At_Label')"></label>
+        </div>
+        <div class="col-xs-3">
+            <input id="dailystarttime" style="width:64.5%;display:inline-block;" type="text" class="form-control" data-bind="datetimepicker: dailyStartDate, datepickerOptions: { changeMonth: true, changeYear: true, showButtonPanel: true }" />
+        </div>
+        <div class="col-xs-7">
+            <!-- ko if: showTimeZoneDropdown -->
+            <select class="form-control" data-bind="value: displayTimeZone, options: DW.ScheduleComponent.TimeZoneMapping.DisplayValues"></select>
+            <!-- /ko -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 text-right">
+            <label for="dailyEndTime" class="control-label" data-bind="text: DW.ScheduleComponent.localize('End_At_Label')"></label>
+        </div>
+        <div class="col-xs-2">
+            <select id="dailyEndTime" class="form-control" data-bind="value: dailyEndTime,
+                                                                      options: endTimeList,
+                                                                      optionsValue: 'value',
+                                                                      optionsText: localizeDailyEndTime.bind($data)"></select>
+        </div>
+        <div class="col-xs-8"></div>
+    </div>
+</div>
+<!--END Recurring by minute-->
+<!--Weekly recurring-->
+<div data-bind="visible: repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.Weekly">
+    <div class="row bottom-offset-medium">
+        <div class="col-xs-2 text-right">
+            <label for="weeklyWeekday" class="control-label" data-bind="text: DW.ScheduleComponent.localize('On_Label')"></label>
+        </div>
+        <div class="col-xs-4">
+            <select id="weeklyWeekday" class="form-control" data-bind="value: weeklyWeekday,options:weekdaysList, optionsValue: 'value', optionsText: function(item) {return DW.ScheduleComponent.localize(item.key)}"></select>
+        </div>
+        <div class="col-xs-6"></div>
+    </div>
+    <div class="row bottom-offset-medium">
+        <div class="col-xs-2 text-right">
+            <label for="weeklyStartDate" class="control-label" data-bind="text: DW.ScheduleComponent.localize('At_Label')"></label>
+        </div>
+        <div class="col-xs-3">
+            <input id="weeklyStartDate" style="width:64.5%;display:inline-block;" type="text" class="form-control" data-bind="datetimepicker: weeklyStartDate, datepickerOptions: { changeMonth: true, changeYear: true, showButtonPanel: true }" />
+        </div>
+        <div class="col-xs-7">
+            <!-- ko if: showTimeZoneDropdown -->
+            <select class="form-control" data-bind="value: displayTimeZone, options: DW.ScheduleComponent.TimeZoneMapping.DisplayValues"></select>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
+<!--END Weekly recurring-->
+<!--Monthly recurring-->
+<div data-bind="visible: repeatType() == DW.ScheduleComponent.Enums.ScheduleRepeatingType.Monthly">
+    <div class="row bottom-offset-medium">
+        <div class="col-xs-2 text-right">
+            <label for="monthlyScheduleWeek" class="control-label" data-bind="text: DW.ScheduleComponent.localize('On_the_Label')"></label>
+        </div>
+        <div class="col-xs-2">
+            <select id="monthlyScheduleWeek" class="form-control" data-bind="value:monthlyScheduleWeek, options:monthlyScheduleWeekList, optionsValue: 'value', optionsText: function(item) {return DW.ScheduleComponent.localize(item.key)}"></select>
+        </div>
+        <div class="col-xs-2">
+            <select class="form-control" data-bind="visible: monthlyScheduleWeek() != DW.ScheduleComponent.Enums.MonthlyRepeatOnType.SelectDate, value:monthlyWeekday, options:weekdaysList, optionsValue: 'value', optionsText: function(item) {return DW.ScheduleComponent.localize(item.key)}"></select>
+            <select class="form-control" data-bind="visible: monthlyScheduleWeek() == DW.ScheduleComponent.Enums.MonthlyRepeatOnType.SelectDate, value:dayOfMonth, options:dayOfMonthList, optionsValue: 'value', optionsText: function(item) {return DW.ScheduleComponent.localize(item.key)}"></select>
+        </div>
+        <div class="col-xs-6">
+            <label class="control-label" data-bind="visible: monthlyScheduleWeek() != DW.ScheduleComponent.Enums.MonthlyRepeatOnType.SelectDate, text: DW.ScheduleComponent.localize('Of_The_Month_Text')"></label>
+        </div>
+    </div>
+    <div class="row bottom-offset-medium">
+        <div class="col-xs-2 text-right">
+            <label for="monthlystarttime" class="control-label" data-bind="text: DW.ScheduleComponent.localize('At_Label')"></label>
+        </div>
+        <div class="col-xs-3">
+            <input id="monthlystarttime" style="width:64.5%;display:inline-block;" type="text" class="form-control" data-bind="datetimepicker: monthlyStartDate, datepickerOptions: { changeMonth: true, changeYear: true, showButtonPanel: true }" />
+        </div>
+        <div class="col-xs-7">
+            <!-- ko if: showTimeZoneDropdown -->
+            <select class="form-control" data-bind="value: displayTimeZone, options: DW.ScheduleComponent.TimeZoneMapping.DisplayValues"></select>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
+<!--END Monthly recurring-->
+</script>

@@ -1,0 +1,215 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+
+/* Intellix */
+.dw-intellix
+{
+    width: 2px;
+    height: 100%;
+
+    &.dw-errorIndexing
+    {
+        display: none;
+    }
+
+    &.dw-notReadyIndexing
+    {
+        .backgroundImage( ~'"@{indexing-2-23}"', center, center, no-repeat );
+    }
+
+    &.dw-noIndexing
+    {
+        display: none;
+    }
+
+    &.dw-badIndexing
+    {
+        background-color: @badIndexColor;
+    }
+
+    &.dw-mediumIndexing
+    {
+        background-color: @mediumIndexColor;
+    }
+
+    &.dw-goodIndexing
+    {
+        background-color: @goodIndexColor;
+    }
+
+    &.thumbnail
+    {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10px;
+        height: 23px;
+
+        &.dw-notReadyIndexing
+        {
+            .backgroundImage( ~'"@{indexing-10-23}"', center, center, no-repeat );
+        }
+    }
+
+    &.dw-intellixTrustColor
+    {
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        width: 2px;
+        height: 97%;
+        min-height: 24px;
+        max-height: 78px;
+        z-index: 1;
+    }
+}
+
+.table-fields-wrapper {
+    &.dw-badIndexing {
+        border-left: 2px solid @badIndexColor;
+
+        .dw-badIndexing {
+            display: none;
+        }
+    }
+
+    &.dw-mediumIndexing {
+        border-left: 2px solid @mediumIndexColor;
+
+        .dw-mediumIndexing {
+            display: none;
+        }
+    }
+
+    &.dw-goodIndexing {
+        border-left: 2px solid @goodIndexColor;
+
+        .dw-goodIndexing {
+            display: none;
+        }
+    }
+
+    &.dw-noIndexing {
+        border-left: 2px solid transparent;
+
+        .dw-badIndexing, .dw-mediumIndexing, .dw-goodIndexing {
+            display: none;
+        }
+    }
+}
+
+//intelix suggestion entries (used in IndexCard view and tooltips)
+.suggestionEntryRed {
+    border-left: 4px solid @OT_Red;
+    padding-left: 6px;
+    .boxed();
+}
+.suggestionEntryGreen {
+    border-left: 4px solid @OT_Green;
+    padding-left:6px;
+    .boxed();
+}
+.suggestionEntryYellow {
+    border-left: 4px solid @OT_Yellow;
+    padding-left:6px;
+    .boxed();
+}
+
+
+
+.dw-storeDialogColors, .dw-menuColors, .dw-fcColors li
+{
+    border-left: 4px solid transparent;
+
+    &.file-cabinet-colors
+    {
+        padding-left: 4px;
+
+        &.no-color
+        {
+            border-left-width: 0;
+            padding-left: 0;
+        }
+          &:not(.table-view)
+        {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 3px;
+            border-left-width: 7px;
+        }
+    }
+
+    &.Red
+    {
+        border-left-color: @fcColorRed;
+    }
+
+    &.Green
+    {
+        border-left-color: @fcColorGreen;
+    }
+
+    &.Yellow
+    {
+        border-left-color: @fcColorYellow;
+    }
+
+    &.Blue
+    {
+        border-left-color: @fcColorBlue;
+    }
+
+    &.Black
+    {
+        border-left-color: @fcColorBlack;
+    }
+}
+
+.dw-tabStrip .dw-colors
+{
+
+    border-top: 2px solid transparent;
+
+    &.Red
+    {
+        border-top-color: @fcColorRed;
+    }
+
+    &.Green
+    {
+        border-top-color: @fcColorGreen;
+    }
+
+    &.Yellow
+    {
+        border-top-color: @fcColorYellow;
+    }
+
+    &.Blue
+    {
+        border-top-color: @fcColorBlue;
+    }
+
+    &.Black
+    {
+        border-top-color: @fcColorBlack;
+    }
+}
+
+//To refactor - used in workflow
+/*bold text*/
+.ui-bold
+{
+    font-weight: bold;
+}
+/*red text */
+.ui-red
+{
+    color: @OT_Red;
+}
+/*orange text */
+.ui-orange
+{
+    color: @OT_Orange;
+}

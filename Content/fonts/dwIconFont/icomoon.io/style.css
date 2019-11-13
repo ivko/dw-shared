@@ -1,0 +1,108 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-predefined-locked {
+  width: 0.9570312499999982em;
+}
+
+.icon-revision-history {
+  width: 0.99609375em;
+}
+
+.icon-logotype {
+  width: 6.9501953125em;
+}
+
+.icon-cloud-product {
+  width: 1.3046875em;
+}
+
+.icon-database4 {
+  width: 0.875em;
+}
+
+.icon-DocuWare_logo {
+  width: 4.7216796875em;
+}
+
+.icon-stamp_workflow {
+  width: 0.99609375em;
+}
+
+.icon-dialog {
+  width: 0.79296875em;
+}
+
+.icon-database_field {
+  width: 1.0654296875em;
+}
+
+.icon-cursor3 {
+  width: 0.8095703125em;
+}
+
+.icon-touch {
+  width: 0.8095703125em;
+}
+
+.icon-assign_data {
+  width: 1.462890625em;
+}
+
+.icon-parallel_tasks {
+  width: 1.564453125em;
+}
+
+.icon-task_list {
+  width: 1.0927734375em;
+}
+
+.icon-web_service {
+  width: 1.12890625em;
+}
+
+.icon-double-angle-up {
+  width: 0.65625em;
+}
+
+.icon-double-angle-right {
+  width: 0.5625em;
+}
+
+.icon-double-angle-left {
+  width: 0.5625em;
+}
+
+.icon-double-angle-down {
+  width: 0.65625em;
+}
+
+.icon-angle-up {
+  width: 0.65625em;
+}
+
+.icon-angle-right {
+  width: 0.34375em;
+}
+
+.icon-angle-left {
+  width: 0.34375em;
+}
+
+.icon-angle-down {
+  width: 0.65625em;
+}

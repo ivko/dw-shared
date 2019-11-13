@@ -1,0 +1,114 @@
+﻿<script type='text/html' id='index-assignment-template'>
+    <!--ko template: {
+        name: 'table-template',
+        data: {
+            viewModels: {
+                tableVM:  $data.table,
+                mainVM: $data.indexAssignmentController
+            },
+            tableTemplates: {
+                tHeader: 'sortable-table-header-custom',
+                tRow: 'sortable-table-row'
+            }
+        }
+    }-->
+    <!--/ko-->
+</script>
+
+<script type='text/html' id='sortable-table-header-custom'>
+    <!--ko with: getColumns() -->
+    <th class="col-xs-4" data-bind="template: { name: 'simple-table-header', data: dialogField }"></th>
+    <th class="col-xs-3" data-bind="template: { name: 'simple-table-header', data: source }"></th>
+    <th class="col-xs-4" data-bind="template: { name: 'simple-table-header', data: value }"></th>
+    <!-- /ko -->
+</script>
+
+<script type='text/html' id='sortable-table-row'>
+    <tr data-bind="css: { active: $parent.tableVM.isRowSelected($data) },
+    scrollElementIntoView: { shouldScroll: function () { return $data == $parent.tableVM.scrollRow(); } }">
+        <td>
+            <span data-bind="text: mandatoryFieldName"></span>
+        </td>
+        <td>
+            <!--DO NOT CHANGE TO combobox CONTROL OTHERWISE LEADS TO INFINITE UPDATE OF VALUE OBSERVABLE -->
+            <div>
+                <select class="form-control"
+                        data-bind="options: $data.valueSources,
+                    optionsText: 'displayName',
+                    value: selectedValueSource,
+                    visible: true,
+                    event: { 'change': function() { return $parent.mainVM().toggleIndexField($data) } }"></select>
+            </div>
+        </td>
+        <td>
+            <!-- ko if: indexingTemplate -->
+            <span data-bind="template: { name: indexingTemplate().templateName, data: $data }"></span>
+            <!-- /ko -->
+        </td>
+    </tr>
+</script>
+
+<script type="text/html" id="keyword-template">
+    <div class="input-group">
+        <span data-bind="template: { name: 'text-fixedvalue-template', data: $data }"></span>
+        <span class="keyword-action-icons input-group-btn" role="group">
+            <button type="button" class="btn btn-tertiary icon-only" data-bind="click: function() { $parents[1].mainVM().addAnotherKeyword($data, $index()) }"><i class="ui-icon ico-dec-2 dw-icon-plus"></i></button>
+            <button type="button" class="btn btn-tertiary icon-only" data-bind="visible: showMinus(), click: function() { $parents[1].mainVM().removeKeyword($data, true) }"><i class="ui-icon ico-dec-2 dw-icon-minus"></i></button>
+        </span>
+    </div>
+</script>
+
+<script type="text/html" id="text-fixedvalue-template">
+    <!-- ko if: $data.indexField.dwField.fieldMask -->
+        <div data-bind="css: { 'has-error': indexingTemplate().hasError }">
+            <input type="text" class="form-control" data-bind="value: indexingTemplate().value, valueUpdate: 'afterkeydown', textInput: indexingTemplate().value, tooltip: { conditions: [{ type: 'subscription', arg: { isOpen: indexingTemplate().showTooltip, content: indexingTemplate().options.tooltipContent } }], placement: 'right' }, attr: {'placeholder' : indexingTemplate().options.placeholderText}" />
+        </div>
+    <!-- /ko -->
+    <!-- ko ifnot: $data.indexField.dwField.fieldMask -->
+        <input type="text" class="form-control" data-bind="value: indexingTemplate().value" />
+    <!-- /ko -->
+</script>
+
+<script type="text/html" id="numeric-fixedvalue-template">
+    <input type="text" class="form-control" data-bind="numericValue: indexingTemplate().value,
+                               numericValueOptions: indexingTemplate().options,
+                               tooltip: { conditions: [{ type: 'truncated', arg: indexingTemplate().value }, { type: 'validateNumeric', arg: DW.IndexAssignment.localize('IndexAssignment_Grid_ToolTip_NumberField') }] }">
+</script>
+
+<script type="text/html" id="date-fixedvalue-template">
+    <input type="text" class="adapt-height form-control-static" data-bind="datepicker: indexingTemplate().value, datepickerOptions: {}">
+</script>
+
+<script type="text/html" id="datetime-fixedvalue-template">
+    <input type="text" class="adapt-height form-control-static" data-bind="datetimepicker: indexingTemplate().value, datepickerOptions: {}">
+</script>
+
+<script type="text/html" id="memo-fixedvalue-template">
+    <input type="text" class="form-control" data-bind="value: indexingTemplate().value" />
+</script>
+
+<script type="text/html" id="nullvalue-template">
+</script>
+
+<script type="text/html" id="emailproperties-template">
+    <!-- ko if: $data.indexField.dwField.fieldType === 4 -->
+    <div class="input-group">
+        <select class="form-control"
+                data-bind="options: indexingTemplate().emailProperties,
+                    optionsText: 'name',
+                    optionsValue: 'id',
+                    value: indexingTemplate().value"></select>
+        <span class="keyword-action-icons input-group-btn" role="group">
+            <button type="button" class="btn btn-tertiary icon-only" data-bind="click: function() { $parents[1].mainVM().addAnotherKeyword($data, $index()) }"><i class="ui-icon ico-dec-2 dw-icon-plus"></i></button>
+            <button type="button" class="btn btn-tertiary icon-only" data-bind="visible: showMinus(), click: function() { $parents[1].mainVM().removeKeyword($data, true) }"><i class="ui-icon ico-dec-2 dw-icon-minus"></i></button>
+        </span>
+    </div>
+    <!-- /ko -->
+    <!-- ko ifnot: $data.indexField.dwField.fieldType === 4 -->
+    <combobox params="{options: indexingTemplate().emailProperties,
+                          optionsValue: 'id',
+                          optionsText: 'name',
+                          value: indexingTemplate().value
+                      }"></combobox>
+    <!-- /ko -->
+</script>

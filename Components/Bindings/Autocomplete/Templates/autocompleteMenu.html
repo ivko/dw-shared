@@ -1,0 +1,108 @@
+﻿<script type="text/html" id="autocomplete-menu">
+    <div class="dw-autocompleteColumnContainer ui-widget" data-bind="visible: $data.visible, dwActivity: { active: $data.loading, width: 2, length: 3, radius: 3 }, css: { 'dw-autocompleteColumnContainer-with-footer': $data.options.showSelectListfilter === true || $data.options.showEditFixedList === true, 'dw-autocomplete-single-result': $data.getListLength() <= 1 && !$data.loading() }">
+        <!-- ko if: $data.getListLength() == 0 && !$data.loading() -->
+        <span class="dw-autocomplete-noentries" data-bind="text: DW.Autocomplete.localize('EmptyResult')"></span>
+        <!-- /ko -->
+        <!-- ko if: $data.getListLength() > 0 -->
+
+        <div class="dw-autocompleteScrollArea" data-bind="dwScrollbar: {
+            contentSelector: '.dw-scroll-content',
+            options: {
+                theme: 'scroll-theme-light',
+                updateTriggers: {
+                    autocompleteMenu: $data
+                }
+            }
+        }">
+            <div class="dw-scroll-content">
+                <!-- ko if: $data.lists.intelix && $data.lists.intelix.items.hasItems() -->
+                <ul class="intelligent-indexing" data-bind="css: { 'no-border-bottom': $data.lists.selectList && !$data.lists.selectList.items.hasItems() }">
+                    <li class="header">
+                        <span class="ui-icon dw-icon-indexing"></span>
+                        <span class="ui-widget-header" data-bind="text: DWResources.WebClient.Intelligent_Indexing"></span>
+                    </li>
+                    <!--ko template: { 
+                        name: 'autocomplete-list-items', 
+                        data: {
+                            list: $data.lists.intelix,
+                            onClick: function (value) {
+                                this.onSelectListItemClick(value)
+                            }.bind($data)
+                        }}-->
+                    <!-- /ko -->
+                </ul>
+                <!-- /ko -->
+                <ul class="select-list">
+                    <!--ko template: { 
+                        name: 'autocomplete-list-items', 
+                        data: {
+                            list: $data.lists.selectList,
+                            onClick: function (value) {
+                                this.onSelectListItemClick(value)
+                            }.bind($data)
+                        }}-->
+                    <!-- /ko -->
+                </ul>
+            </div>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: $data.options.showSelectListfilter === true || $data.options.showEditFixedList === true -->
+        <div class="dw-autocompleteContainerFooter">
+            <!-- ko if: $data.options.showEditFixedList === true  -->
+            <div class="dw-autocompleteFooter" data-bind="click: $data.maintainSelectList, tooltip: { content: DWResources.WebClient.SelectList_ManageList, placement: 'bottom' }">
+                <a href="#" class="dw-blue arrow">
+                    <span data-bind="text: DWResources.WebClient.SelectList_ManageList"></span>
+                </a>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: $data.options.showSelectListfilter === true  -->
+            <div class="pull-right dw-autocompleteFooter" data-bind="tooltip: { content: DWResources.WebClient.SelectList_IsFiltering_Tooltip, placement: 'bottom' }">
+                <input class="dw-checkBoxRight pull-right" name="filterSelectLists" type="checkbox" data-bind="enable: $data.options.enableSelectListfilter, checked: $data.options.useSelectiveSelectList, attr: { id: fieldId } " />
+                <label data-bind="text: DWResources.WebClient.Is_Filtering, attr: { for: fieldId }"></label>
+            </div>
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    </div>
+</script>
+
+<script type="text/html" id="autocomplete-list-items">
+    <!-- ko foreach: $data.list.items -->
+    <!-- ko template: {
+        name: 'autocomplete-list-item',
+        data: {
+            item: $data,
+            list: $parent.list,
+            text: $parent.list.textValue($data),
+            selected: $parent.list.selectedIndex() == $index(),
+            mousedown: $parent.list.selectItem.bind($parent.list, $data)
+        }} -->
+    <!-- /ko -->
+    <!-- /ko -->
+</script>
+
+<script type="text/html" id="autocomplete-list-item">
+    <li data-bind="event: { 
+                        mousedown: function(data, event) {
+                            event.preventDefault(); 
+                            $data.mousedown();
+                        }
+                   },
+                   text: $data.text,
+                   css: { selected: $data.selected },
+                   scrollElementIntoView: { shouldScroll: function() { return $data.selected } },
+                   tooltip: { conditions: [{ type: 'truncated', arg: $data.text }], placement: 'top' }"></li>
+</script>
+
+<script type="text/html" id="autocomplete-button">
+    <button type="button" class="dw-imageButton ac-button" tabindex="-1" data-bind="jqueryui: {
+        widget: 'button',
+        options: {
+            icons: {
+                primary: (visible() ? 'ui-icon-carat-1-n' : 'ui-icon-carat-1-s')
+            },
+            label: false,
+            text: false
+        }
+    }"></button>
+</script>

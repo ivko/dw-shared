@@ -1,0 +1,197 @@
+﻿<script type="text/html" id="audit-export-button-template">
+    <button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" data-bind="command: exportAuditReport">
+        <span class="ui-button-icon-primary ui-icon dw-icon-export-CSV"></span>
+        <span class="ui-button-text" data-bind="text: AuditReport.localize('AuditReport_Table_DownloadCSV')"></span>
+    </button>
+</script>
+
+<script type="text/html" id="audit-events-overview-template">
+    <div class="row" data-bind="dwActivity: { active: isBusy, length: 3, width: 2, radius: 2 }">
+        <div class="col-xs-11">
+            <!--ko template: {
+               name: 'table-template',
+               data: {
+                   viewModels:{
+                       mainVM : $data,
+                       tableVM: $data.tableVM
+                   },
+                   tableTemplates: {
+                       body: "audit-events-overview-body-template",
+                       tHeader: tableOptions.header,
+                       tRow: tableOptions.row,
+                       scroll: tableOptions.scroll
+                   }
+               }}-->
+            <!-- /ko -->
+        </div>
+    </div>
+</script>
+<script type="text/html" id="audit-events-overview-body-template">
+    <tr><td colspan="4" data-bind="style:{height: $data.viewModels.tableVM.topOffset() + 'px'}, css: {'ui-hidden':  $data.viewModels.tableVM.topOffset()==0}" class="ui-hidden" style="height: 0px;"></td></tr>
+    <!--ko template: 'simple-table-body-template' -->
+    <!--/ko-->
+    <tr><td colspan="4" data-bind="style:{height: $data.viewModels.tableVM.bottomOffset() + 'px'}, css: {'ui-hidden':  $data.viewModels.tableVM.bottomOffset()==0}" class="ui-hidden" style="height: 0px;"></td></tr>
+</script>
+<script type="text/html" id="auditingReport-settingsTableHeader-listView">
+    <th class="col-xs-2" data-bind="template: {name: 'simple-table-header', data: { text: AuditReport.localize('AuditReport_TableColumn_Date')}}"></th>
+    <th class="col-xs-2" data-bind="template: {name: 'simple-table-header', data: { text: AuditReport.localize('AuditReport_TableColumn_User')}}"></th>
+    <th class="col-xs-2" data-bind="template: {name: 'simple-table-header', data: { text: AuditReport.localize('AuditReport_TableColumn_Type')}}"></th>
+    <th class="col-xs-2" data-bind="template: {name: 'simple-table-header', data: { text: AuditReport.localize('AuditReport_TableColumn_Name')}}"></th>
+    <th class="col-xs-2" data-bind="template: {name: 'simple-table-header', data: { text: AuditReport.localize('AuditReport_TableColumn_Event')}}"></th>
+    <th class="col-xs-1" data-bind="template: {name: 'simple-table-header' }"></th>
+</script>
+
+<script type="text/html" id="document-auditingReport-settingsTableHeader-listView">
+    <th class="col-xs-2" data-bind="template: {name: 'simple-table-header', data: { text: AuditReport.localize('AuditReport_TableColumn_Date')}}"></th>
+    <th class="col-xs-1" data-bind="template: {name: 'simple-table-header', data: { text: AuditReport.localize('AuditReport_TableColumn_User')}}"></th>
+    <th class="col-xs-1" data-bind="template: {name: 'simple-table-header', data: { text: AuditReport.localize('AuditReport_TableColumn_Event')}}"></th>
+    <th class="col-xs-1" data-bind="template: {name: 'simple-table-header' }"></th>
+</script>
+
+<script type="text/html" id="auditEventDetails-template">
+    <span class="ui-icon dw-icon-chat description" tabindex="0" data-bind="event: {'popoveropen': $data.loadEventDetails.bind($data) },
+                                popover: {
+                                cssClass: 'audit-report-details',
+                                templateName: 'audit-report-details-template',
+                                viewModel: $data,
+                                container: 'body',
+                                placement: 'auto',
+                                position: {
+                                    my: 'left-30 top',
+                                    at: 'center bottom+5'
+                                },
+                                trigger: 'hover',
+                                refreshOn: $data.loadingDetails
+                                }"></span>
+
+</script>
+
+<script type="text/html" id="auditingReport-settingsTableRow-listView">
+    <tr data-mousedown="changeSelection" data-bind="css: {active: $parent.tableVM.isRowSelected($data) },
+                                        scrollElementIntoView: { shouldScroll: function () { return $data == $parent.tableVM.scrollRow(); } }">
+        <td data-bind="tooltip: { conditions: [{ type: 'truncated', arg: function(){ return data.auditEntryLoggedDate } }] }">
+            <div class="ellipsis-content">
+                <span data-bind="text: data.auditEntryLoggedDate"></span>
+            </div>
+        </td>
+        <td data-bind="tooltip: { conditions: [{ type: 'truncated', arg: data.userInitiatingChange }] }">
+            <div class="ellipsis-content">
+                <span data-bind="text: data.userInitiatingChange"></span>
+            </div>
+        </td>
+        <td data-bind="tooltip: { conditions: [{ type: 'truncated', arg: data.settingsChangedType }] }">
+            <div class="ellipsis-content">
+                <span data-bind="text: data.settingsChangedType"></span>
+            </div>
+        </td>
+        <td data-bind="tooltip: { conditions: [{ type: 'truncated', arg: data.settingsChangedName }] }">
+            <div class="ellipsis-content">
+                <span data-bind="text: data.settingsChangedName"></span>
+            </div>
+        </td>
+        <td data-bind="tooltip: { conditions: [{ type: 'truncated', arg: data.event }] }">
+            <div class="ellipsis-content">
+                <span data-bind="text: data.event"></span>
+            </div>
+        </td>
+        <td class="text-center description">
+            <!--ko template: "auditEventDetails-template"-->
+            <!--/ko-->
+        </td>
+    </tr>
+</script>
+
+<script type="text/html" id="document-auditingReport-settingsTableRow-listView">
+    <tr data-mousedown="changeSelection" data-bind="css: {active: $parent.tableVM.isRowSelected($data) },
+                                        scrollElementIntoView: { shouldScroll: function () { return $data == $parent.tableVM.scrollRow(); } }">
+        <td data-bind="tooltip: { conditions: [{ type: 'truncated', arg: data.date }] }">
+            <div class="ellipsis-content">
+                <span data-bind="text: data.date"></span>
+            </div>
+        </td>
+        <td data-bind="tooltip: { conditions: [{ type: 'truncated', arg: data.user } ] }">
+            <div class="ellipsis-content">
+                <span data-bind="text: data.user"></span>
+            </div>
+        </td>
+        <td data-bind="tooltip: { conditions: [{ type: 'truncated', arg: data.event }] }">
+            <div class="ellipsis-content">
+                <span data-bind="text: data.event"></span>
+            </div>
+        </td>
+        <td class="text-center description">
+            <!--ko template: "auditEventDetails-template"-->
+            <!--/ko-->
+        </td>
+    </tr>
+</script>
+
+<script type="text/html" id="date-range-filter-template">
+    <span class="">  </span>
+    <input class="form-control input-sm dw-daterangefield qb-txt-standard" type="text" data-bind="datepicker: " />
+</script>
+
+<script type="text/html" id="audit-report-details-template">
+    <div data-bind="dwActivity: { active: loadingDetails, length: 3, width: 2, radius: 2 }">
+        <!--ko ifnot: $data.loadingDetails()-->
+        <div class="col-xs-12">
+            <div class="row bottom-offset-medium">
+                <div class="col-xs-11">
+                    <span data-bind="text: data.docId > 0 ? AuditReport.localize('AuditEventDetails_DocInfo', data.docId) : ''"></span>
+                </div>
+            </div>
+            <div class="row bottom-offset-medium">
+                <div class="col-xs-11">
+                    <span data-bind="text: AuditReport.localize('AuditEventDetails_Label')"></span>
+                </div>
+            </div>
+            <!--ko with: detailsVM-->
+            <div class="row">
+                <div class="col-xs-12">
+                    <!--ko template: {
+                       name: 'table-template',
+                       data: {
+                           viewModels:{
+                               mainVM : $data,
+                               tableVM: $data.tableVM
+                           },
+                           tableTemplates: {
+                               tHeader: "auditingReportDetails-tableHeader-template",
+                               tRow: "auditingReportDetails-tableRow-template"
+                           }
+                       }}-->
+                    <!-- /ko -->
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    </div>
+</script>
+
+<script type="text/html" id="auditingReportDetails-tableHeader-template">
+    <th class="col-xs-4" data-bind="template: {name: 'simple-table-header', data: { text: AuditReport.localize('AuditReportDetails_TableColumn_Property')}}"></th>
+    <th class="col-xs-4" data-bind="template: {name: 'simple-table-header', data: { text: AuditReport.localize('AuditReportDetails_TableColumn_Value')}}"></th>
+    <th class="col-xs-4" data-bind="template: {name: 'simple-table-header', data: { text: AuditReport.localize('AuditReportDetails_TableColumn_PreviousValue')}}"></th>
+</script>
+
+<script type="text/html" id="auditingReportDetails-tableRow-template">
+    <tr data-mousedown="changeSelection" data-bind="css: {active: $parent.tableVM.isRowSelected($data) },
+                                        scrollElementIntoView: { shouldScroll: function () { return $data == $parent.tableVM.scrollRow(); } }">
+        <td>
+            <div class="ellipsis-content">
+				<div data-bind="text: PropertyName"></div>
+            </div>
+        </td>
+        <td>
+            <div class="ellipsis-content pre-wrap">
+                <div data-bind="text: CurrentValue"></div>
+            </div>
+        </td>
+        <td>
+            <div class="ellipsis-content pre-wrap">
+                <div data-bind="text: PreviousValue"></div>
+            </div>
+        </td>
+    </tr>
+</script>

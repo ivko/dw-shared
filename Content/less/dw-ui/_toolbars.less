@@ -1,0 +1,476 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+@import "_icons.less";
+
+//Viewer Toolbars
+.dw-Toolbar {
+    color: @OT_LabelGray;
+    background-color: @OT_UltraLightGray;
+
+    input[type="text"] {
+        padding: 0;
+        text-align: center;
+        height: 2 + @baseUIFontSize;
+        background: @OT_WHITE;
+    }
+
+    .ui-widget-header {
+        padding-left: 3px;
+        line-height: 24px;
+        padding-right: 10px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        border: 1px solid transparent;
+        border-top-color: @OT_BorderGray;
+        font-size: @baseUIFontSizeDec1;
+
+        &.dw-toolbar-header-expanded {
+            background-color: @OT_GrayD;
+        }
+
+        &:focus {
+            border: 1px solid @OT_SelectionBlue;
+        }
+    }
+}
+
+.toolbarDiv {
+    .unselectable()!important;
+}
+
+//Remove top border and margin from the first element in the toolbar
+.toolbarDiv div:first-child .dw-toolbar-header {
+    border-top-color: transparent;
+    margin-top: 0;
+
+    &:focus {
+        border-top-color: @OT_SelectionBlue;
+    }
+}
+
+//Add top border to  last element in the toolbar
+.toolbarDiv div:last-child .dw-toolbar-header
+{
+    border-bottom: 1px solid @OT_BorderGray;
+        &:focus {
+        border-bottom-color: @OT_SelectionBlue;
+    }
+}
+
+
+
+//Old styles to refactor with the new icons
+
+#dw-leftToolbarContent, #dw-rightToolbarContent
+{
+    width: 105px;
+}
+
+
+
+.toolbarDiv
+{
+    width: 105px;
+    overflow: hidden;
+
+    .dw-toolbar-btn-stamp .text-overflow
+    {
+        min-width: 77px;
+        max-width: 77px;
+    }
+}
+
+.dw-toolbar-menu
+{
+    padding: 0px;
+    margin: 0px;
+    float: none;
+    padding-left: 4px;
+    list-style: none;
+    display: block;
+
+    li
+    {
+        position: relative;
+        padding: 2px 0 2px 18px;
+    }
+
+    a
+    {
+        text-decoration: none;
+    }
+
+    .ui-icon
+    {
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+
+    span
+    {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        .textOverflow(ellipsis);
+    }
+}
+
+ul.dw-toolbar-ul {
+    padding: 0px;
+    margin: 0px;
+    float: none;
+    padding-left: 4px;
+    list-style: none;
+    display: block;
+    font-size: 0;
+
+
+
+    li.dw-toolbar-li {
+        white-space: nowrap;
+        display: inline-block;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        letter-spacing: 0px;
+        text-align: center !important;
+        vertical-align: top;
+        position: relative;
+        font-size: 12px;
+        line-height: normal;
+
+        &.row {
+            display: block;
+            text-align: left;
+        }
+
+        &:focus .dw-toolbar-btn-stamp {
+            -webkit-box-shadow: inset 0 0 0 1px @OT_BlueA;
+            -moz-box-shadow: inset 0 0 0 1px @OT_BlueA;
+            box-shadow: inset 0 0 0 1px @OT_BlueA;
+        }
+
+        .border {
+            padding: 1px;
+        }
+    }
+}
+
+
+
+.toolbar_scroll_up, .toolbar_scroll_down
+{
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    background-color: @OT_UltraLightGray;
+}
+
+.toolbar_scroll_up
+{
+    border-bottom: 1px solid @OT_BorderGray;
+    .dw-font-icon;
+    .ui-icon-carat-1-n;
+    .transition( 0.25s, background-color );
+}
+
+.toolbar_scroll_down
+{
+    border-top: 1px solid @OT_BorderGray;
+    .dw-font-icon;
+    .ui-icon-carat-1-s;
+    .transition( 0.25s, background-color );
+}
+
+    .toolbar_scroll_up:hover, .toolbar_scroll_down:hover
+    {
+        .transition( 0.25s, background-color );
+        background-color: @OT_MouseOverBlue;
+    }
+
+
+.dw-toolbar-btn {
+    width: 18px;
+    height: 18px;
+    padding: 1px;
+    cursor: pointer;
+
+    .ui-icon {
+        font-size: @baseUIFontSize + 4;
+        position: relative;
+        line-height: 16px;
+        vertical-align: middle;
+        margin-top: 0;
+        border: 1px solid transparent;
+    }
+
+    &:hover > .ui-icon {
+        background-color: @OT_MouseOverBlue;
+    }
+
+    &:active > .ui-icon {
+        background-color: @OT_SelectionBlue_90;
+    }
+
+    &:focus > .ui-icon {
+        border-color: @OT_SelectionBlue;
+    }
+
+    .ui-icon.ui-state-active {
+        background-color: @OT_SelectionBlue_90;
+        border-color: @OT_BlueD;
+        font-weight: normal;
+        color: @OT_GrayA;
+    }
+}
+
+
+.dw-toolbar-btn-toggled > .ui-icon
+{
+    color: @OT_SelectionBlue;
+}
+
+.dw-toolbar-btn-hover > .ui-icon
+{
+    color: @OT_SelectionBlue;
+}
+
+
+//Disabled icons
+.dw-toolbar-btn.ui-state-disabled, .dw-top-bar-btn.ui-state-disabled, .dw-toolbar-li.ui-state-disabled, .top-bar-nav-info.ui-state-disabled {
+    color: @OT_DisabledGray;
+    opacity: 1 !important;
+    cursor: not-allowed !important;
+
+    input {
+        color: @OT_DisabledGray;
+    }
+
+    .ui-icon {
+        color: @OT_DisabledGray;
+    }
+
+    &:hover > .ui-icon {
+        background-color: transparent;
+        color: @OT_DisabledGray;
+    }
+
+    .dw-toolbar-btn-stamp * {
+        color: @OT_DisabledGray !important;
+    }
+
+    .ui-state-active {
+    //    color: white;
+    }
+}
+
+
+
+.dw-zoom-control-div
+{
+    vertical-align: middle;
+    width: 78px;
+    margin-right: 2px;
+
+
+    input.dw-zoom-control-textbox
+    {
+        width: 58px;
+        border: none;
+        margin-top: 0px;
+        margin-left: 2px;
+        height: 15px;
+        position: absolute;
+        top: 3px;
+        z-index: 2;
+        padding-left: 2px;
+        text-align: left;
+
+        & ,x:-moz-any-link, x:default {
+            margin-top: 1px;
+        }
+
+        &:focus
+        {
+            border: none;
+        }
+
+        &:disabled
+        {
+            background-color: @OT_UltraLightGray;
+            color: @OT_DisabledGray;
+        }
+
+    }
+
+    .small.select2-container .select2-choice
+    {
+        height: 16px;
+        line-height: 16px;
+    }
+
+    .dw-zoom-control-select
+    {
+        width: 78px;
+        height: 18px;
+    }
+
+    
+    span.ui-state-active
+    {  
+        input.dw-zoom-control-textbox
+        { 
+            background-color: @OT_SelectionBlue_90 !important;
+            border-color: @OT_SelectionBlue !important;
+            font-weight: normal;
+        }
+
+        .select2-container a.select2-choice{
+             
+            background-color: @OT_SelectionBlue_90 !important; 
+            border-color: @OT_SelectionBlue !important;
+             span.select2-arrow
+             {
+                 background-color: @OT_SelectionBlue_90 !important;
+             }
+        }
+    }
+
+
+}
+
+.annTextButton:hover
+{
+    background-color: @OT_MouseOverBlue;
+}
+
+.annTextButton
+{
+    position: relative;
+    width: 97px;
+    overflow: hidden;
+    .textOverflow(ellipsis);
+    text-align: center;
+    cursor: pointer;
+}
+
+.annColorPicker
+{
+    width: 85px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.annLineButton
+{
+    text-align: left;
+
+    .size
+    {
+        width: 51px;
+    }
+
+    .sp-preview
+    {
+        width: 18px;
+    }
+}
+
+.select2-chosen, .select2-result-label
+{
+    .line
+    {
+        display: block;
+        background-color: #000;
+    }
+}
+
+.annColorButton
+{
+    text-align: left;
+
+    .sp-preview
+    {
+        width: 73px;
+    }
+}
+
+.annLine
+{
+    margin: 7px 0;
+    width: 97px;
+}
+
+
+.dw-toolbar-btn-stamp
+{
+    width: auto;
+    padding: 1px;
+    cursor: pointer;
+    text-align: left;
+    padding: 3px 1px;
+}
+
+.nav_info
+{
+    width: 90px;
+    text-align: left;
+}
+
+
+.dw-active-tab
+{
+    color: #f98f35 !important;
+}
+
+
+.dw-color
+{
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 15px;
+    height: 15px;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.documentOverviewImage
+{
+    min-width: 57px;
+    border: 1px solid @OT_BorderGray;
+    cursor: pointer;
+    float: left;
+    margin: 0 0 10px 4px;
+}
+
+.AnchorLoadMoreImages
+{
+    font-size: @baseUIFontSizeDec1;
+}
+
+#content .scroll-theme-default .vertical-track-wrapper
+{
+    border-top: 0;
+}
+
+// Remove double borders from scrollbars in Viewer
+#dw-rightToolbar.show + #center_div #content .scroll-theme-default .vertical-track-wrapper
+{
+    border-right: 0;
+}
+
+#dw-rightToolbar.show + #center_div #content .scroll-theme-default .horizontal-track-wrapper
+{
+    border-left: 0;
+}
+
+#dw-rightToolbar.show + #center_div #content .scrollbar-corner
+{
+    border-right: 0;
+}

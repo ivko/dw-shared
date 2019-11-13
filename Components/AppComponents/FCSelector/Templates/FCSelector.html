@@ -1,0 +1,53 @@
+﻿<script type="text/html" id="source-target-file-cabinets-template">
+    <div class="form-horizontal">
+        <div class="row ">
+            <div class="col-xs-5">
+                <label class="control-label" data-bind="text: $data.syncType() == 0 ? DW.FCSelector.localize('Source_File_Cabinet_Label') : DW.FCSelector.localize('File_Cabinet_Label')"></label>
+            </div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-5">
+                <label class="control-label" data-bind="text: $data.syncType() == 0 ? DW.FCSelector.localize('Target_File_Cabinet_Label') : DW.FCSelector.localize('File_Cabinet_Label')"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5" id="sourceFileCabinetSelector" data-bind="dwActivity: { active: function(){ return !$data.sourceFileCabinetSelector.ready()}, message: DW.FCSelector.localize('Loading_FileCabinets_Text'), messagePosition: 'right', messageLeft: $data.sourceFileCabinetSelector.dwActivityLeftOffset(), lines: 8, width: 3, length: 3, radius: 4, color: '#000', speed: 1.5, left: $data.sourceFileCabinetSelector.dwActivityLeftOffset() }">
+                <div class="input-group" data-bind="contextMenu: $data.sourceFileCabinetSelector,
+                         contextMenuOptions: {
+                             contextMenu: false,
+                             template: 'file-cabinet-selector-dropdown-template',
+                             positionAtElement: true,
+                             enabled: true,
+                             enableDwScrollbar: true
+                         }">
+
+                    <input class="form-control" readonly="readonly" type="text" data-bind="attr:{placeholder:$data.sourceFileCabinetSelector.ready() ? DW.FCSelector.localize('SelectFileCabinetPlaceholder') : null}, value: $data.sourceFileCabinetSelector.selectedFileCabinetDisplayName" />
+                    <span class="input-group-addon"><i class="ui-icon dw-icon-arrow-down fc-selector-input-drop-down"></i></span>
+                </div>
+            </div>
+            <div class="col-xs-2 text-center">
+                <i class="fc-selector-direction-type-icon medium ui-icon icon-large dw-icon-sync-one-way" data-bind="visible: $data.syncType() == 0"></i>
+                <i class="fc-selector-direction-type-icon medium ui-icon icon-large dw-icon-sync-two-way" data-bind="visible: $data.syncType() == 1"></i>
+                <i class="fc-selector-direction-type-icon medium ui-icon icon-large dw-icon-sync" data-bind="visible: $data.syncType() == 2"></i>
+            </div>
+            <div class="col-xs-5" id="targetFileCabinetSelector" data-bind="dwActivity: { active: function(){ return !$data.targetFileCabinetSelector.ready()}, message: DW.FCSelector.localize('Loading_FileCabinets_Text'), messagePosition: 'right', messageLeft: $data.targetFileCabinetSelector.dwActivityLeftOffset(), lines: 8, width: 3, length: 3, radius: 4, color: '#000', speed: 1.5, left: $data.targetFileCabinetSelector.dwActivityLeftOffset() }">
+                <div class="input-group" data-bind="contextMenu: $data.targetFileCabinetSelector,
+                         contextMenuOptions: {
+                             contextMenu: false,
+                             template: 'file-cabinet-selector-dropdown-template',
+                             positionAtElement: true,
+                             enabled: true,
+                             enableDwScrollbar: true
+                         }">
+                    <input class="form-control" readonly="readonly" type="text" data-bind="attr:{placeholder: $data.targetFileCabinetSelector.ready() ? DW.FCSelector.localize('SelectFileCabinetPlaceholder') : null}, value: $data.targetFileCabinetSelector.selectedFileCabinetDisplayName" />
+                    <span class="input-group-addon"><i class="ui-icon dw-icon-arrow-down fc-selector-input-drop-down"></i></span>
+                </div>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col-xs-12">
+                <a href="#" class="blue" data-bind="text:DW.FCSelector.localize('FieldsMapping_Text'), command: $data.commands.changeFieldsMappingCommand">
+                </a>
+            </div>
+        </div>-->
+    </div>
+</script>

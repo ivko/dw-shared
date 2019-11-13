@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Button_Back_Text">
+    <value>Назад</value>
+  </data>
+  <data name="Button_Cancel_Text">
+    <value>Отмена</value>
+  </data>
+  <data name="Button_DontSave_Text">
+    <value>Не сохранять</value>
+  </data>
+  <data name="Button_OK_Text">
+    <value>ОК</value>
+  </data>
+  <data name="Button_Save_Text">
+    <value>Сохранить</value>
+  </data>
+  <data name="ConnectionDialog_LongOrganizationName_Text">
+    <value>Количество символов в названии организации ограничено (не более {0}).</value>
+  </data>
+  <data name="ConnectionDialog_LongPassword_Text">
+    <value>Неправильный пароль. Повторите попытку.</value>
+  </data>
+  <data name="ConnectionDialog_LongUrl_Text">
+    <value>URL-адрес в системе DocuWare не может быть длиннее {0} симв.</value>
+  </data>
+  <data name="ConnectionDialog_LongUsername_Text">
+    <value>Имя пользователя не может быть длиннее {0} симв.</value>
+  </data>
+  <data name="ConnectionDialog_MissingOrganizationName_Text">
+    <value>Введите название организации</value>
+  </data>
+  <data name="ConnectionDialog_MissingPassword_Text">
+    <value>Введите пароль</value>
+  </data>
+  <data name="ConnectionDialog_MissingUrl_Text">
+    <value>Введите URL-адрес системы DocuWare другой организации.</value>
+  </data>
+  <data name="ConnectionDialog_MissingUsername_Text">
+    <value>Введите имя пользователя</value>
+  </data>
+  <data name="ConnectionDialog_OrganizationName_Label">
+    <value>Организация</value>
+  </data>
+  <data name="ConnectionDialog_Password_Label">
+    <value>Пароль</value>
+  </data>
+  <data name="ConnectionDialog_RegExpPassword_Text">
+    <value>Ошибка. Введите правильный пароль.</value>
+  </data>
+  <data name="ConnectionDialog_RegExpUrl_Text">
+    <value>Недопустимый URL-адрес. Он должен содержать http:// или https://</value>
+  </data>
+  <data name="ConnectionDialog_RegExpUsername_Text">
+    <value>Ошибка. Введите правильное имя пользователя.</value>
+  </data>
+  <data name="ConnectionDialog_Title">
+    <value>Настроить подключение к другой организации</value>
+  </data>
+  <data name="ConnectionDialog_UsePredefinedUrls">
+    <value>Использовать систему DocuWare Cloud</value>
+  </data>
+  <data name="ConnectionDialog_Username_Label">
+    <value>Имя пользователя</value>
+  </data>
+  <data name="DiscardingChanges_Default_Title">
+    <value>Изменения будут отменены</value>
+  </data>
+  <data name="Enter_Platform_Url_Text">
+    <value>например: https://example.docuware.cloud/DocuWare</value>
+  </data>
+  <data name="ConnectionDialog_URL_Label">
+    <value>URL</value>
+  </data>
+</root>

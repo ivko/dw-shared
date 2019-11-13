@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuditEventDetails_DocInfo">
+    <value>Doc-ID: {0}</value>
+  </data>
+  <data name="AuditEventDetails_Label">
+    <value>Gewijzigde eigenschappen:</value>
+  </data>
+  <data name="AuditReport_Default_FileName">
+    <value>Controle</value>
+  </data>
+  <data name="AuditReport_EventType_Changed">
+    <value>Gewijzigd</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToFileSystem">
+    <value>Uitchecken naar bestandssysteem</value>
+  </data>
+  <data name="AuditReport_EventType_CheckoutToTray">
+    <value>Uitchecken naar postbak</value>
+  </data>
+  <data name="AuditReport_EventType_Clip">
+    <value>Paperclip</value>
+  </data>
+  <data name="AuditReport_EventType_CopyToTray">
+    <value>Kopiëren naar postbak</value>
+  </data>
+  <data name="AuditReport_EventType_Created">
+    <value>Gemaakt</value>
+  </data>
+  <data name="AuditReport_EventType_CreateRequest">
+    <value>Verzoek maken</value>
+  </data>
+  <data name="AuditReport_EventType_CreateSettings">
+    <value>Instellingen maken</value>
+  </data>
+  <data name="AuditReport_EventType_Delete">
+    <value>Verwijderen</value>
+  </data>
+  <data name="AuditReport_EventType_Deleted">
+    <value>Verwijderd</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteSettings">
+    <value>Instellingen verwijderen</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteVersionHistory">
+    <value>Versiegeschiedenis verwijderen</value>
+  </data>
+  <data name="AuditReport_EventType_EditAnnotations">
+    <value>Annotaties bewerken</value>
+  </data>
+  <data name="AuditReport_EventType_EditContent">
+    <value>Inhoud bewerken</value>
+  </data>
+  <data name="AuditReport_EventType_EditIndexData">
+    <value>Indexgegevens bewerken</value>
+  </data>
+  <data name="AuditReport_EventType_EditSettings">
+    <value>Instellingen bewerken</value>
+  </data>
+  <data name="AuditReport_EventType_Email">
+    <value>E-mail</value>
+  </data>
+  <data name="AuditReport_EventType_Export">
+    <value>Exporteren</value>
+  </data>
+  <data name="AuditReport_EventType_LogIn">
+    <value>Aanmelden</value>
+  </data>
+  <data name="AuditReport_EventType_LogOff">
+    <value>Afmelden</value>
+  </data>
+  <data name="AuditReport_EventType_Open">
+    <value>Openen</value>
+  </data>
+  <data name="AuditReport_EventType_Print">
+    <value>Afdrukken</value>
+  </data>
+  <data name="AuditReport_EventType_Store">
+    <value>Opslaan</value>
+  </data>
+  <data name="AuditReport_EventType_UndoCheckout">
+    <value>Uitchecken ongedaan maken</value>
+  </data>
+  <data name="AuditReport_EventType_WorkflowDecisionMade">
+    <value>Workflow-beslissing genomen</value>
+  </data>
+  <data name="AuditReport_LastModified">
+    <value>Laatst bewerkt</value>
+  </data>
+  <data name="AuditReport_SettingsType_AuthenticationServer">
+    <value>Authentication Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_Autoindex">
+    <value>Autoindex</value>
+  </data>
+  <data name="AuditReport_SettingsType_AutoNumber">
+    <value>Automatisch nummeren</value>
+  </data>
+  <data name="AuditReport_SettingsType_BusinessUseCase">
+    <value>Zakelijke use case</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlook">
+    <value>Connect to Outlook</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookAccess">
+    <value>Connect to Outlook-toegang</value>
+  </data>
+  <data name="AuditReport_SettingsType_ConnectToOutlookConfiguration">
+    <value>Connect to Outlook-configuratie</value>
+  </data>
+  <data name="AuditReport_SettingsType_Database">
+    <value>Database</value>
+  </data>
+  <data name="AuditReport_SettingsType_DatabaseConnection">
+    <value>Databaseverbinding</value>
+  </data>
+  <data name="AuditReport_SettingsType_Deletion">
+    <value>Verwijdering</value>
+  </data>
+  <data name="AuditReport_SettingsType_Disk">
+    <value>Schijf</value>
+  </data>
+  <data name="AuditReport_SettingsType_Document">
+    <value>Document</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentSettings">
+    <value>Documentinstellingen</value>
+  </data>
+  <data name="AuditReport_SettingsType_DocumentType">
+    <value>Documenttype</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwImportRequest">
+    <value>DocuWare Import Request</value>
+  </data>
+  <data name="AuditReport_SettingsType_DwRequestLite">
+    <value>DocuWare Request Lite</value>
+  </data>
+  <data name="AuditReport_SettingsType_EmailConfiguration">
+    <value>E-mailconfiguratie</value>
+  </data>
+  <data name="AuditReport_SettingsType_Export">
+    <value>Exporteren</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalSelectList">
+    <value>Externe selectielijst</value>
+  </data>
+  <data name="AuditReport_SettingsType_ExternalUserDirectory">
+    <value>Externe gebruikersdirectory</value>
+  </data>
+  <data name="AuditReport_SettingsType_Field">
+    <value>Veld</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinet">
+    <value>Archiefkast</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetGeneral">
+    <value>Archiefkast algemeen</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileCabinetSettings">
+    <value>Archiefkastinstellingen</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileConnection">
+    <value>Bestandsverbinding</value>
+  </data>
+  <data name="AuditReport_SettingsType_FileExtension">
+    <value>Bestandsextensie</value>
+  </data>
+  <data name="AuditReport_SettingsType_Forms">
+    <value>Formulieren</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralProfile">
+    <value>Algemeen profiel</value>
+  </data>
+  <data name="AuditReport_SettingsType_GeneralSystem">
+    <value>Algemeen systeem</value>
+  </data>
+  <data name="AuditReport_SettingsType_Group">
+    <value>Groep</value>
+  </data>
+  <data name="AuditReport_SettingsType_IntellixConnection">
+    <value>Intelligent Indexing-verbinding</value>
+  </data>
+  <data name="AuditReport_SettingsType_Licence">
+    <value>Licentie</value>
+  </data>
+  <data name="AuditReport_SettingsType_Link">
+    <value>Link</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpDevice">
+    <value>MFP-apparaat</value>
+  </data>
+  <data name="AuditReport_SettingsType_MfpWorkflow">
+    <value>MFP-workflow</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationServer">
+    <value>Notification Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_NotificationSettings">
+    <value>Meldingsinstellingen</value>
+  </data>
+  <data name="AuditReport_SettingsType_Obr">
+    <value>Obr</value>
+  </data>
+  <data name="AuditReport_SettingsType_Ocr">
+    <value>Ocr</value>
+  </data>
+  <data name="AuditReport_SettingsType_Organization">
+    <value>Organisatie</value>
+  </data>
+  <data name="AuditReport_SettingsType_PrinterConfiguration">
+    <value>Printerconfiguratie</value>
+  </data>
+  <data name="AuditReport_SettingsType_ProcessServer">
+    <value>Process Server</value>
+  </data>
+  <data name="AuditReport_SettingsType_Profile">
+    <value>Profiel</value>
+  </data>
+  <data name="AuditReport_SettingsType_RegularExpression">
+    <value>Reguliere expressie</value>
+  </data>
+  <data name="AuditReport_SettingsType_Replication">
+    <value>Replicatie</value>
+  </data>
+  <data name="AuditReport_SettingsType_ResultList">
+    <value>Resultatenlijst</value>
+  </data>
+  <data name="AuditReport_SettingsType_Role">
+    <value>Rol</value>
+  </data>
+  <data name="AuditReport_SettingsType_Schedules">
+    <value>Planningen</value>
+  </data>
+  <data name="AuditReport_SettingsType_SearchDialog">
+    <value>Zoekvenster</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmartConnect">
+    <value>Smart Connect</value>
+  </data>
+  <data name="AuditReport_SettingsType_SmtpConnection">
+    <value>SMTP-verbinding</value>
+  </data>
+  <data name="AuditReport_SettingsType_SolrConnection">
+    <value>SOLR-verbinding</value>
+  </data>
+  <data name="AuditReport_SettingsType_Stamp">
+    <value>Stempel</value>
+  </data>
+  <data name="AuditReport_SettingsType_StorageLocation">
+    <value>Opslaglocatie</value>
+  </data>
+  <data name="AuditReport_SettingsType_StoreDialog">
+    <value>Opslagvenster</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionRules">
+    <value>Vervangingsregels</value>
+  </data>
+  <data name="AuditReport_SettingsType_SystemBackupWorkflow">
+    <value>Workflow voor systeemback-up</value>
+  </data>
+  <data name="AuditReport_SettingsType_TrustedUser">
+    <value>Vertrouwde gebruiker</value>
+  </data>
+  <data name="AuditReport_SettingsType_User">
+    <value>Gebruiker</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserLoginLogout">
+    <value>Gebruikersaanmelding/-afmelding</value>
+  </data>
+  <data name="AuditReport_SettingsType_UserSync">
+    <value>Gebruikerssynchronisatie</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebBasket">
+    <value>Postbak</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebConnection">
+    <value>Webverbinding</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebInstances">
+    <value>Webexemplaren</value>
+  </data>
+  <data name="AuditReport_Table_DownloadCSV">
+    <value>Downloaden als CSV</value>
+  </data>
+  <data name="AuditReport_TableColumn_Date">
+    <value>Datum</value>
+  </data>
+  <data name="AuditReport_TableColumn_DocId">
+    <value>Document-ID</value>
+  </data>
+  <data name="AuditReport_TableColumn_Event">
+    <value>Gebeurtenis</value>
+  </data>
+  <data name="AuditReport_TableColumn_FileCabinet">
+    <value>Archiefkast</value>
+  </data>
+  <data name="AuditReport_TableColumn_Name">
+    <value>Naam</value>
+  </data>
+  <data name="AuditReport_TableColumn_Organization">
+    <value>Organisatie</value>
+  </data>
+  <data name="AuditReport_TableColumn_Type">
+    <value>Type</value>
+  </data>
+  <data name="AuditReport_TableColumn_User">
+    <value>Gebruiker</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_PreviousValue">
+    <value>Vorige waarde</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Property">
+    <value>Eigenschap</value>
+  </data>
+  <data name="AuditReportDetails_TableColumn_Value">
+    <value>Waarde</value>
+  </data>
+  <data name="AuditReport_EventType_Edited">
+    <value>Gewijzigd</value>
+  </data>
+  <data name="AuditReport_EventType_DeleteAudit">
+    <value>Verwijderen</value>
+  </data>
+  <data name="AuditReport_EventType_DisableAudit">
+    <value>Uitschakelen</value>
+  </data>
+  <data name="AuditReport_EventType_EnableAudit">
+    <value>Inschakelen</value>
+  </data>
+  <data name="AuditReport_ObjectName_AllData">
+    <value>Alle gegevens</value>
+  </data>
+  <data name="AuditReport_ObjectName_ConfigurationChanges">
+    <value>Configuratiewijzigingen</value>
+  </data>
+  <data name="AuditReport_ObjectName_DocumentEvent">
+    <value>Documentgebeurtenissen</value>
+  </data>
+  <data name="AuditReport_ObjectName_UserLogEvent">
+    <value>Inloggen/uitloggen gebruiker</value>
+  </data>
+  <data name="AuditReport_SettingsType_Auditing">
+    <value>Controle</value>
+  </data>
+  <data name="AuditReport_SettingsType_FixedSelectList">
+    <value>Vaste selectielijst</value>
+  </data>
+  <data name="AuditReport_SettingsType_WebServices">
+    <value>Webservice</value>
+  </data>
+  <data name="AuditReport_SettingsType_SubstitutionList">
+    <value>Vervangingslijst</value>
+  </data>
+</root>

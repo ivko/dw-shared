@@ -1,0 +1,1122 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+@import "../_bootstrap-variables-adapter.less";
+
+
+/* DIALOG TITLE */
+.dialogTitleContainer {
+    height: 36px;
+    line-height: 34px;
+    vertical-align: middle;
+    background-color: @OT_WHITE;
+
+    .dialogTitle {
+        width: 300px;
+        font-family: @baseFontFamily;
+        font-size: @baseUIFontSize;
+        margin-left: 10px;
+        font-weight: bold;
+        color: @OT_LabelGray;
+        white-space: nowrap;
+    }
+}
+/* DIALOG TOOLBAR */
+.dw-dialogToolbar {
+    .boxed();
+    background-color: @dialogBG;
+    height: @dialog-toolbar-height;
+    width: 100%;
+    margin: 0px auto;
+    margin: 0;
+    position: relative;
+    z-index: 3;
+    -webkit-box-shadow: 0 1px 0px 0px #D5DBDD;
+    -moz-box-shadow: 0 1px 0px 0px #D5DBDD;
+    box-shadow: 0 1px 0px 0px #D5DBDD;
+
+    &.gray {
+        background-color: @OT_UltraLightGray;
+    }
+
+    &.reference-path {
+        height:auto;
+    }
+}
+//Left Buttons
+.leftToolbarButtons {
+    .boxed();
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    text-align: left;
+    padding-left: 10px; //we want different padding in info dialog
+    z-index: 100;
+
+    > :first-child {
+        margin-left: 0px !important; //remove left space for the first button only
+        margin-right: 5px;
+    }
+}
+//Right Buttons
+.rightToolbarButtons {
+    .boxed();
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+    text-align: right;
+    padding-right: 10px; //we want different padding in info dialog
+}
+
+.resultList .table-cell .rightToolbarButtons {
+    padding-right: 0;
+}
+
+.table-cell {
+    .rightToolbarButtons {
+        padding-right: 16px;
+
+        button.main {
+            //        margin-right: 16px; // only the yellow (.main) buttons should not be snapped to the right
+        }
+    }
+
+    .leftToolbarButtons,
+    .middleToolbarButtons,
+    .rightToolbarButtons {
+        position: static;
+        left: auto;
+        right: auto;
+        white-space: nowrap;
+        display: table;
+
+        button {
+            padding: 6px;
+            //background: #00ff00;
+            margin: 0;
+            //            display: table-cell;
+            &.ui-button-text-icon-primary {
+                .ui-icon {
+                    font-size: 18px;
+                }
+
+                .ui-button-text:not(:empty) {
+                    padding-left: 24px;
+                }
+
+                .ui-icon.ui-icon-carat-1-w + .ui-button-text { //different padding for the back button in search dialog
+                    padding-left: 15px;
+                }
+            }
+        }
+        //special style for just the yellow buttons (Store and Search)
+        button.main {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            //    margin-top: 6px;
+            //    margin-bottom: 6px;
+            //fix for IE: showing full height
+            @media all and (-ms-high-contrast:none) {
+                display: inline-block;
+            }
+            //fix for Edge: showing full height
+            @supports
+
+            (-ms-accelerator:true) {
+                display: inline-block;
+            }
+        }
+        //special style for the options button (in order to be horizontally aligened  with the "Show split pane" button)
+        button.optionsBtn {
+            padding-left: 7px;
+            padding-right: 7px;
+
+            .ui-button-icon-primary {
+                left: 0;
+                width: 100%;
+            }
+        }
+
+        label.fileinput.import {
+            padding-top: 6px;
+            padding-bottom: 6px;
+            margin-bottom: 0px;
+            //background: #0000ff;
+            margin: 0;
+            display: table-cell;
+
+            &.ui-button-text-icon-primary {
+                .ui-icon {
+                    font-size: 18px;
+                }
+
+                .ui-button-text:not(:empty) {
+                    padding-left: 11px;
+                }
+            }
+        }
+
+        input[type="checkbox"] + label {
+            margin-bottom: 0px;
+        }
+
+        .button-selected {
+            background: @OT_SelectionBlue_90;
+        }
+    }
+    //fix for button spacing only in Firefox ( this fixes the issue with the redundant right space of the first icon(no text) button in a group ot buttons)
+    .leftToolbarButtons,
+    .middleToolbarButtons {
+        button.view-type-settings-btn {
+            @-moz-document url-prefix() {
+                margin-right: -4px;
+            }
+        }
+
+        button.old-versions-btn {
+            @-moz-document url-prefix() {
+                margin-left: -4px;
+            }
+        }
+    }
+
+    .delimiter {
+        position: static;
+        border-left: 1px solid @OT_BorderGray;
+        width: 1px;
+        height: @dialog-toolbar-height;
+        background: @OT_WHITE;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+}
+
+
+/* DIALOG CONTENT */
+.dw-dialogContent {
+    clear: both;
+    background: @dialogBG;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    * {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    &.fields {
+        padding: 10px 0px 0px 0px;
+        overflow-y: auto;
+
+        &.scroll-wrapper {
+            outline: none;
+
+            &:focus {
+                -webkit-box-shadow: inset 0 0 0 1px @OT_BlueA;
+                -moz-box-shadow: inset 0 0 0 1px @OT_BlueA;
+                box-shadow: inset 0 0 0 1px @OT_BlueA;
+            }
+        }
+    }
+
+    &.dw-resultView {
+        overflow-y: hidden;
+    }
+
+    .dw-dialog {
+        width: 100%;
+        border-collapse: separate;
+
+
+        td {
+            margin: 0;
+            padding: 0;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            height: @field-height;
+            vertical-align: middle;
+            -ms-word-break: break-all;
+            word-break: break-all;
+
+            &:nth-child(2) {
+                padding-right: 5px;
+            }
+
+            &.dw-fieldLabel {
+                cursor: default;
+                vertical-align: top;
+            }
+
+            &:not(.dw-fieldLabel) span {
+                //.user-select(text) !important;
+                //-webkit-user-select: text !important;
+                //-moz-user-select: text !important;
+                //-ms-user-select: element !important;
+                //user-select: text !important;
+                cursor: pointer;
+            }
+        }
+
+        input, textarea, div {
+            .boxed();
+        }
+
+        .dw-fieldLabel {
+            max-width: 200px;
+            width: 100px;
+            margin-right: 10px;
+            font-family: @baseFontFamily;
+            font-size: 1+ @baseUIFontSize;
+            text-align: right;
+
+            & > span {
+                display: block;
+                overflow: hidden;
+                .textOverflow(ellipsis);
+                white-space: nowrap;
+                line-height: 26px;
+            }
+        }
+
+        .dw-keywordField {
+            width: 100%;
+            border-style: none;
+            border-color: @OT_WHITE;
+
+            input[type="text"] {
+                width: 100%;
+            }
+
+            tr, td {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            td.keywords-list {
+                padding-top: 0px;
+            }
+
+            .keywords-container {
+                font-family: @baseFontFamily;
+                font-size: @baseUIFontSize;
+                border-spacing: 0px;
+                border-color: @OT_WHITE;
+                height: 5 * @field-height;
+                background: @OT_WHITE;
+                overflow-y: auto;
+                overflow-x: hidden;
+                border: 1px solid @OT_BorderGray;
+                border-top: 0px;
+                display: block;
+                width: 100%;
+
+                & > table {
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+
+                    tr, td {
+                        padding-left: 5px;
+                        height: -10 + @field-height;
+                    }
+                }
+
+                .keyword-row {
+                    cursor: pointer;
+                    height: 26px;
+                    line-height: 26px;
+                    border-bottom: 1px solid @OT_BorderGray;
+
+                    button {
+                        visibility: hidden;
+                    }
+
+                    &:hover {
+                        background-color: @OT_MouseOverBlue;
+
+                        button {
+                            visibility: visible;
+                        }
+                    }
+
+                    .invalidField {
+                        border-color: @OT_Red;
+                        border-width: 2px;
+                    }
+                }
+
+                &.scroll-vertical-visible .keyword-row:last-child {
+                    border-bottom: 0 none;
+                }
+            }
+        }
+
+        .dw-dateField {
+            width: 200px;
+        }
+
+        .dw-dateRangeField, .dw-dateFieldBox {
+            font-size: 0;
+
+            .right-inner-addons {
+                font-size: @baseUIFontSize;
+                width: 200px;
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+
+        .dw-textField {
+            width: 100%;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .dw-numericField {
+            width: 100%;
+        }
+
+        .dw-numericRangeField {
+            font-size: 0;
+
+            .right-inner-addons {
+                font-size: @baseUIFontSize;
+                width: 200px;
+                display: inline-block;
+                margin-right: 5px;
+
+                button {
+                    position: absolute;
+
+                    &.arrow {
+                        top: 5px;
+                    }
+                }
+            }
+
+            .dw-numericField {
+                width: 200px;
+                display: inline-block;
+            }
+        }
+
+        .dw-memoField {
+            width: 100%;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .dw-keywords {
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: inline;
+                padding-right: 5px;
+                -ms-word-wrap: break-word;
+                word-wrap: break-word;
+
+                &:after {
+                    display: inline-block;
+                    content: ",";
+                }
+
+                &:last-child:after {
+                    content: "";
+                }
+            }
+        }
+
+        .ui-state-default.ui-spinner-button, .ui-spinner-button {
+            height: 42%;
+        }
+
+        .ui-spinner .ui-icon {
+            height: 12px;
+        }
+    }
+}
+
+div[read-only-cursor] .dw-dialogContent .dw-dialog td span {
+    cursor: default;
+}
+
+/* Table Field  */
+
+.table-field-table-row {
+    button.btn {
+        height: 24px;
+        padding: 0 4px;
+        display: none;
+    }
+
+    &:hover {
+        button.btn {
+            display: block;
+        }
+    }
+
+    td {
+        padding: 3px !important;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &.active {
+        .ui-icon {
+            color: @OT_GrayA !important;
+        }
+    }
+
+    .dw-dateFieldBox .right-inner-addons, .dw-dateField {
+        width: 100% !important;
+    }
+
+    a.ui-state-disabled {
+        display: block;
+    }
+
+    a.ui-state-disabled:hover {
+        text-decoration: none;
+    }
+
+    .ui-state-disabled {
+        span {
+            cursor: default !important;
+        }
+    }
+}
+
+.table-fields-content {
+    height: auto !important;
+    .dw-textField, .dw-numericField, .dw-dateField {
+        width: 100% !important;
+    }
+
+    .header-cell {
+        min-width: 70px !important;
+    }
+}
+
+@TFRowHeight: 33px;
+@TFScrollableContainerHeight: 232px;
+@TFHorizontalScrollHeight: 17px;
+
+.table-fields-wrapper {
+    .table-column-titles-container {
+        overflow: hidden;
+        background-color: #eef1f2;
+
+        &.table-header-container {
+            height: @TFRowHeight + 1;
+            position: relative;
+            border: 1px solid @OT_BorderGray;
+
+            .table-column-titles {
+                height: @TFRowHeight - 1;
+            }
+        }
+
+        &.table-footer-container {
+            height: @TFRowHeight;
+            position: absolute;
+
+            .table-column-titles {
+                border-top: 1px solid @OT_BorderGray;
+            }
+        }
+
+        .table-column-titles {
+            position: absolute;
+
+            .table-column-title {
+                float: left;
+                min-width: 70px;
+
+
+                &:last-child {
+                    min-width: 32px;
+
+                    > .header-cell {
+                        min-width: 32px !important;
+                    }
+                }
+
+                &:not(:last-child) {
+                    > .header-cell {
+                        border-right: 1px solid @OT_BorderGray;
+                    }
+                }
+
+                > div.header-cell {
+                    height: @TFRowHeight - 1;
+                    line-height: @TFRowHeight - 1;
+                    position: relative;
+                    font-weight: normal;
+                    font-size: 13px;
+                    background-color: inherit;
+                }
+            }
+        }
+    }
+
+    .table-scroll {
+        border-top: 0;
+        height: @TFScrollableContainerHeight;
+        overflow: auto;
+
+        &:before {
+            content: none;
+            display: none;
+        }
+
+        .table-content {
+            height: @TFScrollableContainerHeight - (@TFRowHeight + @TFHorizontalScrollHeight + 1) !important;
+            position: absolute;
+            top: 0;
+
+            &:not(.scroll-wrapper) {
+                overflow: visible !important;
+            }
+
+            .table {
+                width: auto;
+
+                > tbody {
+                    > tr {
+                        &.table-field-table-postfix-row {
+                            height: @TFRowHeight;
+
+                            &:nth-of-type(odd) {
+                                background-color: inherit;
+                            }
+
+                            &:nth-of-type(even) {
+                                background-color: @table-bg-accent;
+                            }
+
+                            &:hover {
+                                background-color: @table-bg-hover !important;
+                            }
+                        }
+                        &:last-child {
+                            height: @TFRowHeight;
+                        }
+                    }
+                }
+
+                > thead > tr > th {
+                    border-bottom: 0;
+
+                    &:last-child {
+                        min-width: 32px;
+                    }
+                }
+
+                td {
+                    word-break: initial;
+
+                    .error-cell {
+                        border: thin solid @alert-danger-text;
+                    }
+
+                    .row-editor:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .table-field-table-column-content {
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+.table-fields-workflow-wrapper {
+    width: 560px;
+
+    .table-scroll-content:not(.scroll-wrapper) {
+        overflow: visible !important;
+    }
+
+    .table-scroll .table > thead > tr > th > .header-cell {
+        font-weight: normal;
+        font-size: 13px;
+    }
+
+    .table-scroll-content {
+        height: 197px;
+    }
+}
+
+#viewer.storeViewer .dw-dialogContent.fields table {
+    .table-field-table-row td, .table-field-table-postfix-row td {
+        display: table-cell !important;
+        height: (@TFRowHeight - 1) !important;
+    }
+
+    .table-field-table-postfix-row td {
+        margin-bottom: 0;
+        padding-left: 10px;
+        padding-bottom: 5px;
+    }
+}
+
+.row-editor > div div {
+    height: 24px;
+    padding: 3px;
+}
+
+.table-field-column-mask {
+    position: absolute;
+    top: 6px;
+    font-style: italic;
+    color: #999;
+}
+
+.table-field-table-row {
+    .selectListTableText {
+        .dw-textField {
+            height: 22px;
+            display: block;
+            padding-top: 2px;
+        }
+    }
+
+    input {
+        &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            background-color: transparent !important;
+        }
+
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            background-color: transparent !important;
+            //    opacity:  1;
+        }
+
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+            background-color: transparent !important;
+            //    opacity:  1;
+        }
+
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            background-color: transparent !important;
+        }
+    }
+}
+
+.index-entries-table-fields {
+    .width-100-px {
+        width: auto;
+    }
+
+    tr {
+        .width-100-px {
+            width: 100px;
+        }
+    }
+}
+
+/* STORE DIALOG */
+.dialogHeaders {
+    position: absolute;
+    top: @tabStripHeight + @dialog-toolbar-height;
+    /*left: 0px;*/
+    bottom: 0px;
+    right: 0px;
+    width: 0px;
+    display: none;
+    overflow: hidden;
+    background-color: @OT_UltraLightGray;
+    border-left: 1px solid @OT_BorderGray;
+    border-top: 1px solid @OT_BorderGray;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+
+
+    &.lockedHeaders {
+        display: block;
+        width: -1 + @lockedHeadersWidth;
+    }
+
+    .dialogHeadersContent {
+        height: 100%;
+        overflow: hidden;
+
+        &.scroll-vertical-visible .dialogHeadersNavigation li div.ellipsize > span {
+            max-width: 100px;
+        }
+
+        &.scroll-vertical-visible .dialogHeadersNavigation li div.ellipsize > span.dw-icon-indexing + .displayName {
+            max-width: 85px;
+        }
+
+        .dialogHeadersNavigation {
+            color: @OT_LabelGray;
+            list-style: none;
+            padding: 0px;
+            margin: 0;
+            font-family: @baseFontFamily;
+            font-size: @baseUIFontSizeDec1;
+
+            ul {
+                display: table;
+                width: 100%;
+                border-spacing: 0;
+                margin: 0;
+                padding: 0;
+                border-collapse: collapse;
+                height: 100px;
+            }
+
+            li {
+                cursor: pointer;
+                height: (@dialogHeaderHeight);
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                vertical-align: middle;
+                width: @dialogHeaderWidth;
+
+
+                &:hover {
+                    background-color: @OT_MouseOverBlue;
+                }
+
+                &.dialogHeaderSelected {
+                    background-color: @OT_SelectionBlue;
+                    color: @OT_WHITE;
+
+                    .ui-icon {
+                        color: @OT_WHITE;
+                    }
+                }
+
+                &.canDrop {
+                    background-color: @OT_DragZoneGray;
+
+                    div.ellipsize {
+                        border-bottom-color: @OT_DisabledGray;
+                    }
+                }
+
+                &.dropStart {
+                    background-color: @OT_MouseOverBlue;
+                }
+
+                span {
+                    text-align: left;
+                    vertical-align: middle;
+                    display: inline-block;
+                    padding-left: 3px;
+                    font-size: @baseUIFontSizeDec1;
+
+                    &.displayName {
+                        font-weight: bold;
+                    }
+
+                    &.description {
+                        display: block;
+                        font-size: @baseUIFontSizeDec2;
+                    }
+                }
+
+                div.ellipsize {
+                    .boxed;
+                    padding-top: ((@dialogHeaderHeight - 2)-(@baseUIFontSize*2))/2;
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: @dialogHeaderWidth;
+                    height: (@dialogHeaderHeight);
+                    font-size: 0;
+                    border-bottom: 1px solid @OT_BorderGray;
+                }
+
+                div.ellipsize > span {
+                    max-width: @dialogHeaderWidth - 7;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-align: left;
+                    .textOverflow(ellipsis);
+                }
+
+                span.dw-icon-indexing {
+                    display: inline-block;
+                    margin-left: -3px;
+                }
+
+                span.dw-icon-indexing + .displayName {
+                    max-width: @dialogHeaderWidth - 20;
+                }
+            }
+        }
+    }
+}
+/* Security Dialog */
+.security-dialog {
+    margin-bottom: 15px !important;
+
+    .row {
+        margin-bottom: 16px;
+    }
+
+    .container-title {
+        margin-bottom: 8px;
+    }
+
+    .table-scroll-content {
+        height: 200px;
+    }
+}
+
+.security-configurations {
+    .table-scroll-content {
+        height: 160px;
+    }
+}
+/* Hidden Tabs */
+.ui-tabs-nav-hidden .dialogHeaders {
+    top: @navbar-height;
+}
+/* UI Tabs - background for active tab */
+.ui-tabs {
+    &.ui-tabs-horizontal {
+        .ui-tabs-arrows {
+            .ui-tabs-arrow-down {
+                background-color: @dialogBG;
+            }
+        }
+
+        .ui-tabs-active {
+            background-color: @dialogBG;
+        }
+
+        &.ui-tabs-count-single {
+            .ui-tabs-nav {
+                li:first-child { //This is added to be skipped for single workflow tabs(on the left). In fact even if we have a single tab in workflow tabs there are two <li> elems - the first one is invisible
+                    width: 100%;
+                    background: none;
+                    top: -3px;
+
+                    a.ui-tabs-anchor {
+                        width: ~"calc(100% - 45px)";
+
+                        span:not(.ui-icon):not(.dw-circle) {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            width: ~"calc(100% - 25px)";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* CLIP DIALOG */
+.clipDialog {
+    .dropArea {
+        position: relative;
+        top: 0;
+        padding: 8px 0;
+
+        &.canDrop {
+            background-color: @OT_DragZoneGray;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0 8px;
+            padding: 4px;
+            .clearfix();
+        }
+
+        li {
+            display: block;
+            position: relative;
+            float: left;
+            height: 120px;
+            width: 120px;
+            margin: 5px 0;
+            padding: 0 8px;
+
+            &.document {
+                &:hover {
+                    .dw-thumbnailView-item {
+                        background-color: @OT_MouseOverBlue;
+                    }
+                }
+            }
+
+            &.base {
+                color: @OT_WHITE;
+                padding-left: 17px;
+
+
+                .dw-thumbnailView-item {
+                    background-color: @OT_SelectionBlue;
+                }
+
+                &:hover {
+                    .dw-thumbnailView-item {
+                        background-color: @OT_SelectionBlue;
+                    }
+                }
+            }
+
+            &.dragged {
+                opacity: 0.5;
+            }
+
+            &.left {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 8px;
+                    background-color: @OT_MouseOverBlue;
+                    border: 1px solid @OT_BorderGray;
+                }
+            }
+
+            &.placeholder div {
+                margin: 0 5px;
+                height: 116px;
+                width: 106px;
+                border: 1px dashed @OT_DisabledGray;
+            }
+
+            .remove {
+                position: absolute;
+                top: 3px;
+                right: 13px;
+                padding: 1px;
+                margin-left: 10px;
+                font-size: 9px;
+                cursor: pointer;
+                border: 1px solid transparent;
+            }
+        }
+
+        &.first li.placeholder.head div, &.last li.placeholder.tail div {
+            background-color: @OT_MouseOverBlue;
+            border-style: solid;
+        }
+    }
+}
+//mobile App dialog
+// web app download buttons
+@webapps-button-size: 25px;
+
+.dw-webapps {
+    margin: 10px 0;
+
+    .dw-ContainerSmallBoxes {
+        display: table;
+        table-layout: fixed;
+        width: 610px;
+
+        .dw-ContainerSmallBoxes-cell {
+            display: inline-block;
+            width: 30%;
+            border: 1px solid @OT_BorderGray;
+            background: @OT_UltraLightGray;
+            padding: 5px;
+            text-align: center;
+
+            .dw-dialogsTxtTitle {
+                font-size: @baseUIFontSize;
+                font-weight: bold;
+                display: inline-block;
+            }
+
+            .dw-dialogsTxt {
+                text-align: left;
+            }
+            //images
+            .dw-mobileapps-img {
+                display: block;
+                width: 64px;
+                margin: 10px auto;
+
+                &.dw-mobile-img {
+                    &:after {
+                        content: '';
+                        background: url('../../images/mobile3app.png');
+                        background-size: 64px;
+                        height: 64px;
+                        display: block;
+                    }
+                }
+
+                &.dw-paperscan-img {
+                    &:after {
+                        content: '';
+                        background: url('../../images/paperscan.png');
+                        background-size: 64px;
+                        height: 64px;
+                        display: block;
+                    }
+                }
+            }
+
+            .webapps-container {
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+
+                .webapp-item {
+                    display: table-cell;
+                    text-align: center;
+
+                    .webapp-download-button {
+                        padding: 0 !important;
+                        margin: 0 !important;
+                        width: @webapps-button-size;
+                        line-height: @webapps-button-size;
+
+                        span {
+                            left: 0 !important;
+                            font-size: @webapps-button-size !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .no-border-bottom {
+            border-bottom: 0 !important;
+        }
+
+        .no-border-top {
+            border-top: 0 !important;
+        }
+
+        .delimiter {
+            width: 4%;
+            border: 0;
+            padding: 0;
+            background: none;
+        }
+    }
+}
+
+.dw-webapps-notice {
+    font-size: 11px;
+    padding-left: 10px;
+
+    &.bottom-offset-medium {
+        margin-bottom: 20px;
+    }
+}
+
+.dw-dialogs .dialog-password, .dw-dialogs .dialog-stamp {
+    .dw-dialogContent.fields {
+        margin: 10px 40px 21px 40px;
+    }
+}

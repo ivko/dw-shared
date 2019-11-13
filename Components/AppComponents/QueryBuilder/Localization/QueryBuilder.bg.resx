@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="QueryBuilder_AfterTheNext" xml:space="preserve">
+    <value>След следващите</value>
+  </data>
+  <data name="QueryBuilder_AfterThePast" xml:space="preserve">
+    <value>След изминалите</value>
+  </data>
+  <data name="QueryBuilder_And" xml:space="preserve">
+    <value>И</value>
+  </data>
+  <data name="QueryBuilder_BeforeTheNext" xml:space="preserve">
+    <value>Преди следващите</value>
+  </data>
+  <data name="QueryBuilder_BeforeThePast" xml:space="preserve">
+    <value>Преди изминалите</value>
+  </data>
+  <data name="QueryBuilder_Contains" xml:space="preserve">
+    <value>Съдържа</value>
+  </data>
+  <data name="QueryBuilder_Err_DateField" xml:space="preserve">
+    <value>Моля, въведете валидна стойност в полето за дата.</value>
+  </data>
+  <data name="QueryBuilder_Err_DateTimeField" xml:space="preserve">
+    <value>Моля, въведете валидна стойност в полето за дата/час.</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalField" xml:space="preserve">
+    <value>Моля, въведете валидна стойност в полето за десетичен знак.</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalRangeField" xml:space="preserve">
+    <value>Моля, въведете валидна(и) стойност(и) за диапазона в полетата за десетичен знак.</value>
+  </data>
+  <data name="QueryBuilder_Err_KeywordField" xml:space="preserve">
+    <value>Моля, въведете валидна стойност в полето за ключова дума.</value>
+  </data>
+  <data name="QueryBuilder_Err_MemoField" xml:space="preserve">
+    <value>Моля, въведете валидна стойност в полето за бележки.</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericField" xml:space="preserve">
+    <value>Моля, въведете валидна стойност в числовото поле.</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericRangeField" xml:space="preserve">
+    <value>Моля, въведете валидна(и) стойност(и) за диапазона в числовите полета.</value>
+  </data>
+  <data name="QueryBuilder_Err_RangeDateField" xml:space="preserve">
+    <value>Моля, въведете валидна(и) стойност(и) за диапазона в полетата за дата.</value>
+  </data>
+  <data name="QueryBuilder_Err_SqlField" xml:space="preserve">
+    <value>Моля, въведете валидна стойност в sql полето.</value>
+  </data>
+  <data name="QueryBuilder_Err_TextField" xml:space="preserve">
+    <value>Моля, въведете валидна стойност в текстовото поле</value>
+  </data>
+  <data name="QueryBuilder_Introduction" xml:space="preserve">
+    <value>Потребителите ще виждат само документите, които отговарят на следните правила:</value>
+  </data>
+  <data name="QueryBuilder_invalidField" xml:space="preserve">
+    <value>Полето за документалния архив не съществува.</value>
+  </data>
+  <data name="QueryBuilder_IsBetween" xml:space="preserve">
+    <value>Е между</value>
+  </data>
+  <data name="QueryBuilder_IsEmpty" xml:space="preserve">
+    <value>Е празно</value>
+  </data>
+  <data name="QueryBuilder_IsEqual" xml:space="preserve">
+    <value>Е равно на</value>
+  </data>
+  <data name="QueryBuilder_IsNotEmpty" xml:space="preserve">
+    <value>Не е празно</value>
+  </data>
+  <data name="QueryBuilder_IsNotEqual" xml:space="preserve">
+    <value>Не е равно на</value>
+  </data>
+  <data name="QueryBuilder_IsWhereClause" xml:space="preserve">
+    <value>Е (клауза WHERE)</value>
+  </data>
+  <data name="QueryBuilder_Or" xml:space="preserve">
+    <value>ИЛИ</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDISK" xml:space="preserve">
+    <value>Номер на диск</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDOCID" xml:space="preserve">
+    <value>Идентификатор на документ</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSDATETIME" xml:space="preserve">
+    <value>Дата на последен достъп</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSUSER" xml:space="preserve">
+    <value>Последен достъп на потребител</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODDATETIME" xml:space="preserve">
+    <value>Дата на промяна</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODUSER" xml:space="preserve">
+    <value>Потребител, извършил изменение</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSECTIONCOUNT" xml:space="preserve">
+    <value>Брой файлове</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREDATETIME" xml:space="preserve">
+    <value>Дата на съхраняване</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREUSER" xml:space="preserve">
+    <value>Потребител, извършил съхраняване</value>
+  </data>
+  <data name="QueryBuilder_SystemFields" xml:space="preserve">
+    <value>Системни полета</value>
+  </data>
+  <data name="QueryBuilder_WithinTheNext" xml:space="preserve">
+    <value>В следващото</value>
+  </data>
+  <data name="QueryBuilder_WithinThePast" xml:space="preserve">
+    <value>В миналото</value>
+  </data>
+  <data name="QueryClick_LabelFirstPart" xml:space="preserve">
+    <value>Все още няма дефинирани правила.</value>
+  </data>
+  <data name="QueryClick_LabelSecondPart" xml:space="preserve">
+    <value>Създаване на ново правило</value>
+  </data>
+  <data name="QueryClick_LabelThirdPart" xml:space="preserve">
+    <value>Създаване на група правила</value>
+  </data>
+  <data name="QueryDate_Days" xml:space="preserve">
+    <value>Дни</value>
+  </data>
+  <data name="QueryDate_Hours" xml:space="preserve">
+    <value>Часове</value>
+  </data>
+  <data name="QueryDate_Months" xml:space="preserve">
+    <value>Месеци</value>
+  </data>
+  <data name="QueryDate_Years" xml:space="preserve">
+    <value>Години</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPDATETIME" xml:space="preserve">
+    <value>SAP Дата Час</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPSTATUS" xml:space="preserve">
+    <value>SAP Състояние</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWUSRVERSION" xml:space="preserve">
+    <value>Потребителска версия</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSIONCOMMENT" xml:space="preserve">
+    <value>Коментар за версията</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSTATUS" xml:space="preserve">
+    <value>Състояние на версията</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCID" xml:space="preserve">
+    <value>SAP Идентификатор на документ</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCTYPE" xml:space="preserve">
+    <value>SAP Документ Тип</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPPROTECTIONTYPE" xml:space="preserve">
+    <value>SAP Защита Тип</value>
+  </data>
+  <data name="QueryBuilder_ProfileIntroduction">
+    <value>Правата, предоставени по-долу, са приложими за документи, които са в съответствие със следните правила:</value>
+  </data>
+  <data name="QueryBuilder_AddCondition">
+    <value>Създаване на ново правило</value>
+  </data>
+  <data name="QueryBuilder_AddGroupCondition">
+    <value>Създаване на група правила</value>
+  </data>
+  <data name="QueryBuilder_After">
+    <value>Е след</value>
+  </data>
+  <data name="QueryBuilder_AutocompleteEmptyResult">
+    <value>Няма намерени стойности</value>
+  </data>
+  <data name="QueryBuilder_Before">
+    <value>Е преди</value>
+  </data>
+  <data name="QueryBuilder_BeforeOrOn">
+    <value>Е преди или на</value>
+  </data>
+  <data name="QueryBuilder_Begins">
+    <value>Започва с</value>
+  </data>
+  <data name="QueryBuilder_Ends">
+    <value>Завършва на</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Decimal_Input">
+    <value>Моля, въведете десетично число като {0}</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Number_Input">
+    <value>Моля, въведете номер като {0}</value>
+  </data>
+  <data name="QueryBuilder_IsNotOn">
+    <value>Не е на</value>
+  </data>
+  <data name="QueryBuilder_IsOn">
+    <value>Е на</value>
+  </data>
+  <data name="QueryBuilder_Less">
+    <value>Е по-малко от</value>
+  </data>
+  <data name="QueryBuilder_LessOrEqual">
+    <value>Е по-малко от или равно на</value>
+  </data>
+  <data name="QueryBuilder_More">
+    <value>Е по-голямо от</value>
+  </data>
+  <data name="QueryBuilder_MoreOrEqual">
+    <value>Е равно на или по-голямо от</value>
+  </data>
+  <data name="QueryBuilder_OnOrAfter">
+    <value>Е на или след</value>
+  </data>
+  <data name="QueryBuilder_RemoveCondition">
+    <value>Премахване на правилото</value>
+  </data>
+  <data name="QueryBuilder_RemoveGroupCondition">
+    <value>Премахване на група от правила</value>
+  </data>
+  <data name="SystemFunction_CurrentDate">
+    <value>Текуща дата</value>
+  </data>
+  <data name="SystemFunction_CurrentDateTime">
+    <value>Текущи дата и час</value>
+  </data>
+  <data name="SystemFunction_CurrentUserEmail">
+    <value>Имейл на потребителя</value>
+  </data>
+  <data name="SystemFunction_CurrentUserLongName">
+    <value>Влизане на потребителя</value>
+  </data>
+  <data name="SystemFunction_CurrentUserShortName">
+    <value>Вътрешно потребителско име</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWEXTENSION">
+    <value>Разширение</value>
+  </data>
+  <data name="QueryBuilder_RangeTo">
+    <value>до</value>
+  </data>
+</root>

@@ -1,0 +1,303 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+@import "_icons.less";
+
+.wf-history-mainContainer {
+    margin-top: 10px;
+    padding: 0 16px;
+    /*position: relative;*/
+    height: 100%;
+    background: @OT_WHITE;
+    width: auto;
+    overflow: hidden;
+}
+
+.wf-history-main-step {
+    width: 100%;
+
+    .cell-pull-left {
+        text-align: left;
+    }
+
+    .cell-pull-center {
+        text-align: center;
+    }
+
+    .cell-pull-right {
+        text-align: right;
+    }
+}
+
+.wf-additional-history-step {
+    padding-left: 49px;
+    padding-right: 50px;
+    margin-top: 10px;
+}
+
+/*jqGrid*/
+.wf-jqGridContainer {
+    background-color: @table-bg;
+    border: 1px solid @OT_BorderGray;
+    width: 100%;
+
+    tr {
+        height: 25px;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    .ui-jqgrid {
+        width: auto !important;
+
+        .ui-jqgrid-resize-mark {
+            line-height: 0;
+        }
+
+        .ui-jqgrid-view {
+            width: auto !important;
+            .boxed();
+
+            .ui-jqgrid-hdiv {
+                border: 0;
+                background-image: none;
+                width: auto !important;
+
+                .ui-jqgrid-htable {
+                    border: 0;
+                    table-layout: auto;
+                    margin: 0;
+                    width: auto !important;
+
+                    .ui-th-column {
+                        .boxed();
+                        font-style: normal;
+                        display: inline-block;
+                        border-left: 1px solid @OT_BorderGray;
+                        float: left;
+                        font-size: @baseUIFontSizeInc2;
+                        font-weight: bold;
+                        padding: 5px 10px 5px 5px;
+                        position: relative;
+                        background-image: none;
+
+
+                        div {
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-align: left;
+                            .textOverflow(ellipsis);
+                        }
+
+
+
+                        .ui-jqgrid-sortable {
+                            text-align: left;
+
+                            &:nth-child(2) {
+                                text-align: left;
+                            }
+
+                            .s-ico {
+                                position: absolute;
+                                right: 4px;
+                                width: 8px;
+                                color: @OT_LabelGray;
+
+                                .ui-state-disabled {
+                                    visibility: collapse;
+                                }
+
+                                .ui-icon-asc {
+                                    .dw-font-icon;
+                                    .ui-icon-triangle-1-n;
+                                    width: 8px;
+                                }
+
+                                .ui-icon-desc {
+                                    .dw-font-icon;
+                                    .ui-icon-triangle-1-s;
+                                    width: 8px;
+                                }
+                            }
+                        }
+                    }
+
+                    th:first-child {
+                        border-left-color: @OT_WHITE;
+                    }
+
+                    th:first-child:hover {
+                        background-color: transparent;
+                    }
+
+                    .ui-jqgrid-resize-ltr {
+                        cursor: col-resize;
+                        display: block;
+                        font-size: 0.1px;
+                        height: 100%;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 6px;
+                        .backgroundImage( ~'"@{gridResizableHandler}"', center, center, no-repeat );
+                    }
+                }
+            }
+
+            .ui-jqgrid-bdiv {
+                width: auto !important;
+
+                div {
+                    width: inherit;
+                }
+
+                .ui-jqgrid-btable {
+                    outline-style: none;
+                    table-layout: auto;
+                    border: 1px solid @OT_BorderGray;
+                    width: 100% !important;
+
+                    .jqgfirstrow {
+                        width: inherit;
+                    }
+
+                    width: inherit;
+
+                    .jqgrid-new-row, .jqgrow {
+                        .transition( 0.25s, background );
+                        background: @OT_WHITE;
+                        color: @OT_LabelGray;
+                        font-family: @baseFontFamily;
+                        font-size: @baseUIFontSizeInc2;
+                        padding: 0 5px;
+                        line-height: 20px;
+                        opacity: 1;
+                        border: 1px solid @OT_BorderGray;
+                        border-top-width: 0;
+                        overflow: hidden;
+                        text-align: left;
+
+                        td {
+                            max-width: 138px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            .textOverflow(ellipsis);
+                            padding-right: 5px;
+                        }
+
+
+
+                        &:nth-child(2n+1) {
+                        }
+
+                        &:nth-child(2n) {
+                            background-color: @table-bg-accent;
+                        }
+
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+
+                        &:hover {
+                            background: @OT_MouseOverBlue;
+                            margin: 0px;
+                            padding: 0px;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        .ui-icon-plus {
+                            visibility: hidden;
+                            color: @OT_LabelGray;
+                            .ui-icon-carat-1-s;
+                        }
+
+                        .ui-icon-minus {
+                            color: @OT_LabelGray;
+                            .ui-icon-carat-1-n;
+                        }
+
+                        &:hover {
+                            .ui-icon-plus {
+                                visibility: visible;
+                            }
+                        }
+                    }
+
+                    .ui-state-highlight {
+                        background-image: none;
+                        border-bottom-width: 0px;
+                        overflow: auto;
+                        margin: 0px;
+                        vertical-align: middle;
+                        color: @OT_WHITE;
+                        white-space: nowrap;
+                        opacity: 1;
+                        padding: 0px;
+                        outline: none;
+                        background-color: @OT_CaptionGray;
+                        &:nth-child(2n+1) {
+                        }
+
+                        &:nth-child(2n) {
+                            background-color: @OT_CaptionGray;
+                        }
+
+                        .ui-icon-plus, .ui-icon-minus {
+                            color: @OT_WHITE;
+                        }
+
+                        &:hover {
+                            background-color: @OT_CaptionGray;
+                            background-image: none;
+                            margin: 0px;
+                            padding: 0px;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    .ui-subgrid {
+                        // width: 100% !important;
+                        .subgrid-data, .subgrid-cell {
+                            background-image: none;
+                            border-top-width: 0px;
+                            overflow: hidden;
+                            margin: 0px;
+                            padding: 0px;
+                            vertical-align: middle;
+                            color: @OT_WHITE;
+                            opacity: 1;
+                            background-color: @OT_CaptionGray;
+                            font-size: @baseUIFontSizeInc2;
+                        }
+
+                        .subgrid-data {
+                            //white-space: pre-wrap;
+                            //   word-wrap: break-word;
+                        }
+
+                        .label-wrap {
+                            span {
+                                -ms-word-wrap: break-word;
+                                word-wrap: break-word;
+                            }
+                        }
+
+                        .ui-icon-carat-1-sw {
+                            display: none;
+                            background-image: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

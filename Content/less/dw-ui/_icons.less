@@ -1,0 +1,2280 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+
+// ******************************************************************************************
+// NOTE: AFTER UPDATING THE FONT FILES, PLEASE RUN THE _icons-fontface-definition.t4 TEMPLATE
+// ******************************************************************************************
+
+
+// In case the following line produces shit, comment it and uncomment the following old code.
+// This here is to generate hashed URLs for the font files so that they are silently updated even
+// on web proxies. However, this is very experimental.
+// In case of questions, please contact CHW.
+@import "_icons-fontface-definition.less";
+
+@font-face {
+    font-family: 'password';
+    src: ~"url('../fonts/password-font/password.ttf')" format('truetype'), ~"url('../fonts/password-font/password.woff')" format('woff'), ~"url('../fonts/password-font/password.woff2')" format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*For icons inserted before an element and not using the ui-icon class*/
+.dw-font-icon {
+    font-family: 'dwIconFont';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.password-font {
+    font-family: 'password' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.process-planner-icon {
+    font-family: 'process-planner';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* jquery-ui icons
+----------------------------------*/
+
+.ui-icon-carat-1-n {
+    .font-icon(e63d);
+}
+
+.ui-icon-carat-1-n-after {
+    .font-icon-after(e63d);
+}
+
+.ui-icon-carat-1-ne {
+    .font-icon(e670);
+}
+
+.ui-icon-carat-1-e, .ui-icon-circle-triangle-e {
+    .font-icon(e63e);
+}
+
+.ui-icon-carat-1-se {
+    .font-icon(e670);
+}
+
+.ui-icon-carat-1-s {
+    .font-icon(e640);
+}
+
+.ui-icon-carat-1-s-after {
+    .font-icon-after(e640);
+}
+
+.ui-icon-carat-1-sw {
+    .font-icon(e682);
+}
+
+.ui-icon-carat-1-w, .ui-icon-circle-triangle-w {
+    .font-icon(e63f);
+}
+
+.ui-icon-carat-1-nw {
+    .font-icon(e63f);
+}
+
+.ui-icon-carat-2-n-s {
+    .font-icon(e670);
+}
+
+.ui-icon-carat-2-e-w {
+    .font-icon(e670);
+}
+
+.ui-icon-triangle-1-n {
+    .font-icon(e67f);
+}
+
+.ui-icon-triangle-1-e {
+    .font-icon(e680);
+}
+
+.ui-icon-triangle-1-s {
+    .font-icon(e683);
+}
+
+.ui-icon-triangle-1-w {
+    .font-icon(e681);
+}
+
+.ui-icon-refresh {
+    .font-icon(e64c);
+}
+
+.ui-icon-refresh-left {
+    .font-icon(e907);
+}
+// ui-icon-seek-first is deprecated, use ui-icon-seek-start instead
+.ui-icon-seek-first {
+    .font-icon(e63b);
+}
+
+.ui-icon-seek-last {
+    .font-icon(e61a);
+}
+
+.ui-icon-circle-close {
+    .font-icon-after(e670);
+}
+
+.ui-icon-closethick {
+    .font-icon-after(e671);
+}
+
+.ui-icon-seek-end {
+    .font-icon(e61a);
+}
+
+.ui-icon-seek-start {
+    .font-icon(e63b);
+}
+
+.ui-icon-gripsmall-diagonal-se {
+    .font-icon(e6b6);
+}
+
+.ui-icon-alert {
+    .font-icon(e601, @OT_Warning)
+}
+
+/*Navigation icons*/
+.dw-icon-basketContentArea {
+    .font-icon(e66a);
+}
+
+.dw-icon-searchContentArea {
+    .font-icon(e64e);
+}
+
+.dw-icon-tasklistContentArea {
+    .font-icon(e65e);
+}
+
+.dw-icon-workflowContentArea {
+    .font-icon(e675);
+}
+
+.dw-icon-treeViewContentArea {
+    .font-icon(e925);
+}
+
+.dw-icon-formsContentArea {
+    .font-icon(e6de);
+}
+
+.dw-icon-formsType {
+    .font-icon(e6de);
+}
+
+//WAF
+.dw-icon-OCR {
+    .font-icon(e6e3);
+}
+
+.dw-icon-notification {
+    .font-icon(e6e2);
+}
+
+.dw-icon-connect-MFP {
+    .font-icon(e6dc);
+}
+
+.dw-icon-forms {
+    .font-icon(e6de);
+}
+
+.dw-icon-request, .CreateREQUEST {
+    .font-icon(e6e5);
+}
+
+.dw-icon-connect-outlook {
+    .font-icon(e6da);
+}
+
+.dw-icon-email-accounts {
+    .font-icon(e6dd);
+}
+
+.dw-icon-subscribe-notifications {
+    .font-icon(e6e7);
+}
+
+.dw-icon-notification-unsubscribed {
+    .font-icon(e940);
+}
+
+.dw-icon-lab {
+    .font-icon(e93f);
+}
+
+.dw-icon-field-mask {
+    .font-icon(e93e);
+}
+
+.dw-icon-document-processing {
+    .font-icon(e93d);
+}
+
+.dw-icon-spinner-left {
+    .font-icon(e944);
+}
+
+.dw-icon-transfer {
+    .font-icon(e943);
+}
+
+.dw-icon-revision-history, .ShowVersionHistory {
+    .font-icon(e942);
+}
+
+.dw-icon-predefined-locked {
+    .font-icon(e941);
+}
+
+.dw-icon-shoe-print {
+    .font-icon(e946);
+}
+
+.dw-icon-field-behavior {
+    .font-icon(e945);
+}
+
+.dw-icon-heartbeat {
+    .font-icon(e947);
+}
+
+.dw-icon-search-magnifier {
+    .font-icon(e949);
+}
+
+.dw-icon-search-docuware {
+    .font-icon(e948);
+}
+
+.dw-icon-contract {
+    .font-icon(e94d);
+}
+
+.dw-icon-expand {
+    .font-icon(e94c);
+}
+
+.dw-icon-field-validations {
+    .font-icon(e94b);
+}
+
+.dw-icon-id {
+    .font-icon(e94a);
+}
+
+.dw-icon-web-services {
+    .font-icon(e94f);
+}
+
+.dw-icon-kinetic-solutions {
+    .font-icon(e94e);
+}
+
+
+.dw-icon-workflowmanager-webservices {
+    .font-icon(e958);
+}
+
+.dw-icon-workflowmanager-singletask {
+    .font-icon(e957);
+}
+
+.dw-icon-workflowmanager-paralleltasks {
+    .font-icon(e956);
+}
+
+.dw-icon-workflowmanager-email {
+    .font-icon(e955);
+}
+
+.dw-icon-workflowmanager-condition {
+    .font-icon(e954);
+}
+
+.dw-icon-workflowmanager-assignto {
+    .font-icon(e953);
+}
+
+.dw-icon-workflowmanager-assigndata {
+    .font-icon(e952);
+}
+
+.dw-icon-workflowmanager-aftertime {
+    .font-icon(e951);
+}
+
+.dw-icon-workflowmanager-afteraction {
+    .font-icon(e950);
+}
+
+.dw-icon-broken-relations {
+    .font-icon(e95f);
+}
+
+.dw-icon-broken-relations-1 {
+    .font-icon(e95f);
+}
+
+.dw-icon-icons-stamps {
+    .font-icon(e95d);
+}
+
+.dw-icon-stamps-image {
+    .font-icon(e95c);
+}
+
+.dw-icon-stamps-text {
+    .font-icon(e95b);
+}
+
+.dw-icon-stamps-workflow {
+    .font-icon(e95a);
+}
+
+.dw-icon-imgstamp-emptybg {
+    .font-icon(e959);
+}
+
+.dw-icon-filetype-xml {
+    .font-icon(e962);
+}
+
+.dw-icon-filetype-xml-clipped {
+    .font-icon(e961);
+}
+
+.dw-icon-globe {
+    .font-icon(e960);
+}
+
+.dw-icon-user-management-single {
+    .font-icon(e963);
+}
+
+.dw-icon-stamps-personal {
+    .font-icon(e964);
+}
+
+.dw-icon-viewer-notifications {
+    .font-icon(e965);
+}
+
+.dw-icon-cloudstatus {
+    .font-icon(e969);
+}
+
+.dw-icon-cloudstatus-investigating {
+    .font-icon(e968);
+}
+
+.dw-icon-cloudstatus-issue {
+    .font-icon(e967);
+}
+
+.dw-icon-cloudstatus-resolved {
+    .font-icon(e966);
+}
+
+.dw-icon-organization-settings {
+    .font-icon(e96a);
+}
+
+/*Main arrow buttons container*/
+button.icon-button { //for buttons elements
+    border: 0;
+    padding: 0;
+    background-color: @OT_WHITE;
+    font-size: 20px !important;
+    .transition( 0.25s, background-color );
+}
+
+.icon-button //for div and other elements
+{
+    width: @dw-MainArrowIconsWidth;
+    height: @topAreaHeight;
+    position: relative;
+    font-size: 20px;
+    .transition( 0.25s, background-color );
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    span {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+
+    &:hover {
+        background-color: @OT_MouseOverBlue;
+        cursor: pointer;
+        .drop-shadow-inset(inset 0 0 0 1px @OT_SelectionBlue);
+    }
+
+
+    &:active {
+        background-color: @OT_SelectionBlue_90;
+    }
+
+
+    &:focus {
+        .drop-shadow-inset(inset 0 0 0 1px @OT_SelectionBlue);
+    }
+
+    &.selected {
+        .ui-icon {
+
+            &.ui-icon[class*="icon-"] {
+                margin-top: -0.6em;
+            }
+        }
+    }
+
+    &.border-left {
+        border-left: 1px solid @OT_BorderGray;
+
+        &:focus {
+            &:before {
+                border-left-color: transparent;
+            }
+        }
+
+        &:hover {
+            &:before {
+                border-left-color: @OT_SelectionBlue;
+            }
+        }
+
+        &:before {
+            border-left: 1px solid @OT_WHITE;
+        }
+    }
+
+    &.border-left-on-hover {
+        border-left: 1px solid transparent;
+
+        &:before {
+            border-left: 1px solid transparent;
+        }
+
+        &:hover {
+            border-left-color: @OT_BorderGray;
+
+            &:before {
+                border-left-color: @OT_SelectionBlue;
+            }
+        }
+
+        &:focus {
+            .drop-shadow-inset(inset 0 0 0 1px @OT_SelectionBlue);
+        }
+
+        &.selected {
+            border-left-color: @OT_BorderGray;
+        }
+    }
+
+    &.border-right {
+        border-right: 1px solid @OT_BorderGray;
+
+        &:before {
+            border-right: 1px solid @OT_WHITE;
+        }
+    }
+
+    .dw-icon-close {
+        font-size: 12px;
+    }
+
+    .dw-icon-close-light {
+        font-size: 11px;
+    }
+}
+
+.dw-logout {
+    .icon-button:hover {
+        background: none;
+        box-shadow: none;
+    }
+}
+
+/*General Icons*/
+
+.dw-icon-drag-desktop {
+    .font-icon(e693);
+}
+
+.dw-icon-split {
+    .font-icon(e77e);
+}
+
+.dw-icon-checkmark {
+    .font-icon(e77f);
+}
+
+.dw-icon-merge {
+    .font-icon(e77e);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.dw-icon-play {
+    .font-icon(e68d);
+}
+
+.dw-icon-left-align {
+    .font-icon(e6b7);
+}
+
+.dw-icon-right-align {
+    .font-icon(e6b9);
+}
+
+.dw-icon-center-align {
+    .font-icon(e6b8);
+}
+
+.dw-icon-file-cabinet {
+    .font-icon(e781);
+}
+
+.dw-icon-select-list {
+    .font-icon(e905);
+}
+
+.dw-icon-multi-select-list {
+    .font-icon(e904);
+}
+
+.dw-icon-file-cabinet-v1 {
+    .font-icon(e67a);
+}
+
+.dw-icon-connect-paperScan {
+    .font-icon(e6c1);
+}
+
+.dw-icon-mobile {
+    .font-icon(e6d2);
+}
+
+.dw-icon-android {
+    .font-icon(e6bf);
+}
+
+.dw-icon-apple {
+    .font-icon(e6c0);
+}
+
+.dw-icon-windows {
+    .font-icon(e901);
+}
+
+.dw-icon-pointer {
+    .font-icon(e6c4);
+}
+
+.dw-icon-import-configurations {
+    .font-icon(e687);
+}
+
+.dw-icon-one-click-indexing {
+    .font-icon(e627);
+}
+
+.dw-icon-connect-mail {
+    .font-icon(e6d9);
+}
+
+.dw-icon-user-voice {
+    .font-icon(e6a7);
+}
+
+.dw-icon-checkbox-unchecked {
+    .font-icon(e6ce);
+}
+
+.dw-icon-checkbox-checked {
+    .font-icon(e6cd);
+}
+
+.dw-icon-radio-unchecked {
+    .font-icon(e6d0);
+}
+
+.dw-icon-radio-checked {
+    .font-icon(e6d1);
+}
+
+.dw-icon-dropdown {
+    .font-icon(e6cf);
+}
+
+.dw-icon-import-to {
+    .font-icon(e92e);
+}
+
+.dw-icon-export-to {
+    .font-icon(e92d);
+}
+
+//info box
+.dw-icon-info-plain {
+    .font-icon(e605);
+
+    &.gray {
+        cursor: pointer;
+
+        &:before {
+            position: relative;
+            z-index: 50;
+            color: @OT_GrayF;
+            font-size: 16px;
+        }
+
+        &:hover:before {
+            color: @OT_BlueD;
+        }
+    }
+}
+
+.dw-icon-database {
+    .font-icon(e66c);
+}
+
+.dw-icon-text-sline {
+    .font-icon(e6d4);
+}
+
+.dw-icon-text-mline {
+    .font-icon(e6d5);
+}
+
+.dw-icon-number {
+    .font-icon(e6aa);
+}
+
+.dw-icon-radio-buttons {
+    .font-icon(e6d6);
+}
+
+.dw-icon-headline {
+    .font-icon(e6d7);
+}
+
+.dw-icon-lock, .ui-icon-locked {
+    .font-icon(e695);
+}
+
+.dw-icon-keep-entries-unlocked {
+    .font-icon(e694);
+}
+
+.dw-icon-keep-entries-locked {
+    .font-icon(e695);
+}
+
+.dw-icon-arrow-down {
+    .font-icon(e60d);
+}
+
+.dw-icon-folder {
+    .font-icon(e925);
+}
+
+.dw-icon-folder-open {
+    .font-icon(e926);
+}
+
+.dw-icon-folder-add {
+    .font-icon(e928);
+}
+
+.dw-icon-folder-empty {
+    .font-icon(e924);
+}
+
+.dw-icon-arrow-up {
+    .font-icon(e60c);
+}
+
+.dw-icon-arrow-left {
+    .font-icon(e63f);
+}
+
+.dw-icon-back {
+    .font-icon(e63f);
+    font-weight: bold !important;
+}
+
+.dw-icon-help {
+    .font-icon(e608);
+}
+
+.dw-icon-dwlogo {
+    .font-icon(e800);
+}
+
+.dw-icon-grid {
+    .font-icon(e6df);
+}
+
+.dw-icon-logout {
+    .font-icon(e6db);
+}
+
+.dw-icon-databse-fields {
+    .font-icon(e6ec);
+}
+
+.dw-icon-dialog {
+    .font-icon(e6eb);
+}
+
+.dw-icon-user-management {
+    .font-icon(e6e8);
+}
+
+.dw-icon-add-fillarea {
+    .font-icon(e6ee);
+}
+
+.dw-icon-mapping {
+    .font-icon(e6ed);
+}
+
+.dw-icon-original-size {
+    .font-icon(e6ef);
+}
+
+.dw-icon-maximize {
+    .font-icon(e6cb);
+}
+
+
+/*TOASTR ICONS*/
+
+.dw-icon-info {
+    .font-icon(e605, @OT_Info,24px);
+}
+
+.dw-icon-toast-info {
+    .font-icon(e605, @OT_Info,24px);
+}
+
+.dw-icon-success {
+    .font-icon(e600, @OT_Success,24px);
+}
+
+.dw-icon-toast-success {
+    .font-icon(e600, @OT_Success,24px);
+}
+
+.dw-icon-warning {
+    .font-icon(e601, @OT_Warning,24px);
+}
+
+.dw-icon-toast-warning {
+    .font-icon(e601, @OT_Warning,24px);
+}
+
+.dw-icon-error {
+    .font-icon(e60b, @OT_Error,24px);
+}
+
+.dw-icon-toast-error {
+    .font-icon(e60b, @OT_Error,24px);
+}
+
+.dw-icon-plus, .ui-icon-plus {
+    .font-icon(e656);
+}
+
+.dw-icon-minus, .ui-icon-minus {
+    .font-icon(e65a, '', 9px);
+}
+
+.dw-icon-close {
+    .font-icon-after(e671);
+}
+
+.dw-icon-close-light {
+    .font-icon-after(e90a);
+}
+
+.dw-icon-default {
+    .font-icon(e649);
+
+    &.disabled {
+        .font-icon(e649, @OT_DisabledGray);
+    }
+}
+
+.dw-icon-star {
+    .font-icon(e649);
+
+    &.disabled {
+        .font-icon(e649, @OT_DisabledGray);
+    }
+}
+
+.dw-icon-star-empty {
+    .font-icon(e908);
+
+    &.disabled {
+        .font-icon(e908, @OT_DisabledGray);
+    }
+}
+
+.dw-icon-indexing {
+    .font-icon(e660);
+}
+
+.dw-icon-eye {
+    .font-icon(e669);
+}
+
+.dw-icon-eye-disabled {
+    .font-icon(e6a3);
+}
+
+.dw-icon-splitter {
+    .font-icon(e65b);
+}
+
+.dw-icon-splitter-vertical {
+    .font-icon(e6c5);
+}
+
+.dw-icon-calendar {
+    .font-icon(e679);
+}
+
+.dw-icon-touch-mode {
+    .font-icon(e6c7);
+}
+
+.dw-icon-mouse-mode {
+    .font-icon(e6c6);
+}
+
+.dw-icon-more-vertical {
+    .font-icon(e6f2);
+}
+
+.dw-icon-autoindex {
+    .font-icon(e932);
+}
+
+.dw-icon-deletion-policy {
+    .font-icon(e933);
+}
+
+.dw-icon-indexing-assistance {
+    .font-icon(e934);
+}
+
+.dw-icon-predefined {
+    .font-icon(e935);
+}
+
+.dw-icon-relations, .ShowLinkedDocuments {
+    .font-icon(e936);
+}
+
+.dw-icon-spacer {
+    .font-icon(e937);
+}
+
+.dw-icon-cloud-upload {
+    .font-icon(e938);
+}
+
+.dw-icon-cloud-product {
+    .font-icon(e939);
+}
+
+.dw-icon-membership {
+    .font-icon(e93a);
+}
+
+//Workflow
+.dw-wf-status {
+    &.overdue {
+        .font-icon(e664, @OT_Orange, 16px);
+    }
+
+    &.expire {
+        .font-icon(e664, @OT_Red, 16px)
+    }
+}
+
+.dw-icon-send-request, .dw-icon-Tools_SendRequest, .SendREQUEST {
+    .font-icon(e911);
+}
+
+.dw-icon-start {
+    .font-icon(e6a9);
+}
+
+//Buttons icons
+.dw-icon-upload {
+    .font-icon(e618);
+}
+
+.dw-icon-reset {
+    .font-icon(e685);
+}
+
+.dw-icon-inquiry {
+    .font-icon(e621);
+}
+
+
+//Drag icons
+.dw-icon-arrow-2-n-s {
+    .font-icon-after(e684);
+}
+
+.dw-icon-arrow-4-n-s-e-w {
+    .font-icon(e659);
+}
+
+/*MAIN MENU ICONS*/
+
+.dw-icon-settings {
+    .font-icon(e6f3);
+}
+
+.dw-icon-configurations {
+    .font-icon(e6f0);
+}
+
+.dw-icon-desktop {
+    .font-icon(e6f1);
+}
+
+.dw-icon-connect-desktop {
+    .font-icon(e647);
+}
+
+.dw-icon-scan {
+    .font-icon(e603);
+}
+
+.dw-icon-about {
+    .font-icon(e662);
+}
+
+.dw-icon-my-docuware {
+    .font-icon(e645);
+}
+
+.dw-icon-chat {
+    .font-icon(e67c);
+}
+
+.dw-icon-forum {
+    .font-icon(e692);
+}
+
+.dw-icon-key {
+    .font-icon(e661);
+}
+
+.dw-icon-book {
+    .font-icon(e6c2);
+}
+
+
+/*CONTEXT MENUS ICONS*/
+
+.dw-icon-open-in-viewer, .DisplayDocument {
+    .font-icon(e625);
+}
+
+.dw-icon-open-in-new-viewer, .ShowInSeparateViewer {
+    .font-icon(e626);
+}
+
+.dw-icon-edit, .EditDocument {
+    .font-icon(e657);
+}
+
+.dw-icon-delete, .DeleteSelectedDocument {
+    .font-icon(e653);
+}
+
+.dw-icon-save {
+    .font-icon(e66b);
+}
+
+.dw-icon-rename {
+    .font-icon(e773);
+}
+
+.dw-icon-clip, .AppendFromBasket {
+    .font-icon(e67d);
+}
+
+.dw-icon-unclip {
+    .font-icon(e637);
+}
+
+.dw-icon-staple {
+    .font-icon(e61d);
+}
+
+.dw-icon-unstaple {
+    .font-icon(e638);
+}
+
+.dw-icon-send, .SendAsOriginal, .SendAsPDFWithoutAnno, .SendAsPDF, .SendAsHyperlink, .SendResultList {
+    .font-icon(e622);
+}
+
+.dw-icon-set-current-version {
+    .font-icon(e771);
+}
+
+.dw-icon-mobile-menu {
+    .font-icon(e699);
+}
+
+//used in viewer with differnt name - to fix with refactoring
+.dw-icon-reply, .EMailReply {
+    .font-icon(e624);
+}
+
+.dw-icon-reply-all, .EMailReplyAll {
+    .font-icon(e623);
+}
+//used in viewer with differnt name - to fix with refactoring
+.dw-icon-forward, .EMailForward {
+    .font-icon(e62a);
+}
+
+.dw-icon-download, .DownloadAsOriginalFile, .DownloadAsPDFWithoutAnno, .DownloadAsPDF {
+    .font-icon(e666);
+}
+
+.dw-icon-print, .PrintSelectedDocument {
+    .font-icon(e655);
+}
+
+.dw-icon-printer {
+    .font-icon(e6e4);
+}
+
+.dw-icon-import {
+    .font-icon(e607);
+}
+
+.dw-icon-copy, .CopyToBasket, .CopyIntoAnotherFileCabinet {
+    .font-icon(e66e);
+}
+
+.dw-icon-quick-copy {
+    .font-icon(e6be);
+}
+
+.dw-icon-move {
+    .font-icon(e629);
+}
+
+.dw-icon-store-auto {
+    .font-icon(e66b);
+}
+
+.dw-icon-checkin {
+    .font-icon(e771);
+}
+
+.dw-icon-checkout, .CheckoutToBasket, .CheckoutToFileSystem {
+    .font-icon(e665);
+}
+
+.dw-icon-undo-checkout, .ChangeDocumentStatus {
+    .font-icon(e771);
+}
+
+.dw-icon-repeat-indexing {
+    .font-icon(e6e1);
+}
+
+.dw-icon-show-index-entries {
+    .font-icon(e77d);
+}
+
+.dw-icon-document-not-indexed {
+    .font-icon(e77d);
+}
+
+.dw-icon-edit-index-entries, .DisplayInfoBox {
+    .font-icon(e77d);
+}
+
+.dw-icon-smart-connect {
+    .font-icon(e602);
+}
+
+.dw-icon-connect {
+    .font-icon(e6e6);
+}
+
+.dw-icon-edit-m-index-entries {
+    .font-icon(e77d);
+}
+
+.dw-icon-linked-docs {
+    .font-icon(e6f8);
+}
+
+.dw-icon-workflow-history, .ShowWorkflowHistory {
+    .font-icon(e6c8);
+}
+
+.dw-icon-workflow-task {
+    .font-icon(e6c3);
+}
+
+.dw-icon-document-history, .ShowHideCheckedoutDocuments {
+    .font-icon(e76e);
+}
+
+.dw-icon-reassign-task {
+    .font-icon(e76d);
+}
+
+.dw-icon-set-as-read {
+    .font-icon(e620);
+}
+
+.dw-icon-set-as-unread {
+    .font-icon(e61f);
+}
+
+.dw-icon-stop-workflow, .dw-icon-stop {
+    .font-icon(e648);
+}
+
+.dw-icon-export-CSV, .ExportToCSV {
+    .font-icon(e666);
+}
+
+.dw-icon-table-view, .dw-icon-grid-data-view {
+    .font-icon(e65d);
+}
+
+.dw-icon-thumb-view, .dw-icon-thumbnail-data-view {
+    .font-icon(e61b);
+}
+
+.dw-icon-indexcards-view, .dw-icon-card-data-view {
+    .font-icon(e778);
+}
+
+.dw-icon-text-view, .dw-icon-text-data-view {
+    .font-icon(e69a);
+}
+
+.dw-icon-sort {
+    .font-icon(e64d);
+}
+
+.dw-icon-filter {
+    .font-icon(e6cc);
+}
+
+.dw-icon-show-storedialog {
+    .font-icon(e66b);
+}
+
+.dw-icon-create-DWrequest {
+    .font-icon(e66b);
+}
+
+.dw-icon-change-indexterms, .ChangeIndexOfMultipleDocuments {
+    .font-icon(e77d);
+}
+
+.dw-icon-certificate {
+    .font-icon(e6ba);
+}
+
+.dw-icon-certificate-invalid {
+    .font-icon(e6bb);
+}
+
+.dw-icon-certificate-valid {
+    .font-icon(e6bc);
+}
+
+.dw-icon-certificate-warning {
+    .font-icon(e6bd);
+}
+
+//Viewer Icons
+.dw-viewerNoDoc {
+    .font-icon(e63a, @OT_CaptionGray, 80px);
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -80px;
+        margin-left: -40px;
+    }
+}
+
+.dw-viewerNoSection {
+    .font-icon(e92a, @OT_CaptionGray, 80px);
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -80px;
+        margin-left: -40px;
+    }
+}
+
+.dw-icon-double-angle-left {
+    .font-icon(e63b);
+}
+
+.dw-icon-angle-left {
+    .font-icon(e63f);
+}
+
+.dw-icon-angle-right {
+    .font-icon(e63e);
+}
+
+.dw-icon-double-angle-right {
+    .font-icon(e61a);
+}
+
+.dw-icon-type {
+    .font-icon(e646);
+}
+
+.dw-icon-link {
+    .font-icon(e65f);
+}
+
+.dw-icon-icon_numeric {
+    .font-icon(e903);
+}
+
+.dw-icon-icon_decimal {
+    .font-icon(e906);
+}
+
+.dw-icon-icon-datetime {
+    .font-icon(e902);
+}
+
+.dw-icon-paragraph-left {
+    .font-icon(e698);
+}
+
+.dw-icon-file {
+    .font-icon(e668);
+}
+
+.dw-icon-link2 {
+    .font-icon(e6d8);
+}
+
+.dw-icon-list {
+    .font-icon(e65e);
+}
+
+.dw-icon-Table {
+    .font-icon(e688);
+}
+
+.dw-icon-barcode {
+    .font-icon(e92b);
+}
+
+.dw-icon-splitter-vertical {
+    .font-icon(e6c5);
+}
+
+.dw-icon-cog {
+    .font-icon(e66f);
+}
+
+.dw-icon-EmptyViewer {
+    .font-icon(e63a);
+}
+
+.dw-icon-screen {
+    .font-icon(e650);
+}
+
+.dw-icon-Anchor {
+    .font-icon(e686);
+}
+
+.dw-icon-ButtonOK {
+    .font-icon(e689);
+}
+
+.dw-icon-circle2 {
+    .font-icon(e673);
+}
+
+.dw-icon-processing {
+    .font-icon(e923);
+}
+
+.dw-icon-zoom-in {
+    .font-icon(e6a5);
+}
+
+.dw-icon-zoom-out {
+    .font-icon(e6a4);
+}
+
+.top-bar-navigate-first {
+    .ui-icon-seek-first;
+}
+
+.top-bar-navigate-first-disabled {
+    .ui-icon-seek-first;
+}
+
+.top-bar-navigate-prev {
+    .ui-icon-carat-1-w;
+}
+
+.top-bar-navigate-prev-disabled {
+    .ui-icon-carat-1-w;
+}
+
+.top-bar-navigate-next {
+    .ui-icon-carat-1-e;
+}
+
+.top-bar-navigate-next-disabled {
+    .ui-icon-carat-1-e;
+}
+
+.top-bar-navigate-last {
+    .ui-icon-seek-last;
+}
+
+.top-bar-navigate-last-disabled {
+    .ui-icon-seek-last;
+}
+
+.document-nav-topbar-icon {
+    .font-icon(e774);
+}
+
+.file-nav-topbar-icon {
+    .font-icon(e77b);
+}
+
+.page-nav-topbar-icon {
+    .font-icon(e64a);
+}
+
+.dw-icon-stamps {
+    .font-icon(e777);
+
+    &.decision {
+        .font-icon(e6e9);
+    }
+
+    &.yellow {
+        text-shadow: -1px 0 @OT_BorderGray, 0 1px @OT_BorderGray, 1px 0 @OT_BorderGray, 0 -1px @OT_BorderGray;
+    }
+}
+
+.dw-icon-doc-split {
+    .font-icon(e658);
+}
+
+//Toolbars Icons
+//Anotations
+.dw-icon-ann-arrow, .dw-icon-Annotations_Arrow {
+    .font-icon(e67e);
+}
+
+.dw-icon-ann-select-pointer, .dw-icon-Annotations_Select {
+    .font-icon(e66d);
+}
+
+//repeating to refactor
+.dw-icon-ann-delete, .dw-icon-Annotations_Delete {
+    .font-icon-after(e671);
+}
+
+.dw-icon-ann-text, .dw-icon-Annotations_Text {
+    .font-icon(e646);
+}
+
+.dw-icon-ann-marker, .dw-icon-Annotations_Marker {
+    .font-icon(e65c);
+}
+
+.dw-icon-ann-line-straight, .dw-icon-Annotations_Line {
+    .font-icon(e775);
+}
+
+.dw-icon-ann-rectangle-empty, .dw-icon-Annotations_Rectangle {
+    .font-icon(e676);
+}
+
+.dw-icon-ann-rectangle-filled, .dw-icon-Annotations_FilledRectangle {
+    .font-icon(e64b);
+}
+
+.dw-icon-ann-rectangle-filled-transparen, .dw-icon-Annotations_TransparentRectangle {
+    .font-icon(e76c);
+}
+
+.dw-icon-ann-ellipse-empty, .dw-icon-Annotations_Ellipse {
+    .font-icon(e674);
+}
+
+.dw-icon-ann-ellipse-filled, .dw-icon-Annotations_FilledEllipse {
+    .font-icon(e673);
+}
+
+.dw-icon-ann-ellipse-filled-transparent, .dw-icon-Annotations_TransparentEllipse {
+    .font-icon(e77c);
+}
+//To check if this is used
+.dw-icon-ann-move-object {
+    opacity: 0.2;
+    .font-icon(e673);
+}
+
+//Display icons
+.dw-icon-Display_ZoomNumber {
+    .font-icon(e668);
+    .font-icon-after(e64f);
+
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.dw-icon-dspl-enhancement, .dw-icon-Display_DisplayEnhancement {
+    .font-icon(e644);
+}
+
+//Add marker icon on overlay on edit
+.dw-icon-dspl-edit-layer {
+    .font-icon-after(e663);
+
+    &:after {
+        font-size: 10px;
+        color: @OT_CaptionGray;
+        position: absolute;
+        bottom: -1px;
+        right: -6px;
+    }
+}
+
+.dw-icon-edit-layer1 {
+    .font-icon(e634);
+}
+
+.dw-icon-edit-layer2 {
+    .font-icon(e633);
+}
+
+.dw-icon-edit-layer3 {
+    .font-icon(e632);
+}
+
+.dw-icon-edit-layer4 {
+    .font-icon(e631);
+}
+
+.dw-icon-edit-layer5 {
+    .font-icon(e630);
+}
+
+.dw-icon-dspl-fit-to-width, .dw-icon-Display_FitToWidthNoMargins {
+    .font-icon(e779);
+}
+
+.dw-icon-dspl-fit-to-width-with-margins, .dw-icon-Display_FitToWidth {
+    .font-icon(e76a);
+}
+
+.dw-icon-dspl-fit-to-window, .dw-icon-Display_FullDocument {
+    .font-icon(e77a);
+}
+
+.dw-icon-dspl-invert, .dw-icon-Display_Invert {
+    .font-icon(e636);
+}
+
+.dw-icon-dspl-layer1, .dw-icon-Display_ShowOverlay1 {
+    .font-icon(e62f);
+}
+
+.dw-icon-layer-full {
+    text-decoration: underline;
+}
+
+.dw-icon-dspl-layer2, .dw-icon-Display_ShowOverlay2 {
+    .font-icon(e62e);
+}
+
+.dw-icon-dspl-layer3, .dw-icon-Display_ShowOverlay3 {
+    .font-icon(e62d);
+}
+
+.dw-icon-dspl-layer4, .dw-icon-Display_ShowOverlay4 {
+    .font-icon(e62c);
+}
+
+.dw-icon-dspl-layer5, .dw-icon-Display_ShowOverlay5 {
+    .font-icon(e62b);
+}
+
+.dw-icon-dspl-rotate-left, .dw-icon-Display_RotateLeft {
+    .font-icon(e652);
+}
+
+.dw-icon-dspl-rotate-right, .dw-icon-Display_RotateRight {
+    .font-icon(e651)
+}
+//Repeating to refactor
+.dw-icon-dspl-zoom-in, .dw-icon-Display_ZoomIn {
+    .font-icon(e6a5);
+}
+
+.dw-icon-dspl-zoom-out, .dw-icon-Display_ZoomOut {
+    .font-icon(e6a4);
+}
+
+.dw-icon-dspl-zoom-tool, .dw-icon-Display_MagnifyingGlass {
+    .font-icon(e617);
+}
+
+//NAVIGATION ICONS
+//repeating to refactor
+.dw-icon-links-linked-docs, .dw-icon-Tools_ShowLinkedDocuments {
+    .font-icon(e6f8);
+}
+
+.dw-icon-nav-doc-first, .dw-icon-Nav_FirstDocument, .dw-icon-nav-file-first, .dw-icon-Nav_FirstFile, .dw-icon-nav-page-first, .dw-icon-Nav_FirstPage {
+    &:before {
+        font-size: 18px;
+    }
+
+    .ui-icon-seek-first;
+}
+
+.dw-icon-nav-doc-last, .dw-icon-Nav_LastDocument, .dw-icon-nav-file-last, .dw-icon-Nav_LastFile, .dw-icon-nav-page-last, .dw-icon-Nav_LastPage {
+    &:before {
+        font-size: 18px;
+    }
+
+    .ui-icon-seek-last;
+}
+
+.dw-icon-nav-doc-prev, .dw-icon-Nav_PreviousDocument, .dw-icon-nav-file-prev, .dw-icon-Nav_PreviousFile, .dw-icon-nav-page-prev, .dw-icon-Nav_PreviousPage {
+    &:before {
+        font-size: 18px;
+    }
+
+    .ui-icon-carat-1-w;
+}
+
+.dw-icon-nav-doc-next, .dw-icon-Nav_NextDocument, .dw-icon-nav-file-next, .dw-icon-Nav_NextFile, .dw-icon-nav-page-next, .dw-icon-Nav_NextPage {
+    &:before {
+        font-size: 18px;
+    }
+
+    .ui-icon-carat-1-e;
+}
+//repeating to refactor
+.dw-icon-Nav_DocumentNumber {
+    .font-icon(e64a);
+}
+
+.dw-icon-Nav_FileNumber {
+    .font-icon(e77b);
+}
+
+.dw-icon-Nav_PageNumber {
+    .font-icon(e774);
+}
+
+
+
+//Tools
+//To ask Christian if this is used - asked
+.dw-icon-tools-check-sig {
+    .font-icon(e604);
+}
+
+.dw-icon-tools-doc {
+    .font-icon(e667);
+}
+
+.dw-icon-tools-doc-info, .dw-icon-Tools_ShowDocumentInformation {
+    .font-icon(e77d);
+}
+
+.dw-icon-tools-doc-ov, .dw-icon-Tools_ShowDocumentOverview {
+    .font-icon(e61b);
+}
+
+.dw-icon-play-5 {
+    .font-icon(e900);
+}
+
+//repeating to refactor
+.dw-icon-tools-workflow-history, .dw-icon-Tools_WorkflowHistory {
+    .font-icon(e6c8);
+}
+
+.dw-icon-tools-merge-layers, .dw-icon-Display_MergeLayers {
+    .font-icon(e691);
+}
+
+.dw-icon-tools-image-auto-correct, .dw-icon-Display_ImageEnhancement {
+    .font-icon(e68f);
+}
+
+.dw-icon-tools-freehand, .dw-icon-Annotations_FreehandLine {
+    .font-icon(e68e);
+}
+
+.dw-icon-tools-copy-to-clp, .dw-icon-Tools_ShootToClipboard {
+    .font-icon(e690);
+}
+
+.dw-icon-clipboard4 {
+    .font-icon(e6b2);
+}
+
+.dw-icon-tools-point-and-shoot-ov, .dw-icon-Tools_PointAndShoot {
+    .font-icon(e628);
+}
+
+//repeating to refactor
+.dw-icon-tools-download-document, .dw-icon-Tools_Download {
+    .font-icon(e666);
+}
+//repeating to refactor
+.dw-icon-tools-edit-doc, .dw-icon-Tools_Edit {
+    .font-icon(e657);
+}
+
+.dw-icon-tools-find, .dw-icon-Tools_FulltextSearch {
+    .font-icon(e64e);
+}
+
+.dw-icon-tools-find-next, .dw-icon-Tools_FulltextSearchContinue {
+    .font-icon(e61c);
+}
+//Icon in menu not yet implemented to ask Christian - changed
+.dw-icon-tools-forward {
+    .font-icon(e62a);
+}
+//repeating to refactor
+.dw-icon-tools-print-doc, .dw-icon-Tools_PrintDocument {
+    .font-icon(e655);
+}
+//Icon in menu not yet implemented to ask Christian - changed
+.dw-icon-tools-reply {
+    .font-icon(e624);
+}
+//repeating to refactor
+.dw-icon-tools-save, .dw-icon-Tools_Save, .dw-icon-Display_SaveRotation {
+    .font-icon(e66b);
+}
+
+.dw-icon-tools-send, .dw-icon-Tools_SendDocument {
+    .font-icon(e622);
+}
+
+.dw-icon-tools-ta, .dw-icon-Tools_TextAnnotation {
+    .font-icon(e654);
+}
+
+.dw-icon-tools-ta-exists {
+    .font-icon(e654, @OT_Orange);
+}
+
+.dw-icon-checksum-no-check {
+    .font-icon(e677, @OT_Orange);
+}
+
+.dw-icon-checksum-check, .dw-icon-Tools_Checksum {
+    .font-icon(e677);
+}
+
+.dw-icon-checksum-ok {
+    .font-icon(e600);
+}
+
+.dw-icon-checksum-error {
+    .font-icon(e601);
+}
+
+//File Types
+.dw-icon-filetype {
+
+    &:before {
+        display: block;
+    }
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 16px;
+    background-color: @OT_WHITE;
+    color: @OT_CaptionGray;
+    .font-icon(e613);
+
+    &.attachment {
+        .font-icon(e6a0);
+    }
+
+
+    &.doc {
+        color: @OT_DOC;
+        .font-icon(e616);
+
+        &.attachment {
+            .font-icon(e6a2);
+        }
+    }
+
+    &.docx {
+        color: @OT_DOC;
+        .font-icon(e616);
+
+        &.attachment {
+            .font-icon(e6a2);
+        }
+    }
+
+    &.img {
+        color: @OT_IMG;
+        .font-icon(e614);
+
+        &.attachment {
+            .font-icon(e6a1);
+        }
+    }
+
+    &.jpg {
+        color: @OT_JPG;
+        .font-icon(e614);
+
+        &.attachment {
+            .font-icon(e6a1);
+        }
+    }
+
+    &.pdf {
+        color: @OT_PDF;
+        .font-icon(e612);
+
+        &.attachment {
+            .font-icon(e69f);
+        }
+    }
+
+    &.png {
+        color: @OT_PNG;
+        .font-icon(e611);
+
+        &.attachment {
+            .font-icon(e69e);
+        }
+    }
+
+    &.ppt {
+        color: @OT_PPT;
+        .font-icon(e610);
+
+        &.attachment {
+            .font-icon(e69d);
+        }
+    }
+
+    &.pptx {
+        color: @OT_PPT;
+        .font-icon(e610);
+
+        &.attachment {
+            .font-icon(e69d);
+        }
+    }
+
+    &.xml {
+        color: @OT_XML;
+        .font-icon(e962);
+
+        &.attachment {
+            .font-icon(e961);
+        }
+    }
+
+    &.xls {
+        color: @OT_XLS;
+        .font-icon(e60e);
+
+        &.attachment {
+            .font-icon(e69b);
+        }
+    }
+
+    &.xlsx {
+        color: @OT_XLS;
+        .font-icon(e60e);
+
+        &.attachment {
+            .font-icon(e69b);
+        }
+    }
+
+    &.other {
+        .font-icon(e613);
+
+        &.attachment {
+            .font-icon(e6a0);
+        }
+    }
+
+    &.tif, &.tiff {
+        color: @OT_TIFF;
+        .font-icon(e60f);
+
+        &.attachment {
+            .font-icon(e69c);
+        }
+    }
+
+    &.cold {
+        color: @OT_COLD;
+        .font-icon(e678);
+    }
+
+    &.dbrecord {
+        .font-icon(e781);
+
+        &.attachment {
+            .font-icon(e77b);
+        }
+    }
+
+    &.email {
+        .font-icon(e622);
+
+        &.attachment {
+            .font-icon(e639);
+        }
+    }
+
+    &.checkedout {
+        .font-icon-after(e657);
+
+        &:before {
+            opacity: 0.4;
+        }
+
+        &:after {
+            background: white;
+            font-size: 8px;
+            position: absolute;
+            right: 0;
+            line-height: 8px;
+            bottom: 0;
+            color: @OT_CaptionGray;
+        }
+    }
+}
+
+//Query designer icons
+.dw-icon-query-designer-minus-black {
+    .font-icon(e6f7);
+}
+
+.dw-icon-query-designer-minus-white {
+    .font-icon(e6f6);
+}
+
+.dw-icon-query-designer-plus-black {
+    .font-icon(e6f5);
+}
+
+.dw-icon-query-designer-plus-white, .dw-icon-plus-small {
+    .font-icon(e6ea);
+}
+
+//viewer toolbar control get link
+
+.dw-icon-get-link, .dw-icon-Tools_GetLink {
+    .font-icon(e65f);
+}
+
+//Synchronization workflow
+.dw-icon-sync-one-way {
+    .font-icon(e91b);
+}
+
+.dw-icon-sync-two-way {
+    .font-icon(e91c);
+}
+
+.dw-icon-sync {
+    .font-icon(e916);
+}
+
+.dw-icon-monitoring-status {
+    .font-icon(e930);
+}
+
+.dw-icon-smtp {
+    .font-icon(e92f);
+}
+
+.dw-icon-mail-services {
+    .font-icon(e92f);
+}
+
+.dw-icon-undo {
+    .font-icon(e91d);
+}
+
+.dw-icon-redo {
+    .font-icon(e91a);
+}
+
+// BPSProcesses status column
+.dw-icon-status {
+    .font-icon-status(16px);
+}
+
+
+// Process Planner Icons
+
+.ui-icon&[class^="pp-"], .ui-icon&[class*=" pp-"] {
+    font-family: 'process-planner';
+}
+
+.pp-icon-hide_title {
+    .font-icon(e903);
+}
+
+.pp-icon-remove_step {
+    .font-icon(e904);
+}
+
+.pp-icon-add_new_step {
+    .font-icon(e905);
+}
+
+.pp-icon-dashboard_notifications {
+    .font-icon(e906);
+}
+
+.pp-icon-dashboard_news-2 {
+    .font-icon(e900);
+}
+
+.pp-icon-dashboard_news-1 {
+    .font-icon(e901);
+}
+
+.pp-icon-dashboard_news {
+    .font-icon(e902);
+}
+
+.pp-icon-collaborate_close {
+    .font-icon(e500);
+}
+
+.pp-icon-collaborate_delete {
+    .font-icon(e501);
+}
+
+.pp-icon-collaborate_edit {
+    .font-icon(e502);
+}
+
+.pp-icon-collaborate_edit-off {
+    .font-icon(e503);
+}
+
+.pp-icon-collaborate_edit-on {
+    .font-icon(e504);
+}
+
+.pp-icon-collaborate_help {
+    .font-icon(e505);
+}
+
+.pp-icon-collaborate_more {
+    .font-icon(e506);
+}
+
+.pp-icon-collaborate_send-email {
+    .font-icon(e507);
+}
+
+.pp-icon-collaborate_view {
+    .font-icon(e508);
+}
+
+.pp-icon-dashboard_account {
+    .font-icon(e509);
+}
+
+.pp-icon-dashboard_delete {
+    .font-icon(e50a);
+}
+
+.pp-icon-dashboard_duplicate {
+    .font-icon(e50b);
+}
+
+.pp-icon-dashboard_feedback {
+    .font-icon(e50c);
+}
+
+.pp-icon-dashboard_help-learn {
+    .font-icon(e50d);
+}
+
+.pp-icon-dashboard_logout {
+    .font-icon(e50e);
+}
+
+.pp-icon-dashboard_more {
+    .font-icon(e50f);
+}
+
+.pp-icon-dashboard_rename {
+    .font-icon(e510);
+}
+
+.pp-icon-dashboard_search {
+    .font-icon(e511);
+}
+
+.pp-icon-dashboard_view-list {
+    .font-icon(e512);
+}
+
+.pp-icon-dashboard_view-thumb {
+    .font-icon(e513);
+}
+
+.pp-icon-map_close {
+    .font-icon(e514);
+}
+
+.pp-icon-map_icon {
+    .font-icon(e515);
+}
+
+.pp-icon-project_delete {
+    .font-icon(e516);
+}
+
+.pp-icon-project_warning {
+    .font-icon(e517);
+}
+
+.pp-icon-sidebar_close-ho {
+    .font-icon(e518);
+}
+
+.pp-icon-sidebar_note {
+    .font-icon(e519);
+}
+
+.pp-icon-sidebar_open-ho {
+    .font-icon(e51a);
+}
+
+.pp-icon-sidebar_sections {
+    .font-icon(e51b);
+}
+
+.pp-icon-sidebar_step {
+    .font-icon(e51c);
+}
+
+.pp-icon-sidebar_warning {
+    .font-icon(e51d);
+}
+
+.pp-icon-step_connection {
+    .font-icon(e51e);
+}
+
+.pp-icon-step_connection-dot {
+    .font-icon(e51f);
+}
+
+.pp-icon-step_delete {
+    .font-icon(e520);
+}
+
+.pp-icon-step_new-down {
+    .font-icon(e521);
+}
+
+.pp-icon-step_new-left {
+    .font-icon(e522);
+}
+
+.pp-icon-step_new-right {
+    .font-icon(e523);
+}
+
+.pp-icon-step_new-up {
+    .font-icon(e524);
+}
+
+.pp-icon-step_note {
+    .font-icon(e525);
+}
+
+.pp-icon-toolbar_collaborate {
+    .font-icon(e526);
+}
+
+.pp-icon-toolbar_dashboard {
+    .font-icon(e527);
+}
+
+.pp-icon-toolbar_download-export {
+    .font-icon(e528);
+}
+
+.pp-icon-toolbar_fullscreen {
+    .font-icon(e529);
+}
+
+.pp-icon-toolbar_mainmenue {
+    .font-icon(e52a);
+}
+
+.pp-icon-toolbar_note {
+    .font-icon(e52b);
+}
+
+.pp-icon-toolbar_redo {
+    .font-icon(e52c);
+}
+
+.pp-icon-toolbar_save {
+    .font-icon(e52d);
+}
+
+.pp-icon-toolbar_section {
+    .font-icon(e52e);
+}
+
+.pp-icon-toolbar_step {
+    .font-icon(e52f);
+}
+
+.pp-icon-toolbar_undo {
+    .font-icon(e530);
+}
+
+.pp-icon-toolbar_view {
+    .font-icon(e531);
+}
+
+.pp-icon-toolbar_zoom {
+    .font-icon(e532);
+}
+
+.pp-icon-toolbar_zoom1 {
+    .font-icon(e533);
+}
+
+.pp-icon-top-menue_account-settings {
+    .font-icon(e534);
+}
+
+.pp-icon-top-menue_back {
+    .font-icon(e535);
+}
+
+.pp-icon-top-menue_faq {
+    .font-icon(e536);
+}
+
+.pp-icon-top-menue_product-tester {
+    .font-icon(e537);
+}
+
+.pp-icon-top-menue_shortcuts {
+    .font-icon(e538);
+}
+
+.pp-icon-top-menue_sign-out {
+    .font-icon(e539);
+}
+
+.pp-icon-top-menue_support {
+    .font-icon(e53a);
+}
+
+.pp-icon-top-menue_user-voice {
+    .font-icon(e53b);
+}

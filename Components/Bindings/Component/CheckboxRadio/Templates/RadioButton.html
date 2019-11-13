@@ -1,0 +1,169 @@
+﻿<script type="text/html" id="radio-template">
+    <!-- ko template: { name: $data.getMode() + '-radio-template' } -->
+    <!-- /ko -->
+</script>
+
+<!--examples:-->
+
+
+<!-- (1) 'native' mode radio button 
+     ------- used for simple radio buttons -------
+
+    <radio params="buttonOptions: {
+                //mandatory:
+                    buttonId: 'some_element_id', //or function() {return 'radio_button_number_' + $index(); }, for dinamically generated ids
+                    name: 'name_of_a_group',
+                    checked: checkedObservable,
+                    value: true/false
+                },
+             //not mandatory:
+                labelOptions: {
+                    labelClass: 'some_css_class ',
+                    label: 'some label text'
+                }"></radio>
+-->
+
+<!-- (2) 'native' mode radio button example 2
+    ------- if we have some observable ('checkedValue' for example) that takes custom values, different from true/false, that define if the radio button is checked or not -------
+     <radio params="toggleOptions: {  //no toggleChecked here!
+        //not mandatory:
+            enable: function (){ return allowCheckedValueChange(); //~some observable},
+            visible: function (){ return skipShowing(); //~some observable}
+        },
+        buttonOptions: {
+            //mandatory:
+            buttonId: 'some_element_id', //or function() {return 'radio_button_number_' + $index(); }, for dinamically generated ids
+            name: 'name_of_a_group',
+            checked: checkedValue,
+            value: false/true, or some custom vaulee.g '1' with a group of radio buttons with values : '1', '2', '3'...
+            //not mandatory:
+            tooltipContent: {
+                 content: function(){ return allowCheckedValueChange() ? '': 'Some explaination why this radio button is disabled' }
+            }
+        },
+     //not mandatory:
+        labelOptions: {
+            labelClass: 'some_css_class ',
+            label: 'some label text'
+        }"></radio>
+    -->
+
+
+<!-- (3) 'custom' mode radio button example:
+    ------- if we have enable/visible functionality it is better to use this approach -------
+    ------- if we have some observable ('checkedValue' for example) that takes custom values, different from true/false, that define if the radio button is checked or not, we use this approach:
+
+    <radio params="{
+                   mode: 'custom',
+                   toggleOptions: { 
+                    //mandatory:
+                        toggleChecked: checkedValue.bind($data, someSpecificValue),
+                    //not mandatory:
+                        enable: function (){ return allowCheckedValueChange(); //~some observable},
+                        visible: function (){ return skipShowing(); //~some observable}
+                   },
+                   buttonOptions: {
+                    //mandatory:
+                        checkedCondition: function () { return checkedValue() == someSpecificValue }, // the radio button would be checked if the condition in the checkedCondition function passes;
+                    //not mandatory:
+                        buttonId: 'some_element_id', //or function() {return 'radio_button_number_' + $index(); }, for dinamically generated ids
+                        name: 'name_of_a_group',
+                        tooltipContent: {
+                             content: function(){ return allowCheckedValueChange() ? '': 'Some explaination why this radio button is disabled' }
+                        }
+                   },
+                //not mandatory:
+                   labelOptions: {
+                        labelClass: 'some_css_class ',
+                        label: 'some label text'
+                   }}"></radio>
+-->
+
+<!-- (4) 'custom' mode radio button
+        -if we want to use a command defined outside of the component-
+        -or if we have async condition - can the radio button really be checked, we must use 'custom' mode with external command that we pass to the radio button component
+
+case 1: checkedValue can take only simple true/false value
+
+    <radio params="{ 
+            mode: 'custom',
+            selectCommand: $data.someCommand, //in this command's execute, we must set the value of the checkedValue observable (true or false)
+            bindingContext: $context,
+            buttonOptions: {
+                 checked: checkedValue,
+                //not mandatory:
+                 tooltipContent: {
+                    content: function(){ return allowCheckedValueChange() ? '': 'Some explaination why this radio button is disabled' }
+                 }
+            },
+       //not mandatory:
+        labelOptions: {
+            labelClass: 'some_css_class ',
+            label: 'some label text'
+        }}"></radio>
+
+case 2: we have a custom condition for the checked value:
+
+     <radio params="{ mode: 'custom',
+            selectCommand: $data.someCommand, //in this command's execute, we must set the value of the checkedValue observable (someSpecificValue1, someSpecificValue2, someSpecificValue3 or so on)
+            bindingContext: $context,
+            buttonOptions: {
+                 checkedCondition: function () {return checkedValue() == someSpecificValue; },
+                //not mandatory:
+                 tooltipContent: {
+                    content: function(){ return allowCheckedValueChange() ? '': 'Some explaination why this radio button is disabled' }
+                 }
+            },
+       //not mandatory:
+        labelOptions: {
+            labelClass: 'some_css_class ',
+            label: 'some label text'
+        }}"></radio>
+
+  
+
+     
+-->
+
+<!-- (5)  'delegated' mode radio buttons
+    - same as custom, but with delegated command binding:
+     same as example <4>, but with:  mode: 'delegated' , instead of 'custom'
+
+-->
+
+
+<script type="text/html" id="native-radio-template">
+    <!-- ko if: available() -->
+    <input type="radio" class="radio-button" data-bind="checked: checked,
+                                                checkedValue: checkedValue,
+                                                css: buttonCSS,
+                                                attr: buttonAttributes,
+                                                enable: enabled(),
+                                                tooltip: tooltipObj" />
+
+    <label data-bind="text: label,
+                      class: label ? labelClass: '',
+                      tooltip: tooltipObj,
+                      attr: {for: buttonId}"></label>
+    <!-- /ko -->
+</script>
+
+<script type="text/html" id="custom-radio-template">
+    <div tabindex="0" class="ui-icon icon-auto button radio-button" data-bind="command: command,
+                    css: buttonCSS,
+                    tooltip: tooltipObj" />
+    <!-- ko if: label -->
+    <span data-bind="text: label,
+                     css: labelCSS"></span>
+    <!-- /ko -->
+</script>
+
+<script type="text/html" id="delagated-radio-template">
+    <div tabindex="0" class="ui-icon icon-auto button radio-button" data-bind="delegatedCommand: command,
+                    css: buttonCSS,
+                    tooltip: tooltipObj" />
+    <!-- ko if: label -->
+    <span data-bind="text: label,
+                     css: labelCSS"></span>
+    <!-- /ko -->
+</script>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddConnectionToRemoteOrganization_Text">
+    <value>Andere Organisation</value>
+  </data>
+  <data name="Button_Back_Text">
+    <value>Zurück</value>
+  </data>
+  <data name="Button_Cancel_Text">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Button_DontSave_Text">
+    <value>Nicht speichern</value>
+  </data>
+  <data name="Button_OK_Text">
+    <value>OK</value>
+  </data>
+  <data name="Button_Save_Text">
+    <value>Speichern</value>
+  </data>
+  <data name="Error_Getting_FileCabinets">
+    <value>Kein Zugriff auf die Archive der anderen Organisation</value>
+  </data>
+  <data name="File_Cabinet_Label">
+    <value>Archiv</value>
+  </data>
+  <data name="File_Cabinet_Selectors_Infobox_Content">
+    <value>Um Ihre Archive mit Archiven anderer Organisationen zu synchronisieren, klicken Sie in der Liste auf "Andere Organisationen" und geben die Benutzerkennung ein 
+&lt;br&gt;
+&lt;a target="_blank" href="http://go.docuware.com/infoboxhelp/?lang=en&amp;version=691&amp;id=62764"&gt;More information&lt;/a&gt;</value>
+  </data>
+  <data name="File_Cabinet_Selectors_Infobox_Title">
+    <value>Archiv wählen</value>
+  </data>
+  <data name="File_Cabinets_Group_Label">
+    <value>Archive wählen</value>
+  </data>
+  <data name="Loading_FileCabinets_Text">
+    <value>Archive laden...</value>
+  </data>
+  <data name="Other_Organization_Placeholder_Text">
+    <value>andere Organisation</value>
+  </data>
+  <data name="SelectFileCabinetPlaceholder">
+    <value>Archiv wählen</value>
+  </data>
+  <data name="Source_File_Cabinet_Label">
+    <value>Quellarchiv</value>
+  </data>
+  <data name="Target_File_Cabinet_Label">
+    <value>Zielarchiv</value>
+  </data>
+</root>

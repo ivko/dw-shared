@@ -1,0 +1,141 @@
+@import "../_variables.less";
+@import "../_mixins.less";
+@import "_icons.less";
+
+/* SELECT2 */
+
+/*Scrollbar for select 2 themes other than the white theme */
+.select2-drop
+{
+    &:not(.select-theme-white)
+    {
+
+        .vertical-handle
+        {
+            background-color: @OT_DisabledGray;
+        }
+
+        .arrow-up
+        {
+            border-bottom-color: @OT_DisabledGray;
+        }
+
+        .arrow-down
+        {
+            border-top-color: @OT_DisabledGray;
+        }
+    }
+}
+
+.select-theme-white
+{
+    &.select2-container
+    {
+        .select2-choice
+        {
+            background-color: @OT_WHITE;
+            color: @OT_LabelGray;
+
+            .select2-arrow
+            {
+                background-color: @OT_WHITE;
+            }
+        }
+
+        &.select2-container-disabled
+        {
+            .select2-choice
+            {
+                background-color: @OT_UltraLightGray;
+                color: @OT_DisabledGray;
+
+                .select2-arrow
+                {
+                    background-color: @OT_UltraLightGray;
+                    color: @OT_DisabledGray;
+                }
+            }
+        }
+    }
+
+
+
+    &.select2-drop
+    {
+        background: @OT_WHITE;
+    }
+}
+
+.select-theme-light-gray
+{
+    &.select2-container
+    {
+        .select2-choice
+        {
+            background-color: #EEF1F2;
+            color: @OT_LabelGray;
+
+            .select2-arrow
+            {
+                background-color: #EEF1F2;
+            }
+        }
+
+        &.select2-container-disabled
+        {
+            .select2-choice
+            {
+                background-color: @OT_UltraLightGray;
+                color: @OT_DisabledGray;
+
+                .select2-arrow
+                {
+                    background-color: @OT_UltraLightGray;
+                    color: @OT_DisabledGray;
+                }
+            }
+        }
+    }
+}
+
+
+
+.small
+{
+    &.select2-container
+    {
+        .select2-choice
+        {
+            height: 18px;
+            line-height: 18px;
+        }
+    }
+}
+
+.medium
+{
+    &.select2-container
+    {
+        .select2-choice
+        {
+            height: 20px;
+            line-height: 20px;
+        }
+    }
+}
+
+.large
+{
+    &.select2-container
+    {
+        .select2-choice
+        {
+            height: 26px;
+            line-height: 26px;
+
+            .select2-chosen{
+                //font-size: 14px;
+            }
+        }
+    }
+}

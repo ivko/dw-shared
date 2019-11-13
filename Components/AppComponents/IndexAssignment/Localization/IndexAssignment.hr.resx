@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IndexAssignment_EmailProperty_AttachmentNames">
+    <value>Nazivi privitaka</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_BCC_Email">
+    <value>Adresa e-pošte u polju BCC</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_BCC_Name">
+    <value>Ime u polju BCC</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_CC_Email">
+    <value>Adresa e-pošte u polju CC</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_CC_Name">
+    <value>Ime u polju CC</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Contact">
+    <value>Ime kontakta</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Contact_Email">
+    <value>Adresa e-pošte kontakta</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Direction">
+    <value>Smjer</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_ReceivedDate">
+    <value>Datum primanja</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Recipients">
+    <value>Ime primatelja</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Recipients_Email">
+    <value>Adresa e-pošte primatelja</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_SendDate">
+    <value>Datum slanja</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Sender">
+    <value>Ime pošiljatelja</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Sender_Email">
+    <value>Adresa e-pošte pošiljatelja</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_SendTo">
+    <value>Poslano na ime</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_SendTo_Email">
+    <value>Pošalji na adresu e-pošte</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Size">
+    <value>Veličina</value>
+  </data>
+  <data name="IndexAssignment_EmailProperty_Subject">
+    <value>Predmet</value>
+  </data>
+  <data name="IndexAssignment_Error_Field_Not_Active">
+    <value>Could not find field in list of active index fields</value>
+  </data>
+  <data name="IndexAssignment_Error_Field_Not_Available">
+    <value>Polje više nije dostupno. Uklonite ovo polje iz svoje konfiguracije.</value>
+  </data>
+  <data name="IndexAssignment_Error_Field_Selected_But_Not_Filled">
+    <value>Polja ne smiju biti prazna</value>
+  </data>
+  <data name="IndexAssignment_Error_Not_Single_Field_Filled">
+    <value>Barem jedno polje indeksa mora biti popunjeno. Unesite indeks.</value>
+  </data>
+  <data name="IndexAssignment_Error_Unsupported_field_type">
+    <value>Vrsta polja nije podržana u DocuWare. Obratite se svojem administratoru za DocuWare.</value>
+  </data>
+  <data name="IndexAssignment_Grid_ColumHeader_Field">
+    <value>Polje indeksa</value>
+  </data>
+  <data name="IndexAssignment_Grid_ColumHeader_Source">
+    <value>Radnja popunjavanja</value>
+  </data>
+  <data name="IndexAssignment_Grid_ColumHeader_Value">
+    <value>Vrijednost</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_EmailProperty">
+    <value>Svojstvo e-pošte</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_Fixed">
+    <value>Stalna vrijednost</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_KeywordField">
+    <value>Ključne riječi</value>
+  </data>
+  <data name="IndexAssignment_Grid_Source_PleaseSelect">
+    <value>odaberi</value>
+  </data>
+  <data name="IndexAssignment_Grid_ToolTip_NumberField">
+    <value>Unesite broj</value>
+  </data>
+  <data name="IndexAssignment_ValidationError_Length">
+    <value>Vrijednost prelazi dopušteno ograničenje od {0}</value>
+  </data>
+  <data name="IndexAssignment_ValidationError_ReadOnly">
+    <value>Ovo se polje može samo čitati. Ne može biti prebrisano.</value>
+  </data>
+  <data name="IndexAssignment_ValidationError_Required">
+    <value>Unos u ovo polje je obvezan</value>
+  </data>
+</root>

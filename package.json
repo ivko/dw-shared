@@ -1,0 +1,17 @@
+{
+  "name": "dw-shared",
+  "version": "1.0.0",
+  "description": "Docuware shared",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "docuware",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "knockout": "^3.4.2",
+    "signalr": "^2.4.1",
+    "typings": "^2.1.1"
+  }
+}

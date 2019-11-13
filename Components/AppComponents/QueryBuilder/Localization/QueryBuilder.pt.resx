@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="QueryBuilder_AfterTheNext" xml:space="preserve">
+    <value>Após a próxima</value>
+  </data>
+  <data name="QueryBuilder_AfterThePast" xml:space="preserve">
+    <value>Após a última</value>
+  </data>
+  <data name="QueryBuilder_And" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="QueryBuilder_BeforeTheNext" xml:space="preserve">
+    <value>Antes da próxima</value>
+  </data>
+  <data name="QueryBuilder_BeforeThePast" xml:space="preserve">
+    <value>Antes da última</value>
+  </data>
+  <data name="QueryBuilder_Contains" xml:space="preserve">
+    <value>Contém</value>
+  </data>
+  <data name="QueryBuilder_Err_DateField" xml:space="preserve">
+    <value>Insira um valor válido no campo de data.</value>
+  </data>
+  <data name="QueryBuilder_Err_DateTimeField" xml:space="preserve">
+    <value>Insira um valor válido no campo de data/hora.</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalField" xml:space="preserve">
+    <value>Insira um valor válido no campo decimal.</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalRangeField" xml:space="preserve">
+    <value>Insira um valor(es) de faixa válido(s) no campo decimal.</value>
+  </data>
+  <data name="QueryBuilder_Err_KeywordField" xml:space="preserve">
+    <value>Insira um valor válido no campo de palavra-chave.</value>
+  </data>
+  <data name="QueryBuilder_Err_MemoField" xml:space="preserve">
+    <value>Insira um valor válido no campo de memorando.</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericField" xml:space="preserve">
+    <value>Insira um valor válido no campo numérico.</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericRangeField" xml:space="preserve">
+    <value>Insira um valor(es) de faixa válido(s) nos campos decimais.</value>
+  </data>
+  <data name="QueryBuilder_Err_RangeDateField" xml:space="preserve">
+    <value>Insira um valor(es) de faixa válido(s) nos campos de data.</value>
+  </data>
+  <data name="QueryBuilder_Err_SqlField" xml:space="preserve">
+    <value>Insira um valor válido no campo sql.</value>
+  </data>
+  <data name="QueryBuilder_Err_TextField" xml:space="preserve">
+    <value>Insira um valor válido no campo de texto.</value>
+  </data>
+  <data name="QueryBuilder_Introduction" xml:space="preserve">
+    <value>Os usuários só verão os documentos que correspondem às seguintes regras:</value>
+  </data>
+  <data name="QueryBuilder_invalidField" xml:space="preserve">
+    <value>O gabinete de arquivos não existe.</value>
+  </data>
+  <data name="QueryBuilder_IsBetween" xml:space="preserve">
+    <value>Está entre</value>
+  </data>
+  <data name="QueryBuilder_IsEmpty" xml:space="preserve">
+    <value>Está vazio</value>
+  </data>
+  <data name="QueryBuilder_IsEqual" xml:space="preserve">
+    <value>É igual</value>
+  </data>
+  <data name="QueryBuilder_IsNotEmpty" xml:space="preserve">
+    <value>Não está vazio</value>
+  </data>
+  <data name="QueryBuilder_IsNotEqual" xml:space="preserve">
+    <value>Não é igual</value>
+  </data>
+  <data name="QueryBuilder_IsWhereClause" xml:space="preserve">
+    <value>É (onde cláusula)</value>
+  </data>
+  <data name="QueryBuilder_Or" xml:space="preserve">
+    <value>OU</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDISK" xml:space="preserve">
+    <value>Número do disco</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDOCID" xml:space="preserve">
+    <value>ID do doc</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSDATETIME" xml:space="preserve">
+    <value>Última data de acesso</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSUSER" xml:space="preserve">
+    <value>Último usuário a acessar</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODDATETIME" xml:space="preserve">
+    <value>Data da modificação</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODUSER" xml:space="preserve">
+    <value>Usuário da modificação</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSECTIONCOUNT" xml:space="preserve">
+    <value>Contagem de arquivos</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREDATETIME" xml:space="preserve">
+    <value>Data do armazenamento</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREUSER" xml:space="preserve">
+    <value>Usuário do armazenador</value>
+  </data>
+  <data name="QueryBuilder_SystemFields" xml:space="preserve">
+    <value>Campos do sistema</value>
+  </data>
+  <data name="QueryBuilder_WithinTheNext" xml:space="preserve">
+    <value>Na próxima</value>
+  </data>
+  <data name="QueryBuilder_WithinThePast" xml:space="preserve">
+    <value>Na última</value>
+  </data>
+  <data name="QueryClick_LabelFirstPart" xml:space="preserve">
+    <value>Nenhuma regra definida ainda.</value>
+  </data>
+  <data name="QueryClick_LabelSecondPart" xml:space="preserve">
+    <value>Criar uma nova regra</value>
+  </data>
+  <data name="QueryClick_LabelThirdPart" xml:space="preserve">
+    <value>Criar um grupo de regras</value>
+  </data>
+  <data name="QueryDate_Days" xml:space="preserve">
+    <value>Dias</value>
+  </data>
+  <data name="QueryDate_Hours" xml:space="preserve">
+    <value>Horas</value>
+  </data>
+  <data name="QueryDate_Months" xml:space="preserve">
+    <value>Meses</value>
+  </data>
+  <data name="QueryDate_Years" xml:space="preserve">
+    <value>Anos</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPDATETIME" xml:space="preserve">
+    <value>SAP Date Time</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPSTATUS" xml:space="preserve">
+    <value>SAP Status</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWUSRVERSION" xml:space="preserve">
+    <value>Versão do usuário</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSIONCOMMENT" xml:space="preserve">
+    <value>Comentário da versão</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSTATUS" xml:space="preserve">
+    <value>Status da versão</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCID" xml:space="preserve">
+    <value>SAP Doc Id</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCTYPE" xml:space="preserve">
+    <value>SAP Doc Type</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPPROTECTIONTYPE" xml:space="preserve">
+    <value>SAP Protection Type</value>
+  </data>
+  <data name="QueryBuilder_ProfileIntroduction">
+    <value>Os direitos concedidos abaixo se aplicam a documentos que cumprem as regras a seguir:</value>
+  </data>
+  <data name="QueryBuilder_AddCondition">
+    <value>Criar uma nova regra</value>
+  </data>
+  <data name="QueryBuilder_AddGroupCondition">
+    <value>Criar um grupo de regras</value>
+  </data>
+  <data name="QueryBuilder_After">
+    <value>Está depois de</value>
+  </data>
+  <data name="QueryBuilder_AutocompleteEmptyResult">
+    <value>Nenhum valor encontrado</value>
+  </data>
+  <data name="QueryBuilder_Before">
+    <value>Está antes de</value>
+  </data>
+  <data name="QueryBuilder_BeforeOrOn">
+    <value>Está antes de ou em</value>
+  </data>
+  <data name="QueryBuilder_Begins">
+    <value>Começa com</value>
+  </data>
+  <data name="QueryBuilder_Ends">
+    <value>Termina com</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Decimal_Input">
+    <value>Insira um decimal como {0}</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Number_Input">
+    <value>Insira um número como {0}</value>
+  </data>
+  <data name="QueryBuilder_IsNotOn">
+    <value>Não está em</value>
+  </data>
+  <data name="QueryBuilder_IsOn">
+    <value>Está em</value>
+  </data>
+  <data name="QueryBuilder_Less">
+    <value>É menor que</value>
+  </data>
+  <data name="QueryBuilder_LessOrEqual">
+    <value>É menor ou igual a</value>
+  </data>
+  <data name="QueryBuilder_More">
+    <value>É maior que</value>
+  </data>
+  <data name="QueryBuilder_MoreOrEqual">
+    <value>É igual ou maior que</value>
+  </data>
+  <data name="QueryBuilder_OnOrAfter">
+    <value>Está em ou depois de</value>
+  </data>
+  <data name="QueryBuilder_RemoveCondition">
+    <value>Remover regra</value>
+  </data>
+  <data name="QueryBuilder_RemoveGroupCondition">
+    <value>Remover grupo de regras</value>
+  </data>
+  <data name="SystemFunction_CurrentDate">
+    <value>Data atual</value>
+  </data>
+  <data name="SystemFunction_CurrentDateTime">
+    <value>Data e hora atuais</value>
+  </data>
+  <data name="SystemFunction_CurrentUserEmail">
+    <value>Email do usuário</value>
+  </data>
+  <data name="SystemFunction_CurrentUserLongName">
+    <value>Login do usuário</value>
+  </data>
+  <data name="SystemFunction_CurrentUserShortName">
+    <value>Nome de usuário interno</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWEXTENSION">
+    <value>Extensão</value>
+  </data>
+  <data name="QueryBuilder_RangeTo">
+    <value>para</value>
+  </data>
+</root>

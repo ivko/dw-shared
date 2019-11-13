@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="QueryBuilder_AfterTheNext" xml:space="preserve">
+    <value>Na de volgende</value>
+  </data>
+  <data name="QueryBuilder_AfterThePast" xml:space="preserve">
+    <value>Na de vorige</value>
+  </data>
+  <data name="QueryBuilder_And" xml:space="preserve">
+    <value>EN</value>
+  </data>
+  <data name="QueryBuilder_BeforeTheNext" xml:space="preserve">
+    <value>Voor de volgende</value>
+  </data>
+  <data name="QueryBuilder_BeforeThePast" xml:space="preserve">
+    <value>Voor de vorige</value>
+  </data>
+  <data name="QueryBuilder_Contains" xml:space="preserve">
+    <value>Bevat</value>
+  </data>
+  <data name="QueryBuilder_Err_DateField" xml:space="preserve">
+    <value>Voer een geldige waarde in het datumveld in.</value>
+  </data>
+  <data name="QueryBuilder_Err_DateTimeField" xml:space="preserve">
+    <value>Voer een geldige waarde in het veld Datum/tijd in.</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalField" xml:space="preserve">
+    <value>Voer een geldige waarde in het veld Decimalen in.</value>
+  </data>
+  <data name="QueryBuilder_Err_DecimalRangeField" xml:space="preserve">
+    <value>Voer geldige bereikwaarde(n) in de decimaalvelden in.</value>
+  </data>
+  <data name="QueryBuilder_Err_KeywordField" xml:space="preserve">
+    <value>Voer een geldige waarde in het sleutelwoordenveld in.</value>
+  </data>
+  <data name="QueryBuilder_Err_MemoField" xml:space="preserve">
+    <value>Voer een geldige waarde in het trefwoordveld in.</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericField" xml:space="preserve">
+    <value>Voer een geldige waarde in het numeriek veld in.</value>
+  </data>
+  <data name="QueryBuilder_Err_NumericRangeField" xml:space="preserve">
+    <value>Voer geldige bereikwaarde(n) in de numerieke velden in.</value>
+  </data>
+  <data name="QueryBuilder_Err_RangeDateField" xml:space="preserve">
+    <value>Voer geldige bereikwaarde(n) in de datumvelden in.</value>
+  </data>
+  <data name="QueryBuilder_Err_SqlField" xml:space="preserve">
+    <value>Voer een geldige waarde in het SQL-veld in.</value>
+  </data>
+  <data name="QueryBuilder_Err_TextField" xml:space="preserve">
+    <value>Voer een geldige waarde in het tekstveld in</value>
+  </data>
+  <data name="QueryBuilder_Introduction" xml:space="preserve">
+    <value>Gebruikers zien alleen documenten die overeenkomen met de volgende regels:</value>
+  </data>
+  <data name="QueryBuilder_invalidField" xml:space="preserve">
+    <value>Het veld van de archiefkast bestaat niet.</value>
+  </data>
+  <data name="QueryBuilder_IsBetween" xml:space="preserve">
+    <value>Is tussen</value>
+  </data>
+  <data name="QueryBuilder_IsEmpty" xml:space="preserve">
+    <value>Is leeg</value>
+  </data>
+  <data name="QueryBuilder_IsEqual" xml:space="preserve">
+    <value>Is gelijk aan</value>
+  </data>
+  <data name="QueryBuilder_IsNotEmpty" xml:space="preserve">
+    <value>Is niet leeg</value>
+  </data>
+  <data name="QueryBuilder_IsNotEqual" xml:space="preserve">
+    <value>Is niet gelijk aan</value>
+  </data>
+  <data name="QueryBuilder_IsWhereClause" xml:space="preserve">
+    <value>Is (where-component)</value>
+  </data>
+  <data name="QueryBuilder_Or" xml:space="preserve">
+    <value>OF</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDISK" xml:space="preserve">
+    <value>Schijfnummer</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWDOCID" xml:space="preserve">
+    <value>Doc-id</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSDATETIME" xml:space="preserve">
+    <value>Datum laatst geopend</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWLASTACCESSUSER" xml:space="preserve">
+    <value>Laatst geopend door gebruiker</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODDATETIME" xml:space="preserve">
+    <value>Wijzigingsdatum</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWMODUSER" xml:space="preserve">
+    <value>Wijzigingsgebruiker</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSECTIONCOUNT" xml:space="preserve">
+    <value>Aantal bestanden</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREDATETIME" xml:space="preserve">
+    <value>Datum opslaan</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSTOREUSER" xml:space="preserve">
+    <value>Gebruiker opslaan</value>
+  </data>
+  <data name="QueryBuilder_SystemFields" xml:space="preserve">
+    <value>Systeemvelden</value>
+  </data>
+  <data name="QueryBuilder_WithinTheNext" xml:space="preserve">
+    <value>Binnen de volgende</value>
+  </data>
+  <data name="QueryBuilder_WithinThePast" xml:space="preserve">
+    <value>Binnen de vorige</value>
+  </data>
+  <data name="QueryClick_LabelFirstPart" xml:space="preserve">
+    <value>Nog geen regels gedefinieerd.</value>
+  </data>
+  <data name="QueryClick_LabelSecondPart" xml:space="preserve">
+    <value>Een nieuwe regel maken</value>
+  </data>
+  <data name="QueryClick_LabelThirdPart" xml:space="preserve">
+    <value>Een groep van regels maken</value>
+  </data>
+  <data name="QueryDate_Days" xml:space="preserve">
+    <value>Dagen</value>
+  </data>
+  <data name="QueryDate_Hours" xml:space="preserve">
+    <value>Uren</value>
+  </data>
+  <data name="QueryDate_Months" xml:space="preserve">
+    <value>Maanden</value>
+  </data>
+  <data name="QueryDate_Years" xml:space="preserve">
+    <value>Jaren</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPDATETIME" xml:space="preserve">
+    <value>SAP-datum/-tijd</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWSAPSTATUS" xml:space="preserve">
+    <value>SAP-status</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWUSRVERSION" xml:space="preserve">
+    <value>Gebruikersversie</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSIONCOMMENT" xml:space="preserve">
+    <value>Versieopmerking</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWVERSTATUS" xml:space="preserve">
+    <value>Versiestatus</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCID" xml:space="preserve">
+    <value>SAP-document-id</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPDOCTYPE" xml:space="preserve">
+    <value>SAP-documenttype</value>
+  </data>
+  <data name="QueryBuilder_SystemField_SAPPROTECTIONTYPE" xml:space="preserve">
+    <value>SAP-beveiligingstype</value>
+  </data>
+  <data name="QueryBuilder_ProfileIntroduction">
+    <value>De hieronder verleende rechten zijn van toepassing op documenten die voldoen aan de volgende regels:</value>
+  </data>
+  <data name="QueryBuilder_AddCondition">
+    <value>Een nieuwe regel maken</value>
+  </data>
+  <data name="QueryBuilder_AddGroupCondition">
+    <value>Een groep regels maken</value>
+  </data>
+  <data name="QueryBuilder_After">
+    <value>Is na</value>
+  </data>
+  <data name="QueryBuilder_AutocompleteEmptyResult">
+    <value>Geen waarden gevonden</value>
+  </data>
+  <data name="QueryBuilder_Before">
+    <value>Is voor</value>
+  </data>
+  <data name="QueryBuilder_BeforeOrOn">
+    <value>Is voor of op</value>
+  </data>
+  <data name="QueryBuilder_Begins">
+    <value>Begint met</value>
+  </data>
+  <data name="QueryBuilder_Ends">
+    <value>Eindigt op</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Decimal_Input">
+    <value>Voer een decimaal in zoals {0}</value>
+  </data>
+  <data name="QueryBuilder_Invalid_Number_Input">
+    <value>Voer een cijfer in zoals {0}</value>
+  </data>
+  <data name="QueryBuilder_IsNotOn">
+    <value>Is niet op</value>
+  </data>
+  <data name="QueryBuilder_IsOn">
+    <value>Is op</value>
+  </data>
+  <data name="QueryBuilder_Less">
+    <value>Is kleiner dan</value>
+  </data>
+  <data name="QueryBuilder_LessOrEqual">
+    <value>Is kleiner dan of gelijk aan</value>
+  </data>
+  <data name="QueryBuilder_More">
+    <value>Is groter dan</value>
+  </data>
+  <data name="QueryBuilder_MoreOrEqual">
+    <value>Is gelijk aan of groter dan</value>
+  </data>
+  <data name="QueryBuilder_OnOrAfter">
+    <value>Is op of na</value>
+  </data>
+  <data name="QueryBuilder_RemoveCondition">
+    <value>Regel verwijderen</value>
+  </data>
+  <data name="QueryBuilder_RemoveGroupCondition">
+    <value>Een groep regels verwijderen</value>
+  </data>
+  <data name="SystemFunction_CurrentDate">
+    <value>Huidige datum</value>
+  </data>
+  <data name="SystemFunction_CurrentDateTime">
+    <value>Huidige datum en tijd</value>
+  </data>
+  <data name="SystemFunction_CurrentUserEmail">
+    <value>E-mailadres van de gebruiker</value>
+  </data>
+  <data name="SystemFunction_CurrentUserLongName">
+    <value>Aanmelding van de gebruiker</value>
+  </data>
+  <data name="SystemFunction_CurrentUserShortName">
+    <value>Interne gebruikersnaam</value>
+  </data>
+  <data name="QueryBuilder_SystemField_DWEXTENSION">
+    <value>Extensie</value>
+  </data>
+  <data name="QueryBuilder_RangeTo">
+    <value>aan</value>
+  </data>
+</root>

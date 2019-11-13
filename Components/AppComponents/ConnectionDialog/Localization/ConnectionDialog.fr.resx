@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Button_Back_Text">
+    <value>Retour</value>
+  </data>
+  <data name="Button_Cancel_Text">
+    <value>Annuler</value>
+  </data>
+  <data name="Button_DontSave_Text">
+    <value>Ne pas enregistrer</value>
+  </data>
+  <data name="Button_OK_Text">
+    <value>OK</value>
+  </data>
+  <data name="Button_Save_Text">
+    <value>Enregistrer</value>
+  </data>
+  <data name="ConnectionDialog_LongOrganizationName_Text">
+    <value>Le nom de l'organisation ne doit pas dépasser {0} caractères.</value>
+  </data>
+  <data name="ConnectionDialog_LongPassword_Text">
+    <value>Le mot de passe est incorrect. Veuillez réessayer.</value>
+  </data>
+  <data name="ConnectionDialog_LongUrl_Text">
+    <value>L'URL du système DocuWare ne doit pas dépasser {0} caractères.</value>
+  </data>
+  <data name="ConnectionDialog_LongUsername_Text">
+    <value>Le nom d'utilisateur ne doit pas dépasser {0} caractères.</value>
+  </data>
+  <data name="ConnectionDialog_MissingOrganizationName_Text">
+    <value>Saisir un nom d'organisation</value>
+  </data>
+  <data name="ConnectionDialog_MissingPassword_Text">
+    <value>Saisir un mot de passe</value>
+  </data>
+  <data name="ConnectionDialog_MissingUrl_Text">
+    <value>Saisissez l'URL du système DocuWare de l'autre organisation.</value>
+  </data>
+  <data name="ConnectionDialog_MissingUsername_Text">
+    <value>Saisir un nom d'utilisateur</value>
+  </data>
+  <data name="ConnectionDialog_OrganizationName_Label">
+    <value>Organisation</value>
+  </data>
+  <data name="ConnectionDialog_Password_Label">
+    <value>Mot de passe</value>
+  </data>
+  <data name="ConnectionDialog_RegExpPassword_Text">
+    <value>Erreur - veuillez saisir le mot de passe approprié.</value>
+  </data>
+  <data name="ConnectionDialog_RegExpUrl_Text">
+    <value>L'URL n'est pas valide. Elle doit contenir http:// or https://</value>
+  </data>
+  <data name="ConnectionDialog_RegExpUsername_Text">
+    <value>Erreur - veuillez saisir le nom d'utilisateur correct.</value>
+  </data>
+  <data name="ConnectionDialog_Title">
+    <value>Configurer la connexion à l'autre organisation</value>
+  </data>
+  <data name="ConnectionDialog_UsePredefinedUrls">
+    <value>Utiliser le système DocuWare Cloud</value>
+  </data>
+  <data name="ConnectionDialog_Username_Label">
+    <value>Nom d'utilisateur</value>
+  </data>
+  <data name="DiscardingChanges_Default_Title">
+    <value>Les modifications seront ignorées</value>
+  </data>
+  <data name="Enter_Platform_Url_Text">
+    <value>p. ex. https://example.docuware.cloud/DocuWare</value>
+  </data>
+  <data name="ConnectionDialog_URL_Label">
+    <value>URL</value>
+  </data>
+</root>
