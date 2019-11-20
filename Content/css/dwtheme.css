@@ -4358,17 +4358,25 @@ input[type="checkbox"].checkbox {
   position: absolute;
 }
 input[type="checkbox"].checkbox + label {
-  padding-left: 34px;
+  min-width: 16px;
   height: 16px;
+}
+input[type="checkbox"].checkbox + label span {
+  position: relative;
+  left: 34px;
 }
 .custom-checkbox {
   position: relative;
-  padding-left: 34px;
-  height: 20px;
+  height: 16px;
+  min-width: 16px;
+  display: inline-block;
 }
 .custom-checkbox .checkbox.ui-icon.button {
   position: absolute;
   left: 0;
+}
+.custom-checkbox span {
+  margin-left: 34px;
 }
 .checkbox-right + label,
 .checkbox-right.ui-icon.button {
@@ -8186,6 +8194,9 @@ div#qunit {
   /* Opera/IE 8+ */
   text-align: left;
   padding: 3px 10px;
+}
+#loginBox .dw-login-field .right label {
+  padding-left: 34px;
 }
 #loginBox .dw-login-field input {
   background-color: #ffffff;
@@ -13120,9 +13131,6 @@ div[read-only-cursor] .dw-dialogContent .dw-dialog td span {
 }
 .b-r-gray {
   border-right: 1px solid #C8CED1;
-}
-.no-border {
-  border: none !important;
 }
 .width-100-px {
   width: 100px;

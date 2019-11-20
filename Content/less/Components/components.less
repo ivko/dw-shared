@@ -1314,20 +1314,30 @@ input[type="checkbox"].checkbox {
 
     & + label {
         //        margin-left: -17px;
-        padding-left: 34px;
+        min-width: 16px;
         height: 16px;
+
+        span {
+            position: relative;
+            left: 34px;
+        }
     }
 }
 
 //Custom checkbox
 .custom-checkbox {
     position: relative;
-    padding-left: 34px;
-    height: 20px;
+    height: 16px;
+    min-width: 16px;
+    display: inline-block;
+
 
     .checkbox.ui-icon.button {
         position: absolute;
         left: 0;
+    }
+    span {
+        margin-left: 34px;
     }
 }
 

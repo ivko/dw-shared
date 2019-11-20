@@ -381,7 +381,7 @@
             // check if there are changes based on current row, currentPage
             // this.scrollTimeoutId = this.setScroll.delay(this.options.delay, this, [offset]);
 
-            this.scrollTimeoutId = setTimeout(() => this.setScroll(offset), this.options.delay);
+            this.scrollTimeoutId = window.setTimeout(() => this.setScroll(offset), this.options.delay);
         }
 
         private precalculateCurrentPage(offset: number = this.scrollOffset): void {
