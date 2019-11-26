@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Docuware shared",
   "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivko/dw-shared.git"
+  },
   "scripts": {
     "build": "webpack --env dev",
     "serve": "webpack-dev-server"
@@ -11,7 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.2",
-    "@types": "^2.1.1",
+    "@types/jquery": "^3.3.31",
+    "@types/knockout": "^3.4.66",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
     "css-loader": "^3.2.0",
@@ -30,9 +35,5 @@
     "webpack": "^4.12.2",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.9.0"
-  },
-  "dependencies": {
-    "@types/jquery": "^3.3.31",
-    "@types/knockout": "^3.4.66"
   }
 }
