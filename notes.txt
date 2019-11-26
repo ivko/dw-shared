@@ -1,0 +1,2 @@
+- mootools classes and prototypes are completly useless in typescript context.
+- when using 

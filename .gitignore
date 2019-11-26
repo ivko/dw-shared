@@ -1,2 +1,5 @@
 node_modules
-dist/dw-core.js
+dist
+Content
+Components
+Scripts
