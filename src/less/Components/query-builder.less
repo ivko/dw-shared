@@ -1,0 +1,251 @@
+﻿//Query designer styles
+@query-builder-operations-column-width: 48px;
+@query-builder-conditions-minwidth: 552px;
+@query-builder-condition-field-maxwidth: 130px;
+@query-builder-control-min-width: 100px;
+@query-builder-control-max-width: 100px;
+@query-builder-offset-padding: 2px;
+
+.query-builder {
+    position: relative;
+    padding-bottom: 16px;
+    width: ~"calc(100% - 1px)"; //Fix for showing unnecessary horizontal scrollbar
+    .conditions {
+        min-height: @query-builder-offset-padding + @input-height-base;
+    }
+
+    .query-builder-condition {
+        padding: @query-builder-offset-padding 0px;
+        min-width: @query-builder-conditions-minwidth;
+
+        & > .form-control {
+            display: inline-block;
+            width: auto;
+            vertical-align: middle;
+            height: 32px;
+            cursor: default;
+
+            &:focus, &.menu-activated {
+                &:extend(.form-control:focus);
+            }
+
+            & > span {
+                display: inline-block;
+                min-width: @query-builder-control-min-width;
+                position: relative;
+                padding-right: @caret-width-base * 3;
+
+                & > span:first-child {
+                    display: block;
+                    max-width: @query-builder-control-max-width;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                & > .caret {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                }
+            }
+        }
+
+        .dw-imageButton.ui-datepicker-trigger {
+            margin-right: 10px;
+        }
+
+        & > input.form-control {
+            display: inline-block;
+            max-width: @query-builder-control-max-width;
+            vertical-align: middle;
+            width: auto;
+
+            &:focus, &.menu-activated {
+                &:extend(.form-control:focus);
+            }
+
+            &.input-sm {
+                max-width: 100px; //???
+            }
+
+            &.input-sm-datetime {
+                max-width: 135px; //???
+            }
+        }
+        /*
+        &:last-child {
+            padding-bottom: 0;
+        }
+        */
+    }
+
+    .query-builder-group {
+        //margin-top: @query-builder-offset-padding;
+        //margin-bottom: @query-builder-offset-padding;
+        display: inline-block;
+        min-width: 100%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        //        background-color: rgba(0, 0, 0, 0.05);
+        p {
+            margin: 9px 0;
+        }
+
+        & > .group-controls {
+            position: relative;
+
+            & > .col-operations {
+                position: absolute;
+                width: @query-builder-operations-column-width;
+                height: calc(~"100% -" @query-builder-offset-padding * 2);
+                left: 0; //@query-builder-offset-padding;
+                top: @query-builder-offset-padding;
+
+                & > .btn-group {
+                    display: block;
+                    height: 100%;
+
+                    & > button {
+                        padding: 0;
+                    }
+
+                    & > .dropdown-toggle {
+                        height: 100%;
+                        width: 100%;
+                        color: @OT_GrayA;
+                        border: 1px solid #c8ced1;
+                        background: rgba(0, 0, 0, 0.05);
+                        ;
+
+                        &:focus, &.menu-activated {
+                            &:extend(.form-control:focus);
+                        }
+
+                        div {
+                            overflow: hidden;
+                            -ms-text-overflow: ellipsis;
+                            -o-text-overflow: ellipsis;
+                            text-overflow: ellipsis;
+                        }
+                    }
+
+                    & > .dropdown-menu {
+                        top: 50%;
+                        right: auto;
+                        left: 90%;
+                    }
+                }
+            }
+
+            .col-conditions {
+                margin-left: 52px;
+                width: calc(100% - 52px);
+            }
+        }
+
+        .group-actions {
+            padding: @query-builder-offset-padding 0;
+        }
+    }
+
+    .form-control {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    button.btn {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    button.btn.icon-only {
+        height: 32px;
+        padding: 5px 8px;
+    }
+
+    input[type="text"].qb-has-error {
+        border: 2px solid #a94442;
+    }
+
+    .qbtxt-standard-has-error > input[type="text"].qb-txt-standard {
+        border: 2px solid #a94442;
+    }
+
+    .qbtxt-standard-has-error > div input[type="text"].qb-txt-standard {
+        border: 2px solid #a94442;
+    }
+
+    .qbtxt-standard-has-error > .input-group-as-input {
+        border: 2px solid #a94442;
+        input.form-control {
+            height: 28px !important;
+        }
+    }
+
+    .qbtxt-standard-has-error > span span input[type="text"].qb-txt-standard {
+        border: 2px solid #a94442;
+    }
+
+    .qbtxt-range1-has-error > input[type="text"].qb_txt_range1 {
+        border: 2px solid #a94442;
+    }
+
+    .qbtxt-range2-has-error > input[type="text"].qb_txt_range2 {
+        border: 2px solid #a94442;
+    }
+
+    .qbtxt-error-missing-filed > .form-control:first-child {
+        border: 2px solid #a94442;
+    }
+
+    .input-group-autocomplete {
+        display: inline-table;
+        vertical-align: middle;
+        width: 130px; //?
+        .form-control {
+            padding-right: 23px;
+        }
+
+        .input-group-btn {
+            width: 18px;
+            position: relative;
+            right: 4px;
+            z-index: 2;
+        }
+    }
+
+    .input-group-as-input {
+        border: 1px solid #c8ced1;
+        background: rgb(238, 241, 242);
+
+        > input.form-control {
+            border: 0 !important;
+            height: 30px !important;
+        }
+    }
+}
+
+@query-builder-large-control-min-width: 136px;
+
+.qb-large {
+    .query-builder-condition {
+        & > .form-control {
+            & > span {
+                min-width: @query-builder-large-control-min-width;
+
+                & > span:first-child {
+                    max-width: @query-builder-large-control-min-width;
+                }
+            }
+        }
+
+        input.form-control {
+            min-width: @query-builder-control-min-width + @query-builder-control-max-width / 2;
+        }
+    }
+
+    .input-group-autocomplete {
+        width: 187px;
+    }
+}
