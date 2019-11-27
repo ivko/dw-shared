@@ -4,12 +4,13 @@
 @lessPath: "@{rootPath}/src/less";
 @jqueryUIPath: "@{lessPath}/jquery_ui";
 
+// Core variables and mixins
+@import "@{bootstrapPath}/variables.less";
+@import "@{bootstrapPath}/mixins.less";
 @import "@{lessPath}/_variables.less";
 @import "@{lessPath}/_mixins.less";
-// Core variables and mixins
-//@import "@{bootstrapPath}/variables.less";
 @import "@{lessPath}/_bootstrap-variables-adapter.less";
-@import "@{bootstrapPath}/mixins.less";
+
 // Reset
 @import "@{bootstrapPath}/normalize.less";
 @import "@{bootstrapPath}/print.less";

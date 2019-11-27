@@ -31,9 +31,10 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "@types/webpack": "^4.41.0",
     "@types/jquery": "^3.3.31",
     "@types/knockout": "^3.4.66",
-    "bootstrap": "^3.3.2"
+    "@types/webpack": "^4.41.0",
+    "bootstrap": "^3.3.2",
+    "jquery.browser": "^0.1.0"
   }
 }
