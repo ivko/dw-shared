@@ -1,6 +1,7 @@
 import 'mootools-core';
 import 'mootools-interfaces';
 import * as $ from 'jquery';
+import * as ko from 'knockout';
 import "./array";
 import "./string";
 
@@ -22,6 +23,8 @@ declare global {
 $.fn.exists = function () {
     return this.length !== 0;
 };
+
+//window.ko = ko;
 
 window.extend = function (obj:any, ...args: any[]) {
     var type = typeof obj,
@@ -53,4 +56,4 @@ window.ns = window.namespace = function (namespace) {
 
 window.$R = function (res) {
     return res || '';
-};
+}; 

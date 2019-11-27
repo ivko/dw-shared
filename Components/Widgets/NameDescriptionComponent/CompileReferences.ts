@@ -1,1 +1,0 @@
-﻿/// <reference path="scripts/NameDescriptionComponentVM.ts"/>

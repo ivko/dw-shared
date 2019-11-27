@@ -27,11 +27,11 @@
 
 (function (factory) {
     if (typeof define === "function" && define.amd) {
-        define(["jquery", 'knockout', "jquery-ui", "jquery.browser", "../../../global", "../../../utils", "../../../ViewModels/ViewModel"], factory);
+        define(["jquery", 'knockout', "../model/viewModel", "jquery-ui", "jquery.browser", "../global", "../utils"], factory);
     } else {
-        factory(jQuery, ko);
+        factory(jQuery, ko, DW.ViewModel);
     }
-}(function ($, ko) {
+}(function ($, ko, model) {
 
     // Class used to controll the progress notification. The progressbar will automatically stop and disapper if the current value is equals to or bigger than the man value.
     var toastrProgress = function () {
@@ -854,7 +854,7 @@
     });
 
     var ToastrErrorTracker = new Class({
-        Extends: DW.ViewModel,
+        Extends: model.ViewModel,
         initialize: function (trackingService, properties) {
             this.trackingService = trackingService;
             this.properties = properties;
@@ -875,7 +875,7 @@
         }
     });
 
-    extend(ns('DW'), {
+    window.extend(window.ns('DW'), {
         ToastrErrorTracker: ToastrErrorTracker
     });
 

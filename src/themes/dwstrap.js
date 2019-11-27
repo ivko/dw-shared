@@ -1,1 +1,1 @@
-import '../../Content/css/dwstrap.less';
+import "../less/dwstrap.less";

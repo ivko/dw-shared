@@ -1,1 +1,1 @@
-import "../../Content/css/dwtheme.less";
+import "../less/dwtheme.less";

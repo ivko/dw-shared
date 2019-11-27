@@ -96,7 +96,9 @@ module.exports = {
         'globalize': 'globalize',
         'jstz': 'jstz',
         'moment': 'moment',
-        'toastr': 'toastr'
+        'toastr': 'toastr',
+        'jquery-ui': 'jquery-ui',
+        'spin': 'spin'
     },
     devServer: {
         contentBase: path.resolve(__dirname, '.'),
