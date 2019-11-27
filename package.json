@@ -35,6 +35,12 @@
     "@types/knockout": "^3.4.66",
     "@types/webpack": "^4.41.0",
     "bootstrap": "^3.3.2",
-    "jquery.browser": "^0.1.0"
+    "jquery": "^3.3.1",
+    "jquery.browser": "^0.1.0",
+    "jstz": "^1.0.11",
+    "knockout": "^3.4.2",
+    "moment": "^2.1.0",
+    "mootools-core-dist": "^1.5.1-dist",
+    "spin.js": "^2.3.2"
   }
 }

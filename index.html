@@ -19,14 +19,16 @@
     requirejs.config({
       baseUrl: window['__dwshared_baseUrl__'],
       paths: {
-          "knockout": '../libs/knockout-3.4.2.debug',
-          "jquery": '../libs/jquery-3.3.1',
+          // Libraries from NPM
+          "knockout": '../node_modules/knockout/build/output/knockout-latest.debug',
+          "jquery": '../node_modules/jquery/dist/jquery',
+          "jstz": '../node_modules/jstz/dist/jstz',
+          "moment": '../node_modules/moment/moment',
+          "spin": '../node_modules/spin.js/spin',
+          // Own / Edited libraries
           "globalize": '../libs/globalize',
-          "jstz": '../libs/jstz',
-          "moment": '../libs/moment',
           "toastr": '../libs/toastr',
-          "jquery-ui": '../libs/jquery-ui-1.12.1.custom',
-          "spin": '../libs/spin'
+          "jquery-ui": '../libs/jquery-ui-1.12.1.custom'
       }
   });
 
