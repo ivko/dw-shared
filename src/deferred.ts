@@ -7,12 +7,12 @@ declare global {
 let tuples: any[] = [
     // action, add listener, callbacks,
     // ... .then handlers, argument index, [final state]
-    ["notify", "progress", jQuery.Callbacks("memory"),
-        jQuery.Callbacks("memory"), 2],
-    ["resolve", "done", jQuery.Callbacks("once memory"),
-        jQuery.Callbacks("once memory"), 0, "resolved"],
-    ["reject", "fail", jQuery.Callbacks("once memory"),
-        jQuery.Callbacks("once memory"), 1, "rejected"]
+    ["notify", "progress", $.Callbacks("memory"),
+        $.Callbacks("memory"), 2],
+    ["resolve", "done", $.Callbacks("once memory"),
+        $.Callbacks("once memory"), 0, "resolved"],
+    ["reject", "fail", $.Callbacks("once memory"),
+        $.Callbacks("once memory"), 1, "rejected"]
 ];
 
 export function Deferred<T>(beforeStart?: (deferred: JQueryDeferred<T>) => any): JQueryDeferred<T> {

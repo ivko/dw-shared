@@ -38,6 +38,7 @@ module.exports = {
                     {
                       loader: 'less-loader', // compiles Less to CSS
                       options: {
+                        paths: [path.resolve(__dirname, 'node_modules')],
                         sourceMap: true,
                       },
                     },
