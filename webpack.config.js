@@ -67,7 +67,15 @@ module.exports = {
         extensions: [ ".ts", ".js" ],
         alias: {
             "mootools-core": __dirname + "/libs/mootools-core.js",
-            "mootools-interfaces": __dirname + "/libs/mootools-interfaces.js",
+            "knockout": __dirname + '/node_modules/knockout/build/output/knockout-latest.debug.js',
+            "jquery": __dirname + '/node_modules/jquery/dist/jquery.js',
+            "jstz": __dirname + '/node_modules/jstz/dist/jstz.js',
+            "moment": __dirname + '/node_modules/moment/moment.js',
+            "spin": __dirname + '/node_modules/spin.js/spin.js',
+            // Own / Edited libraries
+            "globalize": __dirname + '/libs/globalize.js',
+            "toastr": __dirname + '/libs/toastr.js',
+            "jquery-ui": __dirname + '/libs/jquery-ui-1.12.1.custo.jsm'
         }
     },
     optimization: {

@@ -1,5 +1,4 @@
 import 'mootools-core';
-import 'mootools-interfaces';
 import * as $ from 'jquery';
 import * as ko from 'knockout';
 import "./array";

@@ -1,6 +1,7 @@
-/// <reference path="../types/WafServices/DataContracts.d.ts" />
-/// <reference path="../types/toastr/toastr.d.ts" />
-/// <reference path="../types/globalize/globalize.d.ts" />
+/// <reference path="../types/DataContracts.d.ts" />
+/// <reference path="../types/toastr.d.ts" />
+/// <reference path="../types/globalize.d.ts" />
+/// <reference path="../types/knockout.d.ts" />
 
 /// 
 import * as $ from "jquery";

@@ -5,7 +5,7 @@
 //     and will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+/// <reference path="ServiceFixes.d.ts" />
 
 declare module dev.docuware.com.bpw {
     export class WorkflowDefinition {
