@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@types/webpack": "4.41.0",
+    "@types/node": "^12.12.14",
     "bootstrap": "3.4.1",
     "jquery": "3.4.1",
     "jquery.browser": "0.1.0",
