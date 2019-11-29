@@ -35,7 +35,8 @@
   require(["knockout", "core", "themes/dwtheme"], function(ko) {
     var vm = {
       tooltipContent: "Tooltip Content",
-      butonLabel: "Click Me"
+      butonLabel: "Click Me",
+      isCheckedObservable: ko.observable(false)
     };
     var root = document.querySelector('.ko-root');
     ko.applyBindings(vm, root);
@@ -48,7 +49,20 @@
         options: {
             label: $data.butonLabel
         }
-    }, tooltip: { content: $data.tooltipContent }"></button>
-  </div>
+    }, tooltip: { content: $data.tooltipContent }, event: {click: function() {console.log('hello from button')}}"></button>
+    <br />
+    <checkbox params="buttonOptions: {
+        buttonId: 'sampleButton1',
+        checked: isCheckedObservable
+      },
+      labelOptions: {
+        labelClass: 'disabled-overlay-item',
+        label: 'Sample text 1'
+      }">
+    </checkbox>
+    <br />
+    <!--div data-bind="command: $data.myCommand"></div-->
+
+  </div>  
 </body>
 </html>

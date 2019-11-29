@@ -1,0 +1,10 @@
+﻿<!-- ko if: available() -->
+<input type="checkbox" class="checkbox" tabindex="0" data-bind="checked: checked,
+checkedValue: checkedValue,
+css: buttonCSS,
+attr: {id: buttonId},
+enable: enabled()" />
+<label data-bind="class: label ? labelClass:'',
+tooltip: tooltipObj,
+attr: {for: buttonId}"><span data-bind="text: label"></span></label>
+<!-- /ko -->
