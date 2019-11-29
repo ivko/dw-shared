@@ -9,8 +9,8 @@
     "removeComments": false,
     "noImplicitAny": false,
     "typeRoots": [
-      "./node_modules/@types",
-      "./types"
+      "node_modules/@types",
+      "types"
     ],
     "lib": [
       "es2017",
@@ -19,5 +19,8 @@
   },
   "include": [
     "src/**/*.ts"
+  ],
+  "types": [
+      "types"
   ]
 }
