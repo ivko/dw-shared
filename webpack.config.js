@@ -46,7 +46,10 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                use: [{
+                use: [/*{
+                    loader: "./tools/dw-template-loader"
+                },*/
+                {
                     loader: "html-loader"
                 }]
             },

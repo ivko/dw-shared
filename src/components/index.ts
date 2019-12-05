@@ -1,2 +1,2 @@
-import "./checkbox/RadioComponent";
-import "./checkbox/CheckboxComponent";
+//import "./checkbox/RadioComponent";
+//import "./checkbox/CheckboxComponent";

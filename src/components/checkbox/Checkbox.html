@@ -1,10 +1,174 @@
-﻿<!-- ko if: available() -->
-<input type="checkbox" class="checkbox" tabindex="0" data-bind="checked: checked,
-checkedValue: checkedValue,
-css: buttonCSS,
-attr: {id: buttonId},
-enable: enabled()" />
-<label data-bind="class: label ? labelClass:'',
-tooltip: tooltipObj,
-attr: {for: buttonId}"><span data-bind="text: label"></span></label>
-<!-- /ko -->
+﻿<script type="text/html" id="checkbox-template">
+    <!-- ko template: { name: $data.getMode() + '-checkbox-template' } -->
+    <!-- /ko -->
+</script>
+
+<!--examples: -->
+
+<!-- (1) 'native' mode checkbox 
+    ------- used for simple checkboxes --------
+
+    <checkbox params="toggleOptions: {
+                   //not mandatory:
+                    enable: function (){ return allowCheckedValueChange(); //~some observable},
+                    visible: function (){ return skipShowing(); //~some observable}
+                },
+                buttonOptions: {
+                  //mandatory:
+                    buttonId: 'some_element_id', //or function() {return 'checkbox_button_number_' + $index(); }, for dinamically generated ids
+                    checked: checkedObservable,  
+                //not mandatory:
+                    checkedValue: someValue, specify if we want checkedObservable to take something different from true when 'checked'
+                    tooltipContent: {
+                        content: function(){ return allowCheckedValueChange() ? '': 'Some explaination why this checkbox is disabled' }
+                    }
+                },
+             //not mandatory:
+                labelOptions: {
+                    labelClass: 'some_css_class ',
+                    label: 'some label text'
+                }"></checkbox>
+
+-->
+
+<!-- (2) 'custom' mode checkbox:
+    ------- if we have enable/visible functionality it is better to use this approach --------
+
+    <checkbox params="{
+                   mode: 'custom',  
+                   toggleOptions: {
+                       //not mandatory:
+                        enable: function (){ return allowCheckedValueChange(); //~some observable},
+                        visible: function (){ return skipShowing(); //~some observable}
+                   },
+                   buttonOptions: {
+                    //mandatory:
+                         checked: checkedObservable,
+                    //not mandatory:
+                        tooltipContent: {
+                             content: function(){ return allowCheckedValueChange() ? '': 'Some explaination why this checkbox is disabled' }
+                        }
+                   },
+                //not mandatory:
+                   labelOptions: {
+                        labelClass: 'some_css_class ',
+                        label: 'some label text'
+                   }}"></checkbox>
+-->
+
+<!-- (3) 'custom' mode checkbox example 2: 
+    -------- if we have some observable ('checkedValue' for example) that takes custom values, different from true/false, that define if the checkbox is checked or not, 
+    and we want to use a command with enable/visible functionality, we use this approach --------
+
+    <checkbox params="{
+                   mode: 'custom',
+                   toggleOptions: {
+                    //mandatory:
+                        toggleChecked: checkedValue.bind($data, someSpecificValue),
+                    //not mandatory:
+                        enable: function (){ return allowCheckedValueChange(); //~some observable},
+                        visible: function (){ return skipShowing(); //~some observable}
+                   },
+                   buttonOptions: {
+                    //mandatory:
+                        checkedCondition: function () { return checkedValue() == someSpecificValue }, // the checkbox would be checked if the condition in the checkedCondition function passes;
+                    //not mandatory:
+                        buttonId: 'some_element_id', //or function() {return 'checkbox_number_' + $index(); }, for dinamically generated ids
+                        tooltipContent: {
+                             content: function(){ return allowCheckedValueChange() ? '': 'Some explaination why this checkbox is disabled' }
+                        }
+                   },
+                //not mandatory:
+                   labelOptions: {
+                        labelClass: 'some_css_class ',
+                        label: 'some label text'
+                   }}"></checkbox>
+-->
+
+<!-- (4) 'custom' mode checkbox example 3: 
+     -if we want to use a command defined outside of the component-
+     -or if we have async condition - can the checkbox really be checked, we must use 'custom' mode with external command that we pass to the checkbox component
+    
+
+case 1: checkedValue can take only simple true/false value
+
+    <checkbox params="{ 
+            mode: 'custom',
+            selectCommand: $data.someCommand, //in this command's execute, we must set the value of the checkedValue observable (true or false)
+            bindingContext: $context,
+            buttonOptions: {
+                 checked: checkedValue,
+                //not mandatory:
+                 tooltipContent: {
+                    content: function(){ return allowCheckedValueChange() ? '': 'Some explaination why this radio button is disabled' }
+                 }
+            },
+       //not mandatory:
+        labelOptions: {
+            labelClass: 'some_css_class ',
+            label: 'some label text'
+        }}"></checkbox>
+
+case 2: we have a custom condition for the checked value:
+
+     <checkbox params="{ mode: 'custom',
+            selectCommand: $data.someCommand, //in this command's execute, we must set the value of the checkedValue observable (someSpecificValue1, someSpecificValue2, someSpecificValue3 or so on)
+            bindingContext: $context,
+            buttonOptions: {
+                 checkedCondition: function () {return checkedValue() == someSpecificValue; },
+                //not mandatory:
+                 tooltipContent: {
+                    content: function(){ return allowCheckedValueChange() ? '': 'Some explaination why this checkbox is disabled' }
+                 }
+            },
+       //not mandatory:
+        labelOptions: {
+            labelClass: 'some_css_class ',
+            label: 'some label text'
+        }}"></checkbox>
+
+-->
+
+<!-- (5) 'delegated' mode checkboxes
+    - same as custom, but with delegated command binding:
+     same as example <4>, but with:  mode: 'delegated' , instead of 'custom'
+
+-->
+
+
+<script type="text/html" id="native-checkbox-template">
+    <!-- ko if: available() -->
+    <input type="checkbox" class="checkbox" tabindex="0" data-bind="checked: checked,
+                                                   checkedValue: checkedValue,
+                                                   css: buttonCSS,
+                                                   attr: {id: buttonId},
+                                                   enable: enabled()" />
+    <label data-bind="class: label ? labelClass:'',
+                      tooltip: tooltipObj,
+                      attr: {for: buttonId}"><span data-bind="text: label"></span></label>
+    <!-- /ko -->
+</script>
+
+<script type="text/html" id="custom-checkbox-template">
+    <div class="custom-checkbox">
+        <div tabindex="0" class="ui-icon button checkbox" data-bind="command: command,
+                                 css: buttonCSS,
+                                 tooltip: tooltipObj"></div>
+        <!-- ko if: label -->
+        <span class="m-r-16" data-bind="text: label,
+                     css: labelCSS"></span>
+        <!-- /ko -->
+    </div>
+</script>
+
+<script type="text/html" id="delegated-checkbox-template">
+    <div class="custom-checkbox">
+        <div tabindex="0" class="ui-icon button checkbox" data-bind="delegatedCommand: command,
+                                 css: buttonCSS,
+                                 tooltip: tooltipObj"></div>
+        <!-- ko if: label -->
+        <span class="m-r-16" data-bind="text: label,
+                     css: labelCSS"></span>
+        <!-- /ko -->
+    </div>
+</script>
