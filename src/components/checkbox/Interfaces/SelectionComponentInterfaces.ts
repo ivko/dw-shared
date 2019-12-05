@@ -1,4 +1,4 @@
-﻿import { Command } from "../../../command/Command.js";
+﻿import { Command } from "../../../command/Command";
 
 //toggleOptions
 export interface IToggleOptions {

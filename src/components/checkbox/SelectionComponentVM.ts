@@ -3,7 +3,7 @@ import * as $ from "jquery";
 import * as Utils from "../../utils";
 import { ViewModel } from "../../model/viewModel";
 import { CommandBindingAdapter } from "../../command/commandBindingAdapter.js";
-import { Command } from "../../command/Command.js";
+import { Command } from "../../command/Command";
 
 import {
     ISelectionComponentOptions,

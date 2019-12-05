@@ -15,9 +15,12 @@
     crossorigin="anonymous"></script>
 
   <script type="text/javascript">
-    window['__dwshared_baseUrl__'] = './dist/';
+    var baseUrl = './dist/';
+
+    window['__dwshared_baseUrl__'] = baseUrl;
+    
     requirejs.config({
-      baseUrl: window['__dwshared_baseUrl__'],
+      baseUrl: baseUrl,
       paths: {
           // Libraries from NPM
           "knockout": '../node_modules/knockout/build/output/knockout-latest.debug',

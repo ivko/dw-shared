@@ -8,6 +8,9 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
+    /*"declaration": true,
+    "declarationMap": true,
+    "declarationDir": "types",*/
     "typeRoots": [
       "node_modules/@types",
       "types"
@@ -21,6 +24,6 @@
     "src/**/*.ts"
   ],
   "types": [
-      "types"
+    "types"
   ]
 }
